@@ -1,0 +1,10 @@
+## This file is meant for remembering changes between stable and development version.
+##
+## current development: 2.0.0
+##
+
+- removed old benchmarks (SIXX, Magma, etc.)
+- added SMark
+- beautified configuration
+- removed FuelUtilities
+
