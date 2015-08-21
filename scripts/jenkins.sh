@@ -119,7 +119,7 @@ else
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
 		wget --quiet -O cog.tgz http://www.mirandabanda.org/files/Cog/VM/VM.r3410/cogspurlinux-15.28.3410.tgz
 		tar -xzf cog.tgz
-		VM_URL="$(pwd)/coglinux/squeak"
+		VM_URL="$(pwd)/cogspurlinux/squeak"
 		INIT_SCRIPT_URL="init_script.st"
 		DEBUG_LOG_URL="SqueakDebug.log"
 	}
