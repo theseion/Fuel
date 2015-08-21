@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# -e exit if simple command fails
+# -x echo each line
+set -ex
+
 # jenkins puts all the params after a / in the job name as well :(
 export JOB_NAME=`dirname $JOB_NAME`
 REPO=http://smalltalkhub.com/mc/Pharo/Fuel/main
@@ -67,10 +72,13 @@ else
 		AIO_DEBUG_LOG_URL="${AIO_APP_FILE_NAME}/Contents/Resources/SqueakDebug.log"
 	}
 
-	function downloadLatestImage() {
+	function downloadLatestImageAndSources() {
 		echo "downloading image: ${1}"
 		IMAGE_DIRECTORY_URL="${FTP_HOST}/${1}/"
-		IMAGE_BASE_NAME=$(wget --quiet -O - http://${IMAGE_DIRECTORY_URL} | grep "Squeak.*\.zip" | sed -r 's/.*(Squeak.*)\.zip.*/\1/' | sort | tail -1)
+		IMAGE_BASE_NAME=$(wget --quiet -O - http://${IMAGE_DIRECTORY_URL} | grep "Squeak[0-9.-]*\.zip" | sed -r 's/.*(Squeak.*)\.zip.*/\1/' | sort | tail -1)
+		SOURCES_BASE_NAME=$(wget --quiet -O - http://${IMAGE_DIRECTORY_URL} | grep "SqueakV[0-9.-]*sources\.zip" | sed -r 's/.*(Squeak.*)\.zip.*/\1/')
+		wget --quiet -O sources.zip http://${IMAGE_DIRECTORY_URL}${SOURCES_BASE_NAME}.zip
+		unzip sources.zip
 		IMAGE_ZIP_FILE_NAME="${IMAGE_BASE_NAME}.zip"
 		wget --quiet "${IMAGE_DIRECTORY_URL}${IMAGE_ZIP_FILE_NAME}"
 		unzip -j "${IMAGE_ZIP_FILE_NAME}"
@@ -95,37 +103,23 @@ else
 	}
 
 	function prepare46() {
-		downloadLatestImage "4.6"
+		downloadLatestImageAndSources "4.6"
 		IMAGE_URL="${IMAGE_BASE_NAME}.image"
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
-		wget --quiet http://www.mirandabanda.org/files/Cog/VM/VM.r3282/coglinux-15.11.3282.tgz
-		tar -xzf coglinux-15.11.3282.tgz
+		wget --quiet -O cog.tgz http://www.mirandabanda.org/files/Cog/VM/VM.r3410/coglinux-15.28.3410.tgz
+		tar -xzf cog.tgz
 		VM_URL="$(pwd)/coglinux/squeak"
-		# the sources are now apparently no longer included in the zip
-		# and since they are nowhere else on the ftp server...
-		for i in 1 6; do
-			if [ ! -e "SqueakV4${i}.sources" ]; then
-				wget --quiet -N https://github.com/theseion/Fuel/raw/master/resources/SqueakV4${i}.sources.zip
-				unzip SqueakV4${i}.sources.zip
-			fi
-		done
 		INIT_SCRIPT_URL="init_script.st"
 		DEBUG_LOG_URL="SqueakDebug.log"
 	}
 
 	function prepare50() {
-		downloadLatestImage "50"
+		downloadLatestImageAndSources "5.0"
 		IMAGE_URL="${IMAGE_BASE_NAME}.image"
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
-		wget --quiet http://www.mirandabanda.org/files/Cog/VM/VM.r3282/coglinux-15.11.3282.tgz
-		tar -xzf coglinux-15.11.3282.tgz
+		wget --quiet -O cog.tgz http://www.mirandabanda.org/files/Cog/VM/VM.r3410/cogspurlinux-15.28.3410.tgz
+		tar -xzf cog.tgz
 		VM_URL="$(pwd)/coglinux/squeak"
-		# the sources are now apparently no longer included in the zip
-		# and since they are nowhere else on the ftp server...
-		if [ ! -e "SqueakV50.sources" ]; then
-			wget --quiet -N https://github.com/theseion/Fuel/raw/master/resources/SqueakV50.sources.zip
-			unzip SqueakV50.sources.zip
-		fi
 		INIT_SCRIPT_URL="init_script.st"
 		DEBUG_LOG_URL="SqueakDebug.log"
 	}
