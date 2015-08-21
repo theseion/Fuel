@@ -94,8 +94,8 @@ else
 		DEBUG_LOG_URL="${AIO_DEBUG_LOG_URL}"
 	}
 
-	function prepare46alpha() {
-		downloadLatestImage "4.6alpha"
+	function prepare46() {
+		downloadLatestImage "4.6"
 		IMAGE_URL="${IMAGE_BASE_NAME}.image"
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
 		wget --quiet http://www.mirandabanda.org/files/Cog/VM/VM.r3282/coglinux-15.11.3282.tgz
@@ -112,6 +112,24 @@ else
 		INIT_SCRIPT_URL="init_script.st"
 		DEBUG_LOG_URL="SqueakDebug.log"
 	}
+
+	function prepare50() {
+		downloadLatestImage "50"
+		IMAGE_URL="${IMAGE_BASE_NAME}.image"
+		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
+		wget --quiet http://www.mirandabanda.org/files/Cog/VM/VM.r3282/coglinux-15.11.3282.tgz
+		tar -xzf coglinux-15.11.3282.tgz
+		VM_URL="$(pwd)/coglinux/squeak"
+		# the sources are now apparently no longer included in the zip
+		# and since they are nowhere else on the ftp server...
+		if [ ! -e "SqueakV50.sources" ]; then
+			wget --quiet -N https://github.com/theseion/Fuel/raw/master/resources/SqueakV50.sources.zip
+			unzip SqueakV50.sources.zip
+		fi
+		INIT_SCRIPT_URL="init_script.st"
+		DEBUG_LOG_URL="SqueakDebug.log"
+	}
+	
 	
 	function generateBuildInitScript() {
 		echo "generating init_script for build"
@@ -161,7 +179,9 @@ EOF
 		;;
 		"squeak45") prepare45
 		;;
-		"squeak46") prepare46alpha
+		"squeak46") prepare46
+		;;
+		"squeak50") prepare50
 		;;
 		*) echo "Invalid value in SYSTEM variable"
 		   exit 0
