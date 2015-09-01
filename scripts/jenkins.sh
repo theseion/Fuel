@@ -113,8 +113,8 @@ else
 		DEBUG_LOG_URL="SqueakDebug.log"
 	}
 
-	function prepare50() {
-		downloadLatestImageAndSources "5.0"
+	function prepare51alpha() {
+		downloadLatestImageAndSources "5.1alpha"
 		IMAGE_URL="${IMAGE_BASE_NAME}.image"
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
 		wget --quiet -O cog.tgz http://www.mirandabanda.org/files/Cog/VM/VM.r3410/cogspurlinux-15.28.3410.tgz
@@ -175,7 +175,7 @@ EOF
 		;;
 		"squeak46") prepare46
 		;;
-		"squeak50") prepare50
+		"squeak51") prepare51alpha
 		;;
 		*) echo "Invalid value in SYSTEM variable"
 		   exit 0
