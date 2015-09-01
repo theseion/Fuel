@@ -114,6 +114,8 @@ else
 	}
 
 	function prepare51alpha() {
+		downloadLatestImageAndSources "5.0"
+		rm -f Squeak*.image Squeak*.changes
 		downloadLatestImageAndSources "5.1alpha"
 		IMAGE_URL="${IMAGE_BASE_NAME}.image"
 		CHANGES_URL="${IMAGE_BASE_NAME}.changes"
