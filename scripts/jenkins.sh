@@ -77,8 +77,10 @@ else
 		IMAGE_DIRECTORY_URL="${FTP_HOST}/${1}/"
 		IMAGE_BASE_NAME=$(wget --quiet -O - http://${IMAGE_DIRECTORY_URL} | grep "Squeak[0-9.-]*\.zip" | sed -r 's/.*(Squeak.*)\.zip.*/\1/' | sort | tail -1)
 		SOURCES_BASE_NAME=$(wget --quiet -O - http://${IMAGE_DIRECTORY_URL} | grep "SqueakV[0-9.-]*sources\.zip" | sed -r 's/.*(Squeak.*)\.zip.*/\1/')
-		wget --quiet -O sources.zip http://${IMAGE_DIRECTORY_URL}${SOURCES_BASE_NAME}.zip
-		unzip sources.zip
+		if [ -n "${SOURCES_BASE_NAME}" ]; then
+			wget --quiet -O sources.zip http://${IMAGE_DIRECTORY_URL}${SOURCES_BASE_NAME}.zip
+			unzip sources.zip
+		fi
 		IMAGE_ZIP_FILE_NAME="${IMAGE_BASE_NAME}.zip"
 		wget --quiet "${IMAGE_DIRECTORY_URL}${IMAGE_ZIP_FILE_NAME}"
 		unzip -j "${IMAGE_ZIP_FILE_NAME}"
