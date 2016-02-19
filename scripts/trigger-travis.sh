@@ -2,6 +2,7 @@
 
 body='{
 "request": {
+  "message":"Build triggered by Jenkins build on ci.inria.fr"
   "branch":"master"
 }}'
 
@@ -11,4 +12,4 @@ curl -s -X POST \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token LOvjbefQWMRVTnyibGNl4A" \
   -d "$body" \
-  https://api.travis-ci.org/repo/travis-ci%2Ftravis-core/requests
+  https://api.travis-ci.org/repo/theseion%2FFuel/requests
