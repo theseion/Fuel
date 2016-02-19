@@ -8,6 +8,6 @@ SmalltalkCISpec {
     }
   ],
   #testing : {
-    #categories : [ 'Fuel-Tests*' ]
+    #categories : [ 'FuelTests*' ]
   }
 }
