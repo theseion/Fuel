@@ -2,7 +2,7 @@
 
 body='{
 "request": {
-  "message":"Build triggered by Jenkins build on ci.inria.fr"
+  "message":"Build triggered by Jenkins build on ci.inria.fr",
   "branch":"master"
 }}'
 
