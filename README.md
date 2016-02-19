@@ -1,6 +1,8 @@
 Fuel
 ====
 
+[![Build Status](https://travis-ci.org/theseion/Fuel.svg?branch=master)](https://travis-ci.org/theseion/Fuel)
+
 Fuel, the Smalltalk object serializer
 
 ####Installation in Pharo:
