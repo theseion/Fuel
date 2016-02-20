@@ -7,4 +7,8 @@ os:
 
 smalltalk:
   - Squeak-trunk
+  - Squeak-4.6
+  - Squeak-4.5
   - Pharo-alpha
+  - Pharo-5.0
+  - Pharo-4.0
