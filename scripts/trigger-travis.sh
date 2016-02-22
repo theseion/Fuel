@@ -13,3 +13,5 @@ curl -m 5 -s -X POST \
   -H "Authorization: token LOvjbefQWMRVTnyibGNl4A" \
   -d "$body" \
   https://api.travis-ci.org/repo/theseion%2FFuel/requests
+
+exit 0
