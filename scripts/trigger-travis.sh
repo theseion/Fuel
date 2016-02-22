@@ -6,7 +6,7 @@ body='{
   "branch":"master"
 }}'
 
-echo curl --version
+curl --help
 
 curl -m 5 -s -X POST \
   -H "Content-Type: application/json" \
