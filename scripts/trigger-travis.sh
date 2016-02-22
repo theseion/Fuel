@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 body='{
 "request": {
   "message":"Build triggered by Jenkins build on ci.inria.fr",
