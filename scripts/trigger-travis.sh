@@ -1,13 +1,12 @@
 #!/bin/bash
 
-set -ex
-
 body='{
 "request": {
   "message":"Build triggered by Jenkins build on ci.inria.fr",
   "branch":"master"
 }}'
 
+echo curl --version
 
 curl -m 5 -s -X POST \
   -H "Content-Type: application/json" \
