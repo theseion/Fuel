@@ -24,5 +24,6 @@ matrix:
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingEdge.ston
       os: osx
-  allow_failure:
-    - smalltalk_config: .bleedingEdge.ston
+  allow_failures:
+    - smalltalk: Pharo-alpha
+  fast_finish: true
