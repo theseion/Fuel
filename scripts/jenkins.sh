@@ -19,7 +19,7 @@ case "$SYSTEM" in
 esac
 
 echo "downloading image and vm"
-wget --quiet -O - get.pharo.org/${IMAGE_VERSION}+${VM} | bash
+wget --quiet -O - get.pharo.org/${IMAGE_VERSION}+vm | bash
 
 IMAGE_URL="${JOB_NAME}.image"
 CHANGES_URL="${JOB_NAME}.changes"
