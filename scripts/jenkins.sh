@@ -19,12 +19,14 @@ if [[ "$SYSTEM" == "pharo"* ]]; then
 		;;
 		"pharo50") IMAGE_VERSION="50"
 		;;
+		"pharo60") IMAGE_VERSION="60"
+		;;
 		*) echo "Invalid value in SYSTEM variable"
 		   exit 0
 	esac
 
 	VM="vm"
-	if [ ${IMAGE_VERSION} == "50" ]; then
+	if [ ${IMAGE_VERSION} == "60" ]; then
 		VM="vmLatest"
 	fi
 
