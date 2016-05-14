@@ -20,5 +20,9 @@ matrix:
   include:
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingEdge.ston
+      os: linux
+    - smalltalk: Pharo-alpha
+      smalltalk_config: .bleedingEdge.ston
+      os: osx
   allow_failure:
     - smalltalk_config: .bleedingEdge.ston
