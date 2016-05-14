@@ -7,8 +7,13 @@ os:
 
 smalltalk:
   - Squeak-trunk
+  - Squeak-5.0
   - Squeak-4.6
   - Squeak-4.5
   - Pharo-alpha
   - Pharo-5.0
   - Pharo-4.0
+
+smalltalk_config:
+  - .stable.ston
+  - .bleedingEdge.ston

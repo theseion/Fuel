@@ -1,0 +1,14 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #configuration : 'Fuel',
+      #repository : 'http://smalltalkhub.com/mc/Pharo/Fuel/main',
+      #load : [ 'bleedingEdge' ],
+      #platforms : [
+        #pharo ]
+    }
+  ],
+  #testing : {
+    #categories : [ 'FuelTests*' ]
+  }
+}
