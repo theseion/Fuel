@@ -14,8 +14,6 @@ smalltalk:
   - Pharo-5.0
   - Pharo-4.0
 
-smalltalk_config: .stable.ston
-
 matrix:
   include:
     - smalltalk: Pharo-alpha
