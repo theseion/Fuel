@@ -1,19 +1,39 @@
 language: smalltalk
 sudo: false
 
-os:
-  - linux
-  - osx
+# os:
+#   - linux
+#   - osx
+#
+# smalltalk:
+#   - Squeak-trunk
+#   - Squeak-5.0
+#   - Squeak-4.6
+#   - Squeak-4.5
+#   - Pharo-alpha
+#   - Pharo-5.0
+#   - Pharo-4.0
+#
+# smalltalk_config:
+#   - .stable.ston
+#   - .bleedingEdge.ston
 
-smalltalk:
-  - Squeak-trunk
-  - Squeak-5.0
-  - Squeak-4.6
-  - Squeak-4.5
-  - Pharo-alpha
-  - Pharo-5.0
-  - Pharo-4.0
-
-smalltalk_config:
-  - .stable.ston
-  - .bleedingEdge.ston
+matrix:
+  include:
+    - smalltalk: Pharo-alpha
+      smalltalk_config: .bleedingEdge.ston
+      os:
+        - linux
+        - osx
+    - smalltalk:
+      - Squeak-trunk
+      - Squeak-5.0
+      - Squeak-4.6
+      - Squeak-4.5
+      - Pharo-alpha
+      - Pharo-5.0
+      - Pharo-4.0
+      smalltalk_config: .stable.ston
+      os:
+        - linux
+        - osx
