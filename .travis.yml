@@ -26,12 +26,6 @@ matrix:
     - smalltalk: Squeak-trunk
       smalltalk_config: .stable-corewithextras.ston
       os: osx
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-developmentgroup.ston
-      os: osx
     # Squeak-5.1 -> stable
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-default.ston
@@ -52,11 +46,6 @@ matrix:
       smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-developmentgroup.ston
-      os: osx
     # Squeak-4.6 -> stable
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-default.ston
@@ -75,12 +64,6 @@ matrix:
       os: linux
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-corewithextras.ston
-      os: osx
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Squeak-4.5
     - smalltalk: Squeak-4.5
@@ -102,11 +85,6 @@ matrix:
       smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-developmentgroup.ston
-      os: osx
     # Pharo-alpha -> bleedingEdge
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingedge-default.ston
@@ -151,12 +129,6 @@ matrix:
     - smalltalk: Pharo-5.0
       smalltalk_config: .stable-corewithextras.ston
       os: osx
-    - smalltalk: Pharo-5.0
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Pharo-5.0
-      smalltalk_config: .stable-developmentgroup.ston
-      os: osx
     # Pharo-4.0 -> stable
     - smalltalk: Pharo-4.0
       smalltalk_config: .stable-default.ston
@@ -175,10 +147,4 @@ matrix:
       os: linux
     - smalltalk: Pharo-4.0
       smalltalk_config: .stable-corewithextras.ston
-      os: osx
-    - smalltalk: Pharo-4.0
-      smalltalk_config: .stable-developmentgroup.ston
-      os: linux
-    - smalltalk: Pharo-4.0
-      smalltalk_config: .stable-developmentgroup.ston
       os: osx
