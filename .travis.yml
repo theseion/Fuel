@@ -1,123 +1,111 @@
 language: smalltalk
 sudo: false
 
-os:
-  - linux
-  - osx
-
-smalltalk:
-  - Squeak-trunk
-  - Squeak-5.1
 # Squeak 5.0 can't load Traits due to a bug in the class format definition.
 # This issue has been fixed in trunk
 #  - Squeak-5.0
-  - Squeak-4.6
-  - Squeak-4.5
-  - Pharo-alpha
-  - Pharo-5.0
-  - Pharo-4.0
 
 matrix:
   include:
     # Squeak-trunk-> stable
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Squeak-trunk
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Squeak-5.1 -> stable
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Squeak-5.1
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Squeak-4.6 -> stable
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Squeak-4.6
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Squeak-4.5
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Squeak-4.5
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Pharo-alpha -> bleedingEdge
     - smalltalk: Pharo-alpha
@@ -146,51 +134,51 @@ matrix:
       os: osx
     # Pharo-5.0 -> stable
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Pharo-5.0
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
     # Pharo-4.0 -> stable
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-default.ston
+      smalltalk_config: .stable-default.ston
       os: osx
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-tests.ston
+      smalltalk_config: .stable-tests.ston
       os: osx
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: linux
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-corewithextras.ston
+      smalltalk_config: .stable-corewithextras.ston
       os: osx
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: linux
     - smalltalk: Pharo-4.0
-      smalltalk_config: .default-developmentgroup.ston
+      smalltalk_config: .stable-developmentgroup.ston
       os: osx
