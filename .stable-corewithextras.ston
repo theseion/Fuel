@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #configuration : 'Fuel',
+      #repository : 'http://smalltalkhub.com/mc/Pharo/Fuel/main',
+      #load : [ 'CoreWithExtras' ],
+      #platforms : [
+        #squeak,
+        #pharo ]
+    }
+  ],
+  #testing : {
+    #categories : [ 'FuelTests*' ]
+  }
+}
