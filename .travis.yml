@@ -45,7 +45,6 @@ matrix:
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-corewithextras.ston
       os: osx
-    - smalltalk: Squeak-5.1
     # Squeak-4.6 -> stable
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-default.ston
@@ -84,7 +83,6 @@ matrix:
     - smalltalk: Squeak-4.5
       smalltalk_config: .stable-corewithextras.ston
       os: osx
-    - smalltalk: Squeak-4.5
     # Pharo-alpha -> bleedingEdge
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingedge-default.ston
