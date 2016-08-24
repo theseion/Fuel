@@ -8,5 +8,8 @@ SmalltalkCISpec {
         #squeak,
         #pharo ]
     }
-  ]
+  ],
+  #testing : {
+    #categories : [ 'FuelTests*' ]
+  }
 }

@@ -3,7 +3,7 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #configuration : 'Fuel',
       #repository : 'http://smalltalkhub.com/mc/Pharo/Fuel/main',
-      #load : [ 'default' ],
+      #load : [ 'Tests' ],
       #platforms : [
         #pharo ],
       #version : #bleedingEdge
