@@ -4,7 +4,7 @@ environment:
   CYG_CACHE: C:\cygwin\var\cache\setup
   CYG_EXE: C:\cygwin\setup-x86.exe
   CYG_MIRROR: http://cygwin.mirror.constant.com
-  SCI_RUN: /cygdrive/c/smalltalkCI-master/run.sh\
+  SCI_RUN: /cygdrive/c/smalltalkCI-master/run.sh
 
   matrix:
     # Squeak-trunk -> #stable
