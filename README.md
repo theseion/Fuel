@@ -8,5 +8,11 @@ Fuel
         url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
         package: 'ConfigurationOfFuel';
         load.
-    ((Smalltalk at: #ConfigurationOfFuel) project version: '1.9') 
-        load.
+    ((Smalltalk at: #ConfigurationOfFuel) load
+
+
+####Installation in Squeak:
+    (Installer mc http: 'http://smalltalkhub.com/mc/Pharo/Fuel/main')
+        project: 'Fuel';
+        install: 'CConfigurationOfFuel-PavelKrivanek.308'.
+    (Smalltalk at: #ConfigurationOfFuel) load.
