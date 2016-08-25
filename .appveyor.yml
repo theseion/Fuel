@@ -4,77 +4,77 @@ environment:
   CYG_CACHE: C:\cygwin\var\cache\setup
   CYG_EXE: C:\cygwin\setup-x86.exe
   CYG_MIRROR: http://cygwin.mirror.constant.com
-  SCI_RUN: /cygdrive/c/smalltalkCI-master/run.sh
+  SCI_RUN: /cygdrive/c/SMALLTALKCI-master/run.sh
 
   matrix:
     # Squeak-trunk -> #stable
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-tests.ston
-    # - smalltalk: Squeak-trunk
-    #   smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Squeak-trunk
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Squeak-trunk
+      SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Squeak-trunk
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Squeak-5.1 -> stable
-    - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-tests.ston
-    # - smalltalk: Squeak-5.1
-    #   smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Squeak-5.1
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Squeak-5.1
+      SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Squeak-5.1
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Squeak-5.0 -> stable
-    - smalltalk: Squeak-5.0
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Squeak-5.0
-      smalltalk_config: .stable-tests.ston
-    # - smalltalk: Squeak-5.0
-    #   smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Squeak-5.0
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Squeak-5.0
+      SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Squeak-5.0
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Squeak-4.6 -> stable
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-tests.ston
-    # - smalltalk: Squeak-4.6
-    #   smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Squeak-4.6
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Squeak-4.6
+      SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Squeak-4.6
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Squeak-4.5 ->stable
-    - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-tests.ston
-    # - smalltalk: Squeak-4.5
-    #   smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Squeak-4.5
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Squeak-4.5
+      SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Squeak-4.5
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-alpha -> bleedingEdge
-    - smalltalk: Pharo-alpha
-      smalltalk_config: .bleedingEdge-default.ston
-    - smalltalk: Pharo-alpha
-      smalltalk_config: .bleedingEdge-tests.ston
-    - smalltalk: Pharo-alpha
-      smalltalk_config: .bleedingEdge-corewithextras.ston
-    - smalltalk: Pharo-alpha
-      smalltalk_config: .bleedingEdge-developmentgroup.ston
+    - SMALLTALK: Pharo-alpha
+      SMALLTALK_CONFIG: .bleedingEdge-default.ston
+    - SMALLTALK: Pharo-alpha
+      SMALLTALK_CONFIG: .bleedingEdge-tests.ston
+    - SMALLTALK: Pharo-alpha
+      SMALLTALK_CONFIG: .bleedingEdge-corewithextras.ston
+    - SMALLTALK: Pharo-alpha
+      SMALLTALK_CONFIG: .bleedingEdge-developmentgroup.ston
     # Pharo-5.0 -> stable
-    - smalltalk: Pharo-5.0
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Pharo-5.0
-      smalltalk_config: .stable-tests.ston
-    - smalltalk: Pharo-5.0
-      smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Pharo-5.0
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Pharo-5.0
+      SMALLTALK_CONFIG: .stable-tests.ston
+    - SMALLTALK: Pharo-5.0
+      SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-4.0 -> stable
-    - smalltalk: Pharo-4.0
-      smalltalk_config: .stable-default.ston
-    - smalltalk: Pharo-4.0
-      smalltalk_config: .stable-tests.ston
-    - smalltalk: Pharo-4.0
-      smalltalk_config: .stable-corewithextras.ston
+    - SMALLTALK: Pharo-4.0
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Pharo-4.0
+      SMALLTALK_CONFIG: .stable-tests.ston
+    - SMALLTALK: Pharo-4.0
+      SMALLTALK_CONFIG: .stable-corewithextras.ston
 
 platform:
   - x86
 
 install:
   - '%CYG_EXE% -qnNdO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
-  - ps: Start-FileDownload "https://github.com/hpi-swa/smalltalkCI/archive/master.zip" "C:\smalltalkCI.zip"
-  - 7z x C:\smalltalkCI.zip -oC:\ -y > NULL
+  - ps: Start-FileDownload "https://github.com/hpi-swa/SMALLTALKCI/archive/master.zip" "C:\SMALLTALKCI.zip"
+  - 7z x C:\SMALLTALKCI.zip -oC:\ -y > NULL
 
 build: false
 
 test_script:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $smalltalk_config"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
