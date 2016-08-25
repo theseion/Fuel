@@ -14,9 +14,9 @@ matrix:
     - smalltalk: Squeak-trunk
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-corewithextras.ston
-      os: linux
+    # - smalltalk: Squeak-trunk
+    #   smalltalk_config: .stable-corewithextras.ston
+    #   os: linux
     # Squeak-5.1 -> stable
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-default.ston
@@ -24,9 +24,9 @@ matrix:
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-corewithextras.ston
-      os: linux
+    # - smalltalk: Squeak-5.1
+    #   smalltalk_config: .stable-corewithextras.ston
+    #   os: linux
     # Squeak-4.6 -> stable
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-default.ston
@@ -34,9 +34,9 @@ matrix:
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-corewithextras.ston
-      os: linux
+    # - smalltalk: Squeak-4.6
+    #   smalltalk_config: .stable-corewithextras.ston
+    #   os: linux
     # Squeak-4.5
     - smalltalk: Squeak-4.5
       smalltalk_config: .stable-default.ston
@@ -44,9 +44,9 @@ matrix:
     - smalltalk: Squeak-4.5
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-corewithextras.ston
-      os: linux
+    # - smalltalk: Squeak-4.5
+    #   smalltalk_config: .stable-corewithextras.ston
+    #   os: linux
     # Pharo-alpha -> bleedingEdge
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingedge-default.ston

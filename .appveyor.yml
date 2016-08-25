@@ -12,36 +12,36 @@ environment:
       smalltalk_config: .stable-default.ston
     - smalltalk: Squeak-trunk
       smalltalk_config: .stable-tests.ston
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-corewithextras.ston
+    # - smalltalk: Squeak-trunk
+    #   smalltalk_config: .stable-corewithextras.ston
     # Squeak-5.1 -> stable
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-default.ston
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-tests.ston
-    - smalltalk: Squeak-5.1
-      smalltalk_config: .stable-corewithextras.ston
+    # - smalltalk: Squeak-5.1
+    #   smalltalk_config: .stable-corewithextras.ston
     # Squeak-5.0 -> stable
     - smalltalk: Squeak-5.0
       smalltalk_config: .stable-default.ston
     - smalltalk: Squeak-5.0
       smalltalk_config: .stable-tests.ston
-    - smalltalk: Squeak-5.0
-      smalltalk_config: .stable-corewithextras.ston
+    # - smalltalk: Squeak-5.0
+    #   smalltalk_config: .stable-corewithextras.ston
     # Squeak-4.6 -> stable
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-default.ston
     - smalltalk: Squeak-4.6
       smalltalk_config: .stable-tests.ston
-    - smalltalk: Squeak-4.6
-      smalltalk_config: .stable-corewithextras.ston
+    # - smalltalk: Squeak-4.6
+    #   smalltalk_config: .stable-corewithextras.ston
     # Squeak-4.5 ->stable
     - smalltalk: Squeak-4.5
       smalltalk_config: .stable-default.ston
     - smalltalk: Squeak-4.5
       smalltalk_config: .stable-tests.ston
-    - smalltalk: Squeak-4.5
-      smalltalk_config: .stable-corewithextras.ston
+    # - smalltalk: Squeak-4.5
+    #   smalltalk_config: .stable-corewithextras.ston
     # Pharo-alpha -> bleedingEdge
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingEdge-default.ston
