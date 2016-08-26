@@ -35,63 +35,63 @@ From the beginning it was a constraint to have a good object-oriented design and
 
 ##Pharo >= 3
 ```smalltalk
-    Metacello new
-        repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
-        configuration: 'Fuel';
-        load.
+Metacello new
+    repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    configuration: 'Fuel';
+    load.
 ```
 
 <details>
   <summary>Pharo <= 2</summary>
 ```smalltalk
-    Gofer new
-        gemsource: 'metacello';
-        package: 'ConfigurationOfMetacello';
-        load.
-    ((Smalltalk at: #ConfigurationOfMetacello) project 
-        version: #'previewBootstrap') load.
-    (Smalltalk at: #Metacello) new
-        configuration: 'MetacelloPreview';
-        version: #stable;
-        repository: 'github://dalehenrich/metacello-work:configuration';
-        load.
-    Metacello new
-      baseline: 'Metacello';
-      repository: 'github://dalehenrich/metacello-work:master/repository';
-      get.
-    Metacello new
-      baseline: 'Metacello';
-      repository: 'github://dalehenrich/metacello-work:master/repository';
-      onConflict: [:ex | ex allow];
-      load.
-    Metacello new
-        repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
-        configuration: 'Fuel';
-        load.
+Gofer new
+    gemsource: 'metacello';
+    package: 'ConfigurationOfMetacello';
+    load.
+((Smalltalk at: #ConfigurationOfMetacello) project 
+    version: #'previewBootstrap') load.
+(Smalltalk at: #Metacello) new
+    configuration: 'MetacelloPreview';
+    version: #stable;
+    repository: 'github://dalehenrich/metacello-work:configuration';
+    load.
+Metacello new
+    baseline: 'Metacello';
+    repository: 'github://dalehenrich/metacello-work:master/repository';
+    get.
+Metacello new
+    baseline: 'Metacello';
+    repository: 'github://dalehenrich/metacello-work:master/repository';
+    onConflict: [:ex | ex allow];
+    load.
+Metacello new
+    repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    configuration: 'Fuel';
+    load.
 ```
 </details>
 
 ##Squeak
 ```smalltalk
-    Installer gemsource
-        project: 'metacello';
-        addPackage: 'ConfigurationOfMetacello';
-        install.
-    ((Smalltalk at: #ConfigurationOfMetacello) project 
-        version: #'previewBootstrap') load.
-    (Smalltalk at: #Metacello) new
-        configuration: 'MetacelloPreview';
-        version: #stable;
-        repository: 'github://dalehenrich/metacello-work:configuration';
-        load.
-    (Smalltalk at: #Metacello) new
-        baseline: 'Metacello';
-        repository: 'github://dalehenrich/metacello-work:master/repository';
-        load.
-    (Smalltalk at: #Metacello) new
-        repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
-        configuration: 'Fuel';
-        load.
+Installer gemsource
+    project: 'metacello';
+    addPackage: 'ConfigurationOfMetacello';
+    install.
+((Smalltalk at: #ConfigurationOfMetacello) project 
+    version: #'previewBootstrap') load.
+(Smalltalk at: #Metacello) new
+    configuration: 'MetacelloPreview';
+    version: #stable;
+    repository: 'github://dalehenrich/metacello-work:configuration';
+    load.
+(Smalltalk at: #Metacello) new
+    baseline: 'Metacello';
+    repository: 'github://dalehenrich/metacello-work:master/repository';
+    load.
+(Smalltalk at: #Metacello) new
+    repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    configuration: 'Fuel';
+    load.
 ```
 
 #More documentation
