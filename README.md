@@ -2,10 +2,10 @@
 
 [![Build Status](https://travis-ci.org/theseion/Fuel.svg?branch=master)](https://travis-ci.org/theseion/Fuel) [![Build status](https://ci.appveyor.com/api/projects/status/74d8sx8mf20v0p83/branch/master?svg=true)](https://ci.appveyor.com/project/theseion/fuel/branch/master)
 
-- [Description](README.md#Description)
-- [Properties](README.md#Properties)
-- [Installation](README.md#Installation)
-- [More documentation](README.md#More documentation)
+- [Description](#description)
+- [Properties](#properties)
+- [Installation](#installation)
+- [More documentation](#more-documentation)
 
 #Description
 A general-purpose object serialization framework developed in [Pharo](https://pharo.org). Fuel is developed under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
