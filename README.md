@@ -1,11 +1,11 @@
-[![Fuel](resources/fuel-header-logo.png)](http://rmod.inria.fr/web/software/Fuel)
+[![Fuel](resources/logo-fuel-header.png)](http://rmod.inria.fr/web/software/Fuel)
 
 [![Build Status](https://travis-ci.org/theseion/Fuel.svg?branch=master)](https://travis-ci.org/theseion/Fuel) [![Build status](https://ci.appveyor.com/api/projects/status/74d8sx8mf20v0p83/branch/master?svg=true)](https://ci.appveyor.com/project/theseion/fuel/branch/master)
 
-- [Description](Description)
-- [Properties](Properties)
-- [Installation](Installation)
-- [More documentation](More documentation)
+- [Description](README.md#Description)
+- [Properties](README.md#Properties)
+- [Installation](README.md#Installation)
+- [More documentation](README.md#More documentation)
 
 #Description
 A general-purpose object serialization framework developed in [Pharo](https://pharo.org). Fuel is developed under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
@@ -34,13 +34,16 @@ From the beginning it was a constraint to have a good object-oriented design and
 #Installation
 
 ##Pharo >= 3
+```smalltalk
     Metacello new
         repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
         configuration: 'Fuel';
         load.
+```
 
 <details>
   <summary>Pharo <= 2</summary>
+```smalltalk
     Gofer new
         gemsource: 'metacello';
         package: 'ConfigurationOfMetacello';
@@ -65,9 +68,11 @@ From the beginning it was a constraint to have a good object-oriented design and
         repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
         configuration: 'Fuel';
         load.
+```
 </details>
 
 ##Squeak
+```smalltalk
     Installer gemsource
         project: 'metacello';
         addPackage: 'ConfigurationOfMetacello';
@@ -87,6 +92,7 @@ From the beginning it was a constraint to have a good object-oriented design and
         repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
         configuration: 'Fuel';
         load.
+```
 
 #More documentation
 The main hub for documenation is our page at [RMoD, INRIA](http://rmod.inria.fr/web/software/Fuel)
