@@ -3,7 +3,6 @@ sudo: false
 
 # Squeak 5.0 can't load Traits due to a bug in the class format definition.
 # This issue has been fixed in trunk
-#  - Squeak-5.0
 
 matrix:
   include:
