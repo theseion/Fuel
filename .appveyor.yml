@@ -21,7 +21,7 @@ environment:
       SMALLTALK_CONFIG: .stable-tests.ston
     - SMALLTALK: Squeak-5.1
       SMALLTALK_CONFIG: .stable-corewithextras.ston
-    Squeak-5.0 -> stable
+    # Squeak-5.0 -> stable
     - SMALLTALK: Squeak-5.0
       SMALLTALK_CONFIG: .stable-default.ston
     - SMALLTALK: Squeak-5.0
