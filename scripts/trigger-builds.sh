@@ -10,7 +10,7 @@ curl -m 5 -s -X POST \
   -H "Content-Type: application/json" \
   -H "Accept: application/vnd.travis-ci.2+json" \
   -H "Travis-API-Version: 3" \
-  -H "Authorization: token ${APPVEOYR_TOKEN}" \
+  -H "Authorization: token ${TRAVIS_TOKEN}" \
   -d "${BODY}" \
   https://api.travis-ci.org/repo/theseion%2FFuel/requests
 
@@ -22,7 +22,7 @@ BODY='{
 curl -m 5 -s -X POST \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer ${TRAVIS_TOKEN}" \
+  -H "Authorization: Bearer ${APPVEYOR_TOKEN}" \
   -d "${BODY}" \
   https://ci.appveyor.com/api/builds
 
