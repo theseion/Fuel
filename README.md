@@ -56,16 +56,16 @@ Gofer new
     version: #stable;
     repository: 'github://dalehenrich/metacello-work:configuration';
     load.
-Metacello new
+(Smalltalk at: #Metacello) new
     baseline: 'Metacello';
     repository: 'github://dalehenrich/metacello-work:master/repository';
     get.
-Metacello new
+(Smalltalk at: #Metacello) new
     baseline: 'Metacello';
     repository: 'github://dalehenrich/metacello-work:master/repository';
     onConflict: [:ex | ex allow];
     load.
-Metacello new
+(Smalltalk at: #Metacello) new
     repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
     configuration: 'Fuel';
     load.
