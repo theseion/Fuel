@@ -43,7 +43,7 @@ Metacello new
 ```
 
 <details>
-  <summary>Pharo <= 2</summary>
+  <summary>Pharo < 3</summary>
 ```smalltalk
 Gofer new
     url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
