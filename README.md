@@ -46,53 +46,29 @@ Metacello new
   <summary>Pharo <= 2</summary>
 ```smalltalk
 Gofer new
-    gemsource: 'metacello';
-    package: 'ConfigurationOfMetacello';
+    url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    package: 'ConfigurationOfFuel';
     load.
-((Smalltalk at: #ConfigurationOfMetacello) project 
-    version: #'previewBootstrap') load.
-(Smalltalk at: #Metacello) new
-    configuration: 'MetacelloPreview';
-    version: #stable;
-    repository: 'github://dalehenrich/metacello-work:configuration';
+(Smalltalk at: #ConfigurationOfFuel) load.
+</details>
+
+<details>
+  <summary>Pharo 1.1.1</summary>
+```smalltalk
+Gofer new
+    url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    package: 'ConfigurationOfFuel';
     load.
-(Smalltalk at: #Metacello) new
-    baseline: 'Metacello';
-    repository: 'github://dalehenrich/metacello-work:master/repository';
-    get.
-(Smalltalk at: #Metacello) new
-    baseline: 'Metacello';
-    repository: 'github://dalehenrich/metacello-work:master/repository';
-    onConflict: [:ex | ex allow];
-    load.
-(Smalltalk at: #Metacello) new
-    repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
-    configuration: 'Fuel';
-    load.
-```
+(Smalltalk at: #ConfigurationOfFuel) project load: '1.9.4.
 </details>
 
 ##Squeak
 ```smalltalk
-Installer gemsource
-    project: 'metacello';
-    addPackage: 'ConfigurationOfMetacello';
+Installer monticello
+    http: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
+    addPackage: 'ConfigurationOfFuel';
     install.
-((Smalltalk at: #ConfigurationOfMetacello) project 
-    version: #'previewBootstrap') load.
-(Smalltalk at: #Metacello) new
-    configuration: 'MetacelloPreview';
-    version: #stable;
-    repository: 'github://dalehenrich/metacello-work:configuration';
-    load.
-(Smalltalk at: #Metacello) new
-    baseline: 'Metacello';
-    repository: 'github://dalehenrich/metacello-work:master/repository';
-    load.
-(Smalltalk at: #Metacello) new
-    repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
-    configuration: 'Fuel';
-    load.
+(Smalltalk at: #ConfigurationOfFuel) load.
 ```
 
 #Report bugs
