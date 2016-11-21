@@ -50,6 +50,7 @@ Gofer new
     package: 'ConfigurationOfFuel';
     load.
 (Smalltalk at: #ConfigurationOfFuel) load.
+```
 </details>
 
 <details>
@@ -60,6 +61,7 @@ Gofer new
     package: 'ConfigurationOfFuel';
     load.
 (Smalltalk at: #ConfigurationOfFuel) project load: '1.9.4.
+```
 </details>
 
 ##Squeak
