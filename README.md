@@ -64,7 +64,7 @@ Gofer new
 ```
 </details>
 
-##Squeak
+##Squeak (>= 4.1)
 ```smalltalk
 Installer monticello
     http: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
