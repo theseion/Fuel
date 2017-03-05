@@ -60,7 +60,7 @@ Gofer new
     url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
     package: 'ConfigurationOfFuel';
     load.
-(Smalltalk at: #ConfigurationOfFuel) project load: '1.9.4.
+(Smalltalk at: #ConfigurationOfFuel) project load: '1.9.4'.
 ```
 </details>
 
