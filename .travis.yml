@@ -59,6 +59,16 @@ matrix:
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingedge-developmentgroup.ston
       os: linux
+    # Pharo-6.0 -> stable
+    - smalltalk: Pharo-6.0
+      smalltalk_config: .stable-default.ston
+      os: linux
+    - smalltalk: Pharo-6.0
+      smalltalk_config: .stable-tests.ston
+      os: linux
+    - smalltalk: Pharo-6.0
+      smalltalk_config: .stable-corewithextras.ston
+      os: linux
     # Pharo-5.0 -> stable
     - smalltalk: Pharo-5.0
       smalltalk_config: .stable-default.ston

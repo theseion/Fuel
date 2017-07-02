@@ -47,6 +47,13 @@ environment:
       SMALLTALK_CONFIG: .bleedingEdge-corewithextras.ston
     - SMALLTALK: Pharo-alpha
       SMALLTALK_CONFIG: .bleedingEdge-developmentgroup.ston
+    # Pharo-6.0 -> stable
+    - SMALLTALK: Pharo-6.0
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Pharo-6.0
+      SMALLTALK_CONFIG: .stable-tests.ston
+    - SMALLTALK: Pharo-6.0
+      SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-5.0 -> stable
     - SMALLTALK: Pharo-5.0
       SMALLTALK_CONFIG: .stable-default.ston
