@@ -68,6 +68,13 @@ environment:
       SMALLTALK_CONFIG: .stable-tests.ston
     - SMALLTALK: Pharo-4.0
       SMALLTALK_CONFIG: .stable-corewithextras.ston
+    # Pharo-3.0 -> stable
+    - SMALLTALK: Pharo-3.0
+      SMALLTALK_CONFIG: .stable-default.ston
+    - SMALLTALK: Pharo-3.0
+      SMALLTALK_CONFIG: .stable-tests.ston
+    - SMALLTALK: Pharo-3.0
+      SMALLTALK_CONFIG: .stable-corewithextras.ston
 
 platform:
   - x86
