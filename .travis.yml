@@ -59,6 +59,39 @@ matrix:
     - smalltalk: Pharo-alpha
       smalltalk_config: .bleedingedge-developmentgroup.ston
       os: linux
+    # Pharo-alpha 64 bit -> bleedingEdge
+    - smalltalk: Pharo64-alpha
+      smalltalk_config: .bleedingedge-default.ston
+      os: linux
+    - smalltalk: Pharo64-alpha
+      smalltalk_config: .bleedingedge-tests.ston
+      os: linux
+    - smalltalk: Pharo64-alpha
+      smalltalk_config: .bleedingedge-corewithextras.ston
+      os: linux
+    - smalltalk: Pharo64-alpha
+      smalltalk_config: .bleedingedge-developmentgroup.ston
+      os: linux
+    # Pharo-6.1 -> stable
+    - smalltalk: Pharo-6.1
+      smalltalk_config: .stable-default.ston
+      os: linux
+    - smalltalk: Pharo-6.1
+      smalltalk_config: .stable-tests.ston
+      os: linux
+    - smalltalk: Pharo-6.1
+      smalltalk_config: .stable-corewithextras.ston
+      os: linux
+    # Pharo-6.1 64 bit -> stable
+    - smalltalk: Pharo64-6.1
+      smalltalk_config: .stable-default.ston
+      os: linux
+    - smalltalk: Pharo64-6.1
+      smalltalk_config: .stable-tests.ston
+      os: linux
+    - smalltalk: Pharo64-6.1
+      smalltalk_config: .stable-corewithextras.ston
+      os: linux
     # Pharo-6.0 -> stable
     - smalltalk: Pharo-6.0
       smalltalk_config: .stable-default.ston
@@ -67,6 +100,16 @@ matrix:
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-6.0
+      smalltalk_config: .stable-corewithextras.ston
+      os: linux
+    # Pharo-6.0 64 bit -> stable
+    - smalltalk: Pharo64-6.0
+      smalltalk_config: .stable-default.ston
+      os: linux
+    - smalltalk: Pharo64-6.0
+      smalltalk_config: .stable-tests.ston
+      os: linux
+    - smalltalk: Pharo64-6.0
       smalltalk_config: .stable-corewithextras.ston
       os: linux
     # Pharo-5.0 -> stable
