@@ -10,7 +10,7 @@ environment:
   SCI_RUN: /cygdrive/c/SMALLTALKCI-master/run.sh
 
   matrix:
-    allow-failures:
+    allow_failures:
       - SMALLTLAK: Squeak-trunk
       - SMALLTALK: Pharo-alpha
       - SMALLTLAK: Pharo64-alpha

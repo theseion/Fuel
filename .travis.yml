@@ -5,7 +5,7 @@ sudo: false
 # This issue has been fixed in trunk
 
 matrix:
-  allow-failures:
+  allow_failures:
     - smalltalk: Squeak-trunk
     - smalltalk: Pharo-alpha
     - smalltalk: Pharo64-alpha
