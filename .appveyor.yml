@@ -10,10 +10,6 @@ environment:
   SCI_RUN: /cygdrive/c/SMALLTALKCI-master/run.sh
 
   matrix:
-    allow_failures:
-      - SMALLTLAK: Squeak-trunk
-      - SMALLTALK: Pharo-alpha
-      - SMALLTLAK: Pharo64-alpha
     # Squeak-trunk -> #stable
     - SMALLTALK: Squeak-trunk
       SMALLTALK_CONFIG: .stable-default.ston
@@ -123,3 +119,9 @@ build: false
 
 test_script:
   - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
+
+matrix:
+  allow_failures:
+    - SMALLTLAK: Squeak-trunk
+    - SMALLTALK: Pharo-alpha
+    - SMALLTLAK: Pharo64-alpha
