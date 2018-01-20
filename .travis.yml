@@ -103,15 +103,16 @@ matrix:
       smalltalk_config: .stable-corewithextras.ston
       os: linux
     # Pharo-6.0 64 bit -> stable
-    - smalltalk: Pharo64-6.0
-      smalltalk_config: .stable-default.ston
-      os: linux
-    - smalltalk: Pharo64-6.0
-      smalltalk_config: .stable-tests.ston
-      os: linux
-    - smalltalk: Pharo64-6.0
-      smalltalk_config: .stable-corewithextras.ston
-      os: linux
+    # A missing override in SmallInteger prevents this from working
+    # - smalltalk: Pharo64-6.0
+    #   smalltalk_config: .stable-default.ston
+    #   os: linux
+    # - smalltalk: Pharo64-6.0
+    #   smalltalk_config: .stable-tests.ston
+    #   os: linux
+    # - smalltalk: Pharo64-6.0
+    #   smalltalk_config: .stable-corewithextras.ston
+    #   os: linux
     # Pharo-5.0 -> stable
     - smalltalk: Pharo-5.0
       smalltalk_config: .stable-default.ston

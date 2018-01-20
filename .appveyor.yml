@@ -78,12 +78,13 @@ environment:
     - SMALLTALK: Pharo-6.0
       SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-6.0 64 bit -> stable
-    - SMALLTALK: Pharo64-6.0
-      SMALLTALK_CONFIG: .stable-default.ston
-    - SMALLTALK: Pharo64-6.0
-      SMALLTALK_CONFIG: .stable-tests.ston
-    - SMALLTALK: Pharo64-6.0
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+    # A missing override in SmallInteger prevents this from working
+    # - SMALLTALK: Pharo64-6.0
+    #   SMALLTALK_CONFIG: .stable-default.ston
+    # - SMALLTALK: Pharo64-6.0
+    #   SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Pharo64-6.0
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-5.0 -> stable
     - SMALLTALK: Pharo-5.0
       SMALLTALK_CONFIG: .stable-default.ston
