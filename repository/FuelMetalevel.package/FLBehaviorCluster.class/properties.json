@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MartinDias 7/30/2011 20:31",
+	"super" : "FLIteratingCluster",
+	"category" : "FuelMetalevel-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLBehaviorCluster",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MartinDias 7/30/2011 20:30",
+	"super" : "FLBehaviorCluster",
+	"category" : "FuelMetalevel-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLClassTraitCluster",
+	"type" : "normal"
+}
