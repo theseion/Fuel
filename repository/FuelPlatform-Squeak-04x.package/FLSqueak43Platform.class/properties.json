@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSqueak4Platform",
+	"category" : "FuelPlatform-Squeak-04x",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLSqueak43Platform",
+	"type" : "normal"
+}
