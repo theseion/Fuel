@@ -64,12 +64,13 @@ environment:
     - SMALLTALK: Pharo-6.1
       SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-6.1 64 bit -> stable
-    - SMALLTALK: Pharo64-6.1
-      SMALLTALK_CONFIG: .stable-default.ston
-    - SMALLTALK: Pharo64-6.1
-      SMALLTALK_CONFIG: .stable-tests.ston
-    - SMALLTALK: Pharo64-6.1
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+    # There's no 64-bit VM for Windows to run 6.1
+    # - SMALLTALK: Pharo64-6.1
+    #   SMALLTALK_CONFIG: .stable-default.ston
+    # - SMALLTALK: Pharo64-6.1
+    #   SMALLTALK_CONFIG: .stable-tests.ston
+    # - SMALLTALK: Pharo64-6.1
+    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
     # Pharo-6.0 -> stable
     - SMALLTALK: Pharo-6.0
       SMALLTALK_CONFIG: .stable-default.ston
