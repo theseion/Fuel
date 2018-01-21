@@ -1,0 +1,3 @@
+accessing
+sampleContents
+	^ sample content

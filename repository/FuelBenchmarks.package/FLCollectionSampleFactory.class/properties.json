@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSampleFactory",
+	"category" : "FuelBenchmarks-Samples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLCollectionSampleFactory",
+	"type" : "normal"
+}

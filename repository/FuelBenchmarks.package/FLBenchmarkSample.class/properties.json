@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "MartinDias 6/1/2011 19:38",
+	"super" : "Object",
+	"category" : "FuelBenchmarks-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"content",
+		"title"
+	],
+	"name" : "FLBenchmarkSample",
+	"type" : "normal"
+}

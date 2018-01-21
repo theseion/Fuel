@@ -1,0 +1,1 @@
+I am useful to benchmark serialization performance. I am substituted by my contents during serialization.

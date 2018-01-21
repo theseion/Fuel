@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializationTest",
+	"category" : "FuelBenchmarks-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLBenchmarkSampleTest",
+	"type" : "normal"
+}
