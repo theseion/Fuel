@@ -1,0 +1,3 @@
+accessing
+edgeColor
+	^ Color gray

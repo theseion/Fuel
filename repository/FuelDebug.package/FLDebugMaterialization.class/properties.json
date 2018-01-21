@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FLMaterialization",
+	"category" : "FuelDebug-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Last"
+	],
+	"instvars" : [
+		"log"
+	],
+	"name" : "FLDebugMaterialization",
+	"type" : "normal"
+}

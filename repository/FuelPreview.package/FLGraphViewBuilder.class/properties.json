@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "FuelPreview",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"references",
+		"elementByObjectMap",
+		"colors"
+	],
+	"name" : "FLGraphViewBuilder",
+	"type" : "normal"
+}

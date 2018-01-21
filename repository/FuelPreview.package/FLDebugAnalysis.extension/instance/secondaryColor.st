@@ -1,0 +1,3 @@
+*FuelPreview
+secondaryColor
+	^ Color yellow

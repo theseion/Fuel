@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FLSerialization",
+	"category" : "FuelDebug-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Last"
+	],
+	"instvars" : [
+		"log"
+	],
+	"name" : "FLDebugSerialization",
+	"type" : "normal"
+}
