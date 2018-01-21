@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLIteratingCluster",
+	"category" : "Fuel-Clusters-Optionals",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLOptimizedObjectCluster",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLBasicSerializationTest",
+	"category" : "FuelTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"byteArray"
+	],
+	"name" : "FLInMemoryBasicSerializationTest",
+	"type" : "normal"
+}

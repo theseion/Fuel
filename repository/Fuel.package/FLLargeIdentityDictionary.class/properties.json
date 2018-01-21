@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FLLargeIdentityHashedCollection",
+	"category" : "Fuel-Collections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"keys",
+		"values"
+	],
+	"name" : "FLLargeIdentityDictionary",
+	"type" : "normal"
+}

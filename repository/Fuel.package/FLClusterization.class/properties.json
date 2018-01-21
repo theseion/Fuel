@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baselevelBucket",
+		"substitutionsBucket",
+		"globalsBucket",
+		"metalevelInstanceSideBucket",
+		"metalevelClassSideBucket",
+		"primitivesBucket",
+		"postBaselevelBucket"
+	],
+	"name" : "FLClusterization",
+	"type" : "normal"
+}

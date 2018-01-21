@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "MaxLeske 11/20/2016 16:32",
+	"super" : "Object",
+	"category" : "ConfigurationOfFuelPlatform",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"project",
+		"customProjectAttributes"
+	],
+	"name" : "ConfigurationOfFuelPlatform",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objectStack",
+		"firstMapper",
+		"clusterization",
+		"root",
+		"privateObjectStack",
+		"privateFirstMapper"
+	],
+	"name" : "FLAnalysis",
+	"type" : "normal"
+}

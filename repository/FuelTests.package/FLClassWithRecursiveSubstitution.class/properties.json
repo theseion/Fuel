@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FuelTests-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"index"
+	],
+	"name" : "FLClassWithRecursiveSubstitution",
+	"type" : "normal"
+}

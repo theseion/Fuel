@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLFileStreamStrategy",
+	"category" : "FuelTests-StreamStrategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLBinaryFileStreamStrategy",
+	"type" : "normal"
+}

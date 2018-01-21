@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLAbstractCollectionCluster",
+	"category" : "Fuel-Clusters-Optionals",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLSimpleCollectionCluster",
+	"type" : "normal"
+}

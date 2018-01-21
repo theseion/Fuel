@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugAction",
+	"category" : "FuelTools-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FuelOutStackDebugAction",
+	"type" : "normal"
+}

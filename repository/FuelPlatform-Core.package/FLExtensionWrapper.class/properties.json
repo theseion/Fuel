@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "FuelPlatform-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetClass",
+		"method",
+		"selector",
+		"isSource"
+	],
+	"name" : "FLExtensionWrapper",
+	"type" : "normal"
+}

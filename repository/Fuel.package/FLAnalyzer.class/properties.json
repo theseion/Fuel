@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"internalClasses",
+		"pluggableSubstitutions",
+		"globalMappersFactory",
+		"analysisFactory",
+		"generalMapperFactory",
+		"globalSymbols",
+		"internalMethods",
+		"globalMappers",
+		"globalEnvironment"
+	],
+	"name" : "FLAnalyzer",
+	"type" : "normal"
+}
