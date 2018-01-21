@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaxLeske 1/21/2018 22:28",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfFuel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfFuel",
+	"type" : "normal"
+}
