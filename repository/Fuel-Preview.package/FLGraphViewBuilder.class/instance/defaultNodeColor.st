@@ -1,0 +1,3 @@
+accessing
+defaultNodeColor
+	^ Color black
