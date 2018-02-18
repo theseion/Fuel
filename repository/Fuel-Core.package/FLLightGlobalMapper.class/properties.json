@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLMapper",
+	"category" : "Fuel-Core-Mappers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"globals"
+	],
+	"name" : "FLLightGlobalMapper",
+	"type" : "normal"
+}

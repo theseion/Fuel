@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLPrimitiveCluster",
+	"category" : "Fuel-Core-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLSmallIntegerCluster",
+	"type" : "normal"
+}

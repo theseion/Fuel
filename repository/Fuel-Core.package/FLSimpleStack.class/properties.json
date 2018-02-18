@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core-Collections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"array",
+		"slotIndex"
+	],
+	"name" : "FLSimpleStack",
+	"type" : "normal"
+}

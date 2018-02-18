@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "FLSerialization",
-	"category" : "Fuel-Debug-Core",
+	"category" : "Fuel-Debug",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [

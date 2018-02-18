@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializationTest",
+	"category" : "Fuel-Tests-Core-Base",
+	"classinstvars" : [
+		"interval"
+	],
+	"pools" : [ ],
+	"classvars" : [
+		"ClassVariableForTesting"
+	],
+	"instvars" : [ ],
+	"name" : "FLBlockClosureSerializationTest",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Fuel-Tests-ProgressUpdate",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"start",
+		"end",
+		"history"
+	],
+	"name" : "FLProgressLog",
+	"type" : "normal"
+}

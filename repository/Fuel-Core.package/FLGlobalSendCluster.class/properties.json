@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLGlobalCluster",
+	"category" : "Fuel-Core-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"globalSends"
+	],
+	"name" : "FLGlobalSendCluster",
+	"type" : "normal"
+}

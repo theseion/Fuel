@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"analyzer",
+		"serializationFactory",
+		"signature",
+		"version",
+		"stream",
+		"header"
+	],
+	"name" : "FLSerializer",
+	"type" : "normal"
+}

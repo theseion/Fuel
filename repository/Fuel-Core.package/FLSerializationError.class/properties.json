@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLError",
+	"category" : "Fuel-Core-Errors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLSerializationError",
+	"type" : "normal"
+}

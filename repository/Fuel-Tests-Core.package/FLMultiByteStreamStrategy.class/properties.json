@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLStreamStrategy",
+	"category" : "Fuel-Tests-Core-StreamStrategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"inMemoryStream"
+	],
+	"name" : "FLMultiByteStreamStrategy",
+	"type" : "normal"
+}

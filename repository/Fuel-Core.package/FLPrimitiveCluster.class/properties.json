@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLIteratingCluster",
+	"category" : "Fuel-Core-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLPrimitiveCluster",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLIteratingCluster",
+	"category" : "Fuel-Core-Clusters",
+	"classinstvars" : [
+		"transformationForSerializing"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLCompiledMethodCluster",
+	"type" : "normal"
+}

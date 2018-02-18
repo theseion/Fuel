@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Stream",
+	"category" : "Fuel-Core-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"buffer",
+		"position",
+		"streamRespondsToNextPutAllStartingAt"
+	],
+	"name" : "FLBufferedWriteStream",
+	"type" : "normal"
+}

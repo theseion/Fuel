@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Core-Mappers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"next",
+		"analysis"
+	],
+	"name" : "FLMapper",
+	"type" : "normal"
+}
