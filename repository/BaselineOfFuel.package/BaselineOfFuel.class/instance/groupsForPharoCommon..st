@@ -2,14 +2,13 @@ baselines-helpers
 groupsForPharoCommon: spec
 	spec for: #pharo do: [              
 		spec
-			package: 'FuelPreview' with: [ spec requires: #( 'FuelDebug' 'Roassal')];
-			package: 'FuelMetalevel' with: [ spec requires: #( 'Fuel' )];
-			package: 'FuelMetalevelTests' with: [ spec requires: #('FuelMetalevel' 'FuelTests' )].
+			package: 'Fuel-Preview' with: [ spec requires: #( 'Fuel-Debug' 'Roassal')];
+			package: 'Fuel-Metalevel' with: [ spec requires: #( 'Fuel' )];
+			package: 'Fuel-Metalevel-Tests' with: [ spec requires: #('Fuel-Metalevel' 'Fuel-Tests' ) ].
 		
 		self roassal: spec.
 
 		spec
-			group: 'CoreWithExtras' with: #('Core'  'FuelMetalevel' 'FuelProgressUpdate');
-			group: 'Tests' with: #('FuelTests' );
-			group: 'DevelopmentGroup' with: #('CoreWithExtras' 'Tests' 'FuelMetalevelTests' 'FuelDebug'). 
-	]
+			group: 'CoreWithExtras' with: #('Core'  'Fuel-Metalevel' 'Fuel-ProgressUpdate');
+			group: 'Tests' with: #('Fuel-Tests' );
+			group: 'DevelopmentGroup' with: #('CoreWithExtras' 'Tests' 'Fuel-Metalevel-Tests' 'Fuel-Debug') ]

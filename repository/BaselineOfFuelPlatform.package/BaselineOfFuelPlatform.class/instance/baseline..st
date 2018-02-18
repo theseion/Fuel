@@ -6,11 +6,11 @@ baseline: spec
 	do: [		
 		spec
 			postLoadDoIt: #addPostloadHacks;
-			package: 'FuelPlatform-Core'.
+			package: 'Fuel-Platform-Core'.
 			
 		spec
 			group: 'default'
-			with: #('FuelPlatform-Core' 'FuelPlatformCurrentGroup') ].
+			with: #('Fuel-Platform-Core' 'FuelPlatformCurrentGroup') ].
 	
 	self 
 		pharoPackagesAndGroups: spec;

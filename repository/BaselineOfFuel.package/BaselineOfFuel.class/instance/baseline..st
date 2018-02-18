@@ -11,18 +11,18 @@ baseline: spec
 			smark: spec.
 
 		spec
-			package: 'Fuel' with: [ spec requires: 'FuelPlatform' ];
-			package: 'FuelTests' with: [ spec requires: 'Fuel' ];
-			package: 'FuelDebug' with: [ spec requires: 'Fuel' ];
-			package: 'FuelProgressUpdate' with: [ spec requires: #('Fuel' 'Tests') ];
-			package: 'FuelBenchmarks' with: [ spec requires: #('Fuel' 'Tests' 'SMark-Jenkins') ].
+			package: 'Fuel' with: [ spec requires: 'Fuel-Platform' ];
+			package: 'Fuel-Tests' with: [ spec requires: 'Fuel' ];
+			package: 'Fuel-Debug' with: [ spec requires: 'Fuel' ];
+			package: 'Fuel-ProgressUpdate' with: [ spec requires: #('Fuel' 'Tests') ];
+			package: 'Fuel-Benchmarks' with: [ spec requires: #('Fuel' 'Tests' 'SMark-Jenkins') ].
 					
 		spec
 			group: 'default' with: #('Core' 'Tests');
 			group: 'Core' with: #('Fuel');
-			group: 'CoreWithExtras' with: #('Core' 'FuelProgressUpdate');
-			group: 'Tests' with: #('Core' 'FuelTests');
-			group: 'Benchmarks' with: #('Core' 'FuelBenchmarks').
+			group: 'CoreWithExtras' with: #('Core' 'Fuel-ProgressUpdate');
+			group: 'Tests' with: #('Core' 'Fuel-Tests');
+			group: 'Benchmarks' with: #('Core' 'Fuel-Benchmarks').
 	].
 
 	self groupsForPharoCommon: spec

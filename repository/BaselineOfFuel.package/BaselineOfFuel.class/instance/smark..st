@@ -4,7 +4,7 @@ smark: spec
 		project: 'SMark' with: [
 			spec
 				className: 'ConfigurationOfSMark';
-                        versionString: #development;
+				versionString: #development;
 				file: 'ConfigurationOfSMark';
 				repository: 'http://smalltalkhub.com/mc/StefanMarr/SMark/main' ].
 
@@ -12,4 +12,4 @@ smark: spec
 		package: 'SMark-Jenkins' with: [ 
 			spec 
 				repository: 'http://smalltalkhub.com/mc/ClementBera/classic-bench/main';
-				requires: 'SMark' ].
+				requires: 'SMark' ]
