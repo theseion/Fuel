@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Fuel-Benchmarks-Samples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents"
+	],
+	"name" : "FLSubstitutedObject",
+	"type" : "normal"
+}
