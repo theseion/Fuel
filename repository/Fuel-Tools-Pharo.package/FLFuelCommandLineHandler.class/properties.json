@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CommandLineHandler",
+	"category" : "Fuel-Tools-Pharo-CommandLineHandler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"files"
+	],
+	"name" : "FLFuelCommandLineHandler",
+	"type" : "normal"
+}
