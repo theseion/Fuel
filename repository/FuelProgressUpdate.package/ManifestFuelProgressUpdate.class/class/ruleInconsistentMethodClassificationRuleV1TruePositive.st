@@ -1,3 +1,0 @@
-meta data
-ruleInconsistentMethodClassificationRuleV1TruePositive
-^ #(#('(RGMethodDefinition className: ''FLProgressSerialization'' selector: #clusterInstancesStepOf: isMetaSide: false)' #'2012-04-21T17:34:52.439000001+02:00') #('(RGMethodDefinition className: ''FLProgressSerialization'' selector: #headerStep isMetaSide: false)' #'2012-04-21T17:34:52.488000001+02:00') #('(RGMethodDefinition className: ''FLProgressAnalysis'' selector: #run isMetaSide: false)' #'2012-04-21T17:34:52.508+02:00') )

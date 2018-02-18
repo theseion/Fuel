@@ -1,3 +1,0 @@
-*FuelDebug
-position
-	^ stream position
