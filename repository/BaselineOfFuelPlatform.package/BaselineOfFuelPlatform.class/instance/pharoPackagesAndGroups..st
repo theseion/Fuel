@@ -1,7 +1,7 @@
 helpers
 pharoPackagesAndGroups: spec
 	spec for: #pharo do: [
-		spec package: 'Fuel-Platform-Pharo-Core' with: [ spec requires: 'FuelPlatform-Core' ] ].
+		spec package: 'Fuel-Platform-Pharo-Core' with: [ spec requires: 'Fuel-Platform-Core' ] ].
 	spec for: #'pharo1.x' do: [
 		spec package: 'Fuel-Platform-Pharo-01x' with: [ spec requires: 'Fuel-Platform-Pharo-Core' ].
 		spec group: 'FuelPlatformCurrentGroup' with: 'Fuel-Platform-Pharo-01x' ].

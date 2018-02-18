@@ -1,7 +1,7 @@
 helpers
 squeakPackagesAndGroups: spec
 	spec for: #squeak do: [
-		spec package: 'Fuel-Platform-Squeak-Core' with: [ spec requires: 'FuelPlatform-Core' ] ].
+		spec package: 'Fuel-Platform-Squeak-Core' with: [ spec requires: 'Fuel-Platform-Core' ] ].
 	spec for: #'squeak4.x' do: [
 		spec package: 'Fuel-Platform-Squeak-04x' with: [ spec requires: 'Fuel-Platform-Squeak-Core' ].
 		spec group: 'FuelPlatformCurrentGroup' with: 'Fuel-Platform-Squeak-04x' ].

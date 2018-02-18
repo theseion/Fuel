@@ -11,7 +11,7 @@ baseline: spec
 			smark: spec.
 
 		spec
-			package: 'Fuel' with: [ spec requires: 'Fuel-Platform' ];
+			package: 'Fuel' with: [ spec requires: 'FuelPlatform' ];
 			package: 'Fuel-Tests' with: [ spec requires: 'Fuel' ];
 			package: 'Fuel-Debug' with: [ spec requires: 'Fuel' ];
 			package: 'Fuel-ProgressUpdate' with: [ spec requires: #('Fuel' 'Tests') ];
