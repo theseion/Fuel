@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLReplacementMock",
+	"category" : "Fuel-Tests-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLReplacementClassMock",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+*Fuel-Tests
+fuelValueWithoutNotifications
+	SystemAnnouncer uniqueInstance suspendAllWhile: self

@@ -1,0 +1,6 @@
+*Fuel-Tests
+duringTestCompileSilently: code storeSource: storeSource
+	^ self
+		duringTestCompileSilently: code
+		storeSource: storeSource
+		classified: ''

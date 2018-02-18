@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerialization",
+	"category" : "Fuel-Tests-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLDelayedSerializationMock",
+	"type" : "normal"
+}
