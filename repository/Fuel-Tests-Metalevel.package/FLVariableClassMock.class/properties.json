@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLPair",
+	"category" : "Fuel-Tests-Metalevel-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLVariableClassMock",
+	"type" : "variable"
+}
