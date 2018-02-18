@@ -1,3 +1,0 @@
-*FuelPreview
-secondaryColor
-	^ Color yellow

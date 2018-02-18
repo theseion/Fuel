@@ -1,3 +1,0 @@
-*FuelPreview
-rootColor
-	^ Color red
