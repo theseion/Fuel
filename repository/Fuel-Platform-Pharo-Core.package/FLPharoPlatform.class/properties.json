@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLPlatform",
+	"category" : "Fuel-Platform-Pharo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLPharoPlatform",
+	"type" : "normal"
+}

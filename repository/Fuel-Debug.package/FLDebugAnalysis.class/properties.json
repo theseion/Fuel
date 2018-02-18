@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FLAnalysis",
+	"category" : "Fuel-Debug-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentlyTracing",
+		"references"
+	],
+	"name" : "FLDebugAnalysis",
+	"type" : "normal"
+}

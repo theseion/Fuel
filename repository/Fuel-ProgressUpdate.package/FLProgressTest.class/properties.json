@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLBasicSerializationTest",
+	"category" : "Fuel-ProgressUpdate-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLProgressTest",
+	"type" : "normal"
+}

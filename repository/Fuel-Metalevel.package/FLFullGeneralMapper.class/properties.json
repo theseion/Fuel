@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "MartinDias 8/7/2011 12:24",
+	"super" : "FLLightGeneralMapper",
+	"category" : "Fuel-Metalevel-Mappers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classCluster"
+	],
+	"name" : "FLFullGeneralMapper",
+	"type" : "normal"
+}

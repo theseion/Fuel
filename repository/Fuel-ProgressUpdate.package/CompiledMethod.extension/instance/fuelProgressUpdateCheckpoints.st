@@ -1,0 +1,4 @@
+*Fuel-ProgressUpdate
+fuelProgressUpdateCheckpoints
+	
+	^ #()

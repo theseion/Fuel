@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FLAnalysis",
+	"category" : "Fuel-ProgressUpdate",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"remainingCheckpoints",
+		"totalNumberOfCheckpoints",
+		"progressBar"
+	],
+	"name" : "FLProgressAnalysis",
+	"type" : "normal"
+}

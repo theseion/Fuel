@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "FLMapper",
+	"category" : "Fuel-Metalevel-Mappers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"clusterByObject",
+		"globalSymbols",
+		"globalsCluster",
+		"instanceSideCluster",
+		"classSideCluster",
+		"classVariablesCluster",
+		"globalAssociationCluster",
+		"globalCompiledMethodCluster",
+		"internalMethods",
+		"internalBehaviors"
+	],
+	"name" : "FLFullGlobalMapper",
+	"type" : "normal"
+}
