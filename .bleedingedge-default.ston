@@ -5,7 +5,7 @@ SmalltalkCISpec {
   },
   #loading : [
     SCIMetacelloLoadSpec {
-      #configuration : 'Fuel',
+      #baseline : 'Fuel',
       #directory: 'repository',
       #load : [ 'default' ],
       #platforms : [ #pharo ],
