@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Fuel',
-      #repository : 'github://theseion/fuel',
+      #directory : 'repository',
       #load : [ 'default' ],
       #platforms : [
         #squeak,

@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #configuration : 'Fuel',
-      #repository : 'http://smalltalkhub.com/mc/Pharo/Fuel/main',
+      #directory: 'repository',
       #load : [ 'Tests' ],
       #platforms : [
         #squeak,
@@ -10,6 +10,6 @@ SmalltalkCISpec {
     }
   ],
   #testing : {
-    #categories : [ 'FuelTests*' ]
+    #categories : [ 'Fuel-Tests*' ]
   }
 }
