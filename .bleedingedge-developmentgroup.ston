@@ -1,4 +1,8 @@
 SmalltalkCISpec {
+  #preLoading : SCICustomScript {
+    #path : 'scripts/unloadOldFuel.st',
+    #platforms : [ #pharo ]
+  },
   #loading : [
     SCIMetacelloLoadSpec {
       #configuration : 'Fuel',
