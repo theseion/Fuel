@@ -12,101 +12,101 @@ environment:
   matrix:
     # Squeak-trunk -> #stable
     - SMALLTALK: Squeak-trunk
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Squeak-trunk
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Squeak-trunk
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Squeak-5.1 -> stable
     - SMALLTALK: Squeak-5.1
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Squeak-5.1
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Squeak-5.1
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Squeak-4.6 -> stable
     - SMALLTALK: Squeak-4.6
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Squeak-4.6
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Squeak-4.6
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Squeak-4.5 ->stable
     - SMALLTALK: Squeak-4.5
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Squeak-4.5
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Squeak-4.5
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-alpha -> bleedingEdge
     - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-developmentgroup.ston
+      SMALLTALK_CONFIG: .developmentgroup.ston
     # Pharo-alpha 64 bit -> bleedingEdge
     - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .bleedingEdge-developmentgroup.ston
+      SMALLTALK_CONFIG: .developmentgroup.ston
     # Pharo-6.1 -> stable
     - SMALLTALK: Pharo-6.1
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-6.1
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-6.1
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-6.1 64 bit -> stable
     # There's no 64-bit VM for Windows to run 6.1
     # - SMALLTALK: Pharo64-6.1
-    #   SMALLTALK_CONFIG: .stable-default.ston
+    #   SMALLTALK_CONFIG: .default.ston
     # - SMALLTALK: Pharo64-6.1
-    #   SMALLTALK_CONFIG: .stable-tests.ston
+    #   SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Pharo64-6.1
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-6.0 -> stable
     - SMALLTALK: Pharo-6.0
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-6.0
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-6.0
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-6.0 64 bit -> stable
     # A missing override in SmallInteger prevents this from working
     # - SMALLTALK: Pharo64-6.0
-    #   SMALLTALK_CONFIG: .stable-default.ston
+    #   SMALLTALK_CONFIG: .default.ston
     # - SMALLTALK: Pharo64-6.0
-    #   SMALLTALK_CONFIG: .stable-tests.ston
+    #   SMALLTALK_CONFIG: .tests.ston
     # - SMALLTALK: Pharo64-6.0
-    #   SMALLTALK_CONFIG: .stable-corewithextras.ston
+    #   SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-5.0 -> stable
     - SMALLTALK: Pharo-5.0
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-5.0
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-5.0
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-4.0 -> stable
     - SMALLTALK: Pharo-4.0
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-4.0
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-4.0
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
     # Pharo-3.0 -> stable
     - SMALLTALK: Pharo-3.0
-      SMALLTALK_CONFIG: .stable-default.ston
+      SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Pharo-3.0
-      SMALLTALK_CONFIG: .stable-tests.ston
+      SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo-3.0
-      SMALLTALK_CONFIG: .stable-corewithextras.ston
+      SMALLTALK_CONFIG: .corewithextras.ston
 
 platform:
   - x86
