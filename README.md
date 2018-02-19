@@ -34,7 +34,15 @@ From the beginning it was a constraint to have a good object-oriented design and
 
 # Installation
 
-## Pharo >= 3
+## Pharo >= 7.0
+```smalltalk
+Metacello new
+    repository: 'github://theseion/Fuel:3.0.0/repository';
+    baseline: 'Fuel';
+    load.
+```
+
+## Pharo >= 3 and <= 6.1
 ```smalltalk
 Metacello new
     repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
@@ -64,7 +72,15 @@ Gofer new
 ```
 </details>
 
-## Squeak (>= 4.1)
+## Squeak >= 6.0
+```smalltalk
+Metacello new
+    repository: 'github://theseion/Fuel:3.0.0/repository';
+    baseline: 'Fuel';
+    load.
+```
+
+## Squeak >= 4.1 and <= 5.1
 ```smalltalk
 Installer monticello
     http: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
