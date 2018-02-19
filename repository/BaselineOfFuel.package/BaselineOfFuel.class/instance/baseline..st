@@ -24,7 +24,7 @@ baseline: spec
 		spec
 			group: 'default' with: #('Core' 'Tests');
 			group: 'Core' with: #('Fuel-Core');
-			group: 'CoreWithExtras' with: #('Core' 'Fuel-ProgressUpdate');
+			group: 'CoreWithExtras' with: #('Core' 'Fuel-ProgressUpdate' 'Fuel-Tests-ProgressUpdate');
 			group: 'Tests' with: #('Core' 'Fuel-Tests-Core');
 			group: 'Benchmarks' with: #('Core' 'Fuel-Benchmarks') ].
 
