@@ -3,6 +3,6 @@ install
 	"Start listening"
 
 	self jobAnnouncer
-		on: JobStart send: #start: to: self;
-		on: JobChange send: #current: to: self;
-		on: JobEnd send: #end: to: self.
+		when: JobStart send: #start: to: self;
+		when: JobChange send: #current: to: self;
+		when: JobEnd send: #end: to: self.
