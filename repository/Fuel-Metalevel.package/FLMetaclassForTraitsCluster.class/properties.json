@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MaxLeske 3/25/2018 23:15",
+	"super" : "FLTraitedMetaclassCluster",
+	"category" : "Fuel-Metalevel-Clusters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLMetaclassForTraitsCluster",
+	"type" : "normal"
+}

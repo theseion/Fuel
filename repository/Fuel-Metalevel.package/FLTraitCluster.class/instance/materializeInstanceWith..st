@@ -1,4 +1,5 @@
 serialize/materialize
 materializeInstanceWith: aDecoder
-
-	^Trait basicNew
+	| traitClass |
+	traitClass := aDecoder nextEncodedReference.
+	^ traitClass new

@@ -1,8 +1,6 @@
 serialize/materialize
 materializePostInstance: aTrait with: aDecoder
-
-	| classTrait category name environment |
-	classTrait := aDecoder nextEncodedReference.
+	| category name environment |
 	category := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
 	environment := aDecoder nextEncodedReference.
@@ -10,9 +8,5 @@ materializePostInstance: aTrait with: aDecoder
 	aTrait 
 		initialize;
 		name: name;
-		basicCategory: (category ifNil: [ RPackage defaultPackageName ]) asSymbol; 
-			"MartinDias-2014-09-03: initialization demanded by esteban for fixing ImageWorker"
-		classTrait: classTrait;
-		environment: environment.
-	
-	classTrait baseTrait: aTrait.
+		basicCategory: (category ifNil: [ RPackage defaultPackageName ]) asSymbol;
+		environment: environment

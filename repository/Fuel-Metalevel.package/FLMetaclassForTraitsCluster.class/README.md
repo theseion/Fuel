@@ -1,0 +1,1 @@
+In addition to storing a metaclass, I also know how to serialize and materialize the additional state of MetaclassForTraits.

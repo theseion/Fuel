@@ -10,6 +10,6 @@ testCreateWithClassSideMethod
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
 
 	self assert: (materializedClassOrTrait classSide includesSelector: #fortyTwo).
-	self assert: #(fortyTwo) asSet = materializedClassOrTrait classSide localSelectors.
+	self assert: #(fortyTwo) = materializedClassOrTrait classSide localSelectors.
 	self assert: category = (materializedClassOrTrait classSide whichCategoryIncludesSelector: #fortyTwo).
 	self assert: 42 = ((self newInstanceFrom: materializedClassOrTrait) class perform: #fortyTwo).

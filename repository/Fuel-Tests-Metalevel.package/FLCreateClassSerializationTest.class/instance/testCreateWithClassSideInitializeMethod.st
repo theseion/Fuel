@@ -11,6 +11,6 @@ testCreateWithClassSideInitializeMethod
 	self should: [ (self newInstanceFrom: materializedClassOrTrait) class perform: #initialize] raise: Error.
 
 	self assert: (materializedClassOrTrait classSide includesSelector: #initialize).
-	self assert: #(initialize) asSet = materializedClassOrTrait classSide localSelectors.
+	self assert: #(initialize) = materializedClassOrTrait classSide localSelectors.
 	self assert: category = (materializedClassOrTrait classSide whichCategoryIncludesSelector: #initialize).
 	

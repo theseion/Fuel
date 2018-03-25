@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
+	"commentStamp" : "<historical>",
+	"super" : "PackageManifest",
 	"category" : "Fuel-Metalevel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
