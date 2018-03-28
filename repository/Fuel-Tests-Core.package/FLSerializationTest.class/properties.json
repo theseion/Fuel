@@ -9,8 +9,7 @@
 		"serializer",
 		"materializer",
 		"classFactory",
-		"streamFactory",
-		"traits"
+		"streamFactory"
 	],
 	"name" : "FLSerializationTest",
 	"type" : "normal"

@@ -1,7 +1,10 @@
 tests
 resultOfSerializeRemoveAndMaterialize: aClass
-
-	self analyzer considerInternalAll: (Array with: aClass).
-	self serialize: aClass.
-	self removeFromSystem: aClass.
-	^self materialized
+	| materialized |
+	self analyzer considerInternalBehavior: aClass.
+	self
+		serialize: aClass;
+		removeFromSystem: aClass.
+	materialized := self materialized.
+	self registerBehavior: materialized.
+	^ materialized

@@ -1,9 +1,12 @@
 tests
 resultOfSerializeRemoveAndMaterializeAll: objects
-
-	| classesOrTraits |
+	| classesOrTraits materialized |
 	classesOrTraits := objects select: [ :anObject | anObject isBehavior or: [anObject isTrait]].
-	self analyzer considerInternalAll: classesOrTraits.
+	self analyzer considerInternalAllBehaviors: classesOrTraits.
 	self serialize: objects.
 	classesOrTraits do: [ :aClassOrTrait | self removeFromSystem: aClassOrTrait . ].
-	^self materialized
+	materialized := self materialized.
+	materialized 
+		select: [ :object | object isBehavior ]
+		thenDo: [ :behavior | self registerBehavior: behavior ].
+	^ materialized
