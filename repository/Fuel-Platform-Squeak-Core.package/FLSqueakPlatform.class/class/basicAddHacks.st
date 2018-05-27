@@ -4,4 +4,5 @@ basicAddHacks
 	
 	self
 		addPackageManifest;
+		addTraits;
 		addAbstractBinaryFileStream
