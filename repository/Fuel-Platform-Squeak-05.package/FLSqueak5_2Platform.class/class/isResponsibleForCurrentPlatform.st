@@ -1,4 +1,4 @@
 testing
 isResponsibleForCurrentPlatform
 	^ super isResponsibleForCurrentPlatform and: [
-		(SystemVersion current version beginsWith: 'Squeak6') ]
+		(SystemVersion current version beginsWith: 'Squeak5.2') ]
