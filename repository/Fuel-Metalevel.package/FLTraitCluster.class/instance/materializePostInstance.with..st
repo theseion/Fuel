@@ -7,6 +7,6 @@ materializePostInstance: aTrait with: aDecoder
 	
 	aTrait 
 		initialize;
-		name: name;
+		setName: name;
 		basicCategory: (category ifNil: [ RPackage defaultPackageName ]) asSymbol;
 		environment: environment
