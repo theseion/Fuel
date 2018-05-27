@@ -8,4 +8,5 @@ addAbstractBinaryFileStream
 		subclass: #AbstractBinaryFileStream
 		instanceVariableNames: ''
 		classVariableNames: ''
+		poolDictionaries: ''
 		category: self hacksCategoryName
