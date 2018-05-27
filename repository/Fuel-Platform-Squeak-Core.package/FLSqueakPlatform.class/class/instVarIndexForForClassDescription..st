@@ -1,7 +1,8 @@
 private-extensions-classdescription
 instVarIndexForForClassDescription: instVarName
 	<flExtensionOf: #ClassDescription selector: #instVarIndexFor: isSource: true>
-	^ '"Answer the index of the named instance variable."
+	^ 'instVarIndexFor: instVarName
+	"Answer the index of the named instance variable."
 
 	| index |
 	index := instanceVariables == nil 
