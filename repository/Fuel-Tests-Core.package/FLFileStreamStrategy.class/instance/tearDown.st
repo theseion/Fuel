@@ -1,3 +1,3 @@
 test support
 tearDown
-	(File named: self fileName) delete
+	FLPlatform current deleteFileNamed: self fileName
