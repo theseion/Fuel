@@ -1,3 +1,3 @@
 running
 setUpClassFactory
-	classFactory := ClassFactoryForTestCase new
+	classFactory := FLPlatform current classFactoryForTestCaseClass new

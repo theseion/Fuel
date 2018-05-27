@@ -1,6 +1,6 @@
 private-extensions-class
-addInstVarNamed: aString
-	<flExtensionOf: #Class>
+addInstVarNamedForClass: aString
+	<flExtensionOf: #Class selector: #addInstVarNamed:>
 	"Add the argument, aString, as one of the receiver's instance variables."
 	^((Smalltalk globals at: #ClassBuilder) new)
 		name: self name

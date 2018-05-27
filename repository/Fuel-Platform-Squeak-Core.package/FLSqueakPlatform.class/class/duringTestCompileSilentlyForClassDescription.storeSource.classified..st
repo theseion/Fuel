@@ -1,6 +1,6 @@
 private-extensions-classdescription
-duringTestCompileSilently: code storeSource: storeSource classified: aCategory
-	<flExtensionOf: #ClassDescription>
+duringTestCompileSilentlyForClassDescription: code storeSource: storeSource classified: aCategory
+	<flExtensionOf: #ClassDescription selector: #duringTestCompileSilently:storeSource:classified:>
 	^ FLPlatform current 
 		useAuthor: 'TestsAuthor'
 		during: [ [

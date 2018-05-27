@@ -1,6 +1,6 @@
 private-extensions-class
-removeInstVarNamed: aString
-	<flExtensionOf: #Class>
+removeInstVarNamedForClass: aString
+	<flExtensionOf: #Class selector: #removeInstVarNamed:>
 	"Remove the argument, aString, as one of the receiver's instance variables."
 
 	| newInstVarString |
