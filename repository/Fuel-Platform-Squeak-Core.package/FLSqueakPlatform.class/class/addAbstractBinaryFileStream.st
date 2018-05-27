@@ -4,8 +4,8 @@ addAbstractBinaryFileStream
 		at: #AbstractBinaryFileStream
 		ifPresent: [ :x | ^ self ].
 		
-	Stream subclass: #AbstractBinaryFileStream
-		instanceVariableNames: '' 
-		classVariableNames: '' 
-		poolDictionaries: '' 
+	Object
+		subclass: #AbstractBinaryFileStream
+		instanceVariableNames: ''
+		classVariableNames: ''
 		category: self hacksCategoryName

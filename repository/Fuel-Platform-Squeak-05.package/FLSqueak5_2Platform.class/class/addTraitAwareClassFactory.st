@@ -1,4 +1,4 @@
-adding
+private-hacks
 addTraitAwareClassFactory
 	Smalltalk
 		at: #FLTraitAwareClassFactoryForTestCase
