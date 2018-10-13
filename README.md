@@ -1,6 +1,9 @@
 [![Fuel](resources/logo-fuel-header.png)](http://rmod.inria.fr/web/software/Fuel)
 
-[![Build Status](https://travis-ci.org/theseion/Fuel.svg?branch=master)](https://travis-ci.org/theseion/Fuel) [![Build status](https://ci.appveyor.com/api/projects/status/74d8sx8mf20v0p83/branch/master?svg=true)](https://ci.appveyor.com/project/theseion/fuel/branch/master)
+Pharo | Squeak
+------------ | -------------
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/SeasideSt/Seaside?branch=master&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-trunk&label=5.2)](http://travis-ci.org/SeasideSt/Seaside)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/SeasideSt/Seaside?branch=master&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | -
 
 - [Description](#description)
 - [Properties](#properties)
@@ -72,7 +75,7 @@ Gofer new
 ```
 </details>
 
-## Squeak >= 6.0
+## Squeak >= 5.2
 ```smalltalk
 Metacello new
     repository: 'github://theseion/Fuel:3.0.0/repository';
