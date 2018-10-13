@@ -8,18 +8,18 @@ matrix:
     - smalltalk: Pharo64-alpha
   include:
     - smalltalk: Squeak-trunk
-      env: BUILD_NAME=Squeak-5.2
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak-trunk
+      env: BUILD_NAME=Squeak-5.2
       smalltalk_config: .tests.ston
       os: linux
 
     - smalltalk: Pharo-alpha
-      env: BUILD_NAME=Pharo-7.0
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo-alpha
+      env: BUILD_NAME=Pharo-7.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo-alpha
@@ -30,10 +30,10 @@ matrix:
       os: linux
 
     - smalltalk: Pharo64-alpha
-      env: BUILD_NAME=Pharo-7.0-64
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo64-alpha
+      env: BUILD_NAME=Pharo-7.0-64
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo64-alpha
