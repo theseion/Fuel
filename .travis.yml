@@ -15,6 +15,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-trunk
+      env: BUILD_NAME=Squeak-5.2
       smalltalk_config: .stable-tests.ston
       os: linux
     # - smalltalk: Squeak-trunk
@@ -25,6 +26,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-5.1
+      env: BUILD_NAME=Squeak-5.1
       smalltalk_config: .stable-tests.ston
       os: linux
     # - smalltalk: Squeak-5.1
@@ -35,6 +37,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-4.6
+      env: BUILD_NAME=Squeak-4.6
       smalltalk_config: .stable-tests.ston
       os: linux
     # - smalltalk: Squeak-4.6
@@ -45,6 +48,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Squeak-4.5
+      env: BUILD_NAME=Squeak-4.5
       smalltalk_config: .stable-tests.ston
       os: linux
     # - smalltalk: Squeak-4.5
@@ -55,6 +59,7 @@ matrix:
       smalltalk_config: .bleedingedge-default.ston
       os: linux
     - smalltalk: Pharo-alpha
+      env: BUILD_NAME=Pharo-7.0
       smalltalk_config: .bleedingedge-tests.ston
       os: linux
     - smalltalk: Pharo-alpha
@@ -68,6 +73,7 @@ matrix:
       smalltalk_config: .bleedingedge-default.ston
       os: linux
     - smalltalk: Pharo64-alpha
+      env: BUILD_NAME=Pharo-7.0-64
       smalltalk_config: .bleedingedge-tests.ston
       os: linux
     - smalltalk: Pharo64-alpha
@@ -81,6 +87,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-6.1
+      env: BUILD_NAME=Pharo-6.1
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-6.1
@@ -91,6 +98,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo64-6.1
+      env: BUILD_NAME=Pharo-6.1-64
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo64-6.1
@@ -101,6 +109,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-6.0
+      env: BUILD_NAME=Pharo-6.0
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-6.0
@@ -122,6 +131,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-5.0
+      env: BUILD_NAME=Pharo-5.0
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-5.0
@@ -132,6 +142,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-4.0
+      env: BUILD_NAME=Pharo-4.0
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-4.0
@@ -142,6 +153,7 @@ matrix:
       smalltalk_config: .stable-default.ston
       os: linux
     - smalltalk: Pharo-3.0
+      env: BUILD_NAME=Pharo-3.0
       smalltalk_config: .stable-tests.ston
       os: linux
     - smalltalk: Pharo-3.0

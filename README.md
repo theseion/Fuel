@@ -1,6 +1,29 @@
 [![Fuel](resources/logo-fuel-header.png)](http://rmod.inria.fr/web/software/Fuel)
 
-[![Build Status](https://travis-ci.org/theseion/Fuel.svg?branch=master)](https://travis-ci.org/theseion/Fuel) [![Build status](https://ci.appveyor.com/api/projects/status/74d8sx8mf20v0p83/branch/master?svg=true)](https://ci.appveyor.com/project/theseion/fuel/branch/master)
+# Status of automated builds
+### master
+Pharo | Squeak
+------------ | -------------
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | -
+
+### Version 3.0.0
+Pharo | Squeak
+------------ | -------------
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | -
+
+### Version 2.2.0
+Pharo | Squeak
+------------ | -------------
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.1](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-5.1&label=5.1)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-6.1](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.1&label=6.1)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-4.6](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-4.6&label=4.6)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-6.1, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.1-64&label=6.1,64-bits)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-4.5](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-4.5&label=4.5)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-6.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.0&label=6.0)](http://travis-ci.org/theseion/Fuel) | -
+[![Build status: Pharo-5.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-5.0&label=5.0)](http://travis-ci.org/theseion/Fuel) | -
+[![Build status: Pharo-4.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-4.0&label=4.0)](http://travis-ci.org/theseion/Fuel) | -
+[![Build status: Pharo-3.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-3.0&label=3.0)](http://travis-ci.org/theseion/Fuel) | -
 
 - [Description](#description)
 - [Properties](#properties)
@@ -34,7 +57,15 @@ From the beginning it was a constraint to have a good object-oriented design and
 
 # Installation
 
-## Pharo >= 3
+## Pharo >= 7.0
+```smalltalk
+Metacello new
+    repository: 'github://theseion/Fuel:3.0.0/repository';
+    baseline: 'Fuel';
+    load.
+```
+
+## Pharo >= 3 and <= 6.1
 ```smalltalk
 Metacello new
     repository: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
@@ -64,7 +95,15 @@ Gofer new
 ```
 </details>
 
-## Squeak (>= 4.1)
+## Squeak >= 5.2
+```smalltalk
+Metacello new
+    repository: 'github://theseion/Fuel:3.0.0/repository';
+    baseline: 'Fuel';
+    load.
+```
+
+## Squeak >= 4.1 and <= 5.1
 ```smalltalk
 Installer monticello
     http: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
