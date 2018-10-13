@@ -6,21 +6,9 @@ sudo: false
 
 matrix:
   allow_failures:
-    - smalltalk: Squeak-trunk
     - smalltalk: Pharo-alpha
     - smalltalk: Pharo64-alpha
   include:
-    # Squeak-trunk-> stable
-    - smalltalk: Squeak-trunk
-      smalltalk_config: .stable-default.ston
-      os: linux
-    - smalltalk: Squeak-trunk
-      env: BUILD_NAME=Squeak-5.2
-      smalltalk_config: .stable-tests.ston
-      os: linux
-    # - smalltalk: Squeak-trunk
-    #   smalltalk_config: .stable-corewithextras.ston
-    #   os: linux
     # Squeak-5.1 -> stable
     - smalltalk: Squeak-5.1
       smalltalk_config: .stable-default.ston
