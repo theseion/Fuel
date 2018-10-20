@@ -2,10 +2,6 @@ language: smalltalk
 sudo: false
 
 matrix:
-  allow_failures:
-    - smalltalk: Squeak-trunk
-    - smalltalk: Pharo-alpha
-    - smalltalk: Pharo64-alpha
   include:
     - smalltalk: Squeak-trunk
       smalltalk_config: .default.ston
