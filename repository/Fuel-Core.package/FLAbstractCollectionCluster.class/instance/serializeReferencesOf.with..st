@@ -6,8 +6,9 @@ serializeReferencesOf: anObject with: anEncoder
 		ifAbsent: [ ^ self ].
 	
 	anEncoder encodePositiveInteger: refs first.
+
 	refs
-		from: (2 min: refs size)
+		from: 2
 		to: refs size
 		do: [ :ref | anEncoder encodeReferenceTo: ref ]
 	
