@@ -8,7 +8,7 @@ mapAndTrace: anObject
 			ifAbsent: [ 
 				"This is a hack to support correct behavior of globals for methods. This is just to avoid adding all 
 				methods to the cache"
-				(anObject class == CompiledMethod and: [self shouldConsdierMethodAsGlobal: anObject])
+				(anObject class == CompiledMethod and: [self shouldConsiderMethodAsGlobal: anObject])
 					ifTrue: [ globalCompiledMethodCluster  ]
 					ifFalse: [^ next mapAndTrace: anObject ] 
 				].

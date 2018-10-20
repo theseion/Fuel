@@ -9,13 +9,16 @@ materializePostInstance: aClass with: aDecoder
 	layout := self materializeLayoutWith: aDecoder.
 	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
 
-	aClass 
-		superclass: superclass;
-		setFormat: format;
-		setName: name;
-		basicCategory: category; 
-		methodDict: MethodDictionary new.
+	"The format will be derived from the class layout,
+	so we must first install the layout before setting the format,
+	as it may differ from the derived one"
+	aClass basicSuperclass: superclass.
 	self
 		installLayout: layout
 		withVariableNames: instanceVariableNames
-		into: aClass
+		into: aClass.
+	aClass
+		methodDictionary: MethodDictionary new;
+		setFormat: format;
+		setName: name;
+		basicCategory: category
