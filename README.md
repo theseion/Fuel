@@ -4,20 +4,20 @@
 ### master
 Pharo | Squeak
 ------------ | -------------
-[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.3](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.3&label=5.3)](http://travis-ci.org/theseion/Fuel)
-[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0&label=7.0-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.3](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.3&label=5.3-alpha)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
 
 ### Version 3.0.0
 Pharo | Squeak
 ------------ | -------------
-[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.3](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.3&label=5.3)](http://travis-ci.org/theseion/Fuel)
-[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0&label=7.0-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.3](http://badges.herokuapp.com/travis/theseion/Fuel?branch=master&env=BUILD_NAME=Squeak-5.3&label=5.3-alpha)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.2](http://badges.herokuapp.com/travis/theseion/Fuel?branch=3.0.0&env=BUILD_NAME=Squeak-5.2&label=5.2)](http://travis-ci.org/theseion/Fuel)
 
 ### Version 2.2.0
 Pharo | Squeak
 ------------ | -------------
-[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0&label=7.0)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.1](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-5.1&label=5.1)](http://travis-ci.org/theseion/Fuel)
-[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-4.6](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-4.6&label=4.6)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0&label=7.0-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-5.1](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-5.1&label=5.1)](http://travis-ci.org/theseion/Fuel)
+[![Build status: Pharo-7.0, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-7.0-64&label=7.0,64-bits-alpha)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-4.6](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-4.6&label=4.6)](http://travis-ci.org/theseion/Fuel)
 [![Build status: Pharo-6.1](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.1&label=6.1)](http://travis-ci.org/theseion/Fuel) | [![Build status: Squeak-4.5](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Squeak-4.5&label=4.5)](http://travis-ci.org/theseion/Fuel)
 [![Build status: Pharo-6.1, 64-bits](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.1-64&label=6.1,64-bits)](http://travis-ci.org/theseion/Fuel) | -
 [![Build status: Pharo-6.0](http://badges.herokuapp.com/travis/theseion/Fuel?branch=2.2.0&env=BUILD_NAME=Pharo-6.0&label=6.0)](http://travis-ci.org/theseion/Fuel) | -
