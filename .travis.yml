@@ -7,6 +7,13 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak-trunk
+      env: BUILD_NAME=Squeak-5.3
+      smalltalk_config: .tests.ston
+      os: linux
+    - smalltalk: Squeak-5.2
+      smalltalk_config: .default.ston
+      os: linux
+    - smalltalk: Squeak-trunk
       env: BUILD_NAME=Squeak-5.2
       smalltalk_config: .tests.ston
       os: linux
