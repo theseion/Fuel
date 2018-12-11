@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testInstalledModified
 	| copy materialized |
 	"Since Pharo 3.0 decompilation of compiled methods is no longer possible.
