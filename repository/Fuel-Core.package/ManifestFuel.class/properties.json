@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "MaxLeske 12/24/2018 11:01",
 	"super" : "PackageManifest",
-	"category" : "Fuel-Core-Fuel-Core",
+	"category" : "Fuel-Core-Manifest",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

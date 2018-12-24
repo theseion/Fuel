@@ -1,1 +1,1 @@
-Manifest for Fuel package
+The core package of Fuel - the Smalltalk object serializer
