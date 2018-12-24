@@ -3,6 +3,6 @@ readSelectorFrom: aPragma argumentNames: argumentNames argumentValues: argumentV
 	| index |
 	index := argumentNames
 		indexOf: 'selector:'
-		ifAbsent: [ ^ aPragma selector ].
+		ifAbsent: [ ^ aPragma method selector ].
 	
 	^ argumentValues at: index

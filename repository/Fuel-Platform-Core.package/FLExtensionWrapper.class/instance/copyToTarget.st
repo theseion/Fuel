@@ -4,4 +4,3 @@ copyToTarget
 		addAndClassifySelector: self selector
 		withMethod: self method copy
 		inProtocol: self extensionProtocolName
-		notifying: nil
