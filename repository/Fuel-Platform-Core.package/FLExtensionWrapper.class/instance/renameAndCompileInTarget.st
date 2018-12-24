@@ -4,7 +4,8 @@ renameAndCompileInTarget
 	newMethod := FLPlatform current
 		renamedMethodCopyOf: self method
 		selector: self selector.
-	self targetClass addSelector: self selector withMethod: newMethod.
-	self targetClass organization
-		classify: self selector
-		under: self extensionProtocolName
+	FLPlatform current
+		silentlyAddAndClassifySelector: self selector
+		inClass: self targetClass
+		withMethod: newMethod
+		inProtocol: self extensionProtocolName
