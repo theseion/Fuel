@@ -1,6 +1,6 @@
 private-extensions-dateandtime
 serializeOnForDateAndTime: anEncoder
-	<flExtensionOf: #DateAndTime selector: #serializeOn: isSource: true>
+	<flExtensionOf: #DateAndTime selector: #serializeOn:>
 	self class instSize = 2
 		ifFalse: [
 			"traditional jdn, seconds, nanos, offset instance variables based on local time"
