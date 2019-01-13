@@ -7,14 +7,14 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak32-trunk
-      env: BUILD_NAME=Squeak-5.3
+      env: BUILD_NAME=Squeak32-5.3
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Squeak64-trunk
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak64-trunk
-      env: BUILD_NAME=Squeak-5.3-64
+      env: BUILD_NAME=Squeak64-5.3
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Squeak32-5.2
@@ -28,7 +28,7 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak64-5.2
-      env: BUILD_NAME=Squeak-5.2-64
+      env: BUILD_NAME=Squeak64-5.2
       smalltalk_config: .tests.ston
       os: linux
 
@@ -36,7 +36,7 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo32-7.0
-      env: BUILD_NAME=Pharo-7.0
+      env: BUILD_NAME=Pharo32-7.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo32-7.0
@@ -50,7 +50,7 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo64-7.0
-      env: BUILD_NAME=Pharo-7.0-64
+      env: BUILD_NAME=Pharo64-7.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo64-7.0
@@ -64,7 +64,7 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo32-alpha
-      env: BUILD_NAME=Pharo-8.0
+      env: BUILD_NAME=Pharo32-8.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo32-alpha
@@ -78,7 +78,7 @@ matrix:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo64-alpha
-      env: BUILD_NAME=Pharo-8.0-64
+      env: BUILD_NAME=Pharo64-8.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo64-alpha
