@@ -8,7 +8,7 @@ testNotInstalled
 	self deny: theCompiledMethod isInstalled.
 	self deny: theCompiledMethod isDoIt.
 	self deny: theCompiledMethod trailer hasSource.
-	self assert: theCompiledMethod trailer isEmpty.
+	self assertEmpty: theCompiledMethod trailer.
 	self deny: theCompiledMethod trailer hasSourcePointer.
 	
 	materialized := self resultOfSerializeAndMaterialize: theCompiledMethod.
