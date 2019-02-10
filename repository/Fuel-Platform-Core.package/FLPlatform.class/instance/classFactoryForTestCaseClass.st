@@ -1,3 +1,0 @@
-accessing-tests
-classFactoryForTestCaseClass
-	^ ClassFactoryForTestCase

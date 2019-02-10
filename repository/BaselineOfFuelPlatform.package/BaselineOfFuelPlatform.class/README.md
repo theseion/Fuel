@@ -1,1 +1,0 @@
-We use a separate baseline to make it simpler to manage the platform classes. Using a separate baseline also makes it easy to load all the packages at once when we need to update them.
