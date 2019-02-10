@@ -4,5 +4,5 @@ fuelPlatform: spec
 		baseline: 'FuelPlatform' 
 		with: [ 
 			spec
-				repository: 'github://theseion/Fuel:', self versionNumber, '/repository';
+				repository: 'github://theseion/Fuel:master/repository';
   				loads: 'default' ]
