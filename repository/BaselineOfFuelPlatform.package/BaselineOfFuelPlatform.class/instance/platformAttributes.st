@@ -1,5 +1,6 @@
 adding
 platformAttributes
+	(SystemVersion current version beginsWith: 'Pharo8') ifTrue: [ ^ #('pharo8.x') ].
 	(SystemVersion current version beginsWith: 'Pharo7') ifTrue: [ ^ #('pharo7.x') ].
 	(SystemVersion current version beginsWith: 'Pharo6') ifTrue: [ ^ #('pharo6.x') ].
 	(SystemVersion current version beginsWith: 'Pharo5') ifTrue: [ ^ #('pharo5.x') ].
