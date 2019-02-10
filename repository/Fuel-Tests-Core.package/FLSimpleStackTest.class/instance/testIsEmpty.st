@@ -1,3 +1,3 @@
 testing
 testIsEmpty
-	self assertEmpty: FLSimpleStack new
+	self assert: FLSimpleStack new isEmpty
