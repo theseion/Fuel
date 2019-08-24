@@ -2,9 +2,7 @@
 	"commentStamp" : "",
 	"super" : "FLSerializationTest",
 	"category" : "Fuel-Tests-Core-Base",
-	"classinstvars" : [
-		"interval"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
 		"ClassVariableForTesting"
