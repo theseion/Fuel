@@ -1,4 +1,4 @@
-*Fuel-Core
+*Fuel-Tools-Pharo
 fuelOut
 	| target |
 	target := FileLocator imageDirectory / self printString asFileName, 'fuel'.
