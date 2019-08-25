@@ -22,7 +22,7 @@ baseline: spec
 			package: 'Fuel-Tests-Benchmarks' with: [ spec requires: #('Fuel-Benchmarks' 'Tests') ].
 					
 		spec
-			group: 'default' with: #('Core' 'Tests');
+			group: 'default' with: #('Core');
 			group: 'Core' with: #('Fuel-Core');
 			group: 'CoreWithExtras' with: #('Core' 'Fuel-ProgressUpdate' 'Fuel-Tests-ProgressUpdate');
 			group: 'Tests' with: #('Core' 'Fuel-Tests-Core');
