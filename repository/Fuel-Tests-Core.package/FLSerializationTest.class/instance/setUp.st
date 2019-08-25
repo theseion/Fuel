@@ -5,4 +5,4 @@ setUp
 	self setUpSerializer.
 	self setUpMaterializer.
 	"You have several stream strategies available on 'stream-strategies' category."
-	self useMemoryStream.
+	self useFileReferenceStream

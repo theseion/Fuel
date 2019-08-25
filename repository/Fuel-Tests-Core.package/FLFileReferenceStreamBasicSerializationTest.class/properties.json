@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FLStandardFileStreamSerializationTest",
+	"name" : "FLFileReferenceStreamBasicSerializationTest",
 	"type" : "normal"
 }

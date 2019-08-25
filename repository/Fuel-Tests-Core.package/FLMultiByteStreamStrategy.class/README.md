@@ -1,1 +1,1 @@
-I am a strategy for MultiByteBinaryOrTextStream..
+I am a strategy for MultiByteBinaryOrTextStream.

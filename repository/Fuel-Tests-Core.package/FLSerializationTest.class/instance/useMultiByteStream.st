@@ -1,4 +1,4 @@
 stream-strategies
-useMemoryStream
+useMultiByteStream
 
 	streamFactory := FLMultiByteStreamStrategy new

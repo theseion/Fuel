@@ -1,0 +1,1 @@
+I use binary read and write streams atop a memory filesystem.

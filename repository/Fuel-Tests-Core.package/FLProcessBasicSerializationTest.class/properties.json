@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FLProcessSerializationTest",
+	"name" : "FLProcessBasicSerializationTest",
 	"type" : "normal"
 }

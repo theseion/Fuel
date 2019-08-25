@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"inMemoryStream"
+		"reference"
 	],
-	"name" : "FLMultiByteStreamStrategy",
+	"name" : "FLFileReferenceStreamStrategy",
 	"type" : "normal"
 }
