@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FLFileStreamStrategy",
+	"super" : "FLStreamStrategy",
 	"category" : "Fuel-Tests-Core-StreamStrategies",
 	"classinstvars" : [ ],
 	"pools" : [ ],

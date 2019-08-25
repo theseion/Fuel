@@ -1,4 +1,4 @@
 stream-strategies
 useBinaryFileStream
 
-	streamFactory := FLFileStreamStrategy newWithBinaryFileStream
+	streamFactory := FLBinaryFileStreamStrategy new
