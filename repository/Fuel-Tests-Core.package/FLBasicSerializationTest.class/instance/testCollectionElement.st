@@ -1,4 +1,5 @@
 tests-collections-Pharo1.3
 testCollectionElement
-
-	self assertSerializationEqualityOf: (CollectionElement with: 3)
+	(Smalltalk classNamed: #CollectionElement) ifNil: [ self skip ].
+	
+	self assertSerializationEqualityOf: ((Smalltalk classNamed: #CollectionElement) with: 3)
