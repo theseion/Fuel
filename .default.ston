@@ -13,7 +13,5 @@ SmalltalkCISpec {
         #pharo ]
     }
   ],
-  #testing : {
-    #categories : [ 'Fuel-Tests*' ]
-  }
+  #failOnZeroTests: false
 }
