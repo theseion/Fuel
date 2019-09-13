@@ -9,6 +9,6 @@ testConsiderCustomGlobal
 
 	aPerson := FLPerson new.
 	[ 
-		Smalltalk globals at: globalKey put: aPerson.
+		environment at: globalKey put: aPerson.
 		self assertSerializationIdentityOf: aPerson.
 	] ensure: [ Smalltalk globals removeKey: globalKey ]

@@ -8,6 +8,6 @@ testDontConsiderCustomGlobal
 	globalName := #FLGlobalVariableForTesting.
 	
 	[ 
-		Smalltalk globals at: globalName put: aPerson.
+		environment at: globalName put: aPerson.
 		self deny: (self resultOfSerializeAndMaterialize: aPerson) == aPerson 
-	] ensure: [ Smalltalk globals removeKey: globalName ]. 
+	] ensure: [ environment removeKey: globalName ]. 

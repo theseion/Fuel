@@ -9,7 +9,8 @@
 		"serializer",
 		"materializer",
 		"classFactory",
-		"streamFactory"
+		"streamFactory",
+		"environment"
 	],
 	"name" : "FLSerializationTest",
 	"type" : "normal"

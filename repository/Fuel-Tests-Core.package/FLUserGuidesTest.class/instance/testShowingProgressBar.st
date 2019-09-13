@@ -1,7 +1,7 @@
 tests-Getting Started
 testShowingProgressBar
 
-	(Smalltalk globals includesKey: #FLProgressSerialization) ifFalse: [
+	(environment includesKey: #FLProgressSerialization) ifFalse: [
 		" Needs:
 		(ConfigurationOfFuel project latestVersion) load: 'FuelProgressUpdate'.
 		"

@@ -6,7 +6,7 @@ testWideStringGlobal
 		yourself.
 	globalValue := global, 'value'.
 	[
-		Smalltalk globals
+		environment
 			at: global
 			put: globalValue.
 		self analyzer considerGlobal: global.
@@ -16,4 +16,4 @@ testWideStringGlobal
 			raise: Error.
 		self assert: self materialized class equals: Association.
 		self assert: self materialized value == global
-	] ensure: [ Smalltalk globals removeKey: global ]
+	] ensure: [ environment removeKey: global ]
