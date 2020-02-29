@@ -1,7 +1,7 @@
 language: smalltalk
-sudo: false
+os: linux
 
-matrix:
+jobs:
   include:
     - smalltalk: Squeak32-trunk
       smalltalk_config: .default.ston
