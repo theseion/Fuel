@@ -59,31 +59,31 @@ jobs:
       smalltalk_config: .developmentgroup.ston
       os: linux
 
-    - smalltalk: Pharo32-8
+    - smalltalk: Pharo32-8.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo32-8
+    - smalltalk: Pharo32-8.0
       env: BUILD_NAME=Pharo32-8.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo32-8
+    - smalltalk: Pharo32-8.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo32-8
+    - smalltalk: Pharo32-8.0
       smalltalk_config: .developmentgroup.ston
       os: linux
 
-    - smalltalk: Pharo64-8
+    - smalltalk: Pharo64-8.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo64-8
+    - smalltalk: Pharo64-8.0
       env: BUILD_NAME=Pharo64-8.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo64-8
+    - smalltalk: Pharo64-8.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo64-8
+    - smalltalk: Pharo64-8.0
       smalltalk_config: .developmentgroup.ston
       os: linux
 
