@@ -82,7 +82,7 @@ From the beginning it was a constraint to have a good object-oriented design and
 ## Pharo >= 7.0
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:3.0.0/repository';
+    repository: 'github://theseion/Fuel:3.0.2/repository';
     baseline: 'Fuel';
     load.
 ```
@@ -120,7 +120,7 @@ Gofer new
 ## Squeak >= 5.2
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:3.0.0/repository';
+    repository: 'github://theseion/Fuel:3.0.2/repository';
     baseline: 'Fuel';
     load.
 ```
