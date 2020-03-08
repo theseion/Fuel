@@ -6,16 +6,32 @@ jobs:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak32-trunk
-      env: BUILD_NAME=Squeak32-5.3
+      env: BUILD_NAME=Squeak32-5.4
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Squeak64-trunk
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Squeak64-trunk
+      env: BUILD_NAME=Squeak64-5.4
+      smalltalk_config: .tests.ston
+      os: linux
+
+    - smalltalk: Squeak32-5.3
+      smalltalk_config: .default.ston
+      os: linux
+    - smalltalk: Squeak32-5.3
+      env: BUILD_NAME=Squeak32-5.3
+      smalltalk_config: .tests.ston
+      os: linux
+    - smalltalk: Squeak64-5.3
+      smalltalk_config: .default.ston
+      os: linux
+    - smalltalk: Squeak64-5.3
       env: BUILD_NAME=Squeak64-5.3
       smalltalk_config: .tests.ston
       os: linux
+
     - smalltalk: Squeak32-5.2
       smalltalk_config: .default.ston
       os: linux
