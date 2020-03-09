@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "AbstractEnvironmentTestCase",
 	"category" : "Fuel-Tests-Core-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],

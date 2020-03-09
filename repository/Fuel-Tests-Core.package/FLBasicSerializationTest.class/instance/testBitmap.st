@@ -12,8 +12,6 @@ testBitmap
 	bitmap at: 2 put: 5674.
 	bitmap at: 3 put: 8978.
 	materialized := self resultOfSerializeAndMaterialize: bitmap.
-	self assert: (materialized at: 1) = 4324.
-	self assert: (materialized at: 2) = 5674.
-	self assert: (materialized at: 3) = 8978.	
-
-
+	self assert: (materialized at: 1) equals: 4324.
+	self assert: (materialized at: 2) equals: 5674.
+	self assert: (materialized at: 3) equals: 8978

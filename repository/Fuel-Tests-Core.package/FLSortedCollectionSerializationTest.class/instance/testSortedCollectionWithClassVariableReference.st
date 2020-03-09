@@ -9,12 +9,12 @@ testSortedCollectionWithClassVariableReference
 
 	| aSortedCollection materialized |
 	ClassVariableForTesting := false.
-	
+
 	aSortedCollection := self class sortedCollectionForTestingWithClassVariable.
 	materialized := self resultOfSerializeAndMaterialize: aSortedCollection.
 	ClassVariableForTesting := true.
 	materialized addAll: #(2 3 1).
 	aSortedCollection addAll: #(2 3 1).
-	
-	aSortedCollection sortBlock assertWellMaterializedInto:  materialized sortBlock in: self.
-	self assert: aSortedCollection asArray = materialized asArray.
+
+	aSortedCollection sortBlock assertWellMaterializedInto: materialized sortBlock in: self.
+	self assert: aSortedCollection asArray equals: materialized asArray

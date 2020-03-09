@@ -1,6 +1,5 @@
 tests
 testTwoIgnoredVariables
-
 	| anObject result aClass |
 	aClass := self newClassWithInstanceVariableNames: 'a b c'.
 	aClass class duringTestCompileSilently: 'fuelIgnoredInstanceVariableNames ^#(a c)'.
@@ -12,6 +11,6 @@ testTwoIgnoredVariables
 
 	result := self resultOfSerializeAndMaterialize: anObject.
 
-	self assert: nil = (result instVarAt: 1).
-	self assert: $B = (result instVarAt: 2).
-	self assert: nil = (result instVarAt: 3).
+	self assert: nil equals: (result instVarAt: 1).
+	self assert: $B equals: (result instVarAt: 2).
+	self assert: nil equals: (result instVarAt: 3)

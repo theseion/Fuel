@@ -7,10 +7,8 @@ testSharedReferences
 	array := Array with: point1 with: point2.
 
 	materialized := self resultOfSerializeAndMaterialize: array.
-	self assert: array = materialized.
-	self 
-		assert: materialized first x == materialized second y 
+	self assert: array equals: materialized.
+	self
+		assert: materialized first x == materialized second y
 		description: 'An object that is referenced twice by the graph must not be duplicated when materialized'.
-	self 
-		deny: materialized first y == materialized second x 
-		description: 'Two (non-literal) objects must maintain different identity even if they are equal'
+	self deny: materialized first y == materialized second x description: 'Two (non-literal) objects must maintain different identity even if they are equal'

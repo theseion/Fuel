@@ -8,12 +8,12 @@ testSortedCollection
 	self assert: x ~= y"
 
 	| aSortBlock aSortedCollection materialized |
-	aSortBlock := [:a :b | a >= b ].
+	aSortBlock := [ :a :b | a >= b ].
 	aSortedCollection := SortedCollection sortBlock: aSortBlock.
 
 	materialized := self resultOfSerializeAndMaterialize: aSortedCollection.
 	self assert: aSortedCollection sortBlock ~~ materialized sortBlock.
 
 	materialized addAll: #(2 1 3).
-	aSortedCollection addAll: #(2 1 3).	
-	self assert: aSortedCollection asArray = materialized asArray.
+	aSortedCollection addAll: #(2 1 3).
+	self assert: aSortedCollection asArray equals: materialized asArray

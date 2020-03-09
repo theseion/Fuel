@@ -19,4 +19,4 @@ testSortedCollectionWithInstanceVariableReferenceChange
 	aSortedCollection addAll: #(2 3 1).
 
 	"IMPORTANT: Unfortunatly there is nothing we can do to solve this problem. The sortBlock was serialized with a method context with different values."
-	self deny: aSortedCollection asArray = materialized asArray.
+	self deny: aSortedCollection asArray equals: materialized asArray

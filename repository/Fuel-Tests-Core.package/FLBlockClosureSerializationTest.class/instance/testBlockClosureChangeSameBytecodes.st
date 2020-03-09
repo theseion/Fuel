@@ -11,4 +11,4 @@ testBlockClosureChangeSameBytecodes
 	aClass duringTestCompileSilently: 'methodWithClosure  ^ [ 42 ]'.
 	self deny: aClosure method isInstalled.
 	materializedClosure := self materialized.
-	self assert: materializedClosure value = 42
+	self assert: materializedClosure value equals: 42

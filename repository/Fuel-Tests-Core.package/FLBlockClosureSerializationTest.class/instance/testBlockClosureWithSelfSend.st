@@ -4,4 +4,4 @@ testBlockClosureWithSelfSend
 	closure := self class blockClosureWithSelfSend.
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
 	closure assertWellMaterializedInto: materializedClosure in: self.
-	self assert: materializedClosure value = closure value
+	self assert: materializedClosure value equals: closure value

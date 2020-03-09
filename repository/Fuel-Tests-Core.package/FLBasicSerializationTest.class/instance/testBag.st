@@ -6,9 +6,8 @@ testBag
 	bag add: 20.
 	bag add: 30.
 	bag add: 30.
-	
+
 	materialized := self resultOfSerializeAndMaterialize: bag.
-	self assert:  bag ~~ materialized.
-	self assert: bag = materialized.
-	self assert: materialized size = 4.
-	
+	self assert: bag ~~ materialized.
+	self assert: bag equals: materialized.
+	self assert: materialized size equals: 4

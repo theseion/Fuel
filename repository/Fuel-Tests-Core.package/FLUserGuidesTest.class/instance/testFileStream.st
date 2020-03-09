@@ -1,16 +1,13 @@
 tests-Getting Started
 testFileStream
-
 	| materializedString |
 	FLPlatform current
 		fileNamed: 'demo.fuel'
-		writeStreamDo: [ :aStream |
-			FLSerializer newDefault 
-				serialize: 'stringToSerialize' 
-	 			on: aStream ].
-
-	FLPlatform current
+		writeStreamDo:
+			[ :aStream | FLSerializer newDefault serialize: 'stringToSerialize' on: aStream ].
+	materializedString := FLPlatform current
 		fileNamed: 'demo.fuel'
-		readStreamDo: [ :aStream |
-			materializedString := (FLMaterializer newDefault 
-				materializeFrom: aStream ) root ]
+		readStreamDo: [ :aStream | 
+			(FLMaterializer newDefault
+				materializeFrom: aStream) root ].
+	self assert: materializedString equals: 'stringToSerialize'

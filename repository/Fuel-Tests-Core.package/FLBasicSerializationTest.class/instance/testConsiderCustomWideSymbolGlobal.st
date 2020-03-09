@@ -10,9 +10,9 @@ testConsiderCustomWideSymbolGlobal
 
 	aPerson := FLPerson new.	
 	[ 
-		Smalltalk globals at: aWideSymbol put: aPerson.
+		testingEnvironment at: aWideSymbol put: aPerson.
 		self
 			shouldnt: [ self resultOfSerializeAndMaterialize: aPerson ]
 			raise: Error
 	] ensure: [ 
-		Smalltalk globals removeKey: aWideSymbol ].
+		testingEnvironment removeKey: aWideSymbol ].

@@ -6,8 +6,8 @@ testWideStringClassName
 		yourself.
 	class := Class new setName: className; yourself.
 	[
-		Smalltalk globals at: class name put: class.
+		testingEnvironment at: class name put: class.
 		self
 			shouldnt: [ self resultOfSerializeAndMaterialize: class ]
 			raise: Error
-	] ensure:[ Smalltalk globals removeKey: class name ]
+	] ensure:[ testingEnvironment removeKey: class name ]

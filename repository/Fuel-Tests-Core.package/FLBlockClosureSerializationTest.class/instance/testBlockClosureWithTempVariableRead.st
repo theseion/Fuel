@@ -4,4 +4,4 @@ testBlockClosureWithTempVariableRead
 	closure := self class blockClosureWithTempVariableRead.
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
 	closure assertWellMaterializedInto: materializedClosure in: self.
-	self assert: materializedClosure value = 'TEST'.
+	self assert: materializedClosure value equals: 'TEST'

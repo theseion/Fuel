@@ -1,4 +1,4 @@
 running
 tearDownGlobalVariables
 
-	Smalltalk globals removeKey: #FLGlobalVariableForTesting ifAbsent: []
+	testingEnvironment removeKey: #FLGlobalVariableForTesting ifAbsent: []

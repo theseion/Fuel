@@ -10,10 +10,10 @@ testSortedCollectionWithInstanceVariableReference
 	| aSortedCollection materialized |
 	instanceVariableForTesting := false.
 	aSortedCollection := self sortedBlockClosureWithInstanceVariable.
-	
+
 	materialized := self resultOfSerializeAndMaterialize: aSortedCollection.
 	materialized addAll: #(2 3 1).
 	aSortedCollection addAll: #(2 3 1).
-	
-	self assert: aSortedCollection asArray = materialized asArray.
-	self assert: aSortedCollection asArray = #(3 2 1)
+
+	self assert: aSortedCollection asArray equals: materialized asArray.
+	self assert: aSortedCollection asArray equals: #(3 2 1)

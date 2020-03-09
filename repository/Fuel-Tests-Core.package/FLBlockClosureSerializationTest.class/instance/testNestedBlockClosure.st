@@ -4,4 +4,4 @@ testNestedBlockClosure
 	closure := [ [ 42 ] ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
 	closure assertWellMaterializedInto: materializedClosure in: self.
-	self assert: materializedClosure value value = 42
+	self assert: materializedClosure value value equals: 42
