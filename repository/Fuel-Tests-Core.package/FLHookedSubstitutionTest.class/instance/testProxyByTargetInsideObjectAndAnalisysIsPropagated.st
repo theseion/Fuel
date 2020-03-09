@@ -6,9 +6,9 @@ testProxyByTargetInsideObjectAndAnalisysIsPropagated
 		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: target';
 		yourself.
 
-	pair := FLPair new.
-	pair left: 6.
-	pair right: 'foo'.
+	pair := FLPair new
+		left: 6;
+		right: 'foo'.
 
 	original := aProxyClass new
 		target: pair;

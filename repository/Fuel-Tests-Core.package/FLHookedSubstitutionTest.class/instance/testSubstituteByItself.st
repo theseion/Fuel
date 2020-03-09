@@ -1,6 +1,5 @@
 tests
 testSubstituteByItself
-
 	| aRecursiveClass result | 
 	aRecursiveClass := (self newSubclassOf: Object instanceVariableNames: '' classVariableNames: '') 
 		duringTestCompileSilently: 'fuelAccept: aMapper  
@@ -9,6 +8,9 @@ testSubstituteByItself
 				onRecursionDo: [super fuelAccept: aMapper]';
 		yourself.
 
-	result := self resultOfSerializeAndMaterialize: aRecursiveClass new.	
+	result := [ self resultOfSerializeAndMaterialize: aRecursiveClass new ]
+		valueWithin: 1 second
+		onTimeout: [ self fail ].
 	
-	"self flag: #todo." "Should test that it doesn't enter in loop."
+	"shouldn't lead to endless loop"
+	self assert: result class identicalTo: aRecursiveClass

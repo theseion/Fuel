@@ -1,22 +1,21 @@
 tests
 testProxyByTargetAnalisysIsPropagated
-	| aProxyClass result pair |
-	self flag: #pharoTodo.	"I don't understand what are we testing here."
-
+	| aProxyClass result pair original |
 	aProxyClass := (self newSubclassOf: Object instanceVariableNames: 'target' classVariableNames: '')
 		duringTestCompileSilently: 'target: x  target := x';
 		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: target';
 		yourself.
 
-	pair := FLPair new.
-	pair left: 6.
-	pair right: 'foo'.
+	pair := FLPair new
+		left: 6;
+		right: 'foo';
+		yourself.
 
-	aProxyClass new
+	original := aProxyClass new
 		target: pair;
 		yourself.
 
-	result := self resultOfSerializeAndMaterialize: pair.
+	result := self resultOfSerializeAndMaterialize: original.
 
 	self assert: result left equals: 6.
 	self assert: result right equals: 'foo'

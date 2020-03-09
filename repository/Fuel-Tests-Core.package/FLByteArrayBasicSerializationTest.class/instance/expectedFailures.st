@@ -1,3 +1,3 @@
 failures
 expectedFailures
-	^ super expectedFailures, #(testConsiderCustomWideSymbolGlobal testStringGlobalsAndClosure)
+	^ super expectedFailures, #(testConsiderCustomWideSymbolGlobal)

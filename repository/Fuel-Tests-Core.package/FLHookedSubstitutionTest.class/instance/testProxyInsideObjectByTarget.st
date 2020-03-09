@@ -10,9 +10,9 @@ testProxyInsideObjectByTarget
 		target: 5;
 		yourself.
 
-	pair := FLPair new.
-	pair left: original.
-	pair right: 'foo'.
+	pair := FLPair new
+		left: original;
+		right: 'foo'.
 
 	result := self resultOfSerializeAndMaterialize: pair.
 
