@@ -1,9 +1,6 @@
 running
 tearDown
-	self
-		tearDownClassFactory;
-		tearDownGlobalVariables.
+	self tearDownClassFactory.
 	self streamFactory tearDown.
-	self tearDownInstanceVariables.
 	
 	super tearDown
