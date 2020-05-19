@@ -1,0 +1,1 @@
+I am an abstract class to hold all the common behavior between the serialization / materialization of CompiledBlocks and CompiledMethods

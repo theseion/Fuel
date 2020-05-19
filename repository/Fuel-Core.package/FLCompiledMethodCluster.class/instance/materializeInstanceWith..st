@@ -3,7 +3,7 @@ materializeInstanceWith: aDecoder
 
 	| compiledMethod header bytecodesPlusTrailerSize |
 
-	header := aDecoder nextEncodedInt32.
+	header := aDecoder nextEncodedInt64.
 	bytecodesPlusTrailerSize := aDecoder nextEncodedUint16.
 
 	compiledMethod := CompiledMethod newMethod: bytecodesPlusTrailerSize header: header.

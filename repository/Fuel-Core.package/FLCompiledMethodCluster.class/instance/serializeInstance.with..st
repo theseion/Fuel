@@ -11,7 +11,7 @@ serializeInstance: aCompiledMethodToSerialize with: anEncoder
 	bytecodesPlusTrailerSize := cmSize - cmInitialPC + 1.
 
 	anEncoder 
-		encodeInt32: header; "Signed int as of Pharo 40"
+		encodeInt64: header; "Signed int as of Pharo 40"
 		encodeUint16: bytecodesPlusTrailerSize.	
 
 	cmInitialPC to: cmSize

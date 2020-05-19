@@ -4,7 +4,7 @@ assertWellMaterializedInto: aBlockClosure in: aTestCase
 	aTestCase assert: self ~~ aBlockClosure.
 	aTestCase assert: self class == aBlockClosure class.
 	aTestCase assert: numArgs = aBlockClosure numArgs.
-	aTestCase assert: startpc = aBlockClosure startpc.
+	aTestCase assert: startpc = aBlockClosure startpcOrOuterCode.
 
 	outerContext
 		ifNil: [ self assert: aBlockClosure outerContext isNil ]
