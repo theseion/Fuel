@@ -114,7 +114,7 @@ jobs:
       smalltalk_config: .default.ston
       os: linux
     - smalltalk: Pharo64-alpha
-      env: BUILD_NAME=Pharo64-9.0
+      env: BUILD_NAME=Pharo64-10.0
       smalltalk_config: .tests.ston
       os: linux
     - smalltalk: Pharo64-alpha
