@@ -6,16 +6,18 @@ assertSequencedSerializationEqualityOf: aCollectionToSerialize
 	aSerializer := FLSerializer newDefault.
 	aMaterializer := FLMaterializer newDefault.
 
-	FileStream forceNewFileNamed: fileName do: [:aWriteStream |
-		aWriteStream binary.
-		aCollectionToSerialize do: [:anObject |
-			 aSerializer serialize: anObject on: aWriteStream ]].
+	FLPlatform current
+		fileNamed: fileName
+		writeStreamDo: [:aWriteStream |
+			aCollectionToSerialize do: [:anObject |
+				 aSerializer serialize: anObject on: aWriteStream ]].
 	
-	FileStream oldFileNamed: fileName do: [:aReadStream |
-		aReadStream binary.
-		materializedCollection := OrderedCollection new.
-		[aReadStream atEnd] whileFalse: [
-			materializedCollection add: 
-				(aMaterializer materializeFrom: aReadStream) root ]].
-	
+	FLPlatform current
+		fileNamed: fileName
+		readStreamDo: [:aReadStream |
+			materializedCollection := OrderedCollection new.
+			[aReadStream atEnd] whileFalse: [
+				materializedCollection add: 
+					(aMaterializer materializeFrom: aReadStream) root ]].
+		
 	self assert: aCollectionToSerialize = materializedCollection.
