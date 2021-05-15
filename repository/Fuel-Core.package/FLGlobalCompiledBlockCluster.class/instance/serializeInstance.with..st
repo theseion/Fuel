@@ -6,8 +6,9 @@ serializeInstance: aCompiledBlock with: anEncoder
 	
 	See #testBlockClosureChangeDifferendBytecodes and #testBlockClosureChangeSameBytecodes
 	on FLBlockClosureSerializationTest."
-	| literalIndex |
-	literalIndex := aCompiledBlock method literals indexOf: aCompiledBlock.
+	| method literalIndex |
+	method := aCompiledBlock method.
+	literalIndex := method literals indexOf: aCompiledBlock.
 	anEncoder
-		encodeReferenceTo: aCompiledBlock method;
+		encodeReferenceTo: method;
 		encodeUint8: literalIndex
