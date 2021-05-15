@@ -1,4 +1,4 @@
 serialize/materialize
 materializeInstanceWith: aDecoder
 
-	^theClass new: aDecoder nextEncodedPositiveInteger
+	^theClass new: aDecoder nextEncodedUint32

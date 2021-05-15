@@ -1,3 +1,3 @@
 encoding
 encodeByte: aSmallInteger 
-	stream nextPut: aSmallInteger
+	self encodeUint8: aSmallInteger

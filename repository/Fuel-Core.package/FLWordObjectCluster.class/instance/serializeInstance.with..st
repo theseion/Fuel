@@ -1,6 +1,6 @@
 serialize/materialize
 serializeInstance: aWordObject with: anEncoder
-
-	anEncoder encodePositiveInteger: aWordObject basicSize.
-	anEncoder encodeWords: aWordObject
+	anEncoder
+		encodeUint32: aWordObject basicSize;
+		encodeWords: aWordObject
 

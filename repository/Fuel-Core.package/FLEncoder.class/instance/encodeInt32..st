@@ -1,9 +1,13 @@
 encoding
 encodeInt32: aSmallInteger
-	"Write a signed integer to the next 4 bytes"
+	"Write a signed integer to the next 4 bytes.
+	
+	Note: In Pharo SmallIntegers are signed 31-bit / 63-bit numbers stored
+			in memory as twos' complement. For storage we can pretend that
+			they are unsigned, as long as we decode them as signed.
+	Note: 	Integers of larger word size are truncated, which is necessary in case of negative
+			numbers (this may change the perceived value).
+			This may result in the creation of a LargeInteger in case of `SmallInteger maxVal`.
+			We assume that doesn't happen often and thus won'	impact performance much."
 
-	| pos |
-	pos := aSmallInteger < 0
-		ifTrue: [ (0 - aSmallInteger) bitInvert32 + 1 ]
-		ifFalse: [ aSmallInteger ].
-	1 to: 4 do: [ :i | stream nextPut: (pos byteAt: 5 - i) ]
+	self encodeUint32: (aSmallInteger bitAnd: 16rFFFFFFFF)

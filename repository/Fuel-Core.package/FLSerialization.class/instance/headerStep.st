@@ -1,5 +1,5 @@
 private
 headerStep
-	
-	encoder encodeYourself.
-	encoder encodePositiveInteger: clusters size.
+	encoder
+		encodeYourself;
+		encodeUint32: clusters size

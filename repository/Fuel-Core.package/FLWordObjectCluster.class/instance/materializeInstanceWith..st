@@ -2,8 +2,7 @@ serialize/materialize
 materializeInstanceWith: aDecoder
 
 	| inst wideSize |
-
-	wideSize :=  aDecoder nextEncodedPositiveInteger.
+	wideSize := aDecoder nextEncodedUint32.
 	inst := theClass basicNew: wideSize.	
 
 	aDecoder nextEncodedWordsInto: inst. 

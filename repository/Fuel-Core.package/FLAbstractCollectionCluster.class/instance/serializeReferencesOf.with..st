@@ -5,7 +5,7 @@ serializeReferencesOf: anObject with: anEncoder
 		at: anObject
 		ifAbsent: [ ^ self ].
 	
-	anEncoder encodePositiveInteger: refs first.
+	anEncoder encodeUint32: refs first.
 
 	refs
 		from: 2

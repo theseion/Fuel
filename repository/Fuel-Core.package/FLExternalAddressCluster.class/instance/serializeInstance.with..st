@@ -1,3 +1,3 @@
 serialize/materialize
 serializeInstance: anExternalAddress with: anEncoder
-	anEncoder encodePositiveInteger: anExternalAddress basicSize
+	anEncoder encodeUint32: anExternalAddress basicSize

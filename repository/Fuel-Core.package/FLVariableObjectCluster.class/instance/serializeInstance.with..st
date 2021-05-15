@@ -1,4 +1,3 @@
 serialize/materialize
 serializeInstance: anObject with: anEncoder
-
-	anEncoder encodePositiveInteger: anObject basicSize
+	anEncoder encodeUint32: anObject basicSize

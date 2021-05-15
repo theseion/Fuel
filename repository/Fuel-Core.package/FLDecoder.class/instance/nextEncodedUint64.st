@@ -10,5 +10,4 @@ nextEncodedUint64
 	n := (n bitShift: 8) + stream next.
 	n := (n bitShift: 8) + stream next.
 	n := (n bitShift: 8) + stream next.
-	n := (n bitShift: 8) + stream next.
-	^ n
+	^ (n bitShift: 8) + stream next
