@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FLIteratingCluster",
+	"super" : "FLCompiledCodeCluster",
 	"category" : "Fuel-Core-Clusters",
 	"classinstvars" : [
 		"transformationForSerializing"
