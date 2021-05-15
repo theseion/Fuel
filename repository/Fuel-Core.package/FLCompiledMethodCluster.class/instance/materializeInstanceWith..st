@@ -1,14 +1,18 @@
 serialize/materialize
 materializeInstanceWith: aDecoder
-
 	| compiledMethod header bytecodesPlusTrailerSize |
-
-	header := aDecoder nextEncodedInt32.
+	header := self decodeHeaderWith: aDecoder.
 	bytecodesPlusTrailerSize := aDecoder nextEncodedUint16.
 
-	compiledMethod := CompiledMethod newMethod: bytecodesPlusTrailerSize header: header.
+	compiledMethod := CompiledMethod
+			newMethod: bytecodesPlusTrailerSize
+			header: header.
 
-	compiledMethod initialPC to: compiledMethod size
-		do: [ :index | compiledMethod at: index put: aDecoder nextEncodedByte ].
+	compiledMethod initialPC
+		to: compiledMethod size
+		do: [ :index |
+			compiledMethod
+				at: index
+				put: aDecoder nextEncodedByte ].
 		
 	^ compiledMethod

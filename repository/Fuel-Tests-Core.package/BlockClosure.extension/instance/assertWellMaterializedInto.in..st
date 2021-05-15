@@ -3,8 +3,8 @@ assertWellMaterializedInto: aBlockClosure in: aTestCase
 
 	aTestCase assert: self ~~ aBlockClosure.
 	aTestCase assert: self class == aBlockClosure class.
-	aTestCase assert: numArgs = aBlockClosure numArgs.
-	aTestCase assert: startpc = aBlockClosure startpc.
+	aTestCase assert: self numArgs = aBlockClosure numArgs.
+	aTestCase assert: self startpc = aBlockClosure startpc.
 
 	outerContext
 		ifNil: [ self assert: aBlockClosure outerContext isNil ]
