@@ -1,0 +1,3 @@
+testing
+appliesTo: aDebugger
+	^ true
