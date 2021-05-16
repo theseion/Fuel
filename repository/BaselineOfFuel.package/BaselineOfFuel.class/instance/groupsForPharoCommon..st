@@ -6,7 +6,8 @@ groupsForPharoCommon: spec
 			package: 'Fuel-Metalevel' with: [ spec requires: 'Core' ];
 			package: 'Fuel-Tools-Pharo' with: [ spec requires: 'Core' ];
 			
-			package: 'Fuel-Tests-Metalevel' with: [ spec requires: #('Fuel-Metalevel' 'Tests' ) ].
+			package: 'Fuel-Tests-Metalevel' with: [ spec requires: #('Fuel-Metalevel' 'Tests' ) ];
+			package: 'Fuel-Tools-Pharo-Tests' with: [ spec requires: #('Fuel-Tools-Pharo') ].
 		
 		self roassal: spec.
 
