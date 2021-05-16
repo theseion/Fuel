@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializer",
+	"category" : "Fuel-Tools-Pharo-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileName"
+	],
+	"name" : "FLDebuggerStackSerializer",
+	"type" : "normal"
+}

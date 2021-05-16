@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Exception",
+	"category" : "Fuel-Tools-Pharo-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"interruptedContext"
+	],
+	"name" : "FLDebuggerStackMaterialization",
+	"type" : "normal"
+}

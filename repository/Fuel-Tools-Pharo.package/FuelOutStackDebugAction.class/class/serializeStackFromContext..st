@@ -1,0 +1,3 @@
+serialization
+serializeStackFromContext: aContext
+	FLDebuggerStackSerializer serializeStackFromContext: aContext

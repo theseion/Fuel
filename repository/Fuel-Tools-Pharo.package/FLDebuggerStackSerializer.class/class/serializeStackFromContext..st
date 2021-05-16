@@ -1,0 +1,3 @@
+serializing
+serializeStackFromContext: aContext
+	self newDefault serializeStackFromContext: aContext
