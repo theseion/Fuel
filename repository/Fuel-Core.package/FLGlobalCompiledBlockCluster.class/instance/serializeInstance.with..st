@@ -9,6 +9,10 @@ serializeInstance: aCompiledBlock with: anEncoder
 	| method literalIndex |
 	method := aCompiledBlock method.
 	literalIndex := method literals indexOf: aCompiledBlock.
+	
+	self
+		serializeGlobalClass: aCompiledBlock methodClass
+		on: anEncoder.
 	anEncoder
-		encodeReferenceTo: method;
+		encodeString: method selector;
 		encodeUint8: literalIndex

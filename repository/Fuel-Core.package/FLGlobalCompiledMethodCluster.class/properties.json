@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FLGlobalCluster",
+	"super" : "FLGlobalCompiledCodeCluster",
 	"category" : "Fuel-Core-Clusters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
