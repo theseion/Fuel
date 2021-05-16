@@ -8,6 +8,7 @@ testSubstituteByItself
 				onRecursionDo: [super fuelAccept: aMapper]';
 		yourself.
 
+	"Fail fast so the image doesn't crash if we end up in an endless loop"
 	result := [ self resultOfSerializeAndMaterialize: aRecursiveClass new ]
 		valueWithin: 1 second
 		onTimeout: [ self fail ].
