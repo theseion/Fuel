@@ -22,7 +22,7 @@ environment:
       SMALLTALK_CONFIG: .developmentgroup.ston
 
 platform:
-  - x64
+  - x86
 
 install:
   - '%CYG_EXE% -dgnqNO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
