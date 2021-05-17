@@ -1,3 +1,0 @@
-actions
-executeAction
-	self class serializeStackFromContext: self interruptedContext

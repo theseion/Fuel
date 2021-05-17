@@ -1,1 +1,0 @@
-I am signalled when a dead stack is materialized from Fuel. My default action is to directly request the opening of a debugger on the post-mortem stack.
