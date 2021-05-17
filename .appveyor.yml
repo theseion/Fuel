@@ -4,22 +4,13 @@ environment:
   CYG_CACHE: C:\cygwin\var\cache\setup
   CYG_EXE: C:\cygwin\setup-x86.exe
   CYG_MIRROR: http://cygwin.mirror.constant.com
-  SCI_RUN: /cygdrive/c/SMALLTALKCI-master/run.sh
+  SCI_RUN: /cygdrive/c/smalltalkCI-master/bin/smalltalkci
 
   matrix:
     - SMALLTALK: Squeak-trunk
       SMALLTALK_CONFIG: .default.ston
     - SMALLTALK: Squeak-trunk
       SMALLTALK_CONFIG: .tests.ston
-
-    - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .default.ston
-    - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .tests.ston
-    - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .corewithextras.ston
-    - SMALLTALK: Pharo-alpha
-      SMALLTALK_CONFIG: .developmentgroup.ston
 
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .default.ston
@@ -31,7 +22,7 @@ environment:
       SMALLTALK_CONFIG: .developmentgroup.ston
 
 platform:
-  - x86
+  - x64
 
 install:
   - '%CYG_EXE% -dgnqNO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
@@ -41,7 +32,7 @@ install:
 build: false
 
 test_script:
-  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
+  - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN"'
 
 #matrix:
 #  allow_failures:
