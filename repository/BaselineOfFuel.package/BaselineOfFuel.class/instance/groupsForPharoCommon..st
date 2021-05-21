@@ -10,7 +10,6 @@ groupsForPharoCommon: spec
 		self roassal: spec.
 
 		spec
-			group: 'default' with: #('Core' 'Tests');
 			group: 'CoreWithExtras' with: #('Core' 'Fuel-Metalevel' 'Fuel-ProgressUpdate');
 			group: 'DevelopmentGroup' with: #('CoreWithExtras' 'Fuel-Debug' 'Tests' 'Fuel-Tests-Metalevel');
 			group: 'Benchmarks' with: #('Core' 'Fuel-Benchmarks') ]
