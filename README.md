@@ -106,6 +106,7 @@ Metacello new
 
 <details>
   <summary>Pharo < 3</summary>
+
 ```smalltalk
 Gofer new
     url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
@@ -117,6 +118,7 @@ Gofer new
 
 <details>
   <summary>Pharo 1.1.1</summary>
+  
 ```smalltalk
 Gofer new
     url: 'http://smalltalkhub.com/mc/Pharo/Fuel/main';
