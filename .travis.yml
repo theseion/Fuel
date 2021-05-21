@@ -2,131 +2,112 @@ language: smalltalk
 
 jobs:
   include:
-    - smalltalk: Squeak32-trunk
+    - smalltalk:
+      - Squeak32-5.3
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Squeak32-trunk
-      env: BUILD_NAME=Squeak32-5.4
-      smalltalk_config: .tests.ston
-      os: linux
-    - smalltalk: Squeak64-trunk
-      smalltalk_config: .default.ston
-      os: linux
-    - smalltalk: Squeak64-trunk
-      env: BUILD_NAME=Squeak64-5.4
-      smalltalk_config: .tests.ston
-      os: linux
-
-    - smalltalk: Squeak32-5.3
-      smalltalk_config: .default.ston
-      os: linux
-    - smalltalk: Squeak32-5.3
+    - smalltalk:
+      - Squeak32-5.3
       env: BUILD_NAME=Squeak32-5.3
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Squeak64-5.3
+    - smalltalk:
+      - Squeak64-5.3
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Squeak64-5.3
+    - smalltalk:
+      - Squeak64-5.3
       env: BUILD_NAME=Squeak64-5.3
       smalltalk_config: .tests.ston
       os: linux
 
-    - smalltalk: Squeak32-5.2
+    - smalltalk:
+      - Squeak32-5.2
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Squeak32-5.2
+    - smalltalk:
+      - Squeak32-5.2
       env: BUILD_NAME=Squeak32-5.2
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Squeak64-5.2
+    - smalltalk:
+      - Squeak64-5.2
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Squeak64-5.2
+    - smalltalk:
+      - Squeak64-5.2
       env: BUILD_NAME=Squeak64-5.2
       smalltalk_config: .tests.ston
       os: linux
 
-    - smalltalk: Pharo32-7.0
+    - smalltalk:
+      - Pharo32-7.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo32-7.0
+    - smalltalk:
+      - Pharo32-7.0
       env: BUILD_NAME=Pharo32-7.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo32-7.0
+    - smalltalk:
+      - Pharo32-7.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo32-7.0
+    - smalltalk:
+      - Pharo32-7.0
       smalltalk_config: .developmentgroup.ston
       os: linux
 
-    - smalltalk: Pharo64-7.0
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo64-7.0
+    - smalltalk:
+      - Pharo64-7.0
       env: BUILD_NAME=Pharo64-7.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo64-7.0
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo64-7.0
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .developmentgroup.ston
       os: linux
 
-    - smalltalk: Pharo32-8.0
+    - smalltalk:
+      - Pharo32-8.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo32-8.0
+    - smalltalk:
+      - Pharo32-8.0
       env: BUILD_NAME=Pharo32-8.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo32-8.0
+    - smalltalk:
+      - Pharo32-8.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo32-8.0
+    - smalltalk:
+      - Pharo32-8.0
       smalltalk_config: .developmentgroup.ston
       os: linux
 
-    - smalltalk: Pharo64-8.0
+    - smalltalk:
+      - Pharo64-8.0
       smalltalk_config: .default.ston
       os: linux
-    - smalltalk: Pharo64-8.0
+    - smalltalk:
+      - Pharo64-8.0
       env: BUILD_NAME=Pharo64-8.0
       smalltalk_config: .tests.ston
       os: linux
-    - smalltalk: Pharo64-8.0
+    - smalltalk:
+      - Pharo64-8.0
       smalltalk_config: .corewithextras.ston
       os: linux
-    - smalltalk: Pharo64-8.0
-      smalltalk_config: .developmentgroup.ston
-      os: linux
-
-    - smalltalk: Pharo32-alpha
-      smalltalk_config: .default.ston
-      os: linux
-    - smalltalk: Pharo32-alpha
-      env: BUILD_NAME=Pharo32-9.0
-      smalltalk_config: .tests.ston
-      os: linux
-    - smalltalk: Pharo32-alpha
-      smalltalk_config: .corewithextras.ston
-      os: linux
-    - smalltalk: Pharo32-alpha
-      smalltalk_config: .developmentgroup.ston
-      os: linux
-
-    - smalltalk: Pharo64-alpha
-      smalltalk_config: .default.ston
-      os: linux
-    - smalltalk: Pharo64-alpha
-      env: BUILD_NAME=Pharo64-9.0
-      smalltalk_config: .tests.ston
-      os: linux
-    - smalltalk: Pharo64-alpha
-      smalltalk_config: .corewithextras.ston
-      os: linux
-    - smalltalk: Pharo64-alpha
+    - smalltalk:
+      - Pharo64-8.0
       smalltalk_config: .developmentgroup.ston
       os: linux
