@@ -5,145 +5,149 @@ sudo: false
 # This issue has been fixed in trunk
 
 matrix:
-  allow_failures:
-    - smalltalk: Pharo-alpha
-    - smalltalk: Pharo64-alpha
   include:
-    # Squeak-5.1 -> stable
-    - smalltalk: Squeak-5.1
+    - smalltalk:
+      - Squeak32-5.1
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Squeak-5.1
+    - smalltalk:
+      - Squeak32-5.1
       env: BUILD_NAME=Squeak-5.1
       smalltalk_config: .stable-tests.ston
       os: linux
-    # - smalltalk: Squeak-5.1
-    #   smalltalk_config: .stable-corewithextras.ston
-    #   os: linux
-    # Squeak-4.6 -> stable
-    - smalltalk: Squeak-4.6
+    - smalltalk:
+      - Squeak32-4.6
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Squeak-4.6
+    - smalltalk:
+      - Squeak32-4.6
       env: BUILD_NAME=Squeak-4.6
       smalltalk_config: .stable-tests.ston
       os: linux
-    # - smalltalk: Squeak-4.6
-    #   smalltalk_config: .stable-corewithextras.ston
-    #   os: linux
-    # Squeak-4.5
-    - smalltalk: Squeak-4.5
+    - smalltalk:
+      - Squeak32-4.5
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Squeak-4.5
+    - smalltalk:
+      - Squeak32-4.5
       env: BUILD_NAME=Squeak-4.5
       smalltalk_config: .stable-tests.ston
       os: linux
-    # - smalltalk: Squeak-4.5
-    #   smalltalk_config: .stable-corewithextras.ston
-    #   os: linux
-    # Pharo-alpha -> bleedingEdge
-    - smalltalk: Pharo-alpha
+    - smalltalk:
+      - Pharo32-7.0
       smalltalk_config: .bleedingedge-default.ston
       os: linux
-    - smalltalk: Pharo-alpha
+    - smalltalk:
+      - Pharo32-7.0
       env: BUILD_NAME=Pharo-7.0
       smalltalk_config: .bleedingedge-tests.ston
       os: linux
-    - smalltalk: Pharo-alpha
+    - smalltalk:
+      - Pharo32-7.0 
       smalltalk_config: .bleedingedge-corewithextras.ston
       os: linux
-    - smalltalk: Pharo-alpha
+    - smalltalk:
+      - Pharo32-7.0
       smalltalk_config: .bleedingedge-developmentgroup.ston
       os: linux
-    # Pharo-alpha 64 bit -> bleedingEdge
-    - smalltalk: Pharo64-alpha
+
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .bleedingedge-default.ston
       os: linux
-    - smalltalk: Pharo64-alpha
+    - smalltalk:
+      - Pharo64-7.0
       env: BUILD_NAME=Pharo-7.0-64
       smalltalk_config: .bleedingedge-tests.ston
       os: linux
-    - smalltalk: Pharo64-alpha
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .bleedingedge-corewithextras.ston
       os: linux
-    - smalltalk: Pharo64-alpha
+    - smalltalk:
+      - Pharo64-7.0
       smalltalk_config: .bleedingedge-developmentgroup.ston
       os: linux
-    # Pharo-6.1 -> stable
-    - smalltalk: Pharo-6.1
+
+    - smalltalk:
+      - Pharo32-6.1
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo-6.1
+    - smalltalk:
+      - Pharo32-6.1
       env: BUILD_NAME=Pharo-6.1
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo-6.1
+    - smalltalk:
+      - Pharo32-6.1
       smalltalk_config: .stable-corewithextras.ston
       os: linux
-    # Pharo-6.1 64 bit -> stable
-    - smalltalk: Pharo64-6.1
+
+    - smalltalk:
+      - Pharo64-6.1
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo64-6.1
+    - smalltalk:
+      - Pharo64-6.1
       env: BUILD_NAME=Pharo-6.1-64
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo64-6.1
+    - smalltalk:
+      - Pharo64-6.1
       smalltalk_config: .stable-corewithextras.ston
       os: linux
-    # Pharo-6.0 -> stable
-    - smalltalk: Pharo-6.0
+
+    - smalltalk:
+      - Pharo32-6.0
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo-6.0
+    - smalltalk:
+      - Pharo32-6.0
       env: BUILD_NAME=Pharo-6.0
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo-6.0
+    - smalltalk:
+      - Pharo32-6.0
       smalltalk_config: .stable-corewithextras.ston
       os: linux
-    # Pharo-6.0 64 bit -> stable
-    # A missing override in SmallInteger prevents this from working
-    # - smalltalk: Pharo64-6.0
-    #   smalltalk_config: .stable-default.ston
-    #   os: linux
-    # - smalltalk: Pharo64-6.0
-    #   smalltalk_config: .stable-tests.ston
-    #   os: linux
-    # - smalltalk: Pharo64-6.0
-    #   smalltalk_config: .stable-corewithextras.ston
-    #   os: linux
-    # Pharo-5.0 -> stable
-    - smalltalk: Pharo-5.0
+    - smalltalk:
+      - Pharo32-5.0
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo-5.0
+    - smalltalk:
+      - Pharo32-5.0
       env: BUILD_NAME=Pharo-5.0
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo-5.0
+    - smalltalk:
+      - Pharo32-5.0
       smalltalk_config: .stable-corewithextras.ston
       os: linux
-    # Pharo-4.0 -> stable
-    - smalltalk: Pharo-4.0
+
+    - smalltalk:
+      - Pharo32-4.0
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo-4.0
+    - smalltalk:
+      - Pharo32-4.0
       env: BUILD_NAME=Pharo-4.0
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo-4.0
+    - smalltalk:
+      - Pharo32-4.0
       smalltalk_config: .stable-corewithextras.ston
       os: linux
-    # Pharo-3.0 -> stable
-    - smalltalk: Pharo-3.0
+
+    - smalltalk:
+      - Pharo32-3.0
       smalltalk_config: .stable-default.ston
       os: linux
-    - smalltalk: Pharo-3.0
+    - smalltalk:
+      - Pharo32-3.0
       env: BUILD_NAME=Pharo-3.0
       smalltalk_config: .stable-tests.ston
       os: linux
-    - smalltalk: Pharo-3.0
+    - smalltalk:
+      - Pharo32-3.0
       smalltalk_config: .stable-corewithextras.ston
       os: linux
