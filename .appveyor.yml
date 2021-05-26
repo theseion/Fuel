@@ -31,6 +31,9 @@ install:
 
 build: false
 
+before_build:
+  - uname -mp
+
 test_script:
   - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
 
