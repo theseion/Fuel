@@ -14,8 +14,6 @@ environment:
 
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .default.ston
-      platform:
-        - x64
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo64-alpha
