@@ -14,6 +14,8 @@ environment:
 
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .default.ston
+      platform:
+        - x64
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo64-alpha
@@ -25,14 +27,12 @@ platform:
   - x64
 
 install:
+  - '%CYG_BASH% -lc "uname -mp"'
   - '%CYG_EXE% -dgnqNO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
   - ps: Start-FileDownload "https://github.com/hpi-swa/SMALLTALKCI/archive/master.zip" "C:\SMALLTALKCI.zip"
   - 7z x C:\SMALLTALKCI.zip -oC:\ -y > NULL
 
 build: false
-
-before_build:
-  - uname -mp
 
 test_script:
   - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
