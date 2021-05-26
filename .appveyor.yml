@@ -7,19 +7,19 @@ environment:
   SCI_RUN: /cygdrive/c/smalltalkCI-master/bin/smalltalkci
 
   matrix:
-    - SMALLTALK: Squeak-trunk
-      SMALLTALK_CONFIG: .default.ston
-    - SMALLTALK: Squeak-trunk
-      SMALLTALK_CONFIG: .tests.ston
+#    - SMALLTALK: Squeak-trunk
+#      SMALLTALK_CONFIG: .default.ston
+#    - SMALLTALK: Squeak-trunk
+#      SMALLTALK_CONFIG: .tests.ston
 
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .default.ston
-    - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .tests.ston
-    - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .corewithextras.ston
-    - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .developmentgroup.ston
+#    - SMALLTALK: Pharo64-alpha
+#      SMALLTALK_CONFIG: .tests.ston
+#    - SMALLTALK: Pharo64-alpha
+#      SMALLTALK_CONFIG: .corewithextras.ston
+#    - SMALLTALK: Pharo64-alpha
+#      SMALLTALK_CONFIG: .developmentgroup.ston
 
 platform:
   - x64
