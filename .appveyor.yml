@@ -7,25 +7,24 @@ environment:
   SCI_RUN: /cygdrive/c/smalltalkCI-master/bin/smalltalkci
 
   matrix:
-#    - SMALLTALK: Squeak-trunk
-#      SMALLTALK_CONFIG: .default.ston
-#    - SMALLTALK: Squeak-trunk
-#      SMALLTALK_CONFIG: .tests.ston
+    - SMALLTALK: Squeak64-trunk
+      SMALLTALK_CONFIG: .default.ston
+    - SMALLTALK: Squeak64-trunk
+      SMALLTALK_CONFIG: .tests.ston
 
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .default.ston
-#    - SMALLTALK: Pharo64-alpha
-#      SMALLTALK_CONFIG: .tests.ston
-#    - SMALLTALK: Pharo64-alpha
-#      SMALLTALK_CONFIG: .corewithextras.ston
-#    - SMALLTALK: Pharo64-alpha
-#      SMALLTALK_CONFIG: .developmentgroup.ston
+    - SMALLTALK: Pharo64-alpha
+      SMALLTALK_CONFIG: .tests.ston
+    - SMALLTALK: Pharo64-alpha
+      SMALLTALK_CONFIG: .corewithextras.ston
+    - SMALLTALK: Pharo64-alpha
+      SMALLTALK_CONFIG: .developmentgroup.ston
 
 platform:
   - x64
 
 install:
-  - '%CYG_BASH% -lc "uname -mp"'
   - '%CYG_EXE% -dgnqNO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
   - ps: Start-FileDownload "https://github.com/hpi-swa/SMALLTALKCI/archive/master.zip" "C:\SMALLTALKCI.zip"
   - 7z x C:\SMALLTALKCI.zip -oC:\ -y > NULL
@@ -34,9 +33,3 @@ build: false
 
 test_script:
   - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN $SMALLTALK_CONFIG"'
-
-#matrix:
-#  allow_failures:
-#    - SMALLTLAK: Squeak-trunk
-#    - SMALLTALK: Pharo-alpha
-#    - SMALLTLAK: Pharo64-alpha
