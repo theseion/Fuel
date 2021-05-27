@@ -14,9 +14,9 @@ testNextEncodedInt64
 	"-1 on 64-bits systems"
 	stream
 		resetToStart;
-		nextPutAll: #[63 255 255 255 255 255 255 255];
+		nextPutAll: #[31 255 255 255 255 255 255 255];
 		reset.
-	self assert: decoder nextEncodedInt64 equals: (2 raisedTo: 62) - 1.
+	self assert: decoder nextEncodedInt64 equals: -1.
 	
 	"SmallInteger maxVal on 64-bits systems"
 	stream
@@ -30,4 +30,4 @@ testNextEncodedInt64
 		resetToStart;
 		nextPutAll: #[16 0 0 0 0 0 0 0];
 		reset.
-	self assert: decoder nextEncodedInt64 equals: (2 raisedTo: 60)
+	self assert: decoder nextEncodedInt64 equals: 0 - (2 raisedTo: 60)

@@ -1,11 +1,6 @@
 encoding
 encodeInt24: aSmallInteger
-	| topByte |
-	topByte := (aSmallInteger bitShift: -16) bitAnd: 255.
-	aSmallInteger < 0 ifTrue: [
-		topByte := topByte bitOr: 128 ].
-	
-	stream
-		nextPut: topByte;
-		nextPut: ((aSmallInteger bitShift: -8) bitAnd: 255);
-		nextPut: (aSmallInteger bitAnd: 255)
+	"SmallInteger is 31 / 63 bits. Hence, we can store a full 24 bit signed integer.
+	We only have to restore the two's complement of the remaining higher bits when
+	we materialize."
+	self encodeUint24: aSmallInteger

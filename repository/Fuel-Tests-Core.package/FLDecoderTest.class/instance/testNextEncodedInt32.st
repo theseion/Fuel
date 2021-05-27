@@ -16,8 +16,7 @@ testNextEncodedInt32
 		resetToStart;
 		nextPutAll: #[127 255 255 255];
 		reset.
-	"The decoded integer will be negative on a 32-bits system but not on 64-bits"
-	self assert: decoder nextEncodedInt32 equals: (2 raisedTo: 31) - 1.
+	self assert: decoder nextEncodedInt32 equals: -1.
 	
 	"SmallInteger maxVal on 32-bits systems"
 	stream
@@ -31,5 +30,4 @@ testNextEncodedInt32
 		resetToStart;
 		nextPutAll: #[64 0 0 0];
 		reset.
-	"The decoded integer will be negative on a 32-bits system but not on 64-bits"
-	self assert: decoder nextEncodedInt32 equals: (2 raisedTo: 30)
+	self assert: decoder nextEncodedInt32 equals: 0 - (2 raisedTo: 30)

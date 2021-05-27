@@ -8,7 +8,7 @@ testDateOffsetsChanging
 	self assert: DateAndTime now offset equals: 1 hour.
 	object := Date fromDays: 37023.
 	self assert: object start offset equals: 0 hours.
-	self serialize:object.
+	self serialize: object.
 	
 	DateAndTime localTimeZone: sast.
 	self assert: DateAndTime now offset equals: 2 hours.

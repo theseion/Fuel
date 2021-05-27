@@ -4,4 +4,4 @@ testEncodeInt64Truncated
 	self assert: self getResult equals: #[0 0 0 0 0 0 0 0].
 	
 	encoder encodeInt64: (2 raisedTo: 65) - 1.
-	self assert: self getResult equals: #[255 255 255 255 255 255 255 255]
+	self assert: self getResult equals: #[31 255 255 255 255 255 255 255]

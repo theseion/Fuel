@@ -16,7 +16,7 @@ testNextEncodedInt24
 		resetToStart;
 		nextPutAll: #[255 255 255];
 		reset.
-	self assert: decoder nextEncodedInt24 equals: (2 raisedTo: 24) - 1.
+	self assert: decoder nextEncodedInt24 equals: -1.
 	
 	"Maximum positive 24-bit integer in two's complement"
 	stream
@@ -30,4 +30,4 @@ testNextEncodedInt24
 		resetToStart;
 		nextPutAll: #[128 0 0 0];
 		reset.
-	self assert: decoder nextEncodedInt24 equals: (2 raisedTo: 23)
+	self assert: decoder nextEncodedInt24 equals: 0 - (2 raisedTo: 23)

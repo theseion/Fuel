@@ -1,16 +1,13 @@
 encoding
 encodeInt64: aSmallInteger
-	| topByte |
-	topByte := (aSmallInteger bitShift: -56) bitAnd: 255.
-	aSmallInteger < 0 ifTrue: [
-		topByte := topByte bitOr: 128 ].
-	
-	stream
-		nextPut: topByte;
-		nextPut: ((aSmallInteger bitShift: -48) bitAnd: 255);
-		nextPut: ((aSmallInteger bitShift: -40) bitAnd: 255);
-		nextPut: ((aSmallInteger bitShift: -32) bitAnd: 255);
-		nextPut: ((aSmallInteger bitShift: -24) bitAnd: 255);
-		nextPut: ((aSmallInteger bitShift: -16) bitAnd: 255);
-		nextPut: ((aSmallInteger bitShift: -8) bitAnd: 255);
-		nextPut: (aSmallInteger bitAnd: 255)
+	"SmallInteger is 31 / 63 bits. We could encode 64 bit signed integers in theory but
+	that would mean that we could receive large integers as input, which shouldn't happen.
+	We have to assume that we are storing a SmallInteger with 63 bits of information here.
+	We can store the SmallInteger as a uint and then take care to restore potential higher
+	bits when we materialze.
+	Note: we have to mask the top bit because we don't know what was in there. Since
+		we store byte units but SmallInteger is only 63 bits, the top bit may be 1 if
+		the argument is negative and we're on a system > 64 bits.
+	Note: while the documentation says that SmallInteger uses 63 bits on 64 bit platforms
+			`SmallInteger minVal` actually only uses 61 bits!"
+	self encodeUint64: (aSmallInteger bitAnd: 16r1FFFFFFFFFFFFFFF)
