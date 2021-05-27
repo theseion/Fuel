@@ -1,13 +1,16 @@
 encoding
 encodeInt64: aSmallInteger
-	"Write a signed integer to the next 8 bytes.
+	| topByte |
+	topByte := (aSmallInteger bitShift: -56) bitAnd: 255.
+	aSmallInteger < 0 ifTrue: [
+		topByte := topByte bitOr: 128 ].
 	
-	Note: In Pharo SmallIntegers are signed 31-bit / 63-bit numbers stored
-			in memory as twos' complement. For storage we can pretend that
-			they are unsigned, as long as we decode them as signed.
-	Note: 	Integers of larger word size are truncated, which is necessary in case of negative
-			numbers (this may change the perceived value).
-			This may result in the creation of a LargeInteger in case of `SmallInteger maxVal`.
-			We assume that doesn't happen often and thus won'	impact performance much."
-
-	self encodeUint64: (aSmallInteger bitAnd: 16rFFFFFFFFFFFFFFFF)
+	stream
+		nextPut: topByte;
+		nextPut: ((aSmallInteger bitShift: -48) bitAnd: 255);
+		nextPut: ((aSmallInteger bitShift: -40) bitAnd: 255);
+		nextPut: ((aSmallInteger bitShift: -32) bitAnd: 255);
+		nextPut: ((aSmallInteger bitShift: -24) bitAnd: 255);
+		nextPut: ((aSmallInteger bitShift: -16) bitAnd: 255);
+		nextPut: ((aSmallInteger bitShift: -8) bitAnd: 255);
+		nextPut: (aSmallInteger bitAnd: 255)
