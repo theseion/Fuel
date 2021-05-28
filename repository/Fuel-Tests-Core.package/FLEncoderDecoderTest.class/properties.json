@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Fuel-Tests-Core-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"encoder",
+		"stream",
+		"decoder"
+	],
+	"name" : "FLEncoderDecoderTest",
+	"type" : "normal"
+}
