@@ -23,6 +23,7 @@ We would love to see your project here too ;)!
 - [Computer-World](https://github.com/seandenigris/Computer-World): Make computing objects come alive
 - [Resources-Live](https://github.com/seandenigris/Resources-Live): Not files, live resources!
 - [SimplePersistence](https://github.com/seandenigris/Simple-Persistence): Hassle free model backups
+- [Launchpad](https://github.com/ba-st/Launchpad): Application entry point command line handler template for Pharo
 
 # Status of automated builds
 ### Pharo
