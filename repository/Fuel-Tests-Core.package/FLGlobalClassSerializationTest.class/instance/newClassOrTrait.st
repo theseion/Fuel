@@ -1,4 +1,4 @@
-tests
+class-factory
 newClassOrTrait
 	"Returns a class for testing"
 

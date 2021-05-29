@@ -1,4 +1,4 @@
-tests
+helpers
 newInstanceFrom: aClass
 
 	^ aClass new

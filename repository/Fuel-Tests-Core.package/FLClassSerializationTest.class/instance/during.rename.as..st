@@ -1,4 +1,4 @@
-tests
+helpers
 during: aBlock rename: aClass as: anotherClass
 
 	[ testingEnvironment at: aClass name put: anotherClass.
