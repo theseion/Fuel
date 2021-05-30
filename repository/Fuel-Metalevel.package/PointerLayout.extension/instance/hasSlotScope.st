@@ -1,3 +1,0 @@
-*Fuel-Metalevel
-hasSlotScope
-	^ true

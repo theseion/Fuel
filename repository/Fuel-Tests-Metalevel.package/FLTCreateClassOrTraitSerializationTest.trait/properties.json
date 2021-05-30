@@ -1,7 +1,0 @@
-{
-	"commentStamp" : "<historical>",
-	"classinstvars" : [ ],
-	"category" : "Fuel-Tests-Metalevel",
-	"instvars" : [ ],
-	"name" : "FLTCreateClassOrTraitSerializationTest"
-}

@@ -1,4 +1,0 @@
-*Fuel-Metalevel
-basicEnvironment
-
-	^ environment
