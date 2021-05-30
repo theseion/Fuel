@@ -1,3 +1,3 @@
-tests
+class-factory
 newAnonymousClassOrTrait
 	^ self explicitRequirement

@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLPrimitiveCluster",
-	"category" : "Fuel-Core-Clusters",
+	"category" : "Fuel-Core-Clusters-Global",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

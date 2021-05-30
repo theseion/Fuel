@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "Fuel-Core-Base",
+	"category" : "Fuel-Core-Clusters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

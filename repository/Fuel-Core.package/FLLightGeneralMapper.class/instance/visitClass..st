@@ -1,4 +1,5 @@
 visiting
 visitClass: aClass
-
-	self mapAndTraceInstanceSideGlobal: aClass
+	self
+		mapAndTraceByClusterName: aClass
+		to: FLGlobalClassCluster

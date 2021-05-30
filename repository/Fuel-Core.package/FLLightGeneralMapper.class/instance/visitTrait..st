@@ -1,4 +1,5 @@
 visiting
 visitTrait: aTrait
-
-	self mapAndTraceInstanceSideGlobal: aTrait
+	self
+		mapAndTraceByClusterName: aTrait
+		to: FLGlobalClassCluster

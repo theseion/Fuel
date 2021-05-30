@@ -1,0 +1,7 @@
+{
+	"commentStamp" : "<historical>",
+	"classinstvars" : [ ],
+	"category" : "Fuel-Tests-Core-FullSerialization",
+	"instvars" : [ ],
+	"name" : "FLTCreateClassOrTraitSerializationTest"
+}

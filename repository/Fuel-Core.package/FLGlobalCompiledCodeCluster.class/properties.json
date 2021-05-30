@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "smalltalkCI 5/16/2021 08:08",
 	"super" : "FLGlobalCluster",
-	"category" : "Fuel-Core-Clusters",
+	"category" : "Fuel-Core-Clusters-Global",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

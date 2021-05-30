@@ -1,0 +1,4 @@
+*Fuel-Core
+basicSubclasses
+
+	^ subclasses
