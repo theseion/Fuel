@@ -1,0 +1,15 @@
+creating
+newSubclassOf: aClass uses: aTraitComposition instanceVariableNames: ivNamesString classVariableNames: classVarsString poolDictionaries: poolNamesString
+	| newClass |		
+	newClass := self class classInstaller make: [ :aBuilder | 
+		aBuilder 
+			name: self defaultNewClassName;
+			superclass: aClass;
+			traitComposition: aTraitComposition asTraitComposition;
+			slots: ivNamesString asSlotCollection;
+			sharedVariablesFromString: classVarsString;
+			sharedPools: poolNamesString;
+			package: self defaultPackageAndTag ].	
+		
+	self createdClasses add: newClass.
+	^ newClass

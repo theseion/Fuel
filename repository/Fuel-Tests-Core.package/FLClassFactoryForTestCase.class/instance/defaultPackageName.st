@@ -1,0 +1,4 @@
+accessing-defaults
+defaultPackageName
+
+	^ #CategoryForTestToBeDeleted
