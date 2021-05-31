@@ -3,7 +3,7 @@ testCreateClassWithSharedPool
 	"Tests materialization of a class not defined in the image, with a shared pool (NOTE: it will be an identity problem if it isn't a Smalltalk global')"
 	
 	| aClass materializedClass |	
-	aClass := self newClass.
+	aClass := self classFactory silentlyNewClass.
 	aClass addSharedPool: TextConstants.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.

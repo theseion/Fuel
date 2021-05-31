@@ -3,7 +3,7 @@ testCreateClassWithSharedPoolAndMethodReferencingIt
 	"Tests materialization of a class not defined in the image, with a shared pool and a compiled method that referers to an Association with such sharedPool (NOTE: it will be an identity problem if it isn't a Smalltalk global')"
 	
 	| aClass materializedClass sharedPool materializedMethod literalIndex |	
-	aClass := self newClass.
+	aClass := self classFactory silentlyNewClass.
 	sharedPool := self classFactory newSubclassOf: SharedPool.
 	aClass addSharedPool: sharedPool.
 	aClass class duringTestCompileSilently: 'initialize ', sharedPool name asString, ' name.'.

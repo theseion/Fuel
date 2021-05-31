@@ -2,10 +2,10 @@ tests
 testNotFoundAfterRemoval
 	"Tests that serializer does not tolarate when the class was removed between serialization and materialization"
 	
-	| class |
-	class := self newClass.
+	| classOrTrait |
+	classOrTrait := self newClassOrTrait.
 	
-	self serialize: class.
-	self removeFromSystem: class.
+	self serialize: classOrTrait.
+	self removeFromSystem: classOrTrait.
 	
 	self should: [self materialized] raise: FLClassNotFound.

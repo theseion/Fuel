@@ -3,7 +3,7 @@ testCreateWithComment
 	"Tests materialization of the comment of a class or trait not defined in the image."
 	
 	| aClassOrTrait materializedClassOrTrait |	
-	aClassOrTrait := self newClass.
+	aClassOrTrait := self newClassOrTrait.
 	aClassOrTrait comment: 'test comment' stamp: 'test stamp'.
 	
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.

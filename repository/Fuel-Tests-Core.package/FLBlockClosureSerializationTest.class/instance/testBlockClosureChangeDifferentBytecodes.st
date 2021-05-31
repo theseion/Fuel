@@ -3,7 +3,7 @@ testBlockClosureChangeDifferentBytecodes
 	"Raise an error when materializing a closure whose method has changed bytecodes."
 
 	| aClass aClosure |
-	aClass := self newClass
+	aClass := self classFactory silentlyNewClass
 		duringTestCompileSilently: 'methodWithClosure  ^ [ 42 ]';
 		yourself.
 	aClosure := aClass new perform: #methodWithClosure.

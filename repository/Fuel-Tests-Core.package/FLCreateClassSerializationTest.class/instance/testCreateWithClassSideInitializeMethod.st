@@ -4,7 +4,7 @@ testCreateWithClassSideInitializeMethod
 
 	| aClassOrTrait materializedClassOrTrait category |
 	category := 'tests-initialize'.
-	aClassOrTrait := self newClass.
+	aClassOrTrait := self classFactory silentlyNewClass.
 	aClassOrTrait classSide duringTestCompileSilently: 'initialize self error: ''Fuel should not automatically call #initialize'' ' classified: category.
 
 	self shouldnt: [materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait] raise: Error.

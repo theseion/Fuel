@@ -3,7 +3,7 @@ testMaterializationDoesNotModifySerializedClass
 	"Tests that materialization does not change the source class."
 	
 	| aClass materializedClass |	
-	aClass := self newClassWithInstanceVariableNames: 'var'.
+	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'var'.
 	
 	self analyzer considerInternalBehavior: aClass.
 	self serialize: aClass.

@@ -4,7 +4,7 @@ testCreateWithMethod
 	
 	| aClassOrTrait materializedClassOrTrait category |
 	category := 'tests-instance-side'.
-	aClassOrTrait := self newClass.
+	aClassOrTrait := self newClassOrTrait.
 	aClassOrTrait duringTestCompileSilently: 'fortyTwo ^42' classified: category.
 
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.

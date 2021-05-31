@@ -1,7 +1,7 @@
 tests
 testProxyByTarget
 	| aProxyClass result original |
-	aProxyClass := (self newSubclassOf: Object instanceVariableNames: 'target' classVariableNames: '')
+	aProxyClass := (self classFactory silentlyNewClassWithClassVariableNames: 'target')
 		duringTestCompileSilently: 'target: x  target := x';
 		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: target';
 		yourself.

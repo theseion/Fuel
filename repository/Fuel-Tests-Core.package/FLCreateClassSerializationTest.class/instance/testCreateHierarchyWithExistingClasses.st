@@ -3,10 +3,10 @@ testCreateHierarchyWithExistingClasses
 	"Tests materialization of a hierarchy of classes that are not defined in the image and classes that indeed are defined"
 	
 	| serializedClasses materializedClasses a b c d |	
-	a := self newSubclassOf: Object instanceVariableNames: '' classVariableNames: ''.
-	b := self newSubclassOf: a instanceVariableNames: '' classVariableNames: ''.
-	c := self newSubclassOf: a instanceVariableNames: '' classVariableNames: ''.
-	d := self newSubclassOf: Date instanceVariableNames: '' classVariableNames: ''.
+	a := self classFactory silentlyNewClass.
+	b := self classFactory silentlyNewSubclassOf: a.
+	c := self classFactory silentlyNewSubclassOf: a.
+	d := self classFactory silentlyNewSubclassOf: Date.
 	serializedClasses := Array with: a with: b with: c with: d.
 	
 	materializedClasses := self resultOfSerializeRemoveAndMaterializeAll: serializedClasses.

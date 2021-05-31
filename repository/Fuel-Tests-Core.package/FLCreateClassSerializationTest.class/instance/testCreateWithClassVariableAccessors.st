@@ -3,10 +3,7 @@ testCreateWithClassVariableAccessors
 	"Tests materialization of a compiled method in a class not defined in the image. The class defines accessors for a class variable."
 	
 	| aClass materializedClass instance |	
-	aClass := self  
-		newSubclassOf: Object 
-		instanceVariableNames: '' 
-		classVariableNames: 'ClassVariable'.
+	aClass := self classFactory silentlyNewClassWithClassVariableNames:'ClassVariable'.
 	aClass 
 		duringTestCompileSilently: 'classVariable ^ClassVariable';
 		duringTestCompileSilently: 'classVariable: value ClassVariable := value'.

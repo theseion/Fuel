@@ -3,7 +3,7 @@ testCreateBasic
 	"Tests materialization a class or trait not defined in the image."
 
 	| aClassOrTrait materializedClassOrTrait environment category name |
-	aClassOrTrait := self newClass.
+	aClassOrTrait := self newClassOrTrait.
 	environment := aClassOrTrait environment.
 	category := aClassOrTrait category.
 	name := aClassOrTrait name.

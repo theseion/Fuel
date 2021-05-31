@@ -3,10 +3,7 @@ testCreateClassWithClassVariable
 	"Tests materialization a class not defined in the image, with a class variable."
 	
 	| aClass materializedClass |	
-	aClass := self  
-		newSubclassOf: Object 
-		instanceVariableNames: '' 
-		classVariableNames: 'ClassVariable'.
+	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'ClassVariable'.
 	aClass classPool at: 'ClassVariable' put: #test.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.

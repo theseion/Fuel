@@ -6,5 +6,5 @@ resultOfSerializeRemoveAndMaterialize: aClass
 		serialize: aClass;
 		removeFromSystem: aClass.
 	materialized := self materialized.
-	self registerBehavior: materialized.
+	self classFactory registerBehavior: materialized.
 	^ materialized

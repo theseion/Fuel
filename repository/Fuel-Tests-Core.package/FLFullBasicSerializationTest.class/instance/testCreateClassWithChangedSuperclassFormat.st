@@ -3,8 +3,8 @@ testCreateClassWithChangedSuperclassFormat
 	"Tests issue #221"
 
 	| a b |
-	a := self newSubclassOf: Object instanceVariableNames: 'one' classVariableNames: ''.
-	b := self newSubclassOf: a instanceVariableNames: 'two' classVariableNames: ''.
+	a := self classFactory silentlyNewClassWithInstanceVariableNames: 'one'.
+	b := self classFactory silentlyNewSubclassOf: a instanceVariableNames: 'two'.
 	self analyzer considerInternalBehavior: b.
 	self serialize: {b new. b}.
 	

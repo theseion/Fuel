@@ -3,8 +3,8 @@ testCreateWithSubclass
 	"Tests materialization of a class that has a external subclass. Currently, this is the expected behaviour."
 	
 	| serializedClass aSubclass materializedClass |	
-	serializedClass := self newSubclassOf: Object instanceVariableNames: '' classVariableNames: ''.
-	aSubclass := self newSubclassOf: serializedClass instanceVariableNames: '' classVariableNames: ''.
+	serializedClass := self classFactory silentlyNewClass.
+	aSubclass := self classFactory silentlyNewSubclassOf: serializedClass.
 	
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: serializedClass.
 

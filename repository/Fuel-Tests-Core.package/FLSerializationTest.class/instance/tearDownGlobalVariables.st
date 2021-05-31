@@ -1,5 +1,5 @@
 running
 tearDownGlobalVariables
-	testingEnvironment
+	self environmentOfTest
 		removeKey: #FLGlobalVariableForTesting
 		ifAbsent: []

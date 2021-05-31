@@ -1,7 +1,7 @@
 tests
 testSubstituteByItself
 	| aRecursiveClass result | 
-	aRecursiveClass := (self newSubclassOf: Object instanceVariableNames: '' classVariableNames: '') 
+	aRecursiveClass := self classFactory silentlyNewClass 
 		duringTestCompileSilently: 'fuelAccept: aMapper  
 			^aMapper 
 				visitSubstitution: self by: self 

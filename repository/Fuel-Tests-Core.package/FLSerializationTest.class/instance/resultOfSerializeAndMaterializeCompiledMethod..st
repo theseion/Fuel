@@ -1,4 +1,4 @@
-running
+helpers
 resultOfSerializeAndMaterializeCompiledMethod: aCompiledMethod
 	| materialized |
 	materialized := self resultOfSerializeAndMaterialize: aCompiledMethod.

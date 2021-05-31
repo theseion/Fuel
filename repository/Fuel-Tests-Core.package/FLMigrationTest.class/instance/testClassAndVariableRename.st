@@ -1,7 +1,7 @@
 tests-manual
 testClassAndVariableRename
 	| pointClass aPoint resultPoint pointClassName |
-	pointClass := self newClassWithInstanceVariableNames: 'x y'.
+	pointClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'x y'.
 	pointClassName := pointClass name.
 	aPoint := pointClass new.
 	aPoint instVarNamed: 'x' put: 7.

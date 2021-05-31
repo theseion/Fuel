@@ -2,16 +2,16 @@ tests
 testMethodNotFoundAfterRemoval
 	"Tests that serializer does not tolarate when the method was removed between serialization and materialization"
 	
-	| class |
-	class := self newClass.
-	class duringTestCompileSilently: 'you'.
+	| classOrTrait |
+	classOrTrait := self newClassOrTrait.
+	classOrTrait duringTestCompileSilently: 'you'.
 	
-	self serialize: class >> #you.
-	class removeSelectorSilently: #you.
+	self serialize: classOrTrait >> #you.
+	classOrTrait removeSelectorSilently: #you.
 	
 	self 
 		should: [self materialized] 
 		raise: FLMethodNotFound
-		whoseDescriptionIncludes: class name, '>>#you' 
+		whoseDescriptionIncludes: classOrTrait name, '>>#you' 
 		description: 'Should raise an error when method is not present.' 
 	

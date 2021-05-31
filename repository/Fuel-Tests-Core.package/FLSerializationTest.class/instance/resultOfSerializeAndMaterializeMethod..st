@@ -1,4 +1,4 @@
-running
+helpers
 resultOfSerializeAndMaterializeMethod: aCompiledMethod
 	self analyzer considerInternalMethod: aCompiledMethod. 
 	self serialize: aCompiledMethod.

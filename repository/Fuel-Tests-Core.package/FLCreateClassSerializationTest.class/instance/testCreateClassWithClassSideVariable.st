@@ -3,7 +3,7 @@ testCreateClassWithClassSideVariable
 	"Tests materialization a class not defined in the image, with a class-side instance variable."
 	
 	| aClass materializedClass |	
-	aClass := self newClass.
+	aClass := self classFactory silentlyNewClass.
 	aClass class addInstVarNamed: 'a'.
 	aClass instVarNamed: 'a' put: #test.
 

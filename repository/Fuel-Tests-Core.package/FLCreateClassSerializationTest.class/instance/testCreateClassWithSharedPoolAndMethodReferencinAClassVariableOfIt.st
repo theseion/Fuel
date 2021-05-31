@@ -4,7 +4,7 @@ testCreateClassWithSharedPoolAndMethodReferencinAClassVariableOfIt
 	
 	| aClass materializedClass sharedPool anObject |	
 	
-	aClass := self newClass.
+	aClass := self classFactory silentlyNewClass.
 	anObject := Object new.
 	
 	sharedPool := self classFactory newSubclassOf: SharedPool.

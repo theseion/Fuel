@@ -1,7 +1,7 @@
 tests
 testTransientByNil
 	| result aClassOfTransientObjects | 
-	aClassOfTransientObjects := self newClass
+	aClassOfTransientObjects := self classFactory silentlyNewClass
 		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: nil';
 		yourself.
 

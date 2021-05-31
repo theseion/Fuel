@@ -3,7 +3,7 @@ testBlockClosureChangeSameBytecodes
 	"Tolerate materializing a closure whose method has changed but not the bytecodes."
 
 	| aClass aClosure materializedClosure |
-	aClass := self newClass
+	aClass := self classFactory silentlyNewClass
 		duringTestCompileSilently: 'methodWithClosure  ^ [ 41 ]';
 		yourself.
 	aClosure := aClass new perform: #methodWithClosure.

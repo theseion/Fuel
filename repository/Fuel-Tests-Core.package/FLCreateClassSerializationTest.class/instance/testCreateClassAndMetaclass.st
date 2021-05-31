@@ -2,15 +2,15 @@ tests
 testCreateClassAndMetaclass
 	"Tests materialization a class or trait not defined in the image and that the metaclass is also created."
 
-	| aClassOrTrait materializedClassOrTrait environment category name metaclassName metaclass |
-	aClassOrTrait := self newClass.
-	environment := aClassOrTrait environment.
-	category := aClassOrTrait category.
-	name := aClassOrTrait name.
-	metaclassName := aClassOrTrait class name.
-	metaclass := aClassOrTrait class.
+	| class materializedClassOrTrait environment category name metaclassName metaclass |
+	class := self classFactory silentlyNewClass.
+	environment := class environment.
+	category := class category.
+	name := class name.
+	metaclassName := class class name.
+	metaclass := class class.
 	
-	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
+	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: class.
 	
 	self assert: environment == materializedClassOrTrait environment.
 		"Classes are not direclty inserted in the system organization so we can only test #basicCategory and not #category."

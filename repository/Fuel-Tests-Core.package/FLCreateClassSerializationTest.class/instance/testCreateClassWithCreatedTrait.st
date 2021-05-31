@@ -3,9 +3,9 @@ testCreateClassWithCreatedTrait
 	"Tests materialization of a class and a trait not defined in the image. The class uses the trait."
 	
 	| aClass aTrait result materializedClass materializedTrait |	
-	aClass := self newClass.
+	aClass := self classFactory silentlyNewClass.
 	aClass duringTestCompileSilently: 'fortyOne ^41'.
-	aTrait := self newTraitSuffixed: 'Secondary'.
+	aTrait := self classFactory silentlyNewTrait.
 	aTrait duringTestCompileSilently: 'fortyTwo ^42'.
 	aClass addToComposition: aTrait.
 	

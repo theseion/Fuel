@@ -2,7 +2,7 @@ tests-manual
 testBadDestinationVariableRename
 	
 	| pointClass aPoint pointClassName |
-	pointClass := self newClassWithInstanceVariableNames: 'x y'.
+	pointClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'x y'.
 	pointClassName := pointClass name.
 	aPoint := pointClass new.
 	

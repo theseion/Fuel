@@ -2,7 +2,7 @@ tests
 testClassWithCachedValueByNil
 
 	| aClassWithCachedValue result original | 
-	aClassWithCachedValue := (self newSubclassOf: Object instanceVariableNames: 'cache' classVariableNames: '') 
+	aClassWithCachedValue := (self classFactory 	silentlyNewClassWithInstanceVariableNames: 'cache' )
 		duringTestCompileSilently: 'cache ^cache';
 		duringTestCompileSilently: 'cache: x cache := x';
 		duringTestCompileSilently: '

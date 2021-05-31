@@ -3,9 +3,9 @@ testCreateWithInternalTrait
 	"Tests materialization of a class not defined in the image, with a trait, both internally serialized"
 	
 	| aClass aTrait serializedArray materializedArray materializedClassOrTrait materializedTrait |	
-	aTrait := self newTraitSuffixed: 'Secondary'.
+	aTrait := self classFactory silentlyNewTrait.
 	aTrait duringTestCompileSilently: 'fortyTwo ^42'.
-	aClass := self newClass.
+	aClass := self newClassOrTrait.
 	aClass addToComposition: aTrait.
 	serializedArray := Array with: aClass with: aTrait.
 

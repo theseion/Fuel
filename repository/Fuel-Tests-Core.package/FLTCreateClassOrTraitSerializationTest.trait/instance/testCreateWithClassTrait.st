@@ -3,9 +3,9 @@ testCreateWithClassTrait
 	"Tests materialization of a class not defined in the image, with a class trait"
 	
 	| class materializedClassOrTrait aTrait |	
-	aTrait := self newTraitSuffixed: 'FortyTwo'.
+	aTrait := self classFactory silentlyNewTrait.
 	aTrait classSide duringTestCompileSilently: 'fortyTwo ^42'.
-	class := self newClass.
+	class := self classFactory silentlyNewClass.
 	class addToComposition: aTrait.
 
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: class.

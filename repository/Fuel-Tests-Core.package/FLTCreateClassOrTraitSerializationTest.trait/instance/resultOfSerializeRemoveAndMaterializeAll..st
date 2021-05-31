@@ -8,5 +8,5 @@ resultOfSerializeRemoveAndMaterializeAll: objects
 	materialized := self materialized.
 	materialized 
 		select: [ :object | object isBehavior ]
-		thenDo: [ :behavior | self registerBehavior: behavior ].
+		thenDo: [ :behavior | self classFactory registerBehavior: behavior ].
 	^ materialized

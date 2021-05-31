@@ -3,6 +3,6 @@ newInstanceFrom: aClassOrTrait
 	^ (aClassOrTrait isTrait
 		ifTrue: [
 			(self classFactory
-				newSubclassOf: Object
-				using: aClassOrTrait) ]
+				silentlyNewSubclassOf: Object
+				uses: aClassOrTrait) ]
 		ifFalse: [ aClassOrTrait ]) new

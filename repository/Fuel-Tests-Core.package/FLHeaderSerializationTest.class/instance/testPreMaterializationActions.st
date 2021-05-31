@@ -1,11 +1,7 @@
 tests
 testPreMaterializationActions
 	| aClass |
-	aClass := self
-		newSubclassNamed: #FuelPreMaterializationTestClassToBeDeleted
-		of: Object
-		instanceVariableNames: ''
-		classVariableNames: 'TestClassVariable TestClassVariable2'.
+	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'TestClassVariable TestClassVariable2'.
 	aClass class
 		duringTestCompileSilently: 'postLoadMethod  TestClassVariable := 1';
 		duringTestCompileSilently: 'postLoadMethod2  TestClassVariable := 2';
@@ -13,8 +9,14 @@ testPreMaterializationActions
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.
+	self serializer
+		at: #className
+		putAdditionalObject: aClass name. 
 	"Cannot replace with testing environment for having clean blockClosure"
-	self serializer addPreMaterializationAction: [ (Smalltalk at: #FuelPreMaterializationTestClassToBeDeleted) perform: #postLoadMethod2 ].
+	self serializer addPreMaterializationAction: [ :header |
+		"Can't use `self environmentOfTest` or `aClass name` here because the closure
+		must be clean."
+		(Smalltalk at: (header additionalObjectAt: #className)) perform: #postLoadMethod2 ].
 	self serialize: aClass.
 	self assert: (aClass perform: #classVariable) equals: 1.
 	self materialized.

@@ -3,9 +3,9 @@ testClassSideCompiledMethod
 	"Any class-side compiled method should be serialized as global by default. On materialization, it should be found in the global environment, and the bytecodes hash must be the same."
 
 	| classA classB |
-	classA := self newClass.
+	classA := self classFactory silentlyNewClass.
 	classA class duringTestCompileSilently: 'm  ^ 42'.
-	classB := self newClass.
+	classB := self classFactory silentlyNewClass.
 	classB class duringTestCompileSilently: 'm    ^    42   '.
 	self assert: (classA class >> #m) bytecodesHash equals: (classB class >> #m) bytecodesHash.
 	self deny: classA class >> #m identicalTo: classB class >> #m.

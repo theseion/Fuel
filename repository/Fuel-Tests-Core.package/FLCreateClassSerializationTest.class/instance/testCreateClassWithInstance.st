@@ -3,7 +3,7 @@ testCreateClassWithInstance
 	"Tests materialization of a class who references an instance of itself."
 	
 	| aClass anInstance materializedClass materializedInstance |
-	aClass := self newClassWithInstanceVariableNames: 'name'.
+	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'name'.
 	aClass class instanceVariableNames: 'instance'.
 	
 	anInstance := aClass new

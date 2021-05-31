@@ -1,12 +1,9 @@
 tests-change
 testBlockClosureMaterializesClassVariablesCorrectly
 	| class closure method |
-	class := (self
-		newSubclassOf: Object
-		instanceVariableNames: ''
-		classVariableNames: 'ClassVariableForTesting')
-			duringTestCompileSilently: 'methodWithClosure  ^ [ ClassVariableForTesting ]';
-			yourself.
+	class := (self classFactory silentlyNewClassWithClassVariableNames: 'ClassVariableForTesting')
+		duringTestCompileSilently: 'methodWithClosure  ^ [ ClassVariableForTesting ]';
+		yourself.
 	
 	method := class methodNamed: #methodWithClosure.
 	"Make sure we don't use global clusters here, which would simply perform a lookup"
