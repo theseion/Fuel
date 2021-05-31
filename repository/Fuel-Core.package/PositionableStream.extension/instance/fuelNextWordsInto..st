@@ -2,9 +2,7 @@
 fuelNextWordsInto: aWordObject 
 	"This method is the same as nextWordsInto: but the restoreEndianness is only done if needed"
 	| blt pos source byteSize |
-
 	byteSize := aWordObject byteSize.
-	"is the test on collection basicSize \\ 4 necessary?"
 	
 	((self position bitAnd: 3) = 0 and: [ (collection basicSize bitAnd: 3) = 0])
 		ifTrue: [source := collection.
