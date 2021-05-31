@@ -2,7 +2,7 @@ running
 redefined: aClass with: instanceVariableNames
 	| name |
 	name := aClass name.
-	self removeFromSystem: aClass.
+	self classFactory deleteBehavior: aClass.
 	"In this case we need to create a class with notifications"
 	^ (self classFactory newClassWithInstanceVariableNames: instanceVariableNames) renameSilently: name
 	

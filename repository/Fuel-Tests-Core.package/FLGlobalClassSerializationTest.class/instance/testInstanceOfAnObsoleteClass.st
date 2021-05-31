@@ -5,7 +5,7 @@ testInstanceOfAnObsoleteClass
 	| aClass instance |
 	aClass := self classFactory silentlyNewClass.
 	instance := self newInstanceFrom: aClass.
-	self removeFromSystem: aClass.
+	self classFactory deleteBehavior: aClass.
 
 	self 
 		should: [self serialize: instance ] 

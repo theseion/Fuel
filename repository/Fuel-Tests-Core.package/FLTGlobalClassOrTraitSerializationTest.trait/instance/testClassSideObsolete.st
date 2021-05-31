@@ -4,7 +4,7 @@ testClassSideObsolete
 	
 	| classOrTrait |
 	classOrTrait := self newClassOrTrait.
-	self removeFromSystem: classOrTrait.
+	self classFactory deleteBehavior: classOrTrait.
 
 	self 
 		should: [self serialize: classOrTrait ] 
