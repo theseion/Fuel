@@ -1,6 +1,6 @@
-analyzing
+accessing
 lightGlobalMappers
 
 	^ globalSymbols isEmpty
 		ifTrue: [ #() ]
-		ifFalse: [ Array with: (FLLightGlobalMapper for: globalSymbols in: self globalEnvironment) ]
+		ifFalse: [ Array with: (FLLightGlobalMapper for: self globalsFromSymbols) ]
