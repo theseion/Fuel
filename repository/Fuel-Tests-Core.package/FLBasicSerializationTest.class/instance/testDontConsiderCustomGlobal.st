@@ -6,6 +6,7 @@ testDontConsiderCustomGlobal
 	aPerson := FLPerson new.
 	globalName := #FLGlobalVariableForTesting.
 
-	[ testingEnvironment at: globalName put: aPerson.
-	self deny: (self resultOfSerializeAndMaterialize: aPerson) identicalTo: aPerson ]
-		ensure: [ testingEnvironment removeKey: globalName ]
+	self environmentOfTest
+		at: globalName
+		put: aPerson.
+	self deny: (self resultOfSerializeAndMaterialize: aPerson) identicalTo: aPerson

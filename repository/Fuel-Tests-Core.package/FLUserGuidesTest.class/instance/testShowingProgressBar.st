@@ -1,9 +1,10 @@
 tests-Getting Started
 testShowingProgressBar
-	(testingEnvironment includesKey: #FLProgressSerialization)
-		ifFalse: [ " Needs:
-		(ConfigurationOfFuel project latestVersion) load: 'FuelProgressUpdate'.
-		" ^ self skip ].
+	(self environmentOfTest includesKey: #FLProgressSerialization)
+		ifFalse: [
+			" Needs: FuelProgressUpdate package"
+			^ self skip ].
+	
 	FLPlatform current
 		fileNamed: 'numbers.fuel'
 		writeStreamDo: [ :aStream | 

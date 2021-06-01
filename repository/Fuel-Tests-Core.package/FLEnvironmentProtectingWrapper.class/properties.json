@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fuel-Tests-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"overlay",
+		"environment"
+	],
+	"name" : "FLEnvironmentProtectingWrapper",
+	"type" : "normal"
+}

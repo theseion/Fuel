@@ -1,3 +1,3 @@
 running
 expectedFailures
-	^super expectedFailures, #(testUndeclaredAssociation)
+	^super expectedFailures, #()

@@ -1,3 +1,4 @@
 running
 setUpSerializer
-	serializer := FLSerializer newDefault
+	serializer := FLSerializer newDefault.
+	self analyzer globalEnvironment: self environmentOfTest.

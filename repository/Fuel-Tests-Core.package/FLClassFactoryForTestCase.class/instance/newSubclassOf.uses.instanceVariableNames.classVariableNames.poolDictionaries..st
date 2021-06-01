@@ -3,6 +3,7 @@ newSubclassOf: aClass uses: aTraitComposition instanceVariableNames: ivNamesStri
 	| newClass |		
 	newClass := self class classInstaller make: [ :aBuilder | 
 		aBuilder 
+			environment: self environment;
 			name: self defaultNewClassName;
 			superclass: aClass;
 			traitComposition: aTraitComposition asTraitComposition;
