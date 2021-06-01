@@ -4,7 +4,9 @@ testMethodNotFoundAfterRemoval
 	
 	| classOrTrait |
 	classOrTrait := self newClassOrTrait.
-	classOrTrait duringTestCompileSilently: 'you'.
+	self classFactory
+		silentlyCompile: 'you'
+		in: classOrTrait.
 	
 	self serialize: classOrTrait >> #you.
 	classOrTrait removeSelectorSilently: #you.

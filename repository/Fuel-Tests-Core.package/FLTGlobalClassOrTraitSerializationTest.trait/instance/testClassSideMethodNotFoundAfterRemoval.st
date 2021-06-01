@@ -4,14 +4,15 @@ testClassSideMethodNotFoundAfterRemoval
 	
 	| classOrTrait |
 	classOrTrait := self newClassOrTrait.
-	classOrTrait classSide duringTestCompileSilently: 'you'.
+	self classFactory
+		silentlyCompile: 'you'
+		in: classOrTrait classSide.
 	
 	self serialize: classOrTrait classSide >> #you.
 	classOrTrait classSide removeSelectorSilently: #you.
 	
 	self 
-		should: [self materialized] 
+		should: [ self materialized ] 
 		raise: FLMethodNotFound
 		whoseDescriptionIncludes: classOrTrait classSide printString 
-		description: 'Should raise an error when method is not present.' 
-	
+		description: 'Should raise an error when method is not present.'

@@ -1,6 +1,0 @@
-*Fuel-Tests-Core
-duringTestCompileSilently: code storeSource: storeSource
-	^ self
-		duringTestCompileSilently: code
-		storeSource: storeSource
-		classified: #Unclassified

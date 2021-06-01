@@ -13,7 +13,8 @@
 		"generalMapperFactory",
 		"globalSymbols",
 		"internalMethods",
-		"globalEnvironment"
+		"globalEnvironment",
+		"shouldConsiderAllBehaviorsInternal"
 	],
 	"name" : "FLAnalyzer",
 	"type" : "normal"

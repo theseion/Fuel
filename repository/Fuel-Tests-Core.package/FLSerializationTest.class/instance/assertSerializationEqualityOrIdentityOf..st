@@ -1,4 +1,4 @@
-running
+helpers
 assertSerializationEqualityOrIdentityOf: anObject
 	"Asserts that the original object and the materialized one are equal (may be the same)"
 

@@ -1,10 +1,13 @@
 tests
 testProxyInsideObjectByTarget
 	| aProxyClass result original pair |
-	aProxyClass := (self newSubclassOf: Object instanceVariableNames: 'target' classVariableNames: '')
-		duringTestCompileSilently: 'target: x  target := x';
-		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: target';
-		yourself.
+	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'target'.
+	self classFactory
+		silentlyCompile:  'target: x  target := x' in: aProxyClass;
+		silentlyCompile: 'fuelAccept: aVisitor
+			^ aVisitor
+				visitSubstitution: self
+				by: target' in: aProxyClass.
 
 	original := aProxyClass new
 		target: 5;

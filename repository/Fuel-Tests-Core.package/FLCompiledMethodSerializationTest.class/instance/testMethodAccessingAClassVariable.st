@@ -1,10 +1,7 @@
 tests
 testMethodAccessingAClassVariable
 	| aClassWithVariable aMethod materializedMethod |
-	aClassWithVariable := self
-		newSubclassOf: Object 
-		instanceVariableNames: '' 
-		classVariableNames: 'A'.
+	aClassWithVariable := self classFactory silentlyNewClassWithClassVariableNames: 'A'.
 
 	aClassWithVariable compileSilently: 'm1 A:= 3'.
 	aMethod := aClassWithVariable >> #m1.

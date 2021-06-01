@@ -1,0 +1,3 @@
+configuring
+considerInternalAllBehaviors: classes
+	internalClasses addAll: classes

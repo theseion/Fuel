@@ -1,0 +1,3 @@
+visiting
+visitClassVariable: aClassVariable
+	self visitFixedObject: aClassVariable

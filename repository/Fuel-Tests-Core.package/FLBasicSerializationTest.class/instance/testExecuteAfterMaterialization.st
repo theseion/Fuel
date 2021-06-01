@@ -1,10 +1,10 @@
 tests-fuelAfterMaterialization
 testExecuteAfterMaterialization
 	| anObject result aClass |
-	aClass := self newClass
-		addInstVarNamed: 'a';
-		duringTestCompileSilently: 'fuelAfterMaterialization a := #A';
-		yourself.
+	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'a'.
+	self classFactory
+		silentlyCompile: 'fuelAfterMaterialization a := #A'
+		in: aClass.
 	anObject := aClass new.
 
 	result := self resultOfSerializeAndMaterialize: anObject.

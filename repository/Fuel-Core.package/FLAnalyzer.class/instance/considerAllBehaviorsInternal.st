@@ -1,0 +1,3 @@
+configuring
+considerAllBehaviorsInternal
+	shouldConsiderAllBehaviorsInternal := true

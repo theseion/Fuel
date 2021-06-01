@@ -1,0 +1,3 @@
+visiting
+visitGlobalVariable: aGlobalVariable
+	self visitFixedObject: aGlobalVariable

@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "MaxLeske 5/15/2021 17:18",
 	"super" : "FLGlobalCompiledCodeCluster",
-	"category" : "Fuel-Core-Clusters",
+	"category" : "Fuel-Core-Clusters-Global",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

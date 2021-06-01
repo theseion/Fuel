@@ -1,6 +1,7 @@
 helpers
 useInstalled
-	theClass 
-		duringTestCompileSilently: 'm  ^ 42'
-		storeSource: true.
+	self classFactory
+		silentlyCompile: 'm  ^ 42'
+		in: theClass
+		storingSource: true.
 	theCompiledMethod := theClass methodNamed: #m

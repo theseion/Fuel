@@ -3,7 +3,7 @@ testVariableRemoved
 	"Tests that serializer tolarates when an instance variable is missing on materialization"
 
 	| pairClass aPair resultPair |
-	pairClass := self newClassWithInstanceVariableNames: 'left right'.
+	pairClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'left right'.
 	aPair := pairClass new.
 	aPair instVarAt: 1 put: $A.
 	aPair instVarAt: 2 put: $B.

@@ -1,4 +1,5 @@
 visiting
 visitMetaclass: aMetaclass
-
-	self mapAndTraceByClusterName: aMetaclass to: FLGlobalClassSideCluster
+	self
+		mapAndTraceByClusterName: aMetaclass
+		to: FLGlobalMetaclassCluster

@@ -1,5 +1,3 @@
-running
+instance creation
 newClassOrTrait
-	"Returns a trait for testing"
-
-	^ self newTraitSuffixed: 'Main'
+	^ self classFactory newTrait

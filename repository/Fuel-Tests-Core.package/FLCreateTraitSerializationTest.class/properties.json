@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "FLTCreateClassOrTraitSerializationTest classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLCreateTraitSerializationTest",
+	"commentStamp" : "<historical>",
+	"super" : "FLTraitSerializationTest",
+	"traitcomposition" : "FLTCreateClassOrTraitSerializationTest",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Fuel-Tests-Core-FullSerialization"
+}

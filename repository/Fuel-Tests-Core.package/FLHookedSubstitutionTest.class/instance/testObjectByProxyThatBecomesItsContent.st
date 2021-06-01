@@ -3,10 +3,13 @@ testObjectByProxyThatBecomesItsContent
 	"Tests a substitution of an object by a proxy that becomes another object on materialization."
 
 	| aProxyClass result |
-	aProxyClass := (self newSubclassOf: Object instanceVariableNames: 'someState' classVariableNames: '')
-		duringTestCompileSilently: 'initialize  someState := 5@1';
-		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: (FLProxyThatBecomesItsContent newWith: someState)';
-		yourself.
+	aProxyClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'someState'.
+	self classFactory
+		silentlyCompile: 'initialize  someState := 5@1' in: aProxyClass;
+		silentlyCompile: 'fuelAccept: aVisitor
+			^ aVisitor
+				visitSubstitution: self
+				by: (FLProxyThatBecomesItsContent newWith: someState)' in: aProxyClass.
 
 	result := self resultOfSerializeAndMaterialize: aProxyClass new.
 

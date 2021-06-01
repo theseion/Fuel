@@ -1,20 +1,17 @@
 tests-change
 testBlockClosureMaterializesClassVariablesCorrectly
 	| class closure method |
-	class := (self
-		newSubclassOf: Object
-		instanceVariableNames: ''
-		classVariableNames: 'ClassVariableForTesting')
-			duringTestCompileSilently: 'methodWithClosure  ^ [ ClassVariableForTesting ]';
-			yourself.
-	"Make sure we don't use global clusters here, which would simply perform a lookup"
+	class := self classFactory silentlyNewClassWithClassVariableNames: 'ClassVariableForTesting'.
+	self classFactory
+		silentlyCompile: 'methodWithClosure  ^ [ ClassVariableForTesting ]'
+		in: class.
+	
 	method := class methodNamed: #methodWithClosure.
+	"Make sure we don't use global clusters here, which would simply perform a lookup"
+	self analyzer considerInternalBehavior: method methodClass.
 	closure := method
 		valueWithReceiver: class new
 		arguments: #().
-	class removeSelectorSilently: #methodWithClosure.
-	self deny: method isInstalled.
-	self deny: closure compiledBlock isInstalled.
 	
 	self serialize: closure.
 	

@@ -3,9 +3,10 @@ testBlockClosureRemoved
 	"Raise an error when materializing a closure whose method was removed."
 
 	| aClass aClosure |
-	aClass := self newClass
-		duringTestCompileSilently: 'methodWithClosure  ^ [ 42 ]';
-		yourself.
+	aClass := self classFactory silentlyNewClass.
+	self classFactory
+		silentlyCompile:  'methodWithClosure  ^ [ 42 ]'
+		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
 	self serialize: aClosure.
 	aClass removeSelectorSilently: #methodWithClosure.

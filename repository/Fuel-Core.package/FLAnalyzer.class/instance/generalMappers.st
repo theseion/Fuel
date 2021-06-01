@@ -1,0 +1,4 @@
+defaults
+generalMappers
+
+	^generalMapperFactory value

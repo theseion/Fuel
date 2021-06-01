@@ -3,7 +3,7 @@ testVariableInsertion
 	"Tests that serializer tolarates when there is a new instance variable on materialization"
 
 	| pairClass aPair resultPair |
-	pairClass := self newClassWithInstanceVariableNames: 'left right'.
+	pairClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'left right'.
 	aPair := pairClass new.
 	aPair instVarAt: 1 put: $A.
 	aPair instVarAt: 2 put: $B.

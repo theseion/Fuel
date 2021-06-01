@@ -1,4 +1,4 @@
 running
 setUp
 	super setUp.
-	theClass := self newClass class
+	theClass := self classFactory silentlyNewClass class

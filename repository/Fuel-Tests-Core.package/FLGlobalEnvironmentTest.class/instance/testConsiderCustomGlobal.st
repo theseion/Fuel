@@ -4,10 +4,12 @@ testConsiderCustomGlobal
 	
 	self analyzer considerGlobal: #FLGlobalVariableForTesting.
 
-	serializationEnvironment 
-		at: #FLGlobalVariableForTesting put: 42.
+	self analyzer globalEnvironment: (Dictionary new
+		at: #FLGlobalVariableForTesting put: 42;
+		yourself).
 
-	materializationEnvironment 
-		at: #FLGlobalVariableForTesting put: 7.
+	self materializer globalEnvironment: (Dictionary new
+		at: #FLGlobalVariableForTesting put: 7;
+		yourself).
 	
 	self assert: (self resultOfSerializeAndMaterialize: 42) equals: 7

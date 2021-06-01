@@ -3,9 +3,11 @@ testSuperclassChange
 	"Tests that serializer tolarates when the superclass changed between serialization and materialization"
 
 	| aClass aClassSubclass instance materializedInstance anotherSuperclass |
-	aClass := self newClassWithInstanceVariableNames: 'a b c' superclass: Object.
-	aClassSubclass := self newClassWithInstanceVariableNames: 'd e' superclass: aClass.
-	anotherSuperclass := self newClassWithInstanceVariableNames: 'x' superclass: Object.
+	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'a b c'.
+	aClassSubclass := self classFactory
+		silentlyNewSubclassOf: aClass
+		instanceVariableNames: 'd e'.
+	anotherSuperclass := self classFactory silentlyNewClassWithInstanceVariableNames: 'x'.
 
 	instance := aClassSubclass new.
 	instance instVarNamed: 'a' put: $A.

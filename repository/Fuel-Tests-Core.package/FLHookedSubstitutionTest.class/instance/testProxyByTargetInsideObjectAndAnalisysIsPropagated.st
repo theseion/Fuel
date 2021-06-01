@@ -1,10 +1,13 @@
 tests
 testProxyByTargetInsideObjectAndAnalisysIsPropagated
 	| aProxyClass result original pair pairRoot |
-	aProxyClass := (self newSubclassOf: Object instanceVariableNames: 'target' classVariableNames: '')
-		duringTestCompileSilently: 'target: x  target := x';
-		duringTestCompileSilently: 'fuelAccept: aVisitor  ^aVisitor visitSubstitution: self by: target';
-		yourself.
+	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'target'.
+	self classFactory
+		silentlyCompile:  'target: x  target := x' in: aProxyClass;
+		silentlyCompile: 'fuelAccept: aVisitor
+			^ aVisitor
+				visitSubstitution: self
+				by: target' in: aProxyClass.
 
 	pair := FLPair new
 		left: 6;
