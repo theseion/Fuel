@@ -58,7 +58,7 @@ master | 3.0.3 | 3.0.2 | 3.0.1 | 3.0.0 | 2.2.0
 - Support for global references.
 - Very customizable: ignore certain instance variables, substitute objects by others, pre and post serialization and materialization actions, etc.
 - Supports class rename and class reshape.
-- Good test coverage (over 900 unit tests).
+- Good test coverage (over 700 unit tests).
 - Large suite of benchmarks.
 
 
