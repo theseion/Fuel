@@ -8,7 +8,9 @@ testClassRename
 	aPoint instVarNamed: 'y' put: 11.
 
 	self serialize: aPoint.
-	pointClass renameSilently: (pointClassName , 'Renamed') asSymbol.
+	self classFactory
+		silentlyRename: pointClass
+		to: pointClassName, 'Renamed'.
 
 	self materializer migrateClassNamed: pointClassName toClass: pointClass.
 

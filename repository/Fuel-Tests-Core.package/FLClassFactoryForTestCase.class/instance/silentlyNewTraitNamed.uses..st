@@ -1,6 +1,6 @@
 creating-traits-silently
 silentlyNewTraitNamed: aTraitName uses: aTraitComposition
-	^ SystemAnnouncer uniqueInstance suspendAllWhile: [			
+	^ self silentlyDo: [			
 		self
 			newTraitNamed: aTraitName
 			uses: aTraitComposition ]

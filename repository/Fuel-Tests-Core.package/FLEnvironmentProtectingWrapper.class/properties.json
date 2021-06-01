@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"overlay",
-		"environment"
+		"environment",
+		"sentinel"
 	],
 	"name" : "FLEnvironmentProtectingWrapper",
 	"type" : "normal"

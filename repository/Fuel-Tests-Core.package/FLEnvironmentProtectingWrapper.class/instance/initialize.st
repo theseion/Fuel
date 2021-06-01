@@ -1,3 +1,4 @@
 initialization
 initialize
-	overlay := IdentityDictionary new 
+	overlay := IdentityDictionary new.
+	sentinel := Object new

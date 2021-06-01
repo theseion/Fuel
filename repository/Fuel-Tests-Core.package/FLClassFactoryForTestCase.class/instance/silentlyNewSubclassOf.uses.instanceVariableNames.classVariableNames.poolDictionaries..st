@@ -1,6 +1,6 @@
 creating-silently
 silentlyNewSubclassOf: aClass uses: aTraitComposition instanceVariableNames: ivNamesString classVariableNames: classVarsString poolDictionaries: poolNamesString
-	^ SystemAnnouncer uniqueInstance suspendAllWhile: [
+	^ self silentlyDo: [
 		self
 			newSubclassOf: aClass
 			uses: aTraitComposition

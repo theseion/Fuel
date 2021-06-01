@@ -4,9 +4,13 @@ testCreateClassWithCreatedTrait
 	
 	| aClass aTrait result materializedClass materializedTrait |	
 	aClass := self classFactory silentlyNewClass.
-	aClass duringTestCompileSilently: 'fortyOne ^41'.
+	self classFactory
+		silentlyCompile:  'fortyOne ^41'
+		in: aClass.
 	aTrait := self classFactory silentlyNewTrait.
-	aTrait duringTestCompileSilently: 'fortyTwo ^42'.
+	self classFactory
+		silentlyCompile:  'fortyTwo ^42'
+		in: aTrait.
 	aClass addToComposition: aTrait.
 	
 	result := self resultOfSerializeRemoveAndMaterializeAll: (Array with: aClass with: aTrait).

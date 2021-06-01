@@ -4,5 +4,7 @@ testClassSideMethodPreservesIdentity
 	
 	| classOrTrait |
 	classOrTrait := self newClassOrTrait.
-	classOrTrait classSide duringTestCompileSilently: 'you'.
+	self classFactory
+		silentlyCompile:  'you'
+		in: classOrTrait classSide.
 	self assertSerializationIdentityOf: classOrTrait classSide >> #you

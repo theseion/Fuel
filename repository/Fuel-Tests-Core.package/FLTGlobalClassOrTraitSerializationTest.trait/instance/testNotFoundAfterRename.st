@@ -6,6 +6,8 @@ testNotFoundAfterRename
 	classOrTrait := self newClassOrTrait.
 	
 	self serialize: classOrTrait.
-	classOrTrait renameSilently: (classOrTrait name, 'Renamed') asSymbol.
+	self classFactory
+		silentlyRename: classOrTrait
+		to: classOrTrait name, 'Renamed'.
 	
-	self should: [self materialized] raise: FLClassNotFound.
+	self should: [ self materialized ] raise: FLClassNotFound

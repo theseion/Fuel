@@ -2,18 +2,23 @@ tests
 testClassWithCachedValueByNil
 
 	| aClassWithCachedValue result original | 
-	aClassWithCachedValue := (self classFactory 	silentlyNewClassWithInstanceVariableNames: 'cache' )
-		duringTestCompileSilently: 'cache ^cache';
-		duringTestCompileSilently: 'cache: x cache := x';
-		duringTestCompileSilently: '
+	aClassWithCachedValue := self classFactory silentlyNewClassWithInstanceVariableNames: 'cache'.
+	self classFactory
+		silentlyCompile: 'cache ^cache' in: aClassWithCachedValue;
+		silentlyCompile: 'cache: x cache := x' in: aClassWithCachedValue;
+		silentlyCompile: '
 			fuelAccept: aVisitor  
 				^cache 
 					ifNil: [ super fuelAccept: aVisitor ]
-					ifNotNil: [ aVisitor visitSubstitution: self by: (self copy cache: nil)]';
-		yourself.
+					ifNotNil: [
+						aVisitor
+							visitSubstitution: self
+							by: (self copy cache: nil)]' in: aClassWithCachedValue.
 
-	original := aClassWithCachedValue new cache: 5; yourself.
+	original := aClassWithCachedValue new
+		cache: 5;
+		yourself.
 
 	result := self resultOfSerializeAndMaterialize: original.
 	
-	self assert: result cache isNil.
+	self assert: result cache isNil

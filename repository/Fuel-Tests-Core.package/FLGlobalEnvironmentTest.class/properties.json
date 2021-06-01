@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"serializationEnvironment",
-		"materializationEnvironment"
-	],
+	"instvars" : [ ],
 	"name" : "FLGlobalEnvironmentTest",
 	"type" : "normal"
 }

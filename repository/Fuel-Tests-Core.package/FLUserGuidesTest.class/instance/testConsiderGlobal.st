@@ -13,14 +13,17 @@ testConsiderGlobal
 		fileNamed: 'demo.fuel'
 		writeStreamDo: [ :aStream |
 			aSerializer := FLSerializer newDefault.
-			aSerializer analyzer considerGlobal: #GlobalSet1.
+			aSerializer analyzer
+				globalEnvironment: self environmentOfTest;
+				considerGlobal: #GlobalSet1.
 			aSerializer serialize: anArray on: aStream ].
 
 	"Materialize"
 	materializedArray := FLPlatform current
 		fileNamed: 'demo.fuel'
 		readStreamDo: [:aStream |
-			(FLMaterializer newDefault 
+			(FLMaterializer newDefault
+				globalEnvironment: self environmentOfTest;
 				materializeFrom: aStream) root].
 				
 	"Check that second element is a new Set."

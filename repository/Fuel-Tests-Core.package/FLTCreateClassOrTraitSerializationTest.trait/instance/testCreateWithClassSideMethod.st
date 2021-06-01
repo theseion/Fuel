@@ -5,11 +5,14 @@ testCreateWithClassSideMethod
 	| aClassOrTrait materializedClassOrTrait category |
 	category := 'tests-class-side'.
 	aClassOrTrait := self newClassOrTrait.
-	aClassOrTrait classSide duringTestCompileSilently: 'fortyTwo ^42' classified: category.
+	self classFactory
+		silentlyCompile:  'fortyTwo ^42'
+		in: aClassOrTrait classSide
+		category: category.
 
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
 
 	self assert: (materializedClassOrTrait classSide includesSelector: #fortyTwo).
-	self assert: #(fortyTwo) = materializedClassOrTrait classSide localSelectors.
-	self assert: category = (materializedClassOrTrait classSide whichCategoryIncludesSelector: #fortyTwo).
-	self assert: 42 = ((self newInstanceFrom: materializedClassOrTrait) class perform: #fortyTwo).
+	self assertCollection: #(fortyTwo) hasSameElements: materializedClassOrTrait classSide localSelectors.
+	self assert: category equals: (materializedClassOrTrait classSide whichCategoryIncludesSelector: #fortyTwo).
+	self assert: 42 equals: ((self newInstanceFrom: materializedClassOrTrait) class perform: #fortyTwo)

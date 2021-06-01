@@ -2,7 +2,9 @@ tests
 testOneIgnoredVariable
 	| anObject result aClass |
 	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'a b c'.
-	aClass class duringTestCompileSilently: 'fuelIgnoredInstanceVariableNames ^#(b)'.
+	self classFactory
+		silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(b)'
+		in: aClass class.
 	anObject := aClass new
 		instVarAt: 1 put: $A;
 		instVarAt: 2 put: $B;

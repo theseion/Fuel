@@ -1,3 +1,0 @@
-*Fuel-Tests-Core
-fuelValueWithoutNotifications
-	SystemAnnouncer uniqueInstance suspendAllWhile: self

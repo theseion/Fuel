@@ -1,8 +1,9 @@
 helpers
 useDoIt
-	theClass 
-		duringTestCompileSilently: 'm  ^ 42'
-		storeSource: false.
+	self classFactory 
+		silentlyCompile: 'm  ^ 42'
+		in: theClass
+		storingSource: false.
 	theCompiledMethod := theClass methodNamed: #m.
 	theClass methodDict
 		at: #DoIt

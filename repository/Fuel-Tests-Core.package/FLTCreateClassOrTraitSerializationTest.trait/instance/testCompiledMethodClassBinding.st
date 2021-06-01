@@ -4,8 +4,9 @@ testCompiledMethodClassBinding
 	
 	| class materializedClassOrTrait className method1 method2 |	
 	class := self newClassOrTrait.
-	class duringTestCompileSilently: 'fortyTwo ^42'.
-	class duringTestCompileSilently: 'fortyThree ^43'.
+	self classFactory
+		silentlyCompile:  'fortyTwo ^42' in: class;
+		silentlyCompile: 'fortyThree ^43' in: class.
 	className := class name.
 
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: class.

@@ -2,10 +2,10 @@ tests
 testPreMaterializationActions
 	| aClass |
 	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'TestClassVariable TestClassVariable2'.
-	aClass class
-		duringTestCompileSilently: 'postLoadMethod TestClassVariable := 1';
-		duringTestCompileSilently: 'postLoadMethod2 TestClassVariable := 2';
-		duringTestCompileSilently: 'classVariable ^TestClassVariable'.
+	self classFactory
+		silentlyCompile: 'postLoadMethod TestClassVariable := 1' in: aClass class;
+		silentlyCompile: 'postLoadMethod2 TestClassVariable := 2' in: aClass class;
+		silentlyCompile: 'classVariable ^TestClassVariable' in: aClass class.
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.

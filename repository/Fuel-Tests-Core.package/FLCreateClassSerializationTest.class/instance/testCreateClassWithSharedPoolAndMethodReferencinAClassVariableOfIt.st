@@ -9,22 +9,21 @@ testCreateClassWithSharedPoolAndMethodReferencinAClassVariableOfIt
 	
 	sharedPool := self classFactory newSubclassOf: SharedPool.
 	sharedPool addClassVarNamed: 'ClassVar1'.
-	sharedPool class duringTestCompileSilently: 'classVar1: a  ClassVar1 := a. '.
-	sharedPool class duringTestCompileSilently: 'classVar1 ^  ClassVar1 '.
+	self classFactory
+		silentlyCompile: 'classVar1: a  ClassVar1 := a.' in: sharedPool class;
+		silentlyCompile: 'classVar1 ^  ClassVar1' in: sharedPool class.
 	sharedPool perform: #classVar1: with: anObject.
 	
 	aClass addSharedPool: sharedPool.	
-	aClass duringTestCompileSilently: 'xxx ^ ClassVar1.'.
-	aClass class duringTestCompileSilently: 'yyy ^ ClassVar1.'.
+	self classFactory
+		silentlyCompile:  'xxx ^ ClassVar1.' in: aClass;
+		silentlyCompile: 'yyy ^ ClassVar1.' in: aClass class.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
 
-	self assert: 1 = (materializedClass sharedPools size).
-	self assert: sharedPool == materializedClass sharedPools first.
-	self assert:  ((materializedClass >> #xxx) literalAt: 1) value == (sharedPool classPool at: #ClassVar1).
-	self assert:  ((materializedClass class >> #yyy) literalAt: 1) value == (sharedPool classPool at: #ClassVar1).
-	self assert: (materializedClass new perform: #xxx) == anObject.
-	self assert: (materializedClass perform: #yyy) == anObject.
-	
-	
- 
+	self assert: 1 equals: materializedClass sharedPools size.
+	self assert: sharedPool identicalTo: materializedClass sharedPools first.
+	self assert:  ((materializedClass >> #xxx) literalAt: 1) value identicalTo: (sharedPool classPool at: #ClassVar1).
+	self assert:  ((materializedClass class >> #yyy) literalAt: 1) value identicalTo: (sharedPool classPool at: #ClassVar1).
+	self assert: (materializedClass new perform: #xxx) identicalTo: anObject.
+	self assert: (materializedClass perform: #yyy) identicalTo: anObject

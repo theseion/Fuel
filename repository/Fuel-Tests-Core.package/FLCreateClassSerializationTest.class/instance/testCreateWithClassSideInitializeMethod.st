@@ -5,12 +5,20 @@ testCreateWithClassSideInitializeMethod
 	| aClassOrTrait materializedClassOrTrait category |
 	category := 'tests-initialize'.
 	aClassOrTrait := self classFactory silentlyNewClass.
-	aClassOrTrait classSide duringTestCompileSilently: 'initialize self error: ''Fuel should not automatically call #initialize'' ' classified: category.
+	self classFactory
+		silentlyCompile: 'initialize
+			self error: ''Fuel should not automatically call #initialize'''
+		in: aClassOrTrait classSide
+		category: category.
 
-	self shouldnt: [materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait] raise: Error.
-	self should: [ (self newInstanceFrom: materializedClassOrTrait) class perform: #initialize] raise: Error.
+	self
+		shouldnt: [ materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait ]
+		raise: Error.
+	self
+		should: [ (self newInstanceFrom: materializedClassOrTrait) class perform: #initialize ]
+		raise: Error
+		description: 'Fuel should not automatically call #initialize'.
 
 	self assert: (materializedClassOrTrait classSide includesSelector: #initialize).
-	self assert: #(initialize) = materializedClassOrTrait classSide localSelectors.
-	self assert: category = (materializedClassOrTrait classSide whichCategoryIncludesSelector: #initialize).
-	
+	self assertCollection: #(initialize) hasSameElements: materializedClassOrTrait classSide localSelectors.
+	self assert: category equals: (materializedClassOrTrait classSide whichCategoryIncludesSelector: #initialize)

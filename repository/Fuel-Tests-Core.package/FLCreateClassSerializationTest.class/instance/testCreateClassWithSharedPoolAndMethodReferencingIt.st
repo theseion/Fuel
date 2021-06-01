@@ -6,12 +6,14 @@ testCreateClassWithSharedPoolAndMethodReferencingIt
 	aClass := self classFactory silentlyNewClass.
 	sharedPool := self classFactory newSubclassOf: SharedPool.
 	aClass addSharedPool: sharedPool.
-	aClass class duringTestCompileSilently: 'initialize ', sharedPool name asString, ' name.'.
+	self classFactory
+		silentlyCompile: 'initialize ', sharedPool name asString, ' name.'
+		in: aClass class.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
 	materializedMethod := materializedClass class >> #initialize.
 	literalIndex := materializedMethod literals indexOf: (self class bindingOf: sharedPool name).
 
-	self assert: 1 = (materializedClass sharedPools size).
-	self assert: sharedPool == materializedClass sharedPools first.
-	self assert:  (materializedMethod literalAt: literalIndex) value == sharedPool.
+	self assert: 1 equals: (materializedClass sharedPools size).
+	self assert: sharedPool identicalTo: materializedClass sharedPools first.
+	self assert:  (materializedMethod literalAt: literalIndex) value identicalTo: sharedPool

@@ -4,12 +4,18 @@ testClassSideCompiledMethod
 
 	| classA classB |
 	classA := self classFactory silentlyNewClass.
-	classA class duringTestCompileSilently: 'm  ^ 42'.
+	self classFactory
+		silentlyCompile: 'm  ^ 42'
+		in: classA class.
 	classB := self classFactory silentlyNewClass.
-	classB class duringTestCompileSilently: 'm    ^    42   '.
+	self classFactory
+		silentlyCompile: 'm   ^   42  '
+		in: classB class.
 	self assert: (classA class >> #m) bytecodesHash equals: (classB class >> #m) bytecodesHash.
 	self deny: classA class >> #m identicalTo: classB class >> #m.
 
-	materializationEnvironment at: classA name put: classB.
+	self materializer globalEnvironment: (Dictionary new
+		at: classA name put: classB;
+		yourself).
 
 	self assert: (self resultOfSerializeAndMaterialize: classA class >> #m) identicalTo: classB class >> #m

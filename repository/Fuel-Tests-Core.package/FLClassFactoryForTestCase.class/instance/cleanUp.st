@@ -5,6 +5,6 @@ cleanUp
 	createdTraitNames := self createdTraitNames.
 	self deleteClasses.
 	self deleteTraits.
-	self deletePackage.
+	"self deletePackage."
 	self cleanUpChangeSetForClassNames: createdClassNames.
 	self cleanUpChangeSetForClassNames: createdTraitNames

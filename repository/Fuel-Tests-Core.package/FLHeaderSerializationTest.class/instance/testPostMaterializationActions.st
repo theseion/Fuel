@@ -2,21 +2,21 @@ tests
 testPostMaterializationActions
 	| aClass |
 	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'TestClassVariable TestClassVariable2'.
-	aClass class
-		duringTestCompileSilently: 'postLoadMethod  TestClassVariable := 1';
-		duringTestCompileSilently: 'postLoadMethod2  TestClassVariable := 2';
-		duringTestCompileSilently: 'classVariable  ^TestClassVariable '.
+	self classFactory
+		silentlyCompile: 'postLoadMethod  TestClassVariable := 1' in: aClass class;
+		silentlyCompile: 'postLoadMethod2  TestClassVariable := 2' in: aClass class;
+		silentlyCompile: 'classVariable  ^TestClassVariable ' in: aClass class.
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.
 		self serializer
-		at: #className
-		putAdditionalObject: aClass name.
+		at: #class
+		putAdditionalObject: aClass.
 	"Cannot replace with testing environment for having clean blockClosure"
 	self serializer addPostMaterializationAction: [ :materialization |
 		"Can't use `self environmentOfTest` or `aClass name` here because the closure
 		must be clean."
-		(Smalltalk at: (materialization additionalObjectAt: #className))  perform: #postLoadMethod2 ].
+		(materialization additionalObjectAt: #class) perform: #postLoadMethod2 ].
 	self serialize: aClass.
 	self assert: (aClass perform: #classVariable) equals: 1.
 	self materialized.

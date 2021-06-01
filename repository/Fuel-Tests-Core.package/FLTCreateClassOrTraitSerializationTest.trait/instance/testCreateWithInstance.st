@@ -4,7 +4,9 @@ testCreateWithInstance
 	
 	| aClassOrTrait materializedObjects objectsToSerialize anInstance |
 	aClassOrTrait := self newClassOrTrait.
-	aClassOrTrait duringTestCompileSilently: 'fortyTwo ^42'.
+	self classFactory
+		silentlyCompile:  'fortyTwo ^42'
+		in: aClassOrTrait.
 	anInstance := self newInstanceFrom: aClassOrTrait.
 	objectsToSerialize := Array 
 		with: aClassOrTrait 
@@ -14,4 +16,4 @@ testCreateWithInstance
 	materializedObjects := self resultOfSerializeRemoveAndMaterializeAll: objectsToSerialize.
 
 	self assert: (materializedObjects first includesSelector: #fortyTwo).
-	self assert: 42 = (materializedObjects second perform: #fortyTwo).
+	self assert: 42 equals: (materializedObjects second perform: #fortyTwo)
