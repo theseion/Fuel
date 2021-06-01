@@ -1,6 +1,6 @@
 testing
 isBehaviorAnonymous: aBehavior
-	^ (self class environment includes: aBehavior instanceSide)
+	^ (self environment includes: aBehavior instanceSide)
 		ifTrue: [ false ]
 		ifFalse: [
 			aBehavior isObsolete ifTrue: [
