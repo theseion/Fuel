@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "MaxLeske 6/2/2021 13:41",
 	"super" : "FLOptimizedObjectCluster",
-	"category" : "Fuel-Core-Clusters-Optionals",
+	"category" : "Fuel-Core-Clusters-Optimized",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

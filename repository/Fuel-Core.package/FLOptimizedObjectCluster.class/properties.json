@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLIteratingCluster",
-	"category" : "Fuel-Core-Clusters-Optionals",
+	"category" : "Fuel-Core-Clusters-Optimized",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
