@@ -1,3 +1,3 @@
 configuring
 considerInternalAllBehaviors: classes
-	internalClasses addAll: classes
+	internalBehaviors addAll: classes

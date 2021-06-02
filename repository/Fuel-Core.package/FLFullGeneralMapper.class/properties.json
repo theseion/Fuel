@@ -9,7 +9,6 @@
 		"globalSymbols",
 		"internalMethods",
 		"internalBehaviors",
-		"shouldConsiderAllBehaviorsInternal",
 		"environment"
 	],
 	"name" : "FLFullGeneralMapper",

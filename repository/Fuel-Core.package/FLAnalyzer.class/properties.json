@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"internalClasses",
 		"pluggableSubstitutions",
 		"globalMappersFactory",
 		"analysisFactory",
@@ -14,7 +13,7 @@
 		"globalSymbols",
 		"internalMethods",
 		"globalEnvironment",
-		"shouldConsiderAllBehaviorsInternal"
+		"internalBehaviors"
 	],
 	"name" : "FLAnalyzer",
 	"type" : "normal"
