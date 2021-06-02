@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLObjectCluster",
-	"category" : "Fuel-Core-Clusters-Optionals",
+	"category" : "Fuel-Core-Clusters-Optimized",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

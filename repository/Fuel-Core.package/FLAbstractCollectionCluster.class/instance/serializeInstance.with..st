@@ -1,3 +1,5 @@
 serialize/materialize
 serializeInstance: anObject with: anEncoder
-	anEncoder encodeUint32: anObject size
+	self
+		encodeSizeOf: anObject
+		with: anEncoder

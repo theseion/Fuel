@@ -1,14 +1,12 @@
 serialize/materialize
 serializeReferencesOf: anObject with: anEncoder
-	| refs |
-	refs := self references
-		at: anObject
-		ifAbsent: [ ^ self ].
+	self
+		encodeExtraInformationForReferencesFor: anObject with: anEncoder;
+		encodeSizeOf: anObject with: anEncoder.
 	
-	anEncoder encodeUint32: refs first.
-
-	refs
-		from: 2
-		to: refs size
-		do: [ :ref | anEncoder encodeReferenceTo: ref ]
+	self references
+		at: anObject
+		ifPresent: [ :refs |
+			refs do: [ :ref |
+				anEncoder encodeReferenceTo: ref ] ]
 	
