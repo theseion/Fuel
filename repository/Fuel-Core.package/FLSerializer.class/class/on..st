@@ -1,5 +1,5 @@
 instance creation
 on: aStream
-	^ self newLight 
+	^ self new 
 		stream: aStream;
 		yourself

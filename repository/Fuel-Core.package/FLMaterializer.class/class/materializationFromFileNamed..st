@@ -3,4 +3,4 @@ materializationFromFileNamed: aFilename
 	^ FLPlatform current
 		fileNamed: aFilename 
 		readStreamDo: [ :aFileStream | 
-			self newDefault materializeFrom: aFileStream ]
+			self new materializeFrom: aFileStream ]

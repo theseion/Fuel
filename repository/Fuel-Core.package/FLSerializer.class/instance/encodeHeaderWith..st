@@ -6,10 +6,7 @@ encodeHeaderWith: anEncoder
 
 	header isEmpty ifTrue: [ ^ self ].
 	
-	headerSerializer := self class newDefault.
-	headerSerializer analyzer
-		globalSymbols: self analyzer globalSymbols;
-		globalEnvironment: self analyzer globalEnvironment;
+	headerSerializer := self class new
+		analyzer: self analyzer;
 		yourself.
-		
 	headerSerializer serializationFactory value: header value: anEncoder

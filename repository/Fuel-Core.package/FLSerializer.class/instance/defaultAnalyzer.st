@@ -1,4 +1,3 @@
 protected
 defaultAnalyzer
-
-	^FLAnalyzer newDefault
+	^ FLAnalyzer new

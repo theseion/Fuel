@@ -1,4 +1,4 @@
 materializing-shortcuts
 materializeFromByteArray: byteArray
 
-	^(self newDefault materializeFrom: byteArray readStream) root
+	^(self new materializeFrom: byteArray readStream) root
