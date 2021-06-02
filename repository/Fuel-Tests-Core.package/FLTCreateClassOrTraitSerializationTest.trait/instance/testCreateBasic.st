@@ -17,4 +17,4 @@ testCreateBasic
 	self assert: name = materializedClassOrTrait name.
 
      "It is important to notice that Fuel does not add the materialized class or trait into Smalltalk globals."
-    self deny: (Smalltalk globals includesKey: name).
+    self deny: (self environmentOfTest includesKey: name)

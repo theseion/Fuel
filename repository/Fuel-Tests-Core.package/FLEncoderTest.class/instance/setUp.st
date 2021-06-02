@@ -5,4 +5,4 @@ setUp
 	stream := WriteStream on: ByteArray new.
 	encoder := FLEncoder
 		on: stream
-		globalEnvironment: self class environment
+		globalEnvironment: self environmentOfTest

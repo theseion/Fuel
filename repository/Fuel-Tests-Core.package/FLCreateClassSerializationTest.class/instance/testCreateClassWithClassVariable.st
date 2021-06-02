@@ -8,6 +8,7 @@ testCreateClassWithClassVariable
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
 
-	self assert: 1 = materializedClass classVarNames size.
+	self assert: 1 equals: materializedClass classVarNames size.
 	self assert: (materializedClass classVarNames includes: #ClassVariable).
-	self assert: #test = (materializedClass classPool at: #ClassVariable).
+	self assert: #test equals: (materializedClass classPool at: #ClassVariable).
+	self assert: materializedClass classPool associations first class identicalTo: ClassVariable

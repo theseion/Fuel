@@ -1,3 +1,0 @@
-initialization
-setUpEnvironment
-	self testingEnvironment: Smalltalk globals

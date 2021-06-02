@@ -1,7 +1,7 @@
 accessing
 analysisOf: anObject
 
-	^ FLAnalyzer newDefault 
+	^ FLAnalyzer new
 		setDebug; 
 		analysisFor: anObject
 	

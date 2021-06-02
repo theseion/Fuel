@@ -5,7 +5,7 @@ testPluggableSubstitution
 	FLPlatform current
 		fileNamed: 'demo.fuel'
 		writeStreamDo: [ :aStream | 
-			aSerializer := FLSerializer newDefault.
+			aSerializer := FLSerializer new.
 			aSerializer analyzer
 				when: [ :o | o isStream ]
 				substituteBy: [ :o | nil ].
@@ -13,7 +13,7 @@ testPluggableSubstitution
 	materializedObject := FLPlatform current
 		fileNamed: 'demo.fuel'
 		readStreamDo:
-			[ :aStream | (FLMaterializer newDefault materializeFrom: aStream) root ].
+			[ :aStream | (FLMaterializer new materializeFrom: aStream) root ].
 	self
 		assert: materializedObject
 		equals: (Array with: 'hello' with: nil)

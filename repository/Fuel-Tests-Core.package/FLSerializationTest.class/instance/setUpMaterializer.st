@@ -1,5 +1,5 @@
 running
 setUpMaterializer
-	materializer := FLMaterializer newDefault
+	materializer := FLMaterializer new
 		globalEnvironment: self environmentOfTest;
 		yourself

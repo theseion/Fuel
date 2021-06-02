@@ -1,4 +1,4 @@
 decoding
 nextEncodedClusterClass
 
-	^ self class environment at: self nextEncodedString asSymbol
+	^ globalEnvironment at: self nextEncodedString asSymbol

@@ -1,4 +1,4 @@
 running
 setUpSerializer
-	serializer := FLDelayedSerializerMock newDefault.
+	serializer := FLDelayedSerializerMock new.
 	self analyzer globalEnvironment: self environmentOfTest

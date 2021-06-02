@@ -12,7 +12,7 @@ testConsiderGlobal
 	FLPlatform current
 		fileNamed: 'demo.fuel'
 		writeStreamDo: [ :aStream |
-			aSerializer := FLSerializer newDefault.
+			aSerializer := FLSerializer new.
 			aSerializer analyzer
 				globalEnvironment: self environmentOfTest;
 				considerGlobal: #GlobalSet1.
@@ -22,7 +22,7 @@ testConsiderGlobal
 	materializedArray := FLPlatform current
 		fileNamed: 'demo.fuel'
 		readStreamDo: [:aStream |
-			(FLMaterializer newDefault
+			(FLMaterializer new
 				globalEnvironment: self environmentOfTest;
 				materializeFrom: aStream) root].
 				

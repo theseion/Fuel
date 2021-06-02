@@ -16,4 +16,4 @@ testCompiledMethodClassBinding
 	self assert: className = method1 methodClass name.
 	self assert: className = method2 methodClass name.
 	self assert: method1 classBinding == method2 classBinding.
-	self deny: (Smalltalk globals includesKey: className asSymbol)
+	self deny: (self environmentOfTest includesKey: className asSymbol)

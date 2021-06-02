@@ -5,10 +5,10 @@ setUp
 	stream := ReadWriteStream on: ByteArray new.
 	encoder := FLEncoder
 		on: stream
-		globalEnvironment: self class environment.
+		globalEnvironment: self environmentOfTest.
 	
 	decoder := FLDecoder
 		on: stream
 		migrations: #()
-		globalEnvironment: self class environment
+		globalEnvironment: self environmentOfTest
 	

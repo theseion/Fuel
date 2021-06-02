@@ -3,8 +3,8 @@ assertSequencedSerializationEqualityOf: aCollectionToSerialize
 			
 	| aSerializer fileName aMaterializer materializedCollection |
 	fileName := 'sequencedSerializationTest.fuel'.
-	aSerializer := FLSerializer newDefault.
-	aMaterializer := FLMaterializer newDefault.
+	aSerializer := FLSerializer new.
+	aMaterializer := FLMaterializer new.
 
 	FLPlatform current
 		fileNamed: fileName

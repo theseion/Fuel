@@ -5,8 +5,10 @@ testConsiderGlobal: anObject
 	| globalAssociation |
 	self analyzer considerGlobal: #FLGlobalVariableForTesting.
 
-	Smalltalk globals at: #FLGlobalVariableForTesting put: anObject.
-	globalAssociation := Smalltalk globals associationAt: #FLGlobalVariableForTesting.
+	self environmentOfTest
+		at: #FLGlobalVariableForTesting
+		put: anObject.
+	globalAssociation := self environmentOfTest associationAt: #FLGlobalVariableForTesting.
 	
 	self assertSerializationIdentityOf: globalAssociation.
 	self assertSerializationIdentityOf: globalAssociation value.
