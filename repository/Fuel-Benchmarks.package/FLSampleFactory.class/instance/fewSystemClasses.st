@@ -1,6 +1,6 @@
 private
 fewSystemClasses
-
-	^ #('System' 'Collections' 'SUnit') 
-		inject: Array new 
-		into: [:anArray :aName | anArray, (SystemNavigation default allClassesInPackageNamed: aName) ]
+	^ Array streamContents: [ :stream |
+		#('System' 'Collections' 'SUnit') do: [ :packageName |
+		(SystemOrganization categoriesMatching: packageName, '*') do: [ :category |
+			stream nextPutAll: (SystemOrganization classesInCategory: category) ] ] ]

@@ -4,5 +4,5 @@ initialize
 	super initialize.
 
 	self 
-		useStandardFileStream;
+		useBinaryFileStream;
 		sample: (FLStructureSampleFactory sampleNamed: #completeBinaryTree)

@@ -1,5 +1,5 @@
 benchmarking
 benchAnalysis
 
-	FLAnalyzer newDefault
+	FLAnalyzer new
 		analysisFor: self sampleContents.
