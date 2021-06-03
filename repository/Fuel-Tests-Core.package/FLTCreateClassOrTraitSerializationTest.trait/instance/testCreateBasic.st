@@ -10,11 +10,14 @@ testCreateBasic
 	
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
 
-	self deny: aClassOrTrait == materializedClassOrTrait. 
-	self assert: environment == materializedClassOrTrait environment.
+	self deny: aClassOrTrait identicalTo: materializedClassOrTrait.
+	"This is the test environment wrapper, so we need to cheat"
+	self
+		assertCollection: environment associations
+		hasSameElements: materializedClassOrTrait environment associations.
 	"Classes are not direclty inserted in the system organization so we can only test #basicCategory and not #category."
-	self assert: category = materializedClassOrTrait basicCategory.
-	self assert: name = materializedClassOrTrait name.
+	self assert: category equals: materializedClassOrTrait basicCategory.
+	self assert: name equals: materializedClassOrTrait name.
 
      "It is important to notice that Fuel does not add the materialized class or trait into Smalltalk globals."
     self deny: (self environmentOfTest includesKey: name)

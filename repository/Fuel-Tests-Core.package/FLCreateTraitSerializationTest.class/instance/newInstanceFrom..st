@@ -2,7 +2,7 @@ class-factory
 newInstanceFrom: aClassOrTrait
 	^ (aClassOrTrait isTrait
 		ifTrue: [
-			(self classFactory
+			self classFactory
 				silentlyNewSubclassOf: Object
-				uses: aClassOrTrait) ]
+				uses: aClassOrTrait ]
 		ifFalse: [ aClassOrTrait ]) new

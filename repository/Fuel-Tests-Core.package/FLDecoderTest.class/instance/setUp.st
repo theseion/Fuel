@@ -6,4 +6,4 @@ setUp
 	decoder := FLDecoder
 		on: stream
 		migrations: #()
-		globalEnvironment: self environmentOfTest
+		globalEnvironment: self class environment

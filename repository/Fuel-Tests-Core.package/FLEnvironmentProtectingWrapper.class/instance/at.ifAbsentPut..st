@@ -1,5 +1,8 @@
 accessing
 at: key ifAbsentPut: aBlock
-	^ overlay
+	^ self
 		at: key
-		ifAbsentPut: aBlock
+		ifAbsent: [
+			overlay
+				at: key
+				put: aBlock value ]

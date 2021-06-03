@@ -5,7 +5,7 @@ testCreateWithInstance
 	| aClassOrTrait materializedObjects objectsToSerialize anInstance |
 	aClassOrTrait := self newClassOrTrait.
 	self classFactory
-		silentlyCompile:  'fortyTwo ^42'
+		silentlyCompile: 'fortyTwo ^42'
 		in: aClassOrTrait.
 	anInstance := self newInstanceFrom: aClassOrTrait.
 	objectsToSerialize := Array 

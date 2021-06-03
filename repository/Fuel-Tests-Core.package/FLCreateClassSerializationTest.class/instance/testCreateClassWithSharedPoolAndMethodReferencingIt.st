@@ -12,7 +12,7 @@ testCreateClassWithSharedPoolAndMethodReferencingIt
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
 	materializedMethod := materializedClass class >> #initialize.
-	literalIndex := materializedMethod literals indexOf: (self class bindingOf: sharedPool name).
+	literalIndex := materializedMethod literals indexOf: (self environmentOfTest bindingOf: sharedPool name).
 
 	self assert: 1 equals: (materializedClass sharedPools size).
 	self assert: sharedPool identicalTo: materializedClass sharedPools first.

@@ -1,8 +1,10 @@
 accessing
 at: key
-	^ self
-		checkReturn: (overlay
-			at: key
-			ifAbsent: [
-				environment at: key ])
-		forKey: key
+	^ overlay
+		at: key
+		ifPresent: [ :value |
+			self
+				checkReturn: value
+				forKey: key.
+			value ]
+		ifAbsent: [ environment at: key ]
