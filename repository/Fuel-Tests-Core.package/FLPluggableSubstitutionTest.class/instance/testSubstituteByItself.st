@@ -1,7 +1,9 @@
 tests
 testSubstituteByItself
 	| result |
-	self analyzer when: [ :x | true ] substituteBy: [ :x | x ].
+	self serializerConfig
+		when: [ :x | true ]
+		substituteBy: [ :x | x ].
 
 	result := self resultOfSerializeAndMaterialize: 1.
 

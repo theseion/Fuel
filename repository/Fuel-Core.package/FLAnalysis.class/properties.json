@@ -1,9 +1,5 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Fuel-Core-Base",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"objectStack",
@@ -14,5 +10,11 @@
 		"privateFirstMapper"
 	],
 	"name" : "FLAnalysis",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TFLConfigurable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Fuel-Core-Base"
 }

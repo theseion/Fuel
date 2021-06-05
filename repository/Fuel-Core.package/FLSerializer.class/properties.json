@@ -1,18 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Fuel-Core-Base",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"analyzer",
 		"serializationFactory",
-		"signature",
-		"version",
-		"stream",
 		"header"
 	],
 	"name" : "FLSerializer",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TFLConfigurable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Fuel-Core-Base"
 }

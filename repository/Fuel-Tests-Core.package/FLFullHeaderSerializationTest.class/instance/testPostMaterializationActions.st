@@ -2,7 +2,6 @@ tests
 testPostMaterializationActions
 	| aClass |
 	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'TestClassVariable TestClassVariable2'.
-	self analyzer considerInternalBehavior: aClass.
 	self classFactory
 		silentlyCompile: 'postLoadMethod TestClassVariable := 1' in: aClass class;
 		silentlyCompile: 'postLoadMethod2 TestClassVariable := 2' in: aClass class;
@@ -10,11 +9,11 @@ testPostMaterializationActions
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.
-	self serializer
-		at: #className
-		putAdditionalObject: aClass name.
-	self serializer addPostMaterializationAction: [ :header :materialization :environment |
-		(environment at: (header additionalObjectAt: #className)) perform: #postLoadMethod2 ].
+	self serializerConfig
+		at: #className putAdditionalObject: aClass name;
+		considerInternalBehavior: aClass;
+		addPostMaterializationAction: [ :header :materialization :environment |
+			(environment at: (header additionalObjectAt: #className)) perform: #postLoadMethod2 ].
 	self serialize: aClass.
 	self assert: (aClass perform: #classVariable) equals: 1.
 	self materialized.

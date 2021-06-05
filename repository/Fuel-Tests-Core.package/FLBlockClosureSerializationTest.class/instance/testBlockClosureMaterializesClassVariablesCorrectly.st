@@ -8,7 +8,7 @@ testBlockClosureMaterializesClassVariablesCorrectly
 	
 	method := class methodNamed: #methodWithClosure.
 	"Make sure we don't use global clusters here, which would simply perform a lookup"
-	self analyzer considerInternalBehavior: method methodClass.
+	self serializerConfig considerInternalBehavior: method methodClass.
 	closure := method
 		valueWithReceiver: class new
 		arguments: #().

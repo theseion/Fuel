@@ -1,0 +1,3 @@
+writing
+writeStream
+	self subclassResponsibility 

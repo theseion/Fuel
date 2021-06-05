@@ -3,9 +3,5 @@ useLightMappers
 
 	globalMappersFactory := [ self lightGlobalMappers ].
 	generalMapperFactory := [ { 
-		FLFullGeneralMapper
-			newWithInternalBehaviors: internalBehaviors
-			internalMethods: internalMethods
-			globalSymbols: globalSymbols
-			environment: globalEnvironment.
+		FLFullGeneralMapper new.
 		FLLightGeneralMapper new } ]

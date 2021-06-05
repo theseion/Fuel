@@ -2,7 +2,9 @@ running
 testSubstitute: anObject inPresenceOf: anotherObject
 
 	| result |
-	self analyzer when: [:x | x == anObject ] substituteBy: [:x | 424242 ].
+	self serializerConfig
+		when: [:x | x == anObject ]
+		substituteBy: [:x | 424242 ].
 
 	result := self resultOfSerializeAndMaterialize: {anObject. anotherObject}.
 	

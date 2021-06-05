@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLConfiguration",
+	"category" : "Fuel-Core-Configuration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLMaterializerConfiguration",
+	"type" : "normal"
+}

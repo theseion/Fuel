@@ -1,6 +1,6 @@
 running
 tearDown
 	self tearDownClassFactory.
-	self streamFactory tearDown.
+	streamStrategy tearDown.
 	
 	super tearDown

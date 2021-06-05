@@ -1,7 +1,7 @@
 tests
 assertMaterializedHasCorrectFormat: aClass
 	| materializedClass |	
-	self analyzer considerInternalBehavior: aClass.
+	self serializerConfig considerInternalBehavior: aClass.
 	materializedClass := self resultOfSerializeAndMaterialize: aClass.
 	
 	self deny: aClass == materializedClass.

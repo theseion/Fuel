@@ -1,5 +1,5 @@
 helpers
 resultOfSerializeAndMaterializeMethod: aCompiledMethod
-	self analyzer considerInternalMethod: aCompiledMethod. 
+	self serializerConfig considerInternalMethod: aCompiledMethod. 
 	self serialize: aCompiledMethod.
 	^ self materialized

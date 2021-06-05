@@ -1,10 +1,9 @@
 protected
 verifySignatureFrom: aDecoder
-
 	| streamSignature |
-	streamSignature := ByteArray new: self signature size.
+	streamSignature := ByteArray new: self configuration signature size.
 	aDecoder nextEncodedBytesInto: streamSignature.
-	(self signature asByteArray = streamSignature) ifFalse: [ 
+	(self configuration signature asByteArray = streamSignature) ifFalse: [ 
 		FLBadSignature 
-			signalCurrentSignature: self signature 
-			streamSignature: streamSignature  ].
+			signalCurrentSignature: self configuration signature 
+			streamSignature: streamSignature ]

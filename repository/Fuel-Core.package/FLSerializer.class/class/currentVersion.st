@@ -1,3 +1,0 @@
-protected
-currentVersion
-	^ 303

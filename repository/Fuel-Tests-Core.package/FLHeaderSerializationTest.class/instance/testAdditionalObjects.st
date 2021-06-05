@@ -1,8 +1,9 @@
 tests
 testAdditionalObjects
 
-	self serializer at: #test putAdditionalObject: 'test'.
-	self serializer at: 42 putAdditionalObject: 68.
+	self serializerConfig
+		at: #test putAdditionalObject: 'test';
+		at: 42 putAdditionalObject: 68.
 	
 	self assertSerializationEqualityOf: 'foo'.
 

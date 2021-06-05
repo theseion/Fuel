@@ -1,0 +1,3 @@
+*Fuel-ProgressUpdate
+defaultShowProgress
+	^ false

@@ -1,3 +1,0 @@
-configuring
-considerInternalAllBehaviors: classes
-	internalBehaviors addAll: classes

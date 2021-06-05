@@ -13,7 +13,10 @@ testClassAndVariableRename
 		to: (pointClassName , 'Renamed') asSymbol.
 	pointClass := self redefined: pointClass with: 'posY posX'.
 
-	self materializer migrateClassNamed: pointClassName toClass: pointClass variables: {('x' -> 'posX') . ('y' -> 'posY')}.
+	self materializerConfig
+		migrateClassNamed: pointClassName
+		toClass: pointClass
+		variables: {('x' -> 'posX') . ('y' -> 'posY')}.
 
 	resultPoint := self materialized.
 

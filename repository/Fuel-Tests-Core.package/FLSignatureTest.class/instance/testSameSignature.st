@@ -1,6 +1,9 @@
 tests
 testSameSignature
-
-	serializer signature: 'FUELx'.
-	materializer signature: 'FUELx'.
+	self serializerConfig
+		at: #signature
+		put: 'FUELx'.
+	self materializerConfig
+		at: #signature
+		put: 'FUELx'.
 	self assertSerializationEqualityOf: 'content'

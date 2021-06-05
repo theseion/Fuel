@@ -2,8 +2,11 @@ protected
 verifyVersionFrom: aDecoder
 
 	| streamVersion |
-	streamVersion := aDecoder nextEncodedUint16.
-	(self version = streamVersion) ifFalse: [ 
+	streamVersion := FLVersion
+		newWithMajor: aDecoder nextEncodedByte
+		minor: aDecoder nextEncodedByte
+		patch: aDecoder nextEncodedByte.
+	(self configuration version = streamVersion) ifFalse: [ 
 		FLBadVersion 
-			signalCurrentVersion: self version 
+			signalCurrentVersion: self configuration version 
 			streamVersion: streamVersion ]

@@ -1,12 +1,12 @@
 {
-	"commentStamp" : "MaxLeske 8/25/2019 09:11",
+	"commentStamp" : "",
 	"super" : "FLStreamStrategy",
 	"category" : "Fuel-Tests-Core-StreamStrategies",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"reference"
+		"fileReference"
 	],
 	"name" : "FLFileReferenceStreamStrategy",
 	"type" : "normal"

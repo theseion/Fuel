@@ -5,15 +5,12 @@ testShowingProgressBar
 			" Needs: FuelProgressUpdate package"
 			^ self skip ].
 	
-	FLPlatform current
-		fileNamed: 'numbers.fuel'
-		writeStreamDo: [ :aStream | 
-			FLSerializer new 
-				showProgress;
-				serialize: (1 to: 200000) asArray on: aStream ].
-	FLPlatform current
-		fileNamed: 'numbers.fuel'
-		readStreamDo: [ :aStream | 
-			FLMaterializer new
-				showProgress;
-				materializeFrom: aStream ]
+	FLSerializerConfiguration new 
+		showProgress;
+		object: (1 to: 200000) asArray;
+		fileName: 'numbers.fuel';
+		serialize.
+	FLMaterializerConfiguration new
+		showProgress;
+		fileName: 'numbers.fuel';
+		materialize

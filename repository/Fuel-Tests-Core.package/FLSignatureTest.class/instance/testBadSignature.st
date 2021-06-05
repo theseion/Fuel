@@ -1,8 +1,12 @@
 tests
 testBadSignature
-
-	serializer signature: 'FUELx'.
-	materializer signature: 'FUELy'.
+	self serializerConfig
+		at: #signature
+		put: 'FUELx'.
+	self materializerConfig
+		at: #signature
+		put: 'FUELy'.
+		
 	self
 		should: [ self resultOfSerializeAndMaterialize: 'content' ]
 		raise: FLBadSignature

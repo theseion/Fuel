@@ -1,7 +1,9 @@
 initialization
 initialize
-
 	super initialize.
-	self signature: self class defaultSignature.
-	self version: self class currentVersion.
-	header := FLHeader new.
+	
+	header := FLHeader new
+		additionalObjects: self configuration additionalObjects;
+		preMaterializationActions: self configuration preMaterializationActions;
+		postMaterializationActions: self configuration postMaterializationActions;
+		yourself

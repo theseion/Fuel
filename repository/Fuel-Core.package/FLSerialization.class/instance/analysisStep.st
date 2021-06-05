@@ -2,6 +2,6 @@ private
 analysisStep
 
 	| anAnalysis |
-	anAnalysis := analyzer analysisFor: root.
+	anAnalysis := FLAnalysis runWith: FLAnalyzer new.
 	clusters := anAnalysis clusterization clusters.
 	encoder objectCount: anAnalysis clusterization objectCount

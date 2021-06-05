@@ -3,7 +3,9 @@ testPrivateExcludedAndWithConflicts
 	"Tests issue #209"
 
 	| result |
-	self analyzer when: [ :x | FLPair == x ] substituteBy: [ :x | FLWeakClassMock ].
+	self serializerConfig
+		when: [ :x | FLPair == x ]
+		substituteBy: [ :x | FLWeakClassMock ].
 
 	result := self resultOfSerializeAndMaterialize: {FLPair new . FLPair}.
 

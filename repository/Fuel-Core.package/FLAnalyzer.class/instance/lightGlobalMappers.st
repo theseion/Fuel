@@ -1,6 +1,3 @@
 accessing
 lightGlobalMappers
-
-	^ globalSymbols isEmpty
-		ifTrue: [ #() ]
-		ifFalse: [ Array with: (FLLightGlobalMapper for: self globalsFromSymbols) ]
+	^ Array with: FLLightGlobalMapper new

@@ -1,7 +1,7 @@
 tests-Managing Globals
 testConsiderGlobal
 	
-	| aSerializer anArray materializedArray |
+	| anArray materializedArray |
 	"Prepare an array whose two elements are system globals."
 	anArray := Array with: Set new with: Set new.
 	self environmentOfTest
@@ -9,22 +9,18 @@ testConsiderGlobal
 		at: #GlobalSet2 put: anArray second.
 
 	"Serialize considering *only first* as a global object."
-	FLPlatform current
-		fileNamed: 'demo.fuel'
-		writeStreamDo: [ :aStream |
-			aSerializer := FLSerializer new.
-			aSerializer analyzer
-				globalEnvironment: self environmentOfTest;
-				considerGlobal: #GlobalSet1.
-			aSerializer serialize: anArray on: aStream ].
+	FLSerializerConfiguration new
+		fileName: 'demo.fuel';
+		environment: self environmentOfTest;
+		considerGlobal: #GlobalSet1;
+		object: anArray;
+		serialize.
 
 	"Materialize"
-	materializedArray := FLPlatform current
-		fileNamed: 'demo.fuel'
-		readStreamDo: [:aStream |
-			(FLMaterializer new
-				globalEnvironment: self environmentOfTest;
-				materializeFrom: aStream) root].
+	materializedArray := FLMaterializerConfiguration new
+		fileName: 'demo.fuel';
+		environment: self environmentOfTest;
+		materialize.
 				
 	"Check that second element is a new Set."
 	self assert: (self environmentOfTest at: #GlobalSet1) identicalTo: materializedArray first.

@@ -1,3 +1,3 @@
 reading
 readStreamDo: aValuable
-	^ reference binaryReadStreamDo: [ :stream | aValuable value: stream ]
+	^ fileReference binaryReadStreamDo: [ :stream | aValuable value: stream ]

@@ -6,7 +6,7 @@ testBadDestinationVariableRename
 	pointClassName := pointClass name.
 	aPoint := pointClass new.
 	
-	self materializer 
+	self materializerConfig
 		migrateClassNamed: pointClassName 
 		variables: {('x' -> 'posX')}.
 		

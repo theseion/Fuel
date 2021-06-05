@@ -1,0 +1,5 @@
+running
+setUpMaterializerConfiguration
+	super setUpMaterializerConfiguration.
+	
+	self materializerConfig showProgress

@@ -1,23 +1,15 @@
 tests
 assertSequencedSerializationEqualityOf: aCollectionToSerialize
 			
-	| aSerializer fileName aMaterializer materializedCollection |
+	| fileName serializerConfig materializerConfig materializedCollection |
 	fileName := 'sequencedSerializationTest.fuel'.
-	aSerializer := FLSerializer new.
-	aMaterializer := FLMaterializer new.
-
-	FLPlatform current
-		fileNamed: fileName
-		writeStreamDo: [:aWriteStream |
-			aCollectionToSerialize do: [:anObject |
-				 aSerializer serialize: anObject on: aWriteStream ]].
+	FLSerializerConfiguration new
+		fileName: fileName;
+		objectCollection: aCollectionToSerialize;
+		serialize.
 	
-	FLPlatform current
-		fileNamed: fileName
-		readStreamDo: [:aReadStream |
-			materializedCollection := OrderedCollection new.
-			[aReadStream atEnd] whileFalse: [
-				materializedCollection add: 
-					(aMaterializer materializeFrom: aReadStream) root ]].
+	materializedCollection := FLMaterializerConfiguration new
+		fileName: fileName;
+		materializeObjectCollection.
 		
-	self assert: aCollectionToSerialize = materializedCollection.
+	self assertCollection: aCollectionToSerialize equals: materializedCollection

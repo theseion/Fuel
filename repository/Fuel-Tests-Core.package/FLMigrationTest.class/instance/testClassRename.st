@@ -12,7 +12,9 @@ testClassRename
 		silentlyRename: pointClass
 		to: pointClassName, 'Renamed'.
 
-	self materializer migrateClassNamed: pointClassName toClass: pointClass.
+	self materializerConfig
+		migrateClassNamed: pointClassName
+		toClass: pointClass.
 
 	resultPoint := self materialized.
 

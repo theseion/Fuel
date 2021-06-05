@@ -1,7 +1,7 @@
 tests
 resultOfSerializeRemoveAndMaterialize: aClass
 	| materialized |
-	self analyzer considerInternalBehavior: aClass.
+	self serializerConfig considerInternalBehavior: aClass.
 	self serialize: aClass.
 	self classFactory deleteBehavior: aClass.
 	materialized := self materialized.

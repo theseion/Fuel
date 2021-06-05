@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Fuel-Core-Mappers",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"next",
 		"analysis"
 	],
 	"name" : "FLMapper",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TFLConfigurable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Fuel-Core-Mappers"
 }

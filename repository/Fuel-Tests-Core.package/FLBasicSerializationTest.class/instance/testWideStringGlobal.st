@@ -8,7 +8,7 @@ testWideStringGlobal
 	self environmentOfTest
 		at: global
 		put: globalValue.
-	self analyzer considerGlobal: global.
+	self serializerConfig considerGlobal: global.
 
 	self shouldnt: [ self serialize: 'bar' -> globalValue ] raise: Error.
 	self assert: self materialized class equals: Association.

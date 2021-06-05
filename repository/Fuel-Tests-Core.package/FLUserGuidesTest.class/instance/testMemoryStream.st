@@ -1,7 +1,13 @@
 tests-Getting Started
 testMemoryStream
 	| anArray materializedString |
-	anArray := FLSerializer serializeToByteArray: 'stringToSerialize'.
-	materializedString := FLMaterializer
-		materializeFromByteArray: anArray.
+	anArray := ByteArray
+		streamContents: [ :stream |
+			FLSerializerConfiguration new
+				object: 'stringToSerialize';
+				streamFactory: [ stream ];
+				serialize ].
+	materializedString := FLMaterializerConfiguration new
+		streamFactory: [ anArray readStream ];
+		materialize.
 	self assert: materializedString equals: 'stringToSerialize'

@@ -1,9 +1,5 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "Fuel-Core-Base",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"encoder",
@@ -12,5 +8,11 @@
 		"analyzer"
 	],
 	"name" : "FLSerialization",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TFLConfigurable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Fuel-Core-Base"
 }

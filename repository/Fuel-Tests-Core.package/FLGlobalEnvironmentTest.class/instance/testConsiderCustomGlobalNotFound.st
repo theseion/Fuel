@@ -2,12 +2,12 @@ tests
 testConsiderCustomGlobalNotFound
 	"A custom global variable is treated as global if we explicitly specify that on serialization. Then, if the variable is not defined in the materialization environment, a error should be raised."
 	
-	self analyzer
+	self serializerConfig
 		considerGlobal: #FLGlobalVariableForTesting;
-		globalEnvironment: (Dictionary new
+		environment: (Dictionary new
 			at: #FLGlobalVariableForTesting put: 42;
 			yourself).
-	self materializer globalEnvironment: Dictionary new.
+	self materializerConfig environment: Dictionary new.
 
 	self serialize: 42.
 	self 

@@ -5,7 +5,6 @@ setUp
 	self
 		setUpEnvironment;
 		setUpClassFactory;
-		setUpSerializer;
-		setUpMaterializer;
-		"You have several stream strategies available on 'stream-strategies' category."
-		useFileReferenceStream
+		setUpStreamStragety;
+		setUpSerializerConfiguration;
+		setUpMaterializerConfiguration

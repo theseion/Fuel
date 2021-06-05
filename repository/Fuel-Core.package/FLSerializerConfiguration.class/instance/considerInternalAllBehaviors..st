@@ -1,0 +1,3 @@
+configuring
+considerInternalAllBehaviors: aCollection
+	self internalBehaviors addAll: aCollection

@@ -1,5 +1,3 @@
-initialize-release
+initialization
 initializeWith: aDecoder
-
-	self initialize.
 	decoder := aDecoder.

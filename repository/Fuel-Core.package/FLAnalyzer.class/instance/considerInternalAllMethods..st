@@ -1,3 +1,0 @@
-configuring
-considerInternalAllMethods: methods
-	internalMethods addAll: methods

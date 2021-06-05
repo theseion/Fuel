@@ -1,3 +1,3 @@
 protected
 encodeSignatureWith: anEncoder
-	anEncoder encodeBytes: self signature asByteArray
+	anEncoder encodeBytes: self configuration signature asByteArray

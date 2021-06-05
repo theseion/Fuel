@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Fuel-Core-Configuration",
+	"classinstvars" : [
+		"default"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"map",
+		"serializer",
+		"materializer"
+	],
+	"name" : "FLConfiguration",
+	"type" : "normal"
+}

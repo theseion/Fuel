@@ -1,0 +1,3 @@
+reading
+readStream
+	^ fileReference binaryReadStream

@@ -1,0 +1,7 @@
+{
+	"commentStamp" : "<historical>",
+	"classinstvars" : [ ],
+	"category" : "Fuel-Core-Configuration",
+	"instvars" : [ ],
+	"name" : "TFLConfigurable"
+}

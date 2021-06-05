@@ -3,7 +3,9 @@ testUniqueSubstitution
 	"Tests that an object with two occurrences in the graph is substituted to the *same* object."
 
 	| result |
-	self analyzer when: [ :x | x isNumber ] substituteBy: [ :x | x printString ].
+	self serializerConfig
+		when: [ :x | x isNumber ]
+		substituteBy: [ :x | x printString ].
 
 	"This line demonstrates that behavior being tested is not trivial"
 	self deny: 1 printString identicalTo: 1 printString.

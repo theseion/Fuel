@@ -1,0 +1,3 @@
+*Fuel-Debug
+defaultNeedsDebugging
+	^ false

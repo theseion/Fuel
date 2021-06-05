@@ -1,7 +1,7 @@
 analyzing
 run
 
-	objectStack push: root.
+	objectStack push: self configuration object.
 	[ objectStack isEmpty ] 
 		whileFalse: [ self mapAndTrace: objectStack pop ].
 	[ privateObjectStack isEmpty ] 

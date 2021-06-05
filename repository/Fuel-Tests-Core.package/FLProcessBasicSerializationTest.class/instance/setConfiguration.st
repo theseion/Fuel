@@ -1,0 +1,3 @@
+running
+setConfiguration
+	self serializerConfig serializer: FLDelayedSerializerMock new

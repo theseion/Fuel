@@ -1,3 +1,8 @@
 protected
 encodeVersionWith: anEncoder
-	anEncoder encodeUint16: self version
+	| version |
+	version := self configuration version.
+	anEncoder
+		encodeByte: version major;
+		encodeByte: version minor;
+		encodeByte: version patch
