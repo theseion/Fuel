@@ -2,17 +2,13 @@ tests-Getting Started
 testGZip
 	| materialized |
 	FLSerializerConfiguration new
-		fileName: 'demo';
+		fileName: 'demo.fuel';
 		decorateStreamFactory: [ :fileStream | GZipWriteStream on: fileStream ];
 		streamFinalizer: [ :gzipStream | gzipStream finish ];
 		object: 123;
 		serialize.
 	materialized := FLMaterializerConfiguration new
-		fileName: 'demo';
-		decorateStreamFactory: [ :fileStream |
-			self assert: 'demo' asFileReference exists.
-			self assert: 'demo' asFileReference size > 0.
-			self assert: fileStream file exists.
-			GZipReadStream on: fileStream ];
+		fileName: 'demo.fuel';
+		decorateStreamFactory: [ :fileStream | GZipReadStream on: fileStream ];
 		materialize.
 	self assert: materialized equals: 123

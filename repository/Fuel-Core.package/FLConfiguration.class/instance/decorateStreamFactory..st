@@ -4,8 +4,8 @@ decorateStreamFactory: aBlock
 		at: #streamFactory
 		ifPresent: [ :factory |
 			self
-				at: #streamFactory
-				put: [ aBlock cull: factory value ] ]
+				at: #streamFactory put: [ aBlock cull: factory value ];
+				streamFinalizer: [ :stream | stream close ] ]
 		ifAbsent: [
 			FLConfigurationError signal: 'No stream factory configured yet. ',
 				'Did you mean to use #streamFactory:? ',

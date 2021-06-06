@@ -1,5 +1,5 @@
 tests-Getting Started
-testFileStream
+testByteArrayStream
 	| array materializedString |
 	array := ByteArray streamContents: [ :stream |
 		FLSerializerConfiguration new

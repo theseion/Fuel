@@ -2,4 +2,10 @@ accessing
 streamFinalizer: aBlock
 	self
 		at: #streamFinalizer
-		put: aBlock
+		ifPresent: [ :finalizer |
+			self
+				at: #streamFinalize
+				put: [ :stream |
+					aBlock value: stream.
+					finalizer value: stream ] ]
+		ifAbsentPut: [ aBlock ]
