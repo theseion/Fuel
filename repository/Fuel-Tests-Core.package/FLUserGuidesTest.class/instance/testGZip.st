@@ -9,6 +9,10 @@ testGZip
 		serialize.
 	materialized := FLMaterializerConfiguration new
 		fileName: 'demo';
-		decorateStreamFactory: [ :fileStream | GZipReadStream on: fileStream ];
+		decorateStreamFactory: [ :fileStream |
+			self assert: 'demo' asFileReference exists.
+			self assert: 'demo' asFileReference size > 0.
+			self assert: fileStream file exists.
+			GZipReadStream on: fileStream ];
 		materialize.
 	self assert: materialized equals: 123
