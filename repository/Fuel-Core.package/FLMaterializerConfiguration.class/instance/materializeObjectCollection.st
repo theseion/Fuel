@@ -1,5 +1,4 @@
 materializing
 materializeObjectCollection
-	^ FLCurrentConfiguration
-		value: self
-		during: [ self materializer materializeObjectCollection ]
+	^ self useDuring: [
+		self materializer materializeObjectCollection ]

@@ -1,9 +1,8 @@
 materializing
 materialize
 	| materialization |
-	materialization := (FLCurrentConfiguration
-		value: self
-		during: [ self materializer materialize ]).
+	materialization := self useDuring: [
+		self materializer materialize ].
 	self
 		at: #materialization
 		put: materialization.

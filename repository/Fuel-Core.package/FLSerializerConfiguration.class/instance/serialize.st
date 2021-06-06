@@ -1,5 +1,3 @@
 serializing
 serialize
-	FLCurrentConfiguration
-		value: self
-		during: [ self serializer serialize ]
+	self useDuring: [ self serializer serialize ]

@@ -3,7 +3,6 @@ setUp
 	super setUp.
 	
 	stream := ReadWriteStream on: ByteArray new.
-	decoder := FLDecoder
-		on: stream
-		migrations: #()
-		globalEnvironment: self class environment
+	FLMaterializerConfiguration new
+		streamFactory: [ stream ];
+		useDuring: [ decoder := FLDecoder new ]

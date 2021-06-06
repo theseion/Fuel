@@ -3,6 +3,6 @@ runWith: anAnalyzer
 	^ (self detectResponsibleAnalysis
 		newWith: anAnalyzer firstInMapperChain
 		private: anAnalyzer privateFirstInMapperChain
-		root: self configuration object)
+		root: self context object)
 			run;
 			yourself

@@ -1,15 +1,10 @@
 tests
-assertSequencedSerializationEqualityOf: aCollectionToSerialize
-			
-	| fileName serializerConfig materializerConfig materializedCollection |
-	fileName := 'sequencedSerializationTest.fuel'.
-	FLSerializerConfiguration new
-		fileName: fileName;
+assertSequencedSerializationEqualityOf: aCollectionToSerialize	
+	| materializedCollection |
+	self serializerConfig
 		objectCollection: aCollectionToSerialize;
 		serialize.
 	
-	materializedCollection := FLMaterializerConfiguration new
-		fileName: fileName;
-		materializeObjectCollection.
+	materializedCollection := self materializerConfig materializeObjectCollection.
 		
-	self assertCollection: aCollectionToSerialize equals: materializedCollection
+	self assertCollection: aCollectionToSerialize hasSameElements: materializedCollection

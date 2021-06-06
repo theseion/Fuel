@@ -3,12 +3,10 @@ setUp
 	super setUp.
 	
 	stream := ReadWriteStream on: ByteArray new.
-	encoder := FLEncoder
-		on: stream
-		globalEnvironment: self class environment.
+	FLSerializerConfiguration new
+		streamFactory: [ stream ];
+		useDuring: [ encoder := FLEncoder new ].
 	
-	decoder := FLDecoder
-		on: stream
-		migrations: #()
-		globalEnvironment: self class environment
-	
+	FLMaterializerConfiguration new
+		streamFactory: [ stream ];
+		useDuring: [ decoder := FLDecoder new ]

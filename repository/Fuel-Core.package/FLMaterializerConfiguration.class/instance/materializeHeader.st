@@ -1,5 +1,4 @@
 materializing
 materializeHeader
-	^ FLCurrentConfiguration
-		value: self
-		during: [ self materializer materializeHeader ]
+	^ self useDuring: [
+		self materializer materializeHeader ]

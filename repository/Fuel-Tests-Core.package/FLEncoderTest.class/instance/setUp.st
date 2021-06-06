@@ -3,6 +3,6 @@ setUp
 	super setUp.
 	
 	stream := WriteStream on: ByteArray new.
-	encoder := FLEncoder
-		on: stream
-		globalEnvironment: self class environment
+	FLSerializerConfiguration new
+		streamFactory: [ stream ];
+		useDuring: [ encoder := FLEncoder new ]

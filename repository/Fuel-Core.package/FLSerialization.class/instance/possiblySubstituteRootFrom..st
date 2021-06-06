@@ -1,4 +1,4 @@
-private
+as yet unclassified
 possiblySubstituteRootFrom: anAnalysis
 	"The root object may have been substituted. We need to update the
 	object in the configuration to reflect the actual root object"

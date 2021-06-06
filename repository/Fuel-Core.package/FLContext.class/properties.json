@@ -2,20 +2,14 @@
 	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"stream",
-		"objects",
-		"isBigEndian",
-		"indexStream",
-		"migrations",
-		"objectsWriteStream",
-		"globalEnvironment"
+		"map"
 	],
-	"name" : "FLDecoder",
+	"name" : "FLContext",
 	"commentStamp" : "",
 	"super" : "Object",
 	"traitcomposition" : "TFLConfigurable",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"category" : "Fuel-Core-Base"
+	"category" : "Fuel-Core-Configuration"
 }

@@ -1,10 +1,7 @@
 materializing
-basicMaterializeFrom: aStream
+basicMaterialize
 	| decoder header materialization |
-	decoder := FLDecoder 
-		on: aStream 
-		migrations: self configuration migrations 
-		globalEnvironment: self configuration environment.
+	decoder := FLDecoder new.
 	self verifySignatureFrom: decoder.
 	self verifyVersionFrom: decoder.
 	header := self decodeHeaderWith: decoder.

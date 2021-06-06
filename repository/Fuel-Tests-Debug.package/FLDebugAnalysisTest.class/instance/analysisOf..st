@@ -1,8 +1,6 @@
 accessing
 analysisOf: anObject
-	^ FLCurrentConfiguration
-		value: (self serializerConfig
-			object: anObject;
-			yourself)
-		during: [
+	^ self serializerConfig
+		object: anObject;
+		useDuring:[
 			FLAnalysis runWith: FLAnalyzer new ]

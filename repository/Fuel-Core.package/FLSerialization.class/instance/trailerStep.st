@@ -1,3 +1,3 @@
 private
 trailerStep
-	encoder encodeReferenceTo: self configuration object
+	encoder encodeReferenceTo: self context object

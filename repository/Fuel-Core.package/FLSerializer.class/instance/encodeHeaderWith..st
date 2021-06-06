@@ -5,8 +5,6 @@ encodeHeaderWith: anEncoder
 
 	header isEmpty ifTrue: [ ^ self ].
 	
-	FLCurrentConfiguration
-		value: (self configuration copy
-			object: header;
-			yourself)
-		during: [ FLSerialization runWith: anEncoder ]
+	self configuration copy
+		object: header;
+		useDuring: [ FLSerialization runWith: anEncoder ]
