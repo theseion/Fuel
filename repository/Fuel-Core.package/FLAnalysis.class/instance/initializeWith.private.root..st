@@ -6,7 +6,7 @@ initializeWith: aMapper private: privateMapper root: anObject
 	privateFirstMapper := privateMapper.
 	aMapper analysis: self.
 	privateMapper analysis: self.
-	root := anObject fuelReplacement.
+	root := anObject.
 	objectStack := FLSimpleStack new.
 	privateObjectStack := FLSimpleStack new.
 	clusterization := FLClusterization new.
