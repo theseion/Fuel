@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Fuel"
 theme = "book"
 contentDir = "../src"
-publishDir = "../static"
+publishDir = "../"
 
 # The following are options specific to the book theme
 
