@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://theseion.github.io/fuel/getting-started/</loc>
-    <priority>0</priority>
+    <loc>https://theseion.github.io/Fuel/getting-started/</loc>
+    <lastmod>2021-06-10T13:32:53+02:00</lastmod>
   </url><url>
-    <loc>https://theseion.github.io/fuel/managing-globals/</loc>
-    <priority>0</priority>
+    <loc>https://theseion.github.io/Fuel/managing-globals/</loc>
+    <lastmod>2021-06-10T13:32:53+02:00</lastmod>
   </url><url>
-    <loc>https://theseion.github.io/fuel/categories/</loc>
+    <loc>https://theseion.github.io/Fuel/categories/</loc>
   </url><url>
-    <loc>https://theseion.github.io/fuel/</loc>
+    <loc>https://theseion.github.io/Fuel/</loc>
   </url><url>
-    <loc>https://theseion.github.io/fuel/tags/</loc>
+    <loc>https://theseion.github.io/Fuel/tags/</loc>
   </url>
 </urlset>

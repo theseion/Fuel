@@ -2,25 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fuel</title>
-    <link>https://theseion.github.io/fuel/</link>
+    <link>https://theseion.github.io/Fuel/</link>
     <description>Recent content on Fuel</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://theseion.github.io/fuel/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://theseion.github.io/Fuel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://theseion.github.io/fuel/getting-started/</link>
+      <link>https://theseion.github.io/Fuel/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://theseion.github.io/fuel/getting-started/</guid>
-      <description>Basic examples We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file: FLSerializer serialize: &amp;lsquo;stringToSerialize&amp;rsquo; toFileNamed: &amp;lsquo;demo.fuel&amp;rsquo;. materializedString := FLMaterializer materializeFromFileNamed: &amp;lsquo;demo.fuel&amp;rsquo;. We also provide messages for storing into a ByteArray. This can be fine for users of a NoSQL database: anArray := FLSerializer serializeToByteArray: &amp;lsquo;stringToSerialize&amp;rsquo;. materializedString := FLMaterializer materializeFromByteArray: anArray. FileStream In this example we work with files.</description>
+      <guid>https://theseion.github.io/Fuel/getting-started/</guid>
+      <description>Basic examples #  We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file:
+FLSerializer serialize: &amp;#39;stringToSerialize&amp;#39; toFileNamed: &amp;#39;demo.fuel&amp;#39;. materializedString := FLMaterializer materializeFromFileNamed: &amp;#39;demo.fuel&amp;#39;. We also provide messages for storing into a ByteArray. This can be fine for users of a NoSQL database:
+anArray := FLSerializer serializeToByteArray: &amp;#39;stringToSerialize&amp;#39;. materializedString := FLMaterializer materializeFromByteArray: anArray. FileStream #  In this example we work with files.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://theseion.github.io/fuel/managing-globals/</link>
+      <link>https://theseion.github.io/Fuel/managing-globals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://theseion.github.io/fuel/managing-globals/</guid>
+      <guid>https://theseion.github.io/Fuel/managing-globals/</guid>
       <description>Let us assume a CompiledMethod is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.</description>
     </item>
     
