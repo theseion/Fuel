@@ -4,10 +4,10 @@ type = "docs"
 Let us assume a CompiledMethod is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.
 ## Default globals
 By default, Fuel considers following objects as globals, i.e. will store just its name:
-`nil`, `true`, `false`, and `Smalltalk globals`.
-Any `Class`, `Trait`, `Metaclass` or `ClassTrait`.
-Any `CompiledMethod` (except when either it `#isInstalled` not or `#isDoIt`, for example, the code is evaluated from Workspace).
-Some well-known global variables: `Smalltalk` `SourceFiles` `Transcript` `Undeclared` `Display` `TextConstants` `ActiveWorld` `ActiveHand` ActiveEvent Sensor Processor ImageImports SystemOrganization World.
+- `nil`, `true`, `false`, and `Smalltalk globals`.
+- Any `Class`, `Trait`, `Metaclass` or `ClassTrait`.
+- Any `CompiledMethod` (except when either it `#isInstalled` not or `#isDoIt`, for example, the code is evaluated from Workspace).
+- Some well-known global variables: `Smalltalk` `SourceFiles` `Transcript` `Undeclared` `Display` `TextConstants` `ActiveWorld` `ActiveHand` `ActiveEvent` `Sensor` `Processor` `ImageImports` `SystemOrganization` `World`.
 Custom globals are duplicated
 In this following code snippet we show that by default the global value is not serialized as a global, and so it is duplicated on materialization.
 ```smalltalk
