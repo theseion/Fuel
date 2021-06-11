@@ -1,1 +1,0 @@
-I represent an error caused by invalid configuration.

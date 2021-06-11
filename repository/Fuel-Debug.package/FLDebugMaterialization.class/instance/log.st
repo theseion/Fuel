@@ -1,3 +1,0 @@
-debugging
-log
-	^ log

@@ -1,1 +1,0 @@
-I am useful to benchmark serialization performance. My children are pointed through variable references.

@@ -1,3 +1,0 @@
-protected
-defaultAnalyzer
-	^ FLAnalyzer new

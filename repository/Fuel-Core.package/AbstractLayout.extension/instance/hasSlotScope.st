@@ -1,3 +1,0 @@
-*Fuel-Core
-hasSlotScope
-	^ false

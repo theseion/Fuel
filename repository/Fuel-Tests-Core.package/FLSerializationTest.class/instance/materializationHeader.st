@@ -1,3 +1,0 @@
-helpers
-materializationHeader
-	^ self materializerConfig materializeHeader

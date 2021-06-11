@@ -1,3 +1,0 @@
-reading
-writeStream
-	^ fileReference binaryWriteStream

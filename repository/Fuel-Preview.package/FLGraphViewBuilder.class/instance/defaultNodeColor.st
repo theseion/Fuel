@@ -1,3 +1,0 @@
-accessing
-defaultNodeColor
-	^ Color black

@@ -1,3 +1,0 @@
-creating-anonymous
-newAnonymousClass
-	^ self defaultSuperclass newAnonymousSubclass

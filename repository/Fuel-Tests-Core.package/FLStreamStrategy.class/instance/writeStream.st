@@ -1,3 +1,0 @@
-writing
-writeStream
-	self subclassResponsibility 
