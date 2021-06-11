@@ -14,6 +14,7 @@ We also provide messages for storing into a `ByteArray`. This can be fine for us
 anArray := FLSerializer serializeToByteArray: 'stringToSerialize'. 
 materializedString := FLMaterializer materializeFromByteArray: anArray.
 ```
+
 ## FileStream
 In this example we work with files. Note that we set the file in binary mode:
 ```smalltalk
