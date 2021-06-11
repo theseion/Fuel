@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    if: ${{github.ref == 'refs/heads/master'}}
+    if: ${{github.ref == 'refs/heads/master' && contains(github.event.commits[0].message, '[docs]')}}
     steps:
       - uses: actions/checkout@v2
         with:
