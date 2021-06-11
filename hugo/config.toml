@@ -2,6 +2,7 @@ baseURL = "https://theseion.github.io/Fuel"
 languageCode = "en-us"
 title = "Fuel"
 theme = "book"
+contentDir = "../docs"
 
 # The following are options specific to the book theme
 

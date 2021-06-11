@@ -23,7 +23,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --config "hugo-config.toml" -s docs 
+        run: hugo --minify --cleanDestinationDir true --gc true -s hugo 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
