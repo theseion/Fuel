@@ -1,4 +1,5 @@
 language: smalltalk
+if: commit_message !~ /(\[docs])/
 
 jobs:
   include:
