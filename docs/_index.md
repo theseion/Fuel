@@ -8,6 +8,7 @@ We give some class-side messages to facilitate the more common uses of serializa
 FLSerializer serialize: 'stringToSerialize' toFileNamed: 'demo.fuel'.
 materializedString := FLMaterializer materializeFromFileNamed: 'demo.fuel'.
 ```
+
 We also provide messages for storing into a `ByteArray`. This can be fine for users of a NoSQL database:
 ```smalltalk
 anArray := FLSerializer serializeToByteArray: 'stringToSerialize'. 
