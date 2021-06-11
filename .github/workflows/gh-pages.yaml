@@ -23,11 +23,12 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --cleanDestinationDir --gc -s hugo && ls -laR
+        run: hugo --minify --cleanDestinationDir --gc -s hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: 'Published docs [skip ci]'
+          publish_dir: hugo/public
           publish_branch: docs
