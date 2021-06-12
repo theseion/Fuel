@@ -5,5 +5,5 @@ decodeHeaderWith: aDecoder
 	"todo: fix"
 	"Here I cannot use #materializeFrom: again because I will end up in an infinitive loop. Therefore, I use #materializationFactory."
 	^ aDecoder nextEncodedByte = 0
-		ifTrue: [ FLHeader new ]
+		ifTrue: [ FLHeader fuelNew ]
 		ifFalse: [ (FLMaterialization runWith: aDecoder) root ]

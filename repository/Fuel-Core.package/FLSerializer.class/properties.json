@@ -1,11 +1,7 @@
 {
 	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
-	"instvars" : [
-		"analyzer",
-		"serializationFactory",
-		"header"
-	],
+	"instvars" : [ ],
 	"name" : "FLSerializer",
 	"commentStamp" : "",
 	"super" : "Object",

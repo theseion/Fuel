@@ -1,5 +1,5 @@
 initialization
 initialize
-	additionalObjects := IdentityDictionary new.
-	preMaterializationActions := OrderedCollection new.
-	postMaterializationActions := OrderedCollection new.
+	additionalObjects := self configuration additionalObjects.
+	preMaterializationActions := self configuration preMaterializationActions.
+	postMaterializationActions := self configuration postMaterializationActions

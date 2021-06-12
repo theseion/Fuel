@@ -1,4 +1,6 @@
 defaults
 generalMappers
-
-	^generalMapperFactory value
+	^ { 
+		FLFullGeneralMapper new.
+		FLLightGeneralMapper new
+	}

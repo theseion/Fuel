@@ -1,5 +1,5 @@
 accessing
 stream
-	^ self
+	^ map
 		at: #stream
 		ifAbsentPut: [ self configuration streamFactory value ]

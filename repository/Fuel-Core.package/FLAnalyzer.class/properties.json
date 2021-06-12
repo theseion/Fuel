@@ -1,16 +1,7 @@
 {
 	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
-	"instvars" : [
-		"pluggableSubstitutions",
-		"globalMappersFactory",
-		"analysisFactory",
-		"generalMapperFactory",
-		"globalSymbols",
-		"internalMethods",
-		"globalEnvironment",
-		"internalBehaviors"
-	],
+	"instvars" : [ ],
 	"name" : "FLAnalyzer",
 	"commentStamp" : "",
 	"super" : "Object",

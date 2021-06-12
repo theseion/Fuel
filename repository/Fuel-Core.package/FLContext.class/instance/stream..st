@@ -1,5 +1,5 @@
 as yet unclassified
 stream: aStream
-	self
+	map
 		at: #stream
 		put: aStream

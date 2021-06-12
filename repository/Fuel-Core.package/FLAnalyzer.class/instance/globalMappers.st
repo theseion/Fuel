@@ -1,4 +1,3 @@
 accessing
 globalMappers
-	
-	^globalMappersFactory value
+	^ Array with: FLLightGlobalMapper new

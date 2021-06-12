@@ -1,6 +1,6 @@
 accessing
 registerFinalizer: aBlock
-	(self
+	(map
 		at: #finalizers
 		ifAbsentPut: [ OrderedCollection new ])
 			add: aBlock

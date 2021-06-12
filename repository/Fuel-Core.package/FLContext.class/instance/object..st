@@ -1,5 +1,5 @@
 as yet unclassified
 object: anObject
-	self
+	map
 		at: #object
 		put: anObject

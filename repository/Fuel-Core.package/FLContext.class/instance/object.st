@@ -1,5 +1,5 @@
 as yet unclassified
 object
-	^ self
+	^ map
 		at: #object
 		ifAbsentPut: [ self configuration object ]

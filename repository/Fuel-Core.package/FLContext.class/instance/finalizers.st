@@ -1,5 +1,5 @@
 accessing
 finalizers
-	^ self
+	^ map
 		at: #finalizers
 		ifAbsent: [ #() ]

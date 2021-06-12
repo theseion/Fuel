@@ -1,13 +1,7 @@
 {
 	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
-	"instvars" : [
-		"materializationFactory",
-		"signature",
-		"version",
-		"migrations",
-		"globalEnvironment"
-	],
+	"instvars" : [ ],
 	"name" : "FLMaterializer",
 	"commentStamp" : "",
 	"super" : "Object",

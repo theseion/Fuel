@@ -1,7 +1,7 @@
 protected
 pluggableSubstitutionMappers
 
-	^pluggableSubstitutions collect: [:aLink |
+	^ self configuration whenBlocks collect: [ :assoc |
 		FLPluggableSubstitutionMapper 
-			when: aLink key
-			substituteBy: aLink value]
+			when: assoc key
+			substituteBy: assoc value ]
