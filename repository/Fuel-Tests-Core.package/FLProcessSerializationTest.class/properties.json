@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FLSerializer",
-	"category" : "Fuel-Tests-Core-Mocks",
+	"super" : "FLSerializationTest",
+	"category" : "Fuel-Tests-Core-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FLDelayedSerializerMock",
+	"name" : "FLProcessSerializationTest",
 	"type" : "normal"
 }

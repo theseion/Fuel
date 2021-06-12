@@ -1,10 +1,7 @@
-serializing
+running
 run
-	"Serialize the graph starting at the root object."
-
-	self analysisStep.
-	self headerStep.
-	self instancesStep.
-	(Delay forMilliseconds: 100) wait.
-	self referencesStep.
-	self trailerStep.
+	self configuration
+		at: #delayedMockUsed
+		put: true.
+		
+	super run
