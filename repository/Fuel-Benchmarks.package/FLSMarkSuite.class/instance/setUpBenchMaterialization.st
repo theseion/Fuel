@@ -1,7 +1,7 @@
 benchmarking
 setUpBenchMaterialization
 
-	self streamFactory writeStreamDo: [ :aStream |
-		FLSerializer 
-			serialize: self sampleContents
-			on: aStream ].
+	FLSerializerConfiguration new
+		object: self sampleContents;
+		streamFactory: [ self streamFactory writeStream ];
+		serialize

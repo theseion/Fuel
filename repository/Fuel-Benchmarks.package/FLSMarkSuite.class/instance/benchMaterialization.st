@@ -1,5 +1,5 @@
 benchmarking
 benchMaterialization
-
-	self streamFactory readStreamDo: [ :aStream |	
-		FLMaterializer new materializeFrom: aStream ]
+	FLMaterializerConfiguration new
+			streamFactory: [ self streamFactory readStream ];
+			materialize

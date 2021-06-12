@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FLBasicSerializationTest",
+	"super" : "FLSerializationTest",
 	"category" : "Fuel-Tests-Core-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
