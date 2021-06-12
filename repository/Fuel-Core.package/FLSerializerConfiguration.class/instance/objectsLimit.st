@@ -1,5 +1,5 @@
 as yet unclassified
 objectsLimit
-	^ self
+	^ map
 		at: #objectsLimit
 		ifAbsent: [ self class defaultObjectsLimit ]

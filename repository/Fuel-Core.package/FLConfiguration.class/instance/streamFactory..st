@@ -1,6 +1,6 @@
 accessing
 streamFactory: aBlock
-	self
+	map
 		at: #streamFactory
 		ifPresent: [
 			FLConfigurationError signal: 'Stream factory already configured. ',

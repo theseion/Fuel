@@ -1,5 +1,5 @@
 accessing
 object: anObject
-	self
+	map
 		at: #object
 		put: anObject

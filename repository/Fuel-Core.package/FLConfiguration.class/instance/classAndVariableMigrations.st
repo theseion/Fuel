@@ -1,5 +1,5 @@
 enumerating
 classAndVariableMigrations
-	^ self 
+	^ map 
 		at: #classAndVariableMigrations
 		ifAbsent: [ Dictionary new ]

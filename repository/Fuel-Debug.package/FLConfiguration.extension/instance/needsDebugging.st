@@ -1,5 +1,5 @@
 *Fuel-Debug
 needsDebugging
-	self
+	map
 		at: #needDebugging
 		put: true

@@ -1,5 +1,5 @@
 *Fuel-Debug
 doesNeedDebugging
-	^ self
+	^ map
 		at: #needDebugging
 		ifAbsent: [ self class defaultNeedsDebugging ]

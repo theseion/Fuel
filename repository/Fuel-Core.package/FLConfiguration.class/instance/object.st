@@ -1,5 +1,6 @@
 accessing
 object
-	^ self
+	^ map
 		at: #object
-		ifAbsent: [ FLConfigurationError signal: 'You need to specify the object you want to serialize.' ]
+		ifAbsent: [
+			FLConfigurationError signal: 'You need to specify the object you want to serialize.' ]

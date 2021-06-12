@@ -1,5 +1,5 @@
 as yet unclassified
 globalSymbols
-	^ self
+	^ map
 		at: #globalSymbols
 		ifAbsent: [ self class defaultGlobalSymbols asIdentitySet ]

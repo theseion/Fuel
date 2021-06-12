@@ -1,5 +1,5 @@
 *Fuel-ProgressUpdate
 shouldShowProgress
-	^ self
+	^ map
 		at: #showProgress
 		ifAbsent: [ self class defaultShowProgress ]

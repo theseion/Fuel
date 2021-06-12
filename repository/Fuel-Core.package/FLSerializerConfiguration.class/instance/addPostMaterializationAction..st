@@ -17,7 +17,7 @@ addPostMaterializationAction: aCleanBlockClosure
 	aCleanBlockClosure isClean ifFalse: [
 		FLConfigurationError signal: 'Post materializaton actions have to be clean closures. For more details see method BlocKClosure >> #isClean' ].
 	
-	(self
+	(map
 		at: #postMaterializationActions
 		ifAbsentPut: [ IdentitySet new ])
 			add: aCleanBlockClosure

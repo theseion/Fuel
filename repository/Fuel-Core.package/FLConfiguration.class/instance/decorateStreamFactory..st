@@ -1,6 +1,6 @@
 accessing
 decorateStreamFactory: aBlock
-	self
+	map
 		at: #streamFactory
 		ifPresent: [ :factory |
 			self

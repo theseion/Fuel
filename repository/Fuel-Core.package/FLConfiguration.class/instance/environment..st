@@ -1,5 +1,5 @@
 configuring
 environment: anEnvironment
-	self
+	map
 		at: #environment
 		put: anEnvironment

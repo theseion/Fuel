@@ -1,5 +1,5 @@
 accessing
 version
-	^ self
+	^ map
 		at: #version
 		ifAbsent: [ FLVersion current ]

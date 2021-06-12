@@ -3,7 +3,7 @@ materialize
 	| materialization |
 	materialization := self useDuring: [
 		self materializer materialize ].
-	self
+	map
 		at: #materialization
 		put: materialization.
 		

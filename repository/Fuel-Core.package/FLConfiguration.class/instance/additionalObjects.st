@@ -1,5 +1,5 @@
 enumerating
 additionalObjects
-	^ self
+	^ map
 		at: #additionalObjects
 		ifAbsentPut: [ IdentityDictionary new ]

@@ -1,5 +1,5 @@
 testing
 hasMultipleObjects
-	^ self
+	^ map
 		at: #hasMultipleObjects
 		ifAbsent: [ self class defaultHasMultipleObjects ]

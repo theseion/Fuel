@@ -1,5 +1,5 @@
 as yet unclassified
 migrations
-	^ self
+	^ map
 		at: #migrations
 		ifAbsentPut: [ Dictionary new ]

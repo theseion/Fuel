@@ -1,3 +1,3 @@
 running
 materialization
-	^ self at: #materialization
+	^ map at: #materialization

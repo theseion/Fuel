@@ -1,5 +1,5 @@
 configuring
 internalMethods
-	^ self
+	^ map
 		at: #internalMethods
 		ifAbsentPut: [ IdentitySet new ]

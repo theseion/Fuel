@@ -7,6 +7,6 @@ limitObjectsTo: anInteger
 	objects will be missing in the resulting object graph.
 	Graph traversal is depth first."
 
-	self
+	map
 		at: #objectsLimit
 		put: anInteger

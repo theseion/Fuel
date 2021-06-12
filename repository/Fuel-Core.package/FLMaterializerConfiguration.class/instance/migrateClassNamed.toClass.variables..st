@@ -14,7 +14,7 @@ migrateClassNamed: aSymbol toClass: aClassOrSymbol variables: aDictionary
 	class := aClassOrSymbol isSymbol
 		ifTrue: [ self environment at: aClassOrSymbol ]
 		ifFalse: [ aClassOrSymbol ].
-	(self
+	(map
 		at: #migrations
 		ifAbsentPut: [ Set new ])
 			add: (FLMigration 

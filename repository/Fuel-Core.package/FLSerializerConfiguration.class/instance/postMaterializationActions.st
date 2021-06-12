@@ -1,5 +1,5 @@
 as yet unclassified
 postMaterializationActions
-	^ self
+	^ map
 		at: #postMaterializationActions
 		ifAbsent: [ IdentityDictionary new ]

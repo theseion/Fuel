@@ -15,7 +15,7 @@ addPreMaterializationAction: aCleanBlockClosure
 	aCleanBlockClosure isClean ifFalse: [
 		FLConfigurationError signal: 'Pre materializaton actions have to be clean closures. For more details see method BlocKClosure >> #isClean' ].
 	
-	(self
+	(map
 		at: #preMaterializationActions
 		ifAbsentPut: [ IdentitySet new ])
 			add: aCleanBlockClosure

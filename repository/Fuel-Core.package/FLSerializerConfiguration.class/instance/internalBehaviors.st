@@ -1,5 +1,5 @@
 configuring
 internalBehaviors
-	^ self
+	^ map
 		at: #internalBehaviors
 		ifAbsentPut: [ IdentitySet new ]

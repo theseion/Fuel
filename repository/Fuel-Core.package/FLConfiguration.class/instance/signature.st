@@ -1,5 +1,5 @@
 accessing
 signature
-	^ self
+	^ map
 		at: #signature
 		ifAbsentPut: [ self class defaultSignature ]

@@ -1,6 +1,6 @@
 accessing
 streamFinalizer: aBlock
-	self
+	map
 		at: #streamFinalizer
 		ifPresent: [ :finalizer |
 			self

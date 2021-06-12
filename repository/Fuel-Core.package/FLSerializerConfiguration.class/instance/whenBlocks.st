@@ -1,5 +1,5 @@
 as yet unclassified
 whenBlocks
-	^ self
+	^ map
 		at: #whenBlocks
 		ifAbsent: [ Bag new ]

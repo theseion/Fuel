@@ -1,5 +1,5 @@
 *Fuel-ProgressUpdate
 showProgress
-	^ self
+	^ map
 		at: #showProgress
 		put: true

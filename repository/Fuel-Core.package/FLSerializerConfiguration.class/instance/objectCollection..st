@@ -1,5 +1,7 @@
 configuring
 objectCollection: aCollection
-	self
-		object: aCollection;
-		at: #hasMultipleObjects put: true
+	self object: aCollection.
+	
+	map
+		at: #hasMultipleObjects
+		put: true

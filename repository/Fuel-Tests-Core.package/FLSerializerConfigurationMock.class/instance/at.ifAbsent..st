@@ -1,5 +1,5 @@
-private
+accessing
 at: aKey ifAbsent: aBlock
-	^ self map
+	^ map
 		at: aKey
 		ifAbsent: aBlock

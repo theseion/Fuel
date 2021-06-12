@@ -1,5 +1,5 @@
 configuring
 environment
-	^ self
+	^ map
 		at: #environment
 		ifAbsentPut: [ self class defaultGlobalEnvironment ]

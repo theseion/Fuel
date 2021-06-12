@@ -1,5 +1,5 @@
 configuring
 streamStrategy: aStreamStrategy
-	self
+	map
 		at: #streamStrategy
 		put: aStreamStrategy

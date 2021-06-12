@@ -11,7 +11,7 @@ when: aConditionBlock substituteBy: aValuable
 			when: [ :object | object isString ]
 			substituteBy: [ :object | nil ]"
 
-	(self
+	(map
 		at: #whenBlocks
 		ifAbsentPut: [ Bag new ])
 			add: aConditionBlock -> aValuable
