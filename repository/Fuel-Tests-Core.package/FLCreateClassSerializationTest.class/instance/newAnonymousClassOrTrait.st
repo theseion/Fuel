@@ -1,3 +1,3 @@
-class-factory
+instance creation
 newAnonymousClassOrTrait
 	^ self classFactory newAnonymousClass

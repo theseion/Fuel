@@ -1,4 +1,4 @@
-analyzing
+running
 run
 
 	objectStack push: self context object.

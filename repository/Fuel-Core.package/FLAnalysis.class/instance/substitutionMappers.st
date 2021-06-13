@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 substitutionMappers
 	^ self configuration whenBlocks collect: [ :assoc |
 		FLPluggableSubstitutionMapper 
