@@ -1,6 +1,5 @@
-protected
-pluggableSubstitutionMappers
-
+as yet unclassified
+substitutionMappers
 	^ self configuration whenBlocks collect: [ :assoc |
 		FLPluggableSubstitutionMapper 
 			when: assoc key

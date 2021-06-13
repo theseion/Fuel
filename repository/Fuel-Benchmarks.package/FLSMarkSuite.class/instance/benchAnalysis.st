@@ -3,5 +3,4 @@ benchAnalysis
 	FLSerializer new
 		object: self sampleContents;
 		streamFactory: [ ByteArray new writeStream ];
-		useDuring: [
-			FLAnalysis runWith: FLAnalyzer new ]
+		useDuring: [ FLAnalysis run ]
