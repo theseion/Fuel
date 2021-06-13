@@ -1,7 +1,7 @@
 tests
 testSimple
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | x < 0 ]
 		substituteBy: [ :x | 0 ].
 

@@ -2,7 +2,7 @@ running
 testSubstitute: anObject inPresenceOf: anotherObject
 
 	| result |
-	self serializerConfig
+	self serializer
 		when: [:x | x == anObject ]
 		substituteBy: [:x | 424242 ].
 

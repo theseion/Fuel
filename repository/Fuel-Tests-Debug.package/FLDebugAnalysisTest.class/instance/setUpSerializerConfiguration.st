@@ -1,5 +1,0 @@
-tests
-setUpSerializerConfiguration
-	super setUpSerializerConfiguration.
-	
-	self serializerConfig needsDebugging

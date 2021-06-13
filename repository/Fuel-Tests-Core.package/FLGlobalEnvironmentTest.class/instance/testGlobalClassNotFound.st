@@ -4,7 +4,7 @@ testGlobalClassNotFound
 
 	self serialize: Integer.
 	
-	self materializerConfig environment: Dictionary new.
+	self materializer environment: Dictionary new.
 	
 	self should: [ self materialization ] 
 		raise: FLClassNotFound 

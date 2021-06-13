@@ -1,7 +1,7 @@
 tests
 testLowercaseSomeSymbols
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | #A = x ] substituteBy: [ :x | #a ];
 		when: [ :x | #B = x ] substituteBy: [ :x | #b ].
 

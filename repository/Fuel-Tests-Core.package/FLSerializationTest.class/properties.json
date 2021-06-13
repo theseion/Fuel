@@ -8,8 +8,8 @@
 	"instvars" : [
 		"streamStrategy",
 		"classFactory",
-		"serializerConfiguration",
-		"materializerConfiguration"
+		"materializer",
+		"serializer"
 	],
 	"name" : "FLSerializationTest",
 	"type" : "normal"

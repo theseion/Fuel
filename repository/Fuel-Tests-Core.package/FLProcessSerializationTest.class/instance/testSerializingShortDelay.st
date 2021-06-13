@@ -9,4 +9,4 @@ testSerializingShortDelay
 		shouldnt: [ self serialize: process ]
 		raise: FLObjectNotFound.
 		
-	self assert: (self serializerConfig at: #delayedMockUsed)
+	self assert: (self serializer at: #delayedMockUsed)

@@ -1,12 +1,12 @@
 tests
 testBadVersion
-	self serializerConfig
+	self serializer
 		at: #version
 		put: (FLVersion
 			newWithMajor: 1
 			minor: 2
 			patch: 3).
-	self serializerConfig
+	self serializer
 		at: #version
 		put: (FLVersion
 			newWithMajor: 3

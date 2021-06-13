@@ -1,7 +1,7 @@
 tests
 testJustMaterializeHeader
 
-	self serializerConfig
+	self serializer
 		at: #test putAdditionalObject: 'test';
 		at: 42 putAdditionalObject: 68.
 	

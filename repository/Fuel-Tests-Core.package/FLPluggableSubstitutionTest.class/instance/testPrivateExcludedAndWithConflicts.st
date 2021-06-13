@@ -3,7 +3,7 @@ testPrivateExcludedAndWithConflicts
 	"Tests issue #209"
 
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | FLPair == x ]
 		substituteBy: [ :x | FLWeakClassMock ].
 

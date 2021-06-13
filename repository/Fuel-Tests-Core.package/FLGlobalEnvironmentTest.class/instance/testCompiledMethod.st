@@ -14,7 +14,7 @@ testCompiledMethod
 	self assert: (classA >> #m) bytecodesHash equals: (classB >> #m) bytecodesHash.
 	self deny: classA >> #m identicalTo: classB >> #m.
 
-	self materializerConfig environment: (Dictionary new
+	self materializer environment: (Dictionary new
 		at: classA name put: classB;
 		yourself).
 

@@ -5,7 +5,7 @@ testCreateClassWithChangedSuperclassFormat
 	| a b |
 	a := self classFactory silentlyNewClassWithInstanceVariableNames: 'one'.
 	b := self classFactory silentlyNewSubclassOf: a instanceVariableNames: 'two'.
-	self serializerConfig considerInternalBehavior: b.
+	self serializer considerInternalBehavior: b.
 	self serialize: {b new. b}.
 	
 	a addInstVarNamed: 'newIVar'.

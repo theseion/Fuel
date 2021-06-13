@@ -1,3 +1,3 @@
 helpers
 materialized
-	^ self materializerConfig materialize
+	^ self materializer materialize

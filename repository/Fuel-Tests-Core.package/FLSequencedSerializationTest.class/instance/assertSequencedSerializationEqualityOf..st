@@ -1,10 +1,10 @@
 tests
 assertSequencedSerializationEqualityOf: aCollectionToSerialize	
 	| materializedCollection |
-	self serializerConfig
+	self serializer
 		objectCollection: aCollectionToSerialize;
 		serialize.
 	
-	materializedCollection := self materializerConfig materializeObjectCollection.
+	materializedCollection := self materializer materializeObjectCollection.
 		
 	self assertCollection: aCollectionToSerialize hasSameElements: materializedCollection

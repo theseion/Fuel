@@ -2,7 +2,7 @@ tests
 testTransientPair
 
 	| result |
-	self serializerConfig
+	self serializer
 		when: [:x | FLPair = x class]
 		substituteBy: [:x | nil].
 

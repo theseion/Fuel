@@ -1,5 +1,0 @@
-running
-setUpSerializerConfiguration
-	super setUpSerializerConfiguration.
-	
-	self serializerConfig showProgress

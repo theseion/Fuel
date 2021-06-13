@@ -10,7 +10,7 @@ testVariableRename
 	self serialize: aPoint.
 	self redefined: pointClass with: 'posY posX'.
 
-	self materializerConfig
+	self materializer
 		migrateClassNamed: pointClassName
 		variables: {('x' -> 'posX') . ('y' -> 'posY')}.
 

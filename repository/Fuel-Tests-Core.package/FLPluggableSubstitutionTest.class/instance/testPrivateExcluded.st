@@ -1,7 +1,7 @@
 tests
 testPrivateExcluded
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | x isBehavior ]
 		substituteBy: [ :x | FLWeakClassMock ].
 

@@ -4,7 +4,7 @@ testDontConsiderCustomGlobal
 
 	| anObject |
 	anObject := Object new.
-	self serializerConfig
+	self serializer
 		environment: (Dictionary new
 			at: #FLGlobalVariableForTesting put: anObject;
 			at: #Object put: Object;
@@ -14,5 +14,5 @@ testDontConsiderCustomGlobal
 			at: #Object put: Object;
 			yourself).
 
-	self deny: (self serializerConfig globalSymbols includes: #FLGlobalVariableForTesting).
+	self deny: (self serializer globalSymbols includes: #FLGlobalVariableForTesting).
 	self deny: (self resultOfSerializeAndMaterialize: anObject) identicalTo: anObject

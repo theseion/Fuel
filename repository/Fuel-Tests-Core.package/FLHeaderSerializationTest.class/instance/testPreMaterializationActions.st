@@ -9,7 +9,7 @@ testPreMaterializationActions
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.
-	self serializerConfig
+	self serializer
 		at: #class putAdditionalObject: aClass;
 		addPreMaterializationAction: [ :header |
 			"Can't use `self environmentOfTest` or `aClass name` here because the closure

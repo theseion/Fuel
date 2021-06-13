@@ -1,5 +1,5 @@
 helpers
 materialization
-	^ self materializerConfig
+	^ self materializer
 		materialize;
 		materialization

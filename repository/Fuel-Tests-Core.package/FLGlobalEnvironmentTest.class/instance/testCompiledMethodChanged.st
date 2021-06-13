@@ -12,7 +12,7 @@ testCompiledMethodChanged
 		silentlyCompile: 'm  ^ [ 42 ]'
 		in: classB.
 
-	self materializerConfig environment: (Dictionary new
+	self materializer environment: (Dictionary new
 		at: classA name put: classB;
 		yourself).
 

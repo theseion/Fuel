@@ -1,9 +1,9 @@
 tests
 testBadSignature
-	self serializerConfig
+	self serializer
 		at: #signature
 		put: 'FUELx'.
-	self materializerConfig
+	self materializer
 		at: #signature
 		put: 'FUELy'.
 		

@@ -9,7 +9,7 @@ testPreMaterializationActions
 
 	aClass perform: #postLoadMethod.
 	self assert: (aClass perform: #classVariable) equals: 1.
-	self serializerConfig
+	self serializer
 		at: #className putAdditionalObject: aClass name;
 		addPreMaterializationAction: [ :header :environment |
 			(environment at: (header additionalObjectAt: #className)) perform: #postLoadMethod2 ].

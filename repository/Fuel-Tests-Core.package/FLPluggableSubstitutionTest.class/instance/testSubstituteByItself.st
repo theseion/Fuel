@@ -1,7 +1,7 @@
 tests
 testSubstituteByItself
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | true ]
 		substituteBy: [ :x | x ].
 

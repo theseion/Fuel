@@ -1,5 +1,5 @@
 accessing
 analysisOf: anObject
-	^ self serializerConfig
+	^ self serializer
 		object: anObject;
 		useDuring:[ FLAnalysis run ]

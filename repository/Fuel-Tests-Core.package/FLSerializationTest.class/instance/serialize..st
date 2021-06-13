@@ -1,5 +1,5 @@
 helpers
 serialize: anObject
-	self serializerConfig
+	self serializer
 		object: anObject;
 		serialize

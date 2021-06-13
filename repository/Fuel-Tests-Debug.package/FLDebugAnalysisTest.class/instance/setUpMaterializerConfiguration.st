@@ -1,5 +1,0 @@
-tests
-setUpMaterializerConfiguration
-	super setUpMaterializerConfiguration.
-	
-	self materializerConfig needsDebugging

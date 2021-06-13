@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLConfiguration",
-	"category" : "Fuel-Core-Configuration",
+	"category" : "Fuel-Core-Public",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

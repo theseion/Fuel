@@ -6,5 +6,5 @@ setUp
 		setUpEnvironment;
 		setUpClassFactory;
 		setUpStreamStragety;
-		setUpSerializerConfiguration;
-		setUpMaterializerConfiguration
+		setUpSerializer;
+		setUpMaterializer

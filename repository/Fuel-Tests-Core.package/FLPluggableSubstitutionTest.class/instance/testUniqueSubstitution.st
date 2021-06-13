@@ -3,7 +3,7 @@ testUniqueSubstitution
 	"Tests that an object with two occurrences in the graph is substituted to the *same* object."
 
 	| result |
-	self serializerConfig
+	self serializer
 		when: [ :x | x isNumber ]
 		substituteBy: [ :x | x printString ].
 
