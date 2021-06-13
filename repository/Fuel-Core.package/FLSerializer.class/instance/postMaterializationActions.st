@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 postMaterializationActions
 	^ map
 		at: #postMaterializationActions

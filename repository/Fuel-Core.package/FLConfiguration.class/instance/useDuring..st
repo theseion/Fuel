@@ -1,4 +1,4 @@
-as yet unclassified
+private
 useDuring: aBlock
 	^ FLCurrentConfiguration
 		value: self

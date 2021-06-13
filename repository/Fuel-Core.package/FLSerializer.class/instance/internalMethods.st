@@ -1,4 +1,4 @@
-configuring
+accessing
 internalMethods
 	^ map
 		at: #internalMethods

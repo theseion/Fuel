@@ -1,3 +1,3 @@
-configuring
+private
 streamFactoryForFilename: aString
 	^ self subclassResponsibility

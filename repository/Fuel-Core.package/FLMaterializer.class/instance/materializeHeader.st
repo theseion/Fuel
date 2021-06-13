@@ -1,4 +1,4 @@
-materializing
+running
 materializeHeader
 	map
 		at: #shouldMaterializeHeaderOnly

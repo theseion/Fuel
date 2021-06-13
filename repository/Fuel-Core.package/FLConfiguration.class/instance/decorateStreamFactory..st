@@ -1,4 +1,4 @@
-accessing
+configuring-stream
 decorateStreamFactory: aBlock
 	map
 		at: #streamFactory

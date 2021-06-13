@@ -1,3 +1,3 @@
-configuring
+configuring-globals
 considerInternalAllBehaviors: aCollection
 	self internalBehaviors addAll: aCollection

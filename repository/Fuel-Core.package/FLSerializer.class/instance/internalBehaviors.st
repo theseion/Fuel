@@ -1,4 +1,4 @@
-configuring
+accessing
 internalBehaviors
 	^ map
 		at: #internalBehaviors

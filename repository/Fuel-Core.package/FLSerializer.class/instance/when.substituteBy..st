@@ -1,4 +1,4 @@
-instance creation
+configuring
 when: aConditionBlock substituteBy: aValuable
 	"Dynamically substitute any object in the object graph with aValuable (understands #value and #value:)
 	if conditionBlock answers true.

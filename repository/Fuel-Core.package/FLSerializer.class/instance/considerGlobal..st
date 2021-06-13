@@ -1,4 +1,4 @@
-as yet unclassified
+configuring-globals
 considerGlobal: aSymbol
 	(map
 		at: #globalSymbols

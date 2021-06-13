@@ -1,4 +1,4 @@
-as yet unclassified
+configuring-migrations
 migrateClassNamed: aSymbol variables: aDictionary
 	"Migrates variable names as defined in aDictionary.
 	Variables are expected to be unchanged with exception to those in aDictionary. Extra variables will 

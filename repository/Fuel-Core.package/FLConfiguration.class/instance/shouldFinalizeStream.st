@@ -1,3 +1,3 @@
-asserting
+testing
 shouldFinalizeStream
 	^ true

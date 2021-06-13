@@ -1,4 +1,4 @@
-as yet unclassified
+configuring-migrations
 migrateClassNamed: aSymbol toClass: aClassOrSymbol variables: aDictionary
 	"Use aClassOrSymbol instead of aSymbol after materialization and migrate variable names as defined in 
 	aDictionary. The new class is expected to exist in the target system's global environment.

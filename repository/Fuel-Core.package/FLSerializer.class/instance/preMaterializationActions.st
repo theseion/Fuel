@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 preMaterializationActions
 	^ map
 		at: #preMaterializationActions

@@ -1,11 +1,8 @@
-accessing
+configuring-stream
 streamFinalizer: aBlock
 	map
 		at: #streamFinalizer
 		ifPresent: [ :finalizer |
-			map
-				at: #streamFinalize
-				put: [ :stream |
-					aBlock value: stream.
-					finalizer value: stream ] ]
+			FLConfigurationError signal: 'Stream finalizer already configured. ',
+				'Did you mean to use #decorateStreamFinalizer:?' ]
 		ifAbsentPut: [ aBlock ]

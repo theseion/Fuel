@@ -1,4 +1,4 @@
-enumerating
+accessing
 classAndVariableMigrations
 	^ map 
 		at: #classAndVariableMigrations

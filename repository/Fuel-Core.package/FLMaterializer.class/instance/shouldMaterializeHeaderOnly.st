@@ -1,4 +1,4 @@
-asserting
+testing
 shouldMaterializeHeaderOnly
 	^ map
 		at: #shouldMaterializeHeaderOnly

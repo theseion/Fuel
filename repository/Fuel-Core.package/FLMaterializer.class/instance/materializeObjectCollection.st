@@ -1,4 +1,4 @@
-materializing
+running
 materializeObjectCollection
 	map
 		at: #hasMultipleObjects

@@ -1,3 +1,3 @@
-serializing
+running
 serialize
 	self useDuring: [ FLSerialization run ]

@@ -1,4 +1,4 @@
-enumerating
+accessing
 additionalObjects
 	^ map
 		at: #additionalObjects

@@ -1,4 +1,4 @@
-as yet unclassified
+configuring-migrations
 migrateClassNamed: aSymbol toClass: aClassOrSymbol
 	"Use aClassOrSymbol instead of aSymbol after materialization. This only changes the class name.
 	The target class is expected to exist in the target system's global environment.

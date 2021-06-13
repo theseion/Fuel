@@ -1,4 +1,4 @@
-adding
+configuring-materialization
 addPreMaterializationAction: aCleanBlockClosure
 	"Takes a clean (no dependency on outer variables) block closure which will be
 	activated before materialization automatically.

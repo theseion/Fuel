@@ -1,4 +1,4 @@
-accessing
+configuring
 object: anObject
 	map
 		at: #object

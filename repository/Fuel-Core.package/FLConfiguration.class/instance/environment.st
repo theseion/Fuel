@@ -1,4 +1,4 @@
-configuring
+accessing
 environment
 	^ map
 		at: #environment

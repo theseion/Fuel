@@ -1,4 +1,4 @@
-accessing
+configuring-stream
 streamFactory: aBlock
 	map
 		at: #streamFactory
