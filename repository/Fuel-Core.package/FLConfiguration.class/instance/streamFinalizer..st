@@ -3,7 +3,7 @@ streamFinalizer: aBlock
 	map
 		at: #streamFinalizer
 		ifPresent: [ :finalizer |
-			self
+			map
 				at: #streamFinalize
 				put: [ :stream |
 					aBlock value: stream.

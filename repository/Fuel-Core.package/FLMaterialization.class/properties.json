@@ -6,7 +6,8 @@
 		"clusters",
 		"root",
 		"decoder",
-		"header"
+		"header",
+		"stopBlock"
 	],
 	"name" : "FLMaterialization",
 	"commentStamp" : "",

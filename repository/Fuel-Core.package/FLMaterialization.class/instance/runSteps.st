@@ -1,0 +1,10 @@
+materializing
+runSteps
+	self
+		runHeaderSteps;
+		preMaterializationStep;
+		instancesStep;
+		referencesStep;
+		trailerStep;
+		clusterPostMaterializationStep;
+		postMaterializationStep

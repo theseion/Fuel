@@ -1,6 +1,6 @@
 benchmarking
 benchAnalysis
-	FLSerializerConfiguration new
+	FLSerializer new
 		object: self sampleContents;
 		streamFactory: [ ByteArray new writeStream ];
 		useDuring: [

@@ -2,12 +2,12 @@ tests-Customizing Graph
 testPluggableSubstitution
 	| objectToSerialize materializedObject |
 	objectToSerialize := Array with: 'hello' with: '' writeStream.
-	FLSerializerConfiguration new
+	FLSerializer new
 		when: [ :o | o isStream ] substituteBy: [ :o | nil ];
 		object: objectToSerialize;
 		fileName: 'demo.fuel';
 		serialize.
-	materializedObject := FLMaterializerConfiguration new
+	materializedObject := FLMaterializer new
 		fileName: 'demo.fuel';
 		materialize.
 		

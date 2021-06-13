@@ -1,4 +1,9 @@
 hooks
 fuelAccept: aGeneralMapper
 	"The header is actually being serialized. Override the trait"
-	super fuelAccept: aGeneralMapper
+	self isEmpty
+		ifFalse: [ super fuelAccept: aGeneralMapper ]
+		ifTrue: [
+			aGeneralMapper
+				visitSubstitution: self
+				by: nil ]

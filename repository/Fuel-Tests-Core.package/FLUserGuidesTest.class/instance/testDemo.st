@@ -8,12 +8,12 @@ testDemo
 			Smalltalk vm.
 			'a string' ].
 	"Store to the file"
-	FLSerializerConfiguration new
+	FLSerializer new
 		fileName: 'example.FL';
 		object: sourceArray;
 		serialize.
 	"Load from the file"
-	loadedArray := FLMaterializerConfiguration new
+	loadedArray := FLMaterializer new
 		fileName: 'example.FL';
 		materialize.
 	"The arrays are not the same"

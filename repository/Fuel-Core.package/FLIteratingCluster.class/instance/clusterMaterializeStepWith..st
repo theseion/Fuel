@@ -1,5 +1,5 @@
 serialize/materialize
-clusterMaterializeStepWith: aMaterialization
+clusterMaterializeStepWith: aDecoder
 
-	super clusterMaterializeStepWith: aMaterialization.
-	objects := Array new: aMaterialization decoder nextEncodedUint32
+	super clusterMaterializeStepWith: aDecoder.
+	objects := Array new: aDecoder nextEncodedUint32

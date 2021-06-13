@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLMaterializer",
+	"category" : "Fuel-Tests-Core-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLMaterializerMock",
+	"type" : "normal"
+}

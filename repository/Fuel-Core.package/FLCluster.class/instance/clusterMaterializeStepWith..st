@@ -1,3 +1,3 @@
 serialize/materialize
-clusterMaterializeStepWith: aMaterialization
+clusterMaterializeStepWith: aDecoder
 	"Materialize cluster stuff"

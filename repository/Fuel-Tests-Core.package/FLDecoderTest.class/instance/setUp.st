@@ -3,6 +3,6 @@ setUp
 	super setUp.
 	
 	stream := ReadWriteStream on: ByteArray new.
-	FLMaterializerConfiguration new
+	FLMaterializer new
 		streamFactory: [ stream ];
 		useDuring: [ decoder := FLDecoder new ]

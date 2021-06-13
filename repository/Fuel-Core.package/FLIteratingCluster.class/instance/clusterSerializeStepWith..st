@@ -1,5 +1,5 @@
 serialize/materialize
-clusterSerializeStepWith: aSerialization
+clusterSerializeStepWith: anEncoder
 
-	super clusterSerializeStepWith: aSerialization.
-	aSerialization encoder encodeUint32: objects size
+	super clusterSerializeStepWith: anEncoder.
+	anEncoder encodeUint32: objects size

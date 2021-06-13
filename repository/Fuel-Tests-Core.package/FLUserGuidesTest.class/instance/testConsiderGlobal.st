@@ -9,7 +9,7 @@ testConsiderGlobal
 		at: #GlobalSet2 put: anArray second.
 
 	"Serialize considering *only first* as a global object."
-	FLSerializerConfiguration new
+	FLSerializer new
 		fileName: 'demo.fuel';
 		environment: self environmentOfTest;
 		considerGlobal: #GlobalSet1;
@@ -17,7 +17,7 @@ testConsiderGlobal
 		serialize.
 
 	"Materialize"
-	materializedArray := FLMaterializerConfiguration new
+	materializedArray := FLMaterializer new
 		fileName: 'demo.fuel';
 		environment: self environmentOfTest;
 		materialize.

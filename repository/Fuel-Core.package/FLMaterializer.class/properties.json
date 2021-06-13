@@ -1,13 +1,11 @@
 {
-	"classtraitcomposition" : "TFLConfigurable classTrait",
+	"commentStamp" : "",
+	"super" : "FLConfiguration",
+	"category" : "Fuel-Core-Configuration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FLMaterializer",
-	"commentStamp" : "",
-	"super" : "Object",
-	"traitcomposition" : "TFLConfigurable",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Fuel-Core-Base"
+	"type" : "normal"
 }

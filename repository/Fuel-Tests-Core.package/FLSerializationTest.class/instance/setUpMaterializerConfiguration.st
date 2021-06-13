@@ -1,6 +1,6 @@
 running
 setUpMaterializerConfiguration
-	materializerConfiguration := FLMaterializerConfiguration new
+	materializerConfiguration := FLMaterializerMock new
 		environment: self environmentOfTest;
 		streamFactory: [ streamStrategy readStream ]
 		yourself

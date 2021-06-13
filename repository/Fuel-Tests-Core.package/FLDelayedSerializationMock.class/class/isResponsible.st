@@ -1,5 +1,6 @@
 testing
 isResponsible
-	^ self configuration
-		at: #useDelayedMock
-		ifAbsent: [ false ]
+	^ self configuration class = FLSerializerMock and: [
+		self configuration
+			at: #useDelayedMock
+			ifAbsent: [ false ] ]

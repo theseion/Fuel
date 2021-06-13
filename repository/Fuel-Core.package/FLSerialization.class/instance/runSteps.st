@@ -1,0 +1,11 @@
+private
+runSteps
+	self
+		analysisStep;
+		prepareObjectsStep;
+		fileHeaderStep;
+		encoderHeaderStep;
+		headerStep;
+		instancesStep;
+		referencesStep;
+		trailerStep

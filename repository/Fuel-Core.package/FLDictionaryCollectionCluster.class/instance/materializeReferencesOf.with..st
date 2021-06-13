@@ -1,6 +1,6 @@
 serialize/materialize
 materializeReferencesOf: aDictionary with: aDecoder
-	aDecoder nextEncodedByte = 1
+	aDecoder nextEncodedByte = true asBit
 		ifTrue: [
 			self
 				materializeKeysAndValuesOf: aDictionary

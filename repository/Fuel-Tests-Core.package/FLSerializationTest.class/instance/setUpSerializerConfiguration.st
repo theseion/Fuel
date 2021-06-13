@@ -1,6 +1,6 @@
 running
 setUpSerializerConfiguration
-	serializerConfiguration := FLSerializerConfigurationMock new
+	serializerConfiguration := FLSerializerMock new
 		environment: self environmentOfTest;
 		streamFactory: [ streamStrategy writeStream ]
 		yourself

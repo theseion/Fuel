@@ -1,3 +1,10 @@
 materializing
 materialize
-	^ self basicMaterialize
+	| materialization |
+	materialization := self useDuring: [
+		FLMaterialization run ].
+	map
+		at: #materialization
+		put: materialization.
+		
+	^ materialization root

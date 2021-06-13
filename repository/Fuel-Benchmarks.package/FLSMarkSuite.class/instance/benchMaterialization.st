@@ -1,5 +1,5 @@
 benchmarking
 benchMaterialization
-	FLMaterializerConfiguration new
+	FLMaterializer new
 			streamFactory: [ self streamFactory readStream ];
 			materialize

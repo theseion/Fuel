@@ -2,7 +2,7 @@ tests
 testFileName
 	| fileName serializerConfiguration materialized |
 	fileName := 'test_file_name'.
-	serializerConfiguration := FLSerializerConfiguration new
+	serializerConfiguration := FLSerializer new
 		fileName: fileName;
 		object: 'abc';
 		yourself.
@@ -13,7 +13,7 @@ testFileName
 	
 	self assert: fileName asFileReference exists.
 	
-	materialized := FLMaterializerConfiguration new
+	materialized := FLMaterializer new
 		fileName: fileName;
 		materialize.
 	self assert: materialized equals: 'abc'

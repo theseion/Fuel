@@ -1,8 +1,8 @@
 materializing
 run
-
-	self headerStep.
-	self instancesStep.
-	self referencesStep.
-	self trailerStep.
-	self afterMaterializationStep.
+	"Enables early escape, e.g. when only materializing the header"
+	stopBlock := [ ^ self ].
+	
+	self
+		basicRun;
+		stop

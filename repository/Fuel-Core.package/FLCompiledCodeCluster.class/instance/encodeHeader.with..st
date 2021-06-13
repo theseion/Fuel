@@ -4,7 +4,5 @@ encodeHeader: aSmallInteger with: anEncoder
 	high bit will be truncated.
 	See #encodeInt32:."
 	anEncoder
-		encodeByte: (aSmallInteger < 0
-			ifTrue: [ 1 ]
-			ifFalse: [ 0 ]);
+		encodeByte: (aSmallInteger < 0) asBit;
 		encodeInt32: aSmallInteger

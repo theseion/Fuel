@@ -1,7 +1,7 @@
 benchmarking
 setUpBenchMaterialization
 
-	FLSerializerConfiguration new
+	FLSerializer new
 		object: self sampleContents;
 		streamFactory: [ self streamFactory writeStream ];
 		serialize

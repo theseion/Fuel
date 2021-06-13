@@ -1,5 +1,5 @@
-as yet unclassified
+accessing
 stream: aStream
-	map
+	^ map
 		at: #stream
 		put: aStream
