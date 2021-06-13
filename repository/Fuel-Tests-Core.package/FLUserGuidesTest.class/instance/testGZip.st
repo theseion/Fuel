@@ -4,7 +4,7 @@ testGZip
 	FLSerializer new
 		fileName: 'demo.fuel';
 		decorateStreamFactory: [ :fileStream | GZipWriteStream on: fileStream ];
-		streamFinalizer: [ :gzipStream | gzipStream finish ];
+		streamFinalizer: [ :gzipStream | gzipStream close ];
 		object: 123;
 		serialize.
 	materialized := FLMaterializer new
