@@ -1,11 +1,11 @@
 {
+	"commentStamp" : "",
+	"super" : "FLConfiguration",
+	"category" : "Fuel-Core-Configuration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FLSerializer",
-	"commentStamp" : "",
-	"super" : "Object",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Fuel-Core-Base"
+	"type" : "normal"
 }
