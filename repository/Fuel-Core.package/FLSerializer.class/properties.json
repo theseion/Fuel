@@ -1,5 +1,4 @@
 {
-	"classtraitcomposition" : "TFLConfigurable classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FLSerializer",
