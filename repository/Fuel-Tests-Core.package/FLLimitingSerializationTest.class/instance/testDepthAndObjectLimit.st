@@ -13,7 +13,7 @@ testDepthAndObjectLimit
 	
 	self serializer
 		object: root;
-		limitDepthTo: 2;
+		limitDepthTo: 3;
 		limitObjectsTo: 5;
 		serialize.
 		
