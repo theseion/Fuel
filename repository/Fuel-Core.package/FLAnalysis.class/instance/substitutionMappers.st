@@ -1,6 +1,6 @@
 accessing
 substitutionMappers
-	^ self configuration whenBlocks collect: [ :assoc |
+	^ self configuration substitutions collect: [ :assoc |
 		FLPluggableSubstitutionMapper 
 			when: assoc key
 			substituteBy: assoc value ]

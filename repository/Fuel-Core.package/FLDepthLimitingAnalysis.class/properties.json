@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FLAnalysis",
+	"category" : "Fuel-Core-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"depthLimit",
+		"depth",
+		"previousStackSize"
+	],
+	"name" : "FLDepthLimitingAnalysis",
+	"type" : "normal"
+}

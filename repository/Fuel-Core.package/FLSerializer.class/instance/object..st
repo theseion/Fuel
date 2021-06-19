@@ -2,4 +2,5 @@ configuring
 object: anObject
 	map
 		at: #object
-		put: anObject
+		ifPresent: [ FLConfigurationError signal: 'Object already set' ]
+		ifAbsentPut: [ anObject ]

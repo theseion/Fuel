@@ -1,3 +1,3 @@
 test support
 tearDown
-	FLPlatform current deleteFileNamed: self fileReference pathString
+	FLPlatform current deleteFilePath: self fileReference pathString

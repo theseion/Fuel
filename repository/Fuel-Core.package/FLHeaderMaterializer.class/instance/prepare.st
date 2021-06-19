@@ -1,6 +1,7 @@
 initialization
 prepare
 	#(
+		object
 		additionalObjects
 		hasMultipleObjects
 		preMaterializationActions

@@ -1,11 +1,11 @@
-tests
+tests-configuring-convenience
 testFileNameWrong
 	 self
-		should: [ FLSerializer new fileName: 'filename' asFileReference ]
+		should: [ self serializer fileName: 'filename' asFileReference ]
 		raise: FLConfigurationError.
 	self
-		shouldnt: [ FLSerializer new fileName: 'filename' ]
+		shouldnt: [ self serializer fileName: 'filename' ]
 		raise: FLConfigurationError.
 	self
-		shouldnt: [ FLSerializer new fileName: 'filename' asSymbol ]
+		shouldnt: [ self serializer fileName: 'filename' asSymbol ]
 		raise: FLConfigurationError

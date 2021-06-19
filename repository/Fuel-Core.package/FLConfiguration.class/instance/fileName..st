@@ -1,4 +1,4 @@
-configuring
+configuring-convenience
 fileName: aString
 	"Takes the name of the file that should be used for the file produced during serialization.
 	The filename should be passed without any extension, which can be specified separately

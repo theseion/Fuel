@@ -1,5 +1,5 @@
 configuring
-when: aConditionBlock substituteBy: aValuable
+when: aConditionBlock substituteBy: aSubstitutionBlock
 	"Dynamically substitute any object in the object graph with aValuable (understands #value and #value:)
 	if conditionBlock answers true.
 	Every object in the graph will be passed as an argument to aConditionBlock and to aValuable if
@@ -10,8 +10,16 @@ when: aConditionBlock substituteBy: aValuable
 		configuration
 			when: [ :object | object isString ]
 			substituteBy: [ :object | nil ]"
+	aConditionBlock isBlock ifFalse: [
+		FLConfigurationError signal: 'Condition must be a block' ].
+	aConditionBlock numArgs = 1 ifFalse: [
+		FLConfigurationError signal: 'Condition block must accept the currently analysed object as single argument' ].
+	aSubstitutionBlock isBlock ifFalse: [
+		FLConfigurationError signal: 'Substitution must be a block' ].
+	aSubstitutionBlock numArgs = 1 ifFalse: [
+		FLConfigurationError signal: 'Substitution block must accept the currently analysed object as single argument' ].
 
 	(map
-		at: #whenBlocks
+		at: #substitutions
 		ifAbsentPut: [ Bag new ])
-			add: aConditionBlock -> aValuable
+			add: aConditionBlock -> aSubstitutionBlock

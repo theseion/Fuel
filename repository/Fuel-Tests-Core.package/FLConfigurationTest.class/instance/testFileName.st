@@ -1,19 +1,17 @@
-tests
+tests-configuring-convenience
 testFileName
-	| fileName serializerConfiguration materialized |
+	| fileName materialized |
 	fileName := 'test_file_name'.
-	serializerConfiguration := FLSerializer new
+	self serializer
 		fileName: fileName;
-		object: 'abc';
-		yourself.
-	self markFileForDeletion: fileName asFileReference.
+		object: 'abc'.
 	
-	self deny: fileName asFileReference exists.
-	serializerConfiguration serialize.
+	self deny: (FLFilePoolTestResource current fileExists: fileName).
+	self serializer serialize.
 	
-	self assert: fileName asFileReference exists.
+	self assert: (FLFilePoolTestResource current fileExists: fileName).
 	
-	materialized := FLMaterializer new
+	materialized := self materializer
 		fileName: fileName;
 		materialize.
 	self assert: materialized equals: 'abc'

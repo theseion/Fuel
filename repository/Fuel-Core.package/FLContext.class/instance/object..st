@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 object: anObject
 	map
 		at: #object

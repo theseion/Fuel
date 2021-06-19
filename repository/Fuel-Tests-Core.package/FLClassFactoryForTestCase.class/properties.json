@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "MaxLeske 5/31/2021 13:11",
 	"super" : "Object",
-	"category" : "Fuel-Tests-Core-TestFactory",
+	"category" : "Fuel-Tests-Core-Support-ClassFactory",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [

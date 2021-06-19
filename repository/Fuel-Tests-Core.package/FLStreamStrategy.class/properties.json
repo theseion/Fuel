@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "Fuel-Tests-Core-StreamStrategies",
+	"category" : "Fuel-Tests-Core-Support-StreamStrategies",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

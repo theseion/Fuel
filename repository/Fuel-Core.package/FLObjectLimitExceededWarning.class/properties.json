@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLWarning",
+	"category" : "Fuel-Core-Errors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLObjectLimitExceededWarning",
+	"type" : "normal"
+}

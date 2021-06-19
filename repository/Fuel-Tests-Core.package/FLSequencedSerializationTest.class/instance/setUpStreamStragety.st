@@ -1,3 +1,0 @@
-initialization
-setUpStreamStragety
-	streamStrategy := FLByteArrayStreamStrategy new

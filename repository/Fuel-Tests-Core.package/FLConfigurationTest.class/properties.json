@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "FLSerializationTest",
 	"category" : "Fuel-Tests-Core-Configuration",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"filesMarkedForDeletion"
-	],
+	"instvars" : [ ],
 	"name" : "FLConfigurationTest",
 	"type" : "normal"
 }

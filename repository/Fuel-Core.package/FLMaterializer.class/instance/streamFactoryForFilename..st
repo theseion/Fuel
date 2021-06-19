@@ -1,3 +1,3 @@
 private
 streamFactoryForFilename: aString
-	^ [ FLPlatform current readStreamForFileNamed: aString ]
+	^ [ FLPlatform current readStreamForFilePath: aString ]

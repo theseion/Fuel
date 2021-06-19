@@ -1,0 +1,3 @@
+tests
+testLimitObjectsTo
+	self fail

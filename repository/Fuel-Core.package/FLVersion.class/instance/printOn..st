@@ -1,4 +1,4 @@
-accessing
+printing
 printOn: aStream
 	aStream
 		print: self major;

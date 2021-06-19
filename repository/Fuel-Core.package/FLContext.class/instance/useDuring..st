@@ -1,4 +1,4 @@
-as yet unclassified
+evaluating
 useDuring: aBlock
 	^ FLCurrentContext
 		value: self

@@ -1,11 +1,14 @@
 initialization
 prepare
 	#(
+		object
 		additionalObjects
 		hasMultipleObjects
 		preMaterializationActions
 		postMaterializationActions
-		whenBlocks
+		substitutions
+		objectsLimit
+		depthLimit
 	) do: [ :key |
 		map
 			removeKey: key

@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 analysis
 	^ map at: #analysis

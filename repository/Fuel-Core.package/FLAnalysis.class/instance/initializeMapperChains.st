@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeMapperChains
 	| standardMappers allMappers |
 	standardMappers := self standardMappers.

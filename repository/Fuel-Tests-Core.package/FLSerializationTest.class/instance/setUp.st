@@ -5,6 +5,6 @@ setUp
 	self
 		setUpEnvironment;
 		setUpClassFactory;
-		setUpStreamStragety;
+		setUpStreamStrategy;
 		setUpSerializer;
 		setUpMaterializer

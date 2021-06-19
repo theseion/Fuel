@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLSingletonMock",
-	"category" : "Fuel-Tests-Core-Mocks",
+	"category" : "Fuel-Tests-Core-Support-Mocks",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

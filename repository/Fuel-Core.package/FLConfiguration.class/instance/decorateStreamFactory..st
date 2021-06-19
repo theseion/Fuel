@@ -1,5 +1,10 @@
 configuring-stream
 decorateStreamFactory: aBlock
+	aBlock isBlock ifFalse: [
+		FLConfigurationError signal: 'Stream factory must be a block' ].
+	aBlock numArgs = 1 ifFalse: [
+		FLConfigurationError signal: 'The block must accept the original stream as single argument' ].
+	
 	map
 		at: #streamFactory
 		ifPresent: [ :factory |
