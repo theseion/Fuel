@@ -3,7 +3,7 @@ testConsiderGlobal: anObject
 	"With explicit specification of a symbol as global, both value and association keep identity."
 
 	| globalAssociation |
-	self serializer considerGlobal: #FLGlobalVariableForTesting.
+	self serializer lookUpInGlobals: #FLGlobalVariableForTesting.
 
 	self environmentOfTest
 		at: #FLGlobalVariableForTesting

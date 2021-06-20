@@ -12,7 +12,7 @@ testConsiderGlobal
 	FLSerializer new
 		fileName: 'demo.fuel';
 		environment: self environmentOfTest;
-		considerGlobal: #GlobalSet1;
+		lookUpInGlobals: #GlobalSet1;
 		object: anArray;
 		serialize.
 

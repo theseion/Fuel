@@ -5,7 +5,7 @@ testMaterializationDoesNotModifySerializedClass
 	| aClass materializedClass |	
 	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'var'.
 	
-	self serializer considerInternalBehavior: aClass.
+	self serializer fullySerializeBehavior: aClass.
 	self serialize: aClass.
 	aClass removeInstVarNamed: 'var'.
 	materializedClass := self materialized.

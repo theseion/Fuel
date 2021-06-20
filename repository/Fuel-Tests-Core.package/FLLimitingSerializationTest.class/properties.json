@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FLSerializationTest",
-	"category" : "Fuel-Tests-Core-Base",
+	"category" : "Fuel-Tests-Core-Configuration",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

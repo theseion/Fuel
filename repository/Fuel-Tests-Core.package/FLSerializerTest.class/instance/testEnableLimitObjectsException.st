@@ -1,3 +1,6 @@
-tests
+tests-configuring
 testEnableLimitObjectsException
-	self fail
+	self deny: self serializer isLimitObjectsExceptionEnabled.
+	
+	self serializer enableLimitObjectsException.
+	self assert: self serializer isLimitObjectsExceptionEnabled

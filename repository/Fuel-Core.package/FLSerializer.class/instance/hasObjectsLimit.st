@@ -1,3 +1,3 @@
 testing
 hasObjectsLimit
-	^ self objectsLimit > 0
+	^ self objectLimit > 0

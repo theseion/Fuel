@@ -1,5 +1,5 @@
 accessing
-internalBehaviors
+behaviorsToSerialize
 	^ map
-		at: #internalBehaviors
+		at: #behaviorsToSerialize
 		ifAbsentPut: [ IdentitySet new ]

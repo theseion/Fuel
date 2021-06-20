@@ -13,5 +13,5 @@ limitObjectsTo: anInteger
 		FLConfigurationError signal: 'Object limit must be an integer' ].
 	
 	map
-		at: #objectsLimit
+		at: #objectLimit
 		put: anInteger

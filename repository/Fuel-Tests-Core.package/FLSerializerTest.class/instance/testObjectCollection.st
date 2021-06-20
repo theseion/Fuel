@@ -1,4 +1,4 @@
-tests
+tests-configuring
 testObjectCollection
 	| array |
 	array := Array new: 0.

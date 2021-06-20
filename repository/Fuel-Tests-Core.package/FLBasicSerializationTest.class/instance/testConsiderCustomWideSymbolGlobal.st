@@ -6,7 +6,7 @@ testConsiderCustomWideSymbolGlobal
 	aWideSymbol := (WideString streamContents: [ :stream |
 		256 to: 280 do: [ :code | stream nextPut: code asCharacter ] ]) asSymbol.
 
-	self serializer considerGlobal: aWideSymbol.
+	self serializer lookUpInGlobals: aWideSymbol.
 
 	aPerson := FLPerson new.	
 	self environmentOfTest

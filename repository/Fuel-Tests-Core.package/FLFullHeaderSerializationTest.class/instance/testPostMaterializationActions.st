@@ -11,7 +11,7 @@ testPostMaterializationActions
 	self assert: (aClass perform: #classVariable) equals: 1.
 	self serializer
 		at: #className putAdditionalObject: aClass name;
-		considerInternalBehavior: aClass;
+		fullySerializeBehavior: aClass;
 		addPostMaterializationAction: [ :header :materialization :environment |
 			(environment at: (header additionalObjectAt: #className)) perform: #postLoadMethod2 ].
 	self serialize: aClass.

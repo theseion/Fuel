@@ -14,5 +14,5 @@ testDontConsiderCustomGlobal
 			at: #Object put: Object;
 			yourself).
 
-	self deny: (self serializer globalSymbols includes: #FLGlobalVariableForTesting).
+	self deny: (self serializer globals includesKey: #FLGlobalVariableForTesting).
 	self deny: (self resultOfSerializeAndMaterialize: anObject) identicalTo: anObject

@@ -1,5 +1,5 @@
-as yet unclassified
+initialization
 initialize
 	super initialize.
 	
-	globals := self configuration computeGlobals
+	globals := self configuration globals

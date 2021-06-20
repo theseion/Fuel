@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.
 	
-	internalBehaviors := self configuration internalBehaviors.
-	internalMethods := self configuration internalMethods.
-	globalSymbols := self configuration globalSymbols.
+	internalBehaviors := self configuration behaviorsToSerialize.
+	internalMethods := self configuration methodsToSerialize.
+	globals := self configuration globals.
 	environment := self configuration environment

@@ -3,7 +3,7 @@ testConsiderCustomGlobal
 	"A custom global variable is treated as global if we explicitly specify that on serialization."
 	
 	self serializer
-		considerGlobal: #FLGlobalVariableForTesting;
+		lookUpInGlobals: #FLGlobalVariableForTesting;
 		environment: (Dictionary new
 			at: #FLGlobalVariableForTesting put: 42;
 			yourself).

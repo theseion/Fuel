@@ -4,7 +4,7 @@ testConsiderCustomGlobal
 	
 	| aPerson globalKey |	
 	globalKey := #FLGlobalVariableForTesting.
-	self serializer considerGlobal: globalKey.
+	self serializer lookUpInGlobals: globalKey.
 
 	aPerson := FLPerson new.
 	self environmentOfTest

@@ -1,4 +1,4 @@
-tests
+tests-configuring
 testWhenSubstituteBy
 	| condition substitute substitution |
 	condition := [ :x | x - 3 ].

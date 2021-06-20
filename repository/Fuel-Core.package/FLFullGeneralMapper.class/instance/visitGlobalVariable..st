@@ -2,7 +2,7 @@ visiting
 visitGlobalVariable: aGlobalVariable
 	"Consider class variables global that can be looked up, unless
 	the associated class (if any) should be fully serialized"
-	((globalSymbols includes: aGlobalVariable key) or: [
+	((globals includesKey: aGlobalVariable key) or: [
 		(aGlobalVariable value isBehavior and: [
 			self shouldSerializeBehaviorFully: aGlobalVariable value ]) not ])
 				ifTrue: [

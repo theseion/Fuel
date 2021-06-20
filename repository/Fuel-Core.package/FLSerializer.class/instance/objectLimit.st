@@ -1,5 +1,5 @@
 accessing
-objectsLimit
+objectLimit
 	^ map
-		at: #objectsLimit
+		at: #objectLimit
 		ifAbsent: [ self class defaultObjectsLimit ]

@@ -1,11 +1,11 @@
 tests-configuring-stream
 testStreamFinalizerWhenAlreadySet
-	self serializer streamFinalizer: [].
-	self materializer streamFinalizer: [].
+	self serializer streamFinalizer: [ :x ].
+	self materializer streamFinalizer: [ :x ].
 	
 	self
-		should: [ self serializer streamFinalizer: [] ]
+		should: [ self serializer streamFinalizer: [ :x ] ]
 		raise: FLConfigurationError.	
 	self
-		should: [ self materializer streamFinalizer: [] ]
+		should: [ self materializer streamFinalizer: [ :x ] ]
 		raise: FLConfigurationError.

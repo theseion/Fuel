@@ -1,5 +1,5 @@
 accessing
-internalMethods
+methodsToSerialize
 	^ map
-		at: #internalMethods
+		at: #methodsToSerialize
 		ifAbsentPut: [ IdentitySet new ]

@@ -7,7 +7,7 @@ prepare
 		preMaterializationActions
 		postMaterializationActions
 		substitutions
-		objectsLimit
+		#objectLimit
 		depthLimit
 	) do: [ :key |
 		map

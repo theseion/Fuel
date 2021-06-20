@@ -3,7 +3,7 @@ testConsiderCustomGlobalNotFound
 	"A custom global variable is treated as global if we explicitly specify that on serialization. Then, if the variable is not defined in the materialization environment, a error should be raised."
 	
 	self serializer
-		considerGlobal: #FLGlobalVariableForTesting;
+		lookUpInGlobals: #FLGlobalVariableForTesting;
 		environment: (Dictionary new
 			at: #FLGlobalVariableForTesting put: 42;
 			yourself).

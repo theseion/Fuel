@@ -2,7 +2,7 @@ tests
 resultOfSerializeRemoveAndMaterializeAll: objects
 	| classesOrTraits materialized |
 	classesOrTraits := objects select: [ :anObject | anObject isBehavior or: [anObject isTrait]].
-	self serializer considerInternalAllBehaviors: classesOrTraits.
+	self serializer fullySerializeAllBehaviors: classesOrTraits.
 	self serialize: objects.
 	classesOrTraits do: [ :aClassOrTrait | self classFactory deleteBehavior: aClassOrTrait . ].
 	materialized := self materialized.

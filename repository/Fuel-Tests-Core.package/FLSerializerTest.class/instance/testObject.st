@@ -1,4 +1,4 @@
-tests
+tests-configuring
 testObject
 	| object |
 	object := Object new.

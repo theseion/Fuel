@@ -6,10 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"globalSymbols",
 		"internalMethods",
 		"internalBehaviors",
-		"environment"
+		"environment",
+		"globals"
 	],
 	"name" : "FLFullGeneralMapper",
 	"type" : "normal"

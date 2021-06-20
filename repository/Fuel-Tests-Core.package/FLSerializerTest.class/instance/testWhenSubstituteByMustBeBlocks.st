@@ -1,4 +1,4 @@
-tests
+tests-configuring
 testWhenSubstituteByMustBeBlocks
 	{
 		Object -> [ :x ].
