@@ -7,6 +7,6 @@ testAdditionalObjects
 	
 	self assertSerializationEqualityOf: 'foo'.
 
-	self assert: (self materialization additionalObjectAt: #test) equals: 'test'.
-	self assert: (self materialization additionalObjectAt: 42) equals: 68.
+	self assert: (self materializedObjects additionalObjectAt: #test) equals: 'test'.
+	self assert: (self materializedObjects additionalObjectAt: 42) equals: 68.
 	

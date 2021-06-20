@@ -5,6 +5,6 @@ assertSequencedSerializationEqualityOf: aCollectionToSerialize
 		objectCollection: aCollectionToSerialize;
 		serialize.
 	
-	materializedCollection := self materializer materializeObjectCollection.
+	materializedCollection := self materializer materializeObjectCollection roots.
 		
 	self assertCollection: aCollectionToSerialize hasSameElements: materializedCollection

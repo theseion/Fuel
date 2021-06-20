@@ -1,5 +1,5 @@
 helpers
 resultOfSerializeAndMaterialize: anObject
-
-	self serialize: anObject.
-	^ self materialized
+	^ self
+		serialize: anObject;
+		materialized

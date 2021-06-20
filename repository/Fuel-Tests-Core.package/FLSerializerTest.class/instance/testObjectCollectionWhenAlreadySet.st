@@ -1,7 +1,9 @@
 tests-configuring
 testObjectCollectionWhenAlreadySet
-	self serializer objectCollection: (Array new: 0).
+	serializer := FLSerializer new
+		objectCollection: (Array new: 0);
+		yourself.
 	
 	self
-		should: [ self serializer objectCollection: (Array new: 0) ]
+		should: [ serializer objectCollection: (Array new: 0) ]
 		raise: FLConfigurationError

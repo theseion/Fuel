@@ -7,5 +7,4 @@ runHeaderSteps
 		
 	self configuration shouldMaterializeHeaderOnly ifFalse: [ ^ self ].
 	
-	root := header.
 	self stop

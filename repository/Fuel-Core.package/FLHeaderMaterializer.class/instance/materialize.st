@@ -1,9 +1,15 @@
 serializing
 materialize
+	| materializedObjects |
 	(FLCurrentConfiguration value isMemberOf: self class) ifTrue: [
 		"prevent recursion"
-		^ FLHeader forMaterialization ].
+		^ FLCurrentContext value materializedObjects
+			addRoot: FLHeader forMaterialization;
+			yourself ].
 	
-	^ super materialize
-		ifNil: [ FLHeader forMaterialization ]
-		ifNotNil: [ :header | header ]
+	
+	
+	materializedObjects := super materialize.
+	materializedObjects root ifNil: [
+		materializedObjects addRoot: FLHeader forMaterialization ].
+	^ materializedObjects

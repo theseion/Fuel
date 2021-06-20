@@ -13,6 +13,6 @@ testFileName
 	
 	materialized := self materializer
 		fileName: fileName;
-		materialize.
+		materializeRoot.
 	self assert: materialized equals: 'abc'
 	

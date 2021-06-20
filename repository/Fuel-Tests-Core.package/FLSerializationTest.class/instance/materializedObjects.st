@@ -1,4 +1,3 @@
 helpers
 materializedObjects
-	
-	^ self materialization objects
+	^ self materializer materialize

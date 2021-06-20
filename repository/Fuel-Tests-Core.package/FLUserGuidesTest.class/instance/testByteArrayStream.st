@@ -8,5 +8,5 @@ testByteArrayStream
 			serialize ].
 	materializedString := FLMaterializer new
 		streamFactory: [ array readStream ];
-		materialize.
+		materializeRoot.
 	self assert: materializedString equals: 'stringToSerialize'

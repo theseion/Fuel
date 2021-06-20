@@ -1,3 +1,5 @@
 private
 trailerStep
-	root := decoder nextEncodedReference
+	self context materializedObjects
+		addRoot: decoder nextEncodedReference;
+		addObjects: decoder objects

@@ -1,4 +1,3 @@
 materializing
 postMaterializationStep
-	self context materialization: self.
 	header executePostMaterializationActions

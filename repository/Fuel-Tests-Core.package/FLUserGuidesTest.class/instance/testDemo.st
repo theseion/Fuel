@@ -15,7 +15,7 @@ testDemo
 	"Load from the file"
 	loadedArray := FLMaterializer new
 		fileName: 'example.FL';
-		materialize.
+		materializeRoot.
 	"The arrays are not the same"
 	self assert: sourceArray ~~ loadedArray.
 	"The strings are not the same"

@@ -9,7 +9,7 @@ testPluggableSubstitution
 		serialize.
 	materializedObject := FLMaterializer new
 		fileName: 'demo.fuel';
-		materialize.
+		materializeRoot.
 		
 	self
 		assert: materializedObject

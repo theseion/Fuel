@@ -4,7 +4,6 @@
 	"instvars" : [
 		"clusterCount",
 		"clusters",
-		"root",
 		"decoder",
 		"header",
 		"stopBlock"

@@ -1,5 +1,3 @@
 instance creation
 basicRun
-	^ self new
-		run;
-		yourself
+	^ self new run

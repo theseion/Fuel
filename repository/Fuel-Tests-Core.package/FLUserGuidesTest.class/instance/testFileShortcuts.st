@@ -7,5 +7,5 @@ testFileShortcuts
 		serialize.
 	materializedString := FLMaterializer new
 		fileName: 'demo.fuel';
-		materialize.
+		materializeRoot.
 	self assert: materializedString equals: 'stringToSerialize'

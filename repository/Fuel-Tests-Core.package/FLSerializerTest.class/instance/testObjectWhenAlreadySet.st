@@ -1,7 +1,9 @@
 tests-configuring
 testObjectWhenAlreadySet
-	self serializer object: Object new.
+	serializer := FLSerializer new
+		object: Object new;
+		yourself.
 	
 	self
-		should: [ self serializer object: Object new ]
+		should: [ serializer object: Object new ]
 		raise: FLConfigurationError

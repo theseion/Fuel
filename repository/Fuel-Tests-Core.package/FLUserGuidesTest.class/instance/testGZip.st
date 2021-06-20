@@ -10,5 +10,5 @@ testGZip
 	materialized := FLMaterializer new
 		fileName: 'demo.fuel';
 		decorateStreamFactory: [ :fileStream | GZipReadStream on: fileStream ];
-		materialize.
+		materializeRoot.
 	self assert: materialized equals: 123

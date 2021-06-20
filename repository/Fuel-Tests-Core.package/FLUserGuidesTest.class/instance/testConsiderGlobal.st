@@ -1,7 +1,7 @@
 tests-Managing Globals
 testConsiderGlobal
 	
-	| anArray materializedArray |
+	| anArray materialized |
 	"Prepare an array whose two elements are system globals."
 	anArray := Array with: Set new with: Set new.
 	self environmentOfTest
@@ -17,11 +17,11 @@ testConsiderGlobal
 		serialize.
 
 	"Materialize"
-	materializedArray := FLMaterializer new
+	materialized := FLMaterializer new
 		fileName: 'demo.fuel';
 		environment: self environmentOfTest;
-		materialize.
+		materializeRoot.
 				
 	"Check that second element is a new Set."
-	self assert: (self environmentOfTest at: #GlobalSet1) identicalTo: materializedArray first.
-	self deny: (self environmentOfTest at: #GlobalSet2) identicalTo: materializedArray second
+	self assert: (self environmentOfTest at: #GlobalSet1) identicalTo: materialized first.
+	self deny: (self environmentOfTest at: #GlobalSet2) identicalTo: materialized second

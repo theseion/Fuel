@@ -18,6 +18,6 @@ testCompiledMethodChanged
 
 	self serialize: classA >> #m.
 
-	self should: [ self materialization ]
+	self should: [ self materialized ]
 		raise: FLMethodChanged 
 		description: 'Serialized and materialized methods should have the same bytecodes.'

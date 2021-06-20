@@ -6,6 +6,6 @@ testGlobalMetaclassNotFound
 	
 	self materializer environment: Dictionary new.
 	
-	self should: [ self materialization ] 
+	self should: [ self materialized ] 
 		raise: FLClassNotFound 
 		description: 'Raise an error since the class is not present in materialization global environment'

@@ -8,7 +8,9 @@ testBadDestinationVariableRename
 	
 	self materializer
 		migrateClassNamed: pointClassName 
-		variables: {('x' -> 'posX')}.
+		variables: (Dictionary new
+			at: 'x' put: 'posX';
+			yourself).
 		
 	self serialize: aPoint.
 	self should: [ self materialized ] raise: Error. 

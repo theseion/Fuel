@@ -1,7 +1,7 @@
 evaluating
 applyTo: aVariablesMapping 
 	
-	variables do: [:link |
+	variables associationsDo: [:link |
 		aVariablesMapping 
 			map: link key 
 			to: link value ]

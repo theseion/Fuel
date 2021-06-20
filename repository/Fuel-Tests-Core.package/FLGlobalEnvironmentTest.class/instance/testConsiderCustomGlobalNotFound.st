@@ -11,6 +11,6 @@ testConsiderCustomGlobalNotFound
 
 	self serialize: 42.
 	self 
-		should: [ self materialization ] 
+		should: [ self materialized ] 
 		raise: FLGlobalNotFound 
 		description: 'Raise an error since the variable is not present in materialization global environment'

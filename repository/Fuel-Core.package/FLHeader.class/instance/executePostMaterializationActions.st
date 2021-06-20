@@ -4,6 +4,5 @@ executePostMaterializationActions
 	
 	postMaterializationActions do: [ :each |
 		each
-			cull: self
-			cull: self context materialization
+			cull: self context materializedObjects
 			cull: self configuration environment ]

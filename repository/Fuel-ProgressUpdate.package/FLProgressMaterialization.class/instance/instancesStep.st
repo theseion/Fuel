@@ -2,5 +2,5 @@ private
 instancesStep
 
 	numberOfObjectsAlreadyMaterialized := 0.
-	numberOfObjectsToMaterialize := self objects capacity.
+	numberOfObjectsToMaterialize := decoder objects capacity.
 	^ super instancesStep.

@@ -4,5 +4,5 @@ executePreMaterializationActions
 
 	preMaterializationActions do: [ :each |
 		each
-			cull: self
+			cull: self context materializedObjects
 			cull: self configuration environment ]

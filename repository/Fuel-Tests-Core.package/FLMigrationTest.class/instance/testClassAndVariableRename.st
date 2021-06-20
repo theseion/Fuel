@@ -16,7 +16,10 @@ testClassAndVariableRename
 	self materializer
 		migrateClassNamed: pointClassName
 		toClass: pointClass
-		variables: {('x' -> 'posX') . ('y' -> 'posY')}.
+		variables: (Dictionary new
+			at: 'x' put: 'posX';
+			at: 'y' put: 'posY';
+			yourself).
 
 	resultPoint := self materialized.
 

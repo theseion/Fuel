@@ -1,3 +1,3 @@
 helpers
 materialized
-	^ self materializer materialize
+	^ self materializedObjects root
