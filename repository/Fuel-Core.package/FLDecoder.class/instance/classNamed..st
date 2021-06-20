@@ -1,8 +1,7 @@
 accessing
-classNamed: className 
-
-	^ (migrations
-		detect: [:m | m sourceClassName = className ]
-		ifNone: [ ^ self globalClassNamed: className ])
-		targetClass.
+classNamed: className
+	^ migrationsBySource
+		at: className
+		ifPresent: [ :migration | migration targetClass ]
+		ifAbsent: [ self globalClassNamed: className ]
 		

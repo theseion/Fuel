@@ -11,13 +11,25 @@ migrateClassNamed: aSymbol toClass: aClassOrSymbol variables: aDictionary
 			variables: { x -> xCoordinate }"
 
 	| class |
-	class := aClassOrSymbol isSymbol
-		ifTrue: [ self environment at: aClassOrSymbol ]
+	self
+		validateMigrationArgumentsFrom: aSymbol
+		to: aClassOrSymbol
+		variables: aDictionary.
+	
+	class := aClassOrSymbol isString
+		ifTrue: [
+			self environment
+				at: aClassOrSymbol asSymbol
+				ifPresent: [ :global |
+					global isClass
+						ifTrue: [ global ]
+						ifFalse: [
+							FLConfigurationError signal: 'Target global must be a class' ] ]
+				ifAbsent: [
+					FLConfigurationError signal: 'Global not found: ', aClassOrSymbol ] ]
 		ifFalse: [ aClassOrSymbol ].
-	(map
-		at: #migrations
-		ifAbsentPut: [ Set new ])
-			add: (FLMigration 
-				fromClassNamed: aSymbol 
-				toClass: class
-				variables: aDictionary)
+	
+	self
+		basicMigrateClassNamed: aSymbol asSymbol
+		toClass: class
+		variables: aDictionary

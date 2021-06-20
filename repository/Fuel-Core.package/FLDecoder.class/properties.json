@@ -6,9 +6,10 @@
 		"objects",
 		"isBigEndian",
 		"indexStream",
-		"migrations",
 		"objectsWriteStream",
-		"globalEnvironment"
+		"globalEnvironment",
+		"migrationsBySource",
+		"migrationsByTarget"
 	],
 	"name" : "FLDecoder",
 	"commentStamp" : "",

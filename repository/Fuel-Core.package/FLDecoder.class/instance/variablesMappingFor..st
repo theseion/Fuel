@@ -1,12 +1,16 @@
 accessing
 variablesMappingFor: aClass
-
 	| variables |
-	variables := FLVariablesMapping materializing: aClass from: self.
+	variables := FLVariablesMapping
+		materializing: aClass
+		from: self.
 	
-	migrations 
-		select: [ :m | (m targetClass == aClass) or: [ aClass inheritsFrom: m targetClass ] ]
-		thenDo: [ :m | m applyTo: variables ].
+	aClass withAllSuperclassesDo: [ :class |
+		migrationsByTarget
+			at: class
+			ifPresent: [ :migrations |
+				migrations do: [ :migration |
+					migration applyTo: variables ] ] ].
 		
 	^ variables
 	

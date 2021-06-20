@@ -1,10 +1,4 @@
 running
 materialize
-	| materialization |
-	materialization := self useDuring: [
-		FLMaterialization run ].
-	map
-		at: #materialization
-		put: materialization.
-		
-	^ materialization root
+	^ self useDuring: [
+		FLMaterialization run root ]
