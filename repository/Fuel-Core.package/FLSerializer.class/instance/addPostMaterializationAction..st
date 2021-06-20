@@ -13,9 +13,14 @@ addPostMaterializationAction: aCleanBlockClosure
 		| selector |
 		selector := header additionalObjectAt: #selector.
 		materialization root perform: 'Materialization done!' ]"
+	aCleanBlockClosure isBlock ifFalse: [
+		FLConfigurationError signal: 'Argument must be a block' ].
 	
 	aCleanBlockClosure isClean ifFalse: [
 		FLConfigurationError signal: 'Post materializaton actions have to be clean closures. For more details see method BlocKClosure >> #isClean' ].
+	
+	aCleanBlockClosure numArgs > 3 ifTrue: [
+		FLConfigurationError signal: 'Block accepts too many arguments, only three will be passed' ].
 	
 	(map
 		at: #postMaterializationActions
