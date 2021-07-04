@@ -9,7 +9,7 @@ testObjectByProxyThatBecomesItsContent
 		silentlyCompile: 'fuelAccept: aVisitor
 			^ aVisitor
 				visitSubstitution: self
-				by: (FLProxyThatBecomesItsContent newWith: someState)' in: aProxyClass.
+				by: (', FLProxyThatBecomesItsContent name, ' newWith: someState)' in: aProxyClass.
 
 	result := self resultOfSerializeAndMaterialize: aProxyClass new.
 
