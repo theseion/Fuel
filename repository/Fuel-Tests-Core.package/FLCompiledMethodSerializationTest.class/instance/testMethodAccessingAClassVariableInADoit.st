@@ -3,7 +3,9 @@ testMethodAccessingAClassVariableInADoit
 	| aClassWithVariable aMethod materializedMethod |
 	aClassWithVariable := self classFactory silentlyNewClassWithClassVariableNames: 'A'.
 
-	aClassWithVariable compileSilently: 'DoIt A:= 3'.
+	self classFactory
+		silentlyCompile: 'DoIt A:= 3'
+		in: aClassWithVariable.
 	aMethod := aClassWithVariable >> #DoIt.
 	aClassWithVariable classVarNamed: #A put: 7. 
 	

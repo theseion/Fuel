@@ -9,7 +9,9 @@ testCreateHierarchyWithSubclassSerializedBeforeSuperclass
 	"Behavior clusters use an FLLargeIdentitySet for their objects.
 	We need to be sure that the subclass is serialized before the superclass."
 	serializedClasses reversed doWithIndex: [ :class :index |
-		class class compile: 'largeIdentityHash ^ ', index asString ].
+		self classFactory
+			silentlyCompile: 'largeIdentityHash ^ ', index asString
+			in: class class ].
 	set := FLLargeIdentitySet new
 		addAll: serializedClasses;
 		yourself.

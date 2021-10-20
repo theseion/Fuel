@@ -3,7 +3,9 @@ testMethodAccessingAClassVariable
 	| aClassWithVariable aMethod materializedMethod |
 	aClassWithVariable := self classFactory silentlyNewClassWithClassVariableNames: 'A'.
 
-	aClassWithVariable compileSilently: 'm1 A:= 3'.
+	self classFactory
+		silentlyCompile: 'm1 A:= 3'
+		in: aClassWithVariable.
 	aMethod := aClassWithVariable >> #m1.
 	aClassWithVariable classVarNamed: #A put: 7. 
 	
