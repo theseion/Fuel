@@ -1,9 +1,11 @@
 language: smalltalk
 if: commit_message !~ /(\[docs])/
 
-arch: arm64
-os: linux
-dist: focal
+arch: arm64-graviton2 # in AWS over Graviton2 CPU
+virt: lxd             # required, routes to a 'full VM' instance 
+os: linux             # required for arch different than amd64
+dist: xenial
+group: edge           # required for graviton2 builds
 
 jobs:
   include:
