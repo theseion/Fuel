@@ -7,6 +7,7 @@ newSubclassOf: aClass uses: aTraitComposition instanceVariableNames: ivNamesStri
 			name: self defaultNewClassName;
 			superclass: aClass;
 			traitComposition: aTraitComposition asTraitComposition;
+			classTraitComposition: aTraitComposition asTraitComposition classComposition;
 			slots: ivNamesString asSlotCollection;
 			sharedVariablesFromString: classVarsString;
 			sharedPools: poolNamesString;
