@@ -2,4 +2,4 @@ running
 setUp
 	super setUp.
 	
-	directoryPath := FLPlatform current createDirectoryPath: UUID new asString
+	directoryPath := FLPlatform current createTemporaryDirectoryPathNamed: UUID new asString
