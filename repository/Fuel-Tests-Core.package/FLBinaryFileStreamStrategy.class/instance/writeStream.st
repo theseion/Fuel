@@ -1,3 +1,3 @@
 writing
 writeStream
-	^ FLPlatform current writeStreamForFilePath: self fileReference pathString
+	^ FLFilePoolTestResource current writeStreamForFilePath: self fileName

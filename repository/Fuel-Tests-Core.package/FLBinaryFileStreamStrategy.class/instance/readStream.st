@@ -1,3 +1,3 @@
 reading
 readStream
-	^ FLPlatform current readStreamForFilePath: self fileReference pathString
+	^ FLFilePoolTestResource current readStreamForFilePath: self fileName

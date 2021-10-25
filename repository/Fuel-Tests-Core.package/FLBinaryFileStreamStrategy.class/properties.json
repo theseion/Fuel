@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"fileReference"
+		"fileName"
 	],
 	"name" : "FLBinaryFileStreamStrategy",
 	"type" : "normal"
