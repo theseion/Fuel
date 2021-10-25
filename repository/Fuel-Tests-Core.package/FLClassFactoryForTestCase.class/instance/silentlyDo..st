@@ -1,3 +1,3 @@
 private
 silentlyDo: aBlock
-	^ SystemAnnouncer uniqueInstance suspendAllWhile: aBlock
+	^ FLPlatform current doSilently: aBlock
