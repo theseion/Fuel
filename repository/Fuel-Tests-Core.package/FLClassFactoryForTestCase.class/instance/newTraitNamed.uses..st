@@ -1,13 +1,11 @@
 creating-traits
 newTraitNamed: aTraitName uses: aTraitComposition
 	| newTrait |					
-	newTrait := self class classInstaller make: [ :aBuilder |
-		aBuilder
-			environment: self environment;
-			name: aTraitName;
-			traitComposition: aTraitComposition asTraitComposition;
-			package: self defaultPackageAndTag;
-			beTrait ].					
-					
+	newTrait := FLPlatform current
+		newTraitNamed: aTraitName
+		uses: aTraitComposition
+		environment: self environment
+		package: self defaultPackageAndTag.
+	
 	self createdTraits add: newTrait.
 	^ newTrait

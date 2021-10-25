@@ -1,17 +1,15 @@
 creating
 newSubclassOf: aClass uses: aTraitComposition instanceVariableNames: ivNamesString classVariableNames: classVarsString poolDictionaries: poolNamesString
 	| newClass |		
-	newClass := self class classInstaller make: [ :aBuilder | 
-		aBuilder 
-			environment: self environment;
-			name: self defaultNewClassName;
-			superclass: aClass;
-			traitComposition: aTraitComposition asTraitComposition;
-			classTraitComposition: aTraitComposition asTraitComposition classComposition;
-			slots: ivNamesString asSlotCollection;
-			sharedVariablesFromString: classVarsString;
-			sharedPools: poolNamesString;
-			package: self defaultPackageAndTag ].	
+	newClass := FLPlatform current
+		newSubclassOf: aClass
+		named: self defaultNewClassName
+		uses: aTraitComposition
+		instanceVariableNames: ivNamesString
+		classVariableNames: classVarsString
+		poolDictionaries: poolNamesString
+		environment: self environment
+		package: self defaultPackageAndTag.
 		
 	self createdClasses add: newClass.
 	^ newClass

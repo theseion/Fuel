@@ -1,3 +1,5 @@
 creating-anonymous
 newAnonymousClass
-	^ self defaultSuperclass newAnonymousSubclass
+	^ FLPlatform current
+		newAnonymousSubclassOf: self defaultSuperclass
+		named: 'ignored'
