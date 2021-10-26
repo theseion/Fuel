@@ -1,3 +1,3 @@
 private
 silentlyDo: aBlock
-	^ FLPlatform current doSilently: aBlock
+	^ FLPlatform current silentlyDo: aBlock

@@ -7,7 +7,7 @@ streamFactory: aBlock
 	
 	map
 		at: #streamFactory
-		ifPresent: [
+		ifPresent: [ :factory |
 			FLConfigurationError signal: 'Stream factory already configured. ',
 				'Did you mean to use #decorateStreamFactory:?' ]
 		ifAbsentPut: [ aBlock ]

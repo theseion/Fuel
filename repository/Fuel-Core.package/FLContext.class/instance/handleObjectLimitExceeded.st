@@ -2,7 +2,7 @@ exception-handling
 handleObjectLimitExceeded
 	map
 		at: #objectLimitExceededWarningRaised
-		ifPresent: [ ^ self ]
+		ifPresent: [ :boolean | ^ self ]
 		ifAbsentPut: [ true].
 		
 	self configuration isLimitObjectsExceptionEnabled ifFalse: [ ^ self ].

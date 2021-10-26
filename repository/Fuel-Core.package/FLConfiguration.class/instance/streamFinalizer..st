@@ -7,6 +7,6 @@ streamFinalizer: aBlock
 	
 	map
 		at: #streamFinalizer
-		ifPresent: [
+		ifPresent: [ :finalizer |
 			FLConfigurationError signal: 'Stream finalizer already configured' ]
 		ifAbsentPut: [ aBlock ]

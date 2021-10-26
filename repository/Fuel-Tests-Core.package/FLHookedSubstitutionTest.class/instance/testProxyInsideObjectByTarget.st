@@ -1,7 +1,7 @@
 tests
 testProxyInsideObjectByTarget
 	| aProxyClass result original pair |
-	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'target'.
+	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'Target'.
 	self classFactory
 		silentlyCompile:  'target: x  target := x' in: aProxyClass;
 		silentlyCompile: 'fuelAccept: aVisitor
