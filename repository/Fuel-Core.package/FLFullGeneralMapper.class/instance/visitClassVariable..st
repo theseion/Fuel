@@ -1,7 +1,8 @@
 visiting
 visitClassVariable: aClassVariable
-	"Consider class variables global that can be looked up, unless
-	their owning class is being fully serialized"
+	"Consider class variables regular objects (not globals), unless
+	their owning class is being fully serialized, in which case the class
+	variable needs to be serialized fully as well."
 	(self shouldSerializeBehaviorFully: aClassVariable owningClass)
 		ifFalse: [
 			self

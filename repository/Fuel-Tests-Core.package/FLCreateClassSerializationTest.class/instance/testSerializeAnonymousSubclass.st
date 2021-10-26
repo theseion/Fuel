@@ -1,7 +1,7 @@
 tests-bugs
 testSerializeAnonymousSubclass
 	| anonymous |
-	anonymous := Object newAnonymousSubclass.
+	anonymous := self classFactory newAnonymousClass.
 	
 	self
 		shouldnt: [ self resultOfSerializeRemoveAndMaterializeAll: {anonymous} ]
