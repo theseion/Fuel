@@ -2,14 +2,14 @@ classes and traits
 removeKey: aKey ifAbsent: aBlock
 	^ overlay
 		at: aKey
-		ifPresent: [
+		ifPresent: [ :global |
 			overlay
 				at: aKey
 				put: sentinel ]
 		ifAbsent: [
 			environment
 				at: aKey
-				ifPresent: [
+				ifPresent: [ :global |
 					overlay
 						at: aKey
 						put: sentinel ]
