@@ -10,7 +10,7 @@ on:
         type: string
 jobs:
   build:
-    name: "Build ${{ matrix.smalltalk }} ${{ matris.config }}"
+    name: "Build ${{ matrix.smalltalk }} ${{ matrix.config }}"
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
     runs-on: ubuntu-20.04
     strategy:
