@@ -3,6 +3,7 @@ on: [push]
 jobs:
   build_squeak:
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         smalltalk:
@@ -25,6 +26,7 @@ jobs:
         timeout-minutes: 5
   build_pharo:
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         smalltalk:
