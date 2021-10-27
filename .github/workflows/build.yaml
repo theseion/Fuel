@@ -15,7 +15,7 @@ jobs:
         smalltalk_config:
           - .default.ston
           - .tests.ston
-    name: "Build Squeak: ${{ matrix.smalltalk }}"
+    name: "Build ${{ matrix.smalltalk }} ${{ matrix.smalltalk_config }}"
     steps:
       - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
@@ -41,7 +41,7 @@ jobs:
           - .tests.ston
           - .corewithextras.ston
           - .developmentgroup.ston
-    name: "Build Pharo: ${{ matrix.smalltalk }}"
+    name: "Build ${{ matrix.smalltalk }} ${{ matrix.smalltalk_config }}"
     steps:
       - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
