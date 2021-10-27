@@ -1,3 +1,4 @@
+name: Build Squeak 5.2
 on: [push]
 jobs:
   build:

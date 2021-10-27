@@ -1,3 +1,4 @@
+name: Build Pharo 8.0
 on: [push]
 jobs:
   build:

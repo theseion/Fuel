@@ -1,3 +1,4 @@
+name: Build Squeak alpha
 on: [push]
 jobs:
   build:

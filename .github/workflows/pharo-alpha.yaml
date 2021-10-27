@@ -1,3 +1,4 @@
+name: Build Pharo alpha
 on: [push]
 jobs:
   build:
