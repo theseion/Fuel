@@ -2,18 +2,24 @@ name: Build Fuel
 on:
   workflow_call:
     inputs:
-      build_target:
+      build_targets:
         required: true
         type: string
-      config:
+      configs:
         required: true
         type: string
 jobs:
   build:
+    name: "Build ${{ matrix.smalltalk }} ${{ matris.config }}"
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
     runs-on: ubuntu-20.04
-    name: "Build ${{ build_target }} ${{ config }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk: ${{ fromJSON(inputs.build_targets) }}
+        configs: ${{ fromJSON(inputs.configs) }}
     steps:
+      - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ build_target }}
