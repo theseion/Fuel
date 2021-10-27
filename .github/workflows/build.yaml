@@ -5,6 +5,7 @@ jobs:
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
     runs-on: ubuntu-20.04
     strategy:
+      fail-fast: false
       matrix:
         smalltalk:
           - Squeak32-5.2
@@ -28,6 +29,7 @@ jobs:
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
     runs-on: ubuntu-20.04
     strategy:
+      fail-fast: false
       matrix:
         smalltalk:
           - Pharo32-7.0
