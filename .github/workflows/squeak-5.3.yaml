@@ -19,4 +19,4 @@ jobs:
         uses: ./.github/workflows/base
         with:
           build_target: ${{ matrix.smalltalk }}
-          config: ${{ mastrix.config }}
+          config: ${{ matrix.config }}
