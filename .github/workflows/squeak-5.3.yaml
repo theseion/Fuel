@@ -13,7 +13,7 @@ jobs:
           - .default.ston
           - .tests.ston
         steps:
-            - uses: theseion/fuel/.github/workflows/base.yaml@master
-              with:
-                build_target: ${{ matrix.smalltalk }}
-                config: ${{ mastrix.config }}
+          - uses: ./.github/workflows/base.yaml@master
+            with:
+              build_target: ${{ matrix.smalltalk }}
+              config: ${{ mastrix.config }}
