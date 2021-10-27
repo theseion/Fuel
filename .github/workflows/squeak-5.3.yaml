@@ -12,11 +12,11 @@ jobs:
         config:
           - .default.ston
           - .tests.ston
-        steps:
-          - name: Check out repository
-            uses: actions/checkout@v2
-          # - name: Call base workflow
-          #   uses: ./.github/workflows/base
-          #   with:
-          #     build_target: ${{ matrix.smalltalk }}
-          #     config: ${{ mastrix.config }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Call base workflow
+        uses: ./.github/workflows/base
+        with:
+          build_target: ${{ matrix.smalltalk }}
+          config: ${{ mastrix.config }}
