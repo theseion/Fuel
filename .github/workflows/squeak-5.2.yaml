@@ -13,6 +13,7 @@ jobs:
           - .default.ston
           - .tests.ston
     steps:
+      - uses: actions/checkout@v2
       - name: Call base workflow
         uses: ./.github/workflows/base/base.yaml
         with:
