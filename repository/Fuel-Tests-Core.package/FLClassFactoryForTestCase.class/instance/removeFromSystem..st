@@ -1,10 +1,13 @@
 private-cleaning
 removeFromSystem: aBehavior
-	aBehavior isObsolete
-		ifTrue: [ ^ self ].
 	self class environment
 		at: #ChangeSet
 		ifPresent: [ :changeSet |
 			aBehavior removeFromChanges ].
 	
-	aBehavior removeFromSystemUnlogged
+	aBehavior removeFromSystemUnlogged.
+	
+	aBehavior isObsolete ifFalse: [ ^ self ].
+	
+	aBehavior superclass ifNotNil: [ :superclass |
+		superclass removeAllObsoleteSubclasses ]
