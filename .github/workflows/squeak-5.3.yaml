@@ -1,0 +1,19 @@
+name: Build Squeak 5.3
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk:
+          - Squeak32-5.3
+          - Squeak64-5.3
+        config:
+          - .default.ston
+          - .tests.ston
+        steps:
+            - uses: theseion/fuel/.github/workflows/base.yaml@master
+              with:
+                build_target: ${{ matrix.smalltalk }}
+                config: ${{ mastrix.config }}

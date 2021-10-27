@@ -1,0 +1,23 @@
+name: Build Fuel
+on:
+  workflow_call:
+    inputs:
+      build_target:
+        required: true
+        type: string
+      config:
+        required: true
+        type: string
+jobs:
+  build:
+    if: ${{!contains(github.event.commits[0].message, '[docs]')}}
+    runs-on: ubuntu-20.04
+    name: "Build ${{ build_target }} ${{ config }}"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hpi-swa/setup-smalltalkCI@v1
+        with:
+          smalltalk-image: ${{ build_target }}
+      - run: smalltalkci -s ${{ build_target }} ${{ config }}
+        shell: bash
+        timeout-minutes: 5
