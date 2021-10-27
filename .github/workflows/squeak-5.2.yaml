@@ -2,7 +2,7 @@ name: Build Squeak 5.2
 on: [push]
 jobs:
   build:
-    uses: theseion/fuel/.github/workflows/base/base.yaml@master
+    uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
       build_targets: '["Squeak32-5.2", "Squeak64-5.2"]'
       configs: '[".default.ston", ".tests.ston"]'
