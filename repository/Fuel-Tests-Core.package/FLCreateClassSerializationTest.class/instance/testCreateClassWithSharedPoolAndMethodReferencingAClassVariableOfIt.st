@@ -1,5 +1,5 @@
 tests
-testCreateClassWithSharedPoolAndMethodReferencinAClassVariableOfIt
+testCreateClassWithSharedPoolAndMethodReferencingAClassVariableOfIt
 	"Tests materialization of a class not defined in the image, with a shared pool and a compiled method that referers to a class side variable of the  sharedPool (NOTE: it will be an identity problem if it isn't a Smalltalk global')"
 	
 	| aClass materializedClass sharedPool anObject |	
