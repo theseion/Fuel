@@ -13,6 +13,9 @@ jobs:
           - .default.ston
           - .tests.ston
         steps:
+          - name: Check out repository
+            uses: actions/checkout@v2
+          - name: Call base workflow
           - uses: ./.github/workflows/base.yaml@master
             with:
               build_target: ${{ matrix.smalltalk }}
