@@ -1,0 +1,8 @@
+on: [push]
+jobs:
+  build:
+    name: Build Pharo 9.0
+    uses: theseion/fuel/.github/workflows/base.yaml@master
+    with:
+      build_targets: '["Pharo64-9.0"]'
+      configs: '[".default.ston", ".tests.ston", ".corewithextras.ston", ".developmentgroup.ston"]'

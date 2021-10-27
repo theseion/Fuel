@@ -1,7 +1,7 @@
-name: Build Squeak 5.3
 on: [push]
 jobs:
   build:
+    name: Build Squeak 5.3
     uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
       build_targets: '["Squeak32-5.3", "Squeak64-5.3"]'
