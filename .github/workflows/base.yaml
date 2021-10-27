@@ -17,12 +17,12 @@ jobs:
       fail-fast: false
       matrix:
         smalltalk: ${{ fromJSON(inputs.build_targets) }}
-        configs: ${{ fromJSON(inputs.configs) }}
+        config: ${{ fromJSON(inputs.configs) }}
     steps:
       - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
-          smalltalk-image: ${{ build_target }}
-      - run: smalltalkci -s ${{ build_target }} ${{ config }}
+          smalltalk-image: ${{ matrix.smalltalk }}
+      - run: smalltalkci -s ${{ matrix.smalltalk }} ${{ matrix.config }}
         shell: bash
         timeout-minutes: 5
