@@ -3,10 +3,10 @@ testCreateWithClassVariableAccessors
 	"Tests materialization of a compiled method in a class not defined in the image. The class defines accessors for a class variable."
 	
 	| aClass materializedClass instance |	
-	aClass := self classFactory silentlyNewClassWithClassVariableNames:'ClassVariable'.
+	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'AnFLClassVariable'.
 	self classFactory
-		silentlyCompile:  'classVariable ^ClassVariable' in: aClass;
-		silentlyCompile: 'classVariable: value ClassVariable := value' in: aClass.
+		silentlyCompile:  'classVariable ^AnFLClassVariable' in: aClass;
+		silentlyCompile: 'classVariable: value AnFLClassVariable := value' in: aClass.
 	(self newInstanceFrom: aClass) classVariable: 42.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
