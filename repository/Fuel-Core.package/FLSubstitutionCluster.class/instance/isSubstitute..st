@@ -1,4 +1,3 @@
 accessing
 isSubstitute: anObject
-
-	^ substitutes identityIncludes: anObject
+	^ substitutes includes: anObject
