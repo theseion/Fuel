@@ -7,7 +7,7 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'Fuel',
       #directory: 'repository',
-      #load : [ 'CoreWithExtras' ],
+      #load : [ 'Debug' ],
       #platforms : [
         #squeak,
         #pharo ]

@@ -20,7 +20,7 @@ environment:
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .tests.ston
     - SMALLTALK: Pharo64-alpha
-      SMALLTALK_CONFIG: .corewithextras.ston
+      SMALLTALK_CONFIG: .debug.ston
     - SMALLTALK: Pharo64-alpha
       SMALLTALK_CONFIG: .developmentgroup.ston
 
