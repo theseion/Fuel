@@ -24,7 +24,8 @@ baseline: spec
 		spec
 			group: 'default' with: #('Core');
 			group: 'Core' with: #('Fuel-Core');
-			group: 'Tests' with: #('Core' 'Fuel-Tests-Core') ].
+			group: 'Tests' with: #('Core' 'Fuel-Tests-Core');
+			group: 'Debug' with: #('Core' 'Fuel-Debug') ].
 
 	self
 		groupsForPharoCommon: spec;
