@@ -1,0 +1,3 @@
+accessing-defaults
+defaultMethodChangedWarningDisabled
+	^ false

@@ -5,8 +5,15 @@ materializeInstanceWith: aDecoder
 	selector := aDecoder nextEncodedString asSymbol.
 	method := methodClass  
 		compiledMethodAt: selector
-		ifAbsent: [FLMethodNotFound signalWith: methodClass name and: selector].
+		ifAbsent: [
+			FLMethodNotFound
+				signalWith: methodClass name
+				and: selector ].
+	
 	serializedHash := aDecoder nextEncodedUint16.
-	method bytecodesHash =  serializedHash
-		ifFalse: [FLMethodChanged signalWith: methodClass name and: selector].
-	^method
+	aDecoder configuration isMethodChangedWarningDisabled ifFalse: [
+		method bytecodesHash = serializedHash ifFalse: [
+			FLMethodChanged
+				signalWith: methodClass name
+				and: selector ] ].
+	^ method

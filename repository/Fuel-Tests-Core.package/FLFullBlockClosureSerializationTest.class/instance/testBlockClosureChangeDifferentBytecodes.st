@@ -1,4 +1,4 @@
-tests-change
+tests
 testBlockClosureChangeDifferentBytecodes
 	"Raise an error when materializing a closure whose method has changed bytecodes."
 
@@ -8,6 +8,7 @@ testBlockClosureChangeDifferentBytecodes
 		silentlyCompile: 'methodWithClosure  ^ [ 42 ]'
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
+	self serializer fullySerializeMethod: aClosure compiledBlock method.
 	self serialize: aClosure.
 	self classFactory
 		silentlyCompile: 'methodWithClosure  ^ 42'
