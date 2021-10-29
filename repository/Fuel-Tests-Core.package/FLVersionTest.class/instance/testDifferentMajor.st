@@ -1,17 +1,17 @@
 tests
-testBadVersion
+testDifferentMajor
 	self serializer
 		at: #version
 		put: (FLVersion
-			newWithMajor: 1
+			newWithMajor: 2
 			minor: 2
 			patch: 3).
-	self serializer
+	self materializer
 		at: #version
 		put: (FLVersion
 			newWithMajor: 3
 			minor: 2
-			patch: 1).
+			patch: 3).
 	self
 		should: [ self resultOfSerializeAndMaterialize: 'content' ]
 		raise: FLBadVersion
