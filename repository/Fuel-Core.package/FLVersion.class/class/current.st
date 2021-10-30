@@ -2,6 +2,6 @@ accessing
 current
 	^ Current ifNil: [
 		Current := self
-			newWithMajor: 3
+			newWithMajor: 4
 			minor: 0
-			patch: 3 ]
+			patch: 0 ]
