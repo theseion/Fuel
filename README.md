@@ -124,5 +124,11 @@ Installer monticello
 # Report bugs
 You may very well find something that is broken. When you do, please open an issue in the [GitHub bug tracker](https://github.com/theseion/Fuel/issues) and we'll get back to you promptly.
 
-# More documentation
-The main hub for documentation is our page at [RMoD, INRIA](http://rmod.inria.fr/web/software/Fuel)
+# Documentation
+The documentation is generated from this repository and lives [here](https://theseion.github.io/Fuel).
+
+# Origins
+Fuel started its life as a thesis project by @marianopeck at [RMoD, Inria](https://rmod.inria.fr/web).
+@tinchodias later worked on it as part of his own work (also at RMoD).
+
+The Fuel team would like to thank RMoD and especially @Ducasse for the support and for letting us continue development as an open source project.
