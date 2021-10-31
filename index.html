@@ -1,14 +1,135 @@
-<!doctype html><html lang=en dir=ltr><head><meta name=generator content="Hugo 0.83.1"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Basic examples #  We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file:
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta name=generator content="Hugo 0.88.1">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Basic examples #  We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file:
 FLSerializer serialize: 'stringToSerialize' toFileNamed: 'demo.fuel'. materializedString := FLMaterializer materializeFromFileNamed: 'demo.fuel'. We also provide messages for storing into a ByteArray. This can be fine for users of a NoSQL database:
-anArray := FLSerializer serializeToByteArray: 'stringToSerialize'. materializedString := FLMaterializer materializeFromByteArray: anArray. FileStream #  In this example we work with files."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://theseion.github.io/Fuel/"><title>| Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://theseion.github.io/Fuel/index.xml title=Fuel></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
-<strong></strong><label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#filestream>FileStream</a></li><li><a href=#compressing>Compressing</a></li><li><a href=#showing-a-progress-bar>Showing a progress bar</a></li></ul></nav></aside></header><article class=markdown><h1 id=basic-examples>Basic examples
-<a class=anchor href=#basic-examples>#</a></h1><p>We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>serialize:</span> <span style=color:#e6db74>&#39;stringToSerialize&#39;</span> <span style=color:#a6e22e>toFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>.
+anArray := FLSerializer serializeToByteArray: 'stringToSerialize'. materializedString := FLMaterializer materializeFromByteArray: anArray. FileStream #  In this example we work with files.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theseion.github.io/Fuel/">
+<title> | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+<link rel=alternate type=application/rss+xml href=https://theseion.github.io/Fuel/index.xml title=Fuel>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong></strong>
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#filestream>FileStream</a></li>
+<li><a href=#compressing>Compressing</a></li>
+<li><a href=#showing-a-progress-bar>Showing a progress bar</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=basic-examples>
+Basic examples
+<a class=anchor href=#basic-examples>#</a>
+</h1>
+<p>We give some class-side messages to facilitate the more common uses of serialization and materialization. The next example writes and reads from file:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>serialize:</span> <span style=color:#e6db74>&#39;stringToSerialize&#39;</span> <span style=color:#a6e22e>toFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>.
 materializedString <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeFromFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>.
-</code></pre></div><p>We also provide messages for storing into a <code>ByteArray</code>. This can be fine for users of a NoSQL database:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>anArray <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>serializeToByteArray:</span> <span style=color:#e6db74>&#39;stringToSerialize&#39;</span>. 
+</code></pre></div><p>We also provide messages for storing into a <code>ByteArray</code>. This can be fine for users of a NoSQL database:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>anArray <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>serializeToByteArray:</span> <span style=color:#e6db74>&#39;stringToSerialize&#39;</span>. 
 materializedString <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeFromByteArray:</span> anArray.
-</code></pre></div><h2 id=filestream>FileStream
-<a class=anchor href=#filestream>#</a></h2><p>In this example we work with files. Note that we set the file in binary mode:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
+</code></pre></div><h2 id=filestream>
+FileStream
+<a class=anchor href=#filestream>#</a>
+</h2>
+<p>In this example we work with files. Note that we set the file in binary mode:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
 	<span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>newDefault</span> 
 		<span style=color:#a6e22e>serialize:</span> <span style=color:#e6db74>&#39;stringToSerialize&#39;</span> 
  		<span style=color:#a6e22e>on:</span> aStream <span style=color:#a6e22e>binary</span>].
@@ -16,8 +137,13 @@ materializedString <span style=color:#f92672>:=</span> <span style=color:#a6e22e
 <span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>oldFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
 	materializedString <span style=color:#f92672>:=</span> (<span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>newDefault</span> 
 		<span style=color:#a6e22e>materializeFrom:</span> aStream <span style=color:#a6e22e>binary</span>) <span style=color:#a6e22e>root</span>].
-</code></pre></div><p>Note also that we are no longer using the class-side messages of previous examples. Now, for both FLSerializer and FLMaterializer, we first create instances with #newDefault to then perform the desired operations. As we will see in next example, creating the instances brings more possibilities.</p><h2 id=compressing>Compressing
-<a class=anchor href=#compressing>#</a></h2><p>Of course, you could use stream compressors provided by the system. However, we have detected some errors serializing WideStrings. An example of use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;number.fuel.zip&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFileStream <span style=color:#f92672>|</span> 
+</code></pre></div><p>Note also that we are no longer using the class-side messages of previous examples. Now, for both FLSerializer and FLMaterializer, we first create instances with #newDefault to then perform the desired operations. As we will see in next example, creating the instances brings more possibilities.</p>
+<h2 id=compressing>
+Compressing
+<a class=anchor href=#compressing>#</a>
+</h2>
+<p>Of course, you could use stream compressors provided by the system. However, we have detected some errors serializing WideStrings. An example of use:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;number.fuel.zip&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFileStream <span style=color:#f92672>|</span> 
 	<span style=color:#f92672>|</span>gzip<span style=color:#f92672>|</span>
 	aFileStream <span style=color:#a6e22e>binary</span>.
 	gzip <span style=color:#f92672>:=</span> <span style=color:#a6e22e>GZipWriteStream</span> <span style=color:#a6e22e>on:</span> aFileStream.
@@ -30,8 +156,12 @@ materializedString <span style=color:#f92672>:=</span> <span style=color:#a6e22e
 	materialization <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>newDefault</span> 
 		<span style=color:#a6e22e>materializeFrom:</span> gzip.
 	gzip <span style=color:#a6e22e>close</span>. ].
-</code></pre></div><h2 id=showing-a-progress-bar>Showing a progress bar
-<a class=anchor href=#showing-a-progress-bar>#</a></h2><p>Sometimes it is nice to see progress updates on screen. Use #showProgress in this cases.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;numbers.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
+</code></pre></div><h2 id=showing-a-progress-bar>
+Showing a progress bar
+<a class=anchor href=#showing-a-progress-bar>#</a>
+</h2>
+<p>Sometimes it is nice to see progress updates on screen. Use #showProgress in this cases.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;numbers.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
 	<span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>newDefault</span> 
 		<span style=color:#a6e22e>showProgress</span>;
 		<span style=color:#a6e22e>serialize:</span> (<span style=color:#ae81ff>1</span> <span style=color:#a6e22e>to:</span> <span style=color:#ae81ff>200000</span>) <span style=color:#a6e22e>asArray</span> 
@@ -41,7 +171,35 @@ materializedString <span style=color:#f92672>:=</span> <span style=color:#a6e22e
 	<span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>newDefault</span> 
 		<span style=color:#a6e22e>showProgress</span>;
 		<span style=color:#a6e22e>materializeFrom:</span> aStream <span style=color:#a6e22e>binary</span> ].
-</code></pre></div><p>Package FuelProgressUpdate must be installed. You can use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>(<span style=color:#a6e22e>ConfigurationOfFuel</span> <span style=color:#a6e22e>project</span> <span style=color:#a6e22e>version:</span> <span style=color:#e6db74>&#39;1.9&#39;</span>) 
+</code></pre></div><p>Package FuelProgressUpdate must be installed. You can use:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>(<span style=color:#a6e22e>ConfigurationOfFuel</span> <span style=color:#a6e22e>project</span> <span style=color:#a6e22e>version:</span> <span style=color:#e6db74>&#39;1.9&#39;</span>) 
 	<span style=color:#a6e22e>load:</span> <span style=color:#e6db74>&#39;FuelProgressUpdate&#39;</span>.
-</code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/bdc4cdeaf3336443290c8b4ff5d8ee1e1411d88a title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#filestream>FileStream</a></li><li><a href=#compressing>Compressing</a></li><li><a href=#showing-a-progress-bar>Showing a progress bar</a></li></ul></nav></div></aside></main></body></html>
+</code></pre></div></article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/bdc4cdeaf3336443290c8b4ff5d8ee1e1411d88a title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#filestream>FileStream</a></li>
+<li><a href=#compressing>Compressing</a></li>
+<li><a href=#showing-a-progress-bar>Showing a progress bar</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

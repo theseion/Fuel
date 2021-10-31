@@ -1,9 +1,113 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:
-| serializer | serializer := FLSerializer newDefault. serializer header at: #timestamp putAdditionalObject: TimeStamp now. serializer header addPreMaterializationAction: [ Transcript show: 'Before serializing'; cr ]. serializer header addPostMaterializationAction: [ :materialization | Transcript show: 'Serialized at '; show: (materialization additionalObjectAt: #timestamp); cr; show: 'Materialized at '; show: TimeStamp now; cr ]."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:
-| serializer | serializer := FLSerializer newDefault. serializer header at: #timestamp putAdditionalObject: TimeStamp now. serializer header addPreMaterializationAction: [ Transcript show: 'Before serializing'; cr ]. serializer header addPostMaterializationAction: [ :materialization | Transcript show: 'Serialized at '; show: (materialization additionalObjectAt: #timestamp); cr; show: 'Materialized at '; show: TimeStamp now; cr ]."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/builtin-header-support/"><meta property="article:section" content><title>Builtin Header Support | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/ class=active>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:
+| serializer | serializer := FLSerializer newDefault. serializer header at: #timestamp putAdditionalObject: TimeStamp now. serializer header addPreMaterializationAction: [ Transcript show: 'Before serializing'; cr ]. serializer header addPostMaterializationAction: [ :materialization | Transcript show: 'Serialized at '; show: (materialization additionalObjectAt: #timestamp); cr; show: 'Materialized at '; show: TimeStamp now; cr ].">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:
+| serializer | serializer := FLSerializer newDefault. serializer header at: #timestamp putAdditionalObject: TimeStamp now. serializer header addPreMaterializationAction: [ Transcript show: 'Before serializing'; cr ]. serializer header addPostMaterializationAction: [ :materialization | Transcript show: 'Serialized at '; show: (materialization additionalObjectAt: #timestamp); cr; show: 'Materialized at '; show: TimeStamp now; cr ].">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://theseion.github.io/Fuel/builtin-header-support/"><meta property="article:section" content>
+<title>Builtin Header Support | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/ class=active>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>Builtin Header Support</strong>
-<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class=markdown><p>Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#f92672>|</span> serializer <span style=color:#f92672>|</span>
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents></nav>
+</aside>
+</header>
+<article class=markdown><p>Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#f92672>|</span> serializer <span style=color:#f92672>|</span>
 serializer <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>newDefault</span>.
 
 serializer <span style=color:#a6e22e>header</span> 
@@ -27,15 +131,41 @@ serializer <span style=color:#a6e22e>header</span>
 <span style=color:#a6e22e>serializer</span> 
 	<span style=color:#960050;background-color:#1e0010>serialize:</span> <span style=color:#e6db74>&#39;a big amount of data&#39;</span> 
 	<span style=color:#a6e22e>toFileNamed:</span> <span style=color:#e6db74>&#39;demo.fl&#39;</span>
-</code></pre></div><p>Then, you can just materialize the header info:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#f92672>|</span> aHeader <span style=color:#f92672>|</span>
+</code></pre></div><p>Then, you can just materialize the header info:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#f92672>|</span> aHeader <span style=color:#f92672>|</span>
 aHeader <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeHeaderFromFileNamed:</span> <span style=color:#e6db74>&#39;demo.fl&#39;</span>.
 aHeader <span style=color:#a6e22e>additionalObjectAt:</span> <span style=color:#e6db74>#timestamp</span>.
-</code></pre></div><p>Printing it, the result is:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#e6db74>&#39;28 March 2013 12:44:54 pm&#39;</span>
-</code></pre></div><p>If we normally materialize the whole file with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeFromFileNamed:</span> <span style=color:#e6db74>&#39;demo.fl&#39;</span> 
-</code></pre></div><p>Then, the print of the results is:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#e6db74>&#39;a big amount of data&#39;</span>
-</code></pre></div><p>And this is shown in Transcript:</p><pre><code>Before serializing
+</code></pre></div><p>Printing it, the result is:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#e6db74>&#39;28 March 2013 12:44:54 pm&#39;</span>
+</code></pre></div><p>If we normally materialize the whole file with:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeFromFileNamed:</span> <span style=color:#e6db74>&#39;demo.fl&#39;</span> 
+</code></pre></div><p>Then, the print of the results is:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#e6db74>&#39;a big amount of data&#39;</span>
+</code></pre></div><p>And this is shown in Transcript:</p>
+<pre tabindex=0><code>Before serializing
 Serialized at 28 March 2013 12:50:50 pm
 Materialized at 28 March 2013 1:01:21 pm
 For additional examples, you can see tests in FLHeaderSerializationTest.
-</code></pre></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
+</code></pre></article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents></nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

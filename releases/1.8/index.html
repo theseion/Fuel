@@ -1,14 +1,167 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Version 1.8 #  26 May 2012
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Version 1.8 #  26 May 2012
 We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.
 Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.
 Below there are some remarkable changes.
- Much more complete user guides."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Version 1.8 #  26 May 2012
+ Much more complete user guides.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="Version 1.8 #  26 May 2012
 We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.
 Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.
 Below there are some remarkable changes.
- Much more complete user guides."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.8/"><meta property="article:section" content="releases"><meta property="article:modified_time" content="2021-06-11T12:45:53+02:00"><title>1.8 | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/ class=active>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
+ Much more complete user guides.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.8/"><meta property="article:section" content="releases">
+<meta property="article:modified_time" content="2021-06-11T12:45:53+02:00">
+<title>1.8 | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/ class=active>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>1.8</strong>
-<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class=markdown><h1 id=version-18>Version 1.8
-<a class=anchor href=#version-18>#</a></h1><p>26 May 2012</p><p>We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.</p><p>Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.</p><p>Below there are some remarkable changes.</p><ul><li>Much more complete user guides.</li><li>Improved API for customizing how graph is traced.</li><li>FuelMetalevel: serialization of stuff like classes and compiled methods moved to an optional package.</li><li>Customize objects to be treated as globals.</li><li>Migrations: declare at materialization time class and variables renames.</li><li>Weak references properly managed. Thanks to Juan Vuletich and Levente.</li><li>Thanks Pavel for helping us improving FuelPackageLoader with wonderful ideas and bug reports.</li><li>Serialization speed up on large graphs by using specialized collections. Thanks Levente.</li><li>Encoder and Decoder: new reifications that clarify the design. Thanks Colin Putney.</li><li>Optimized serialization of &ldquo;clean&rdquo; BlockClosures, which don&rsquo;t need the whole stack of contexts. Thanks Juan Vuletich and Eliot Miranda.</li><li>Added a clear error hierarchy.</li><li>Debug facilities, including graph visualization using Roassal. Thanks Alexandre and Doru.</li><li>Many more new tests. Including those from extension packages, we have almost 600 tests.</li><li>Repository moved from &lsquo;<a href="http://www.squeaksource.com/Fuel'">http://www.squeaksource.com/Fuel'</a> to &lsquo;<a href="http://ss3.gemstone.com/ss/Fuel'">http://ss3.gemstone.com/ss/Fuel'</a>.</li></ul><p>If you are a Fuel user we are not aware of, please let us know!</p><p>Best regards,</p><p>Martin and Mariano</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents></nav>
+</aside>
+</header>
+<article class=markdown><h1 id=version-18>
+Version 1.8
+<a class=anchor href=#version-18>#</a>
+</h1>
+<p>26 May 2012</p>
+<p>We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.</p>
+<p>Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.</p>
+<p>Below there are some remarkable changes.</p>
+<ul>
+<li>Much more complete user guides.</li>
+<li>Improved API for customizing how graph is traced.</li>
+<li>FuelMetalevel: serialization of stuff like classes and compiled methods moved to an optional package.</li>
+<li>Customize objects to be treated as globals.</li>
+<li>Migrations: declare at materialization time class and variables renames.</li>
+<li>Weak references properly managed. Thanks to Juan Vuletich and Levente.</li>
+<li>Thanks Pavel for helping us improving FuelPackageLoader with wonderful ideas and bug reports.</li>
+<li>Serialization speed up on large graphs by using specialized collections. Thanks Levente.</li>
+<li>Encoder and Decoder: new reifications that clarify the design. Thanks Colin Putney.</li>
+<li>Optimized serialization of &ldquo;clean&rdquo; BlockClosures, which don&rsquo;t need the whole stack of contexts. Thanks Juan Vuletich and Eliot Miranda.</li>
+<li>Added a clear error hierarchy.</li>
+<li>Debug facilities, including graph visualization using Roassal. Thanks Alexandre and Doru.</li>
+<li>Many more new tests. Including those from extension packages, we have almost 600 tests.</li>
+<li>Repository moved from &lsquo;
+<a href=http://www.squeaksource.com/Fuel%27>http://www.squeaksource.com/Fuel'</a> to &lsquo;
+<a href=http://ss3.gemstone.com/ss/Fuel%27>http://ss3.gemstone.com/ss/Fuel'</a>.</li>
+</ul>
+<p>If you are a Fuel user we are not aware of, please let us know!</p>
+<p>Best regards,</p>
+<p>Martin and Mariano</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents></nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

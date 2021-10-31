@@ -1,12 +1,185 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Version 1.9 #  8 March 2013
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Version 1.9 #  8 March 2013
 Announcement #  We are happy to announce Fuel 1.9.
-The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Version 1.9 #  8 March 2013
+The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="Version 1.9 #  8 March 2013
 Announcement #  We are happy to announce Fuel 1.9.
-The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.9/"><meta property="article:section" content="releases"><meta property="article:modified_time" content="2021-06-11T12:45:53+02:00"><title>1.9 | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/ class=active>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
+The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.9/"><meta property="article:section" content="releases">
+<meta property="article:modified_time" content="2021-06-11T12:45:53+02:00">
+<title>1.9 | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/ class=active>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>1.9</strong>
-<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#announcement>Announcement</a></li><li><a href=#changes>Changes:</a></li></ul></nav></aside></header><article class=markdown><h1 id=version-19>Version 1.9
-<a class=anchor href=#version-19>#</a></h1><p>8 March 2013</p><h2 id=announcement>Announcement
-<a class=anchor href=#announcement>#</a></h2><p>We are happy to announce Fuel 1.9.</p><p>The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides.</p><h2 id=changes>Changes:
-<a class=anchor href=#changes>#</a></h2><ul><li>(feature) DoIt and not-installed CompiledMethods are fully serialized by default.</li><li>(fix) Date & DateAndTime (thanks Cami and Marcus) (already included in 1.8.1 and 1.8.2).</li><li>(feature) New hooks methods #fuelNew and #fuelNew: for custom instantiation (see &ldquo;Hooking instance creation&rdquo; in Customizing the Graph).</li><li>Globals:</li><li>Added #globalEnvironment: to specify where the globals are looked-up. (see &ldquo;Changing the environment&rdquo; in Managing Globals)</li><li>Explicit references to &ldquo;Smalltalk globals&rdquo; changed to &ldquo;self class environment&rdquo;.</li><li>A SystemDictionary instance is not treated as global when it is not &ldquo;Smalltalk globals&rdquo;.</li><li>Documentation:</li><li>General update</li><li>New Format Migration section.</li><li>New Built-in Header Support section.</li><li>(feature) Put back FLSerializer&#187;on:.</li><li>(optimization) New clusters for SmallInteger.</li><li>(optimization) New clusters for most common collections.</li><li>(feature) Built-in support for header (See Built-in Header Support):</li><li>pre and post materialization actions (clean closures).</li><li>attach additional objects.</li><li>materialize only the header.</li><li>(fix) Safer substitutions (see FLPluggableSubstitutionTest&#187;testPrivateExcluded).</li><li>(feature) Materialize .fuel files when drag&dropped in the image.</li><li>(cleanup) Removed unneeded cluster: FLWellKnownObjectsCluster.</li></ul><p>We want to thank developers of the community that enrich the project with code, issue reports and ideas.</p><p>Have fun!</p><p>Martin (on behalf of Mariano and Max, who worked a lot on this version!)</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#announcement>Announcement</a></li><li><a href=#changes>Changes:</a></li></ul></nav></div></aside></main></body></html>
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes:</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=version-19>
+Version 1.9
+<a class=anchor href=#version-19>#</a>
+</h1>
+<p>8 March 2013</p>
+<h2 id=announcement>
+Announcement
+<a class=anchor href=#announcement>#</a>
+</h2>
+<p>We are happy to announce Fuel 1.9.</p>
+<p>The default set of packages of this version already comes in Pharo 2.0, so you it&rsquo;s not necessary to install it there. However, Fuel also works out-of-the-box in Pharo from 1.1 up to 2.0, as well as in Squeak 4.1 up to 4.4. You can see our documentation for complete installation and use guides.</p>
+<h2 id=changes>
+Changes:
+<a class=anchor href=#changes>#</a>
+</h2>
+<ul>
+<li>(feature) DoIt and not-installed CompiledMethods are fully serialized by default.</li>
+<li>(fix) Date & DateAndTime (thanks Cami and Marcus) (already included in 1.8.1 and 1.8.2).</li>
+<li>(feature) New hooks methods #fuelNew and #fuelNew: for custom instantiation (see &ldquo;Hooking instance creation&rdquo; in Customizing the Graph).</li>
+<li>Globals:</li>
+<li>Added #globalEnvironment: to specify where the globals are looked-up. (see &ldquo;Changing the environment&rdquo; in Managing Globals)</li>
+<li>Explicit references to &ldquo;Smalltalk globals&rdquo; changed to &ldquo;self class environment&rdquo;.</li>
+<li>A SystemDictionary instance is not treated as global when it is not &ldquo;Smalltalk globals&rdquo;.</li>
+<li>Documentation:</li>
+<li>General update</li>
+<li>New Format Migration section.</li>
+<li>New Built-in Header Support section.</li>
+<li>(feature) Put back FLSerializer&#187;on:.</li>
+<li>(optimization) New clusters for SmallInteger.</li>
+<li>(optimization) New clusters for most common collections.</li>
+<li>(feature) Built-in support for header (See Built-in Header Support):</li>
+<li>pre and post materialization actions (clean closures).</li>
+<li>attach additional objects.</li>
+<li>materialize only the header.</li>
+<li>(fix) Safer substitutions (see FLPluggableSubstitutionTest&#187;testPrivateExcluded).</li>
+<li>(feature) Materialize .fuel files when drag&dropped in the image.</li>
+<li>(cleanup) Removed unneeded cluster: FLWellKnownObjectsCluster.</li>
+</ul>
+<p>We want to thank developers of the community that enrich the project with code, issue reports and ideas.</p>
+<p>Have fun!</p>
+<p>Martin (on behalf of Mariano and Max, who worked a lot on this version!)</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes:</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

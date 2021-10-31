@@ -1,18 +1,144 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Ignoring Instance Variables #  It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:
-User class >> fuelIgnoredInstanceVariableNames ^#('acumulatedLogins' 'applications') When materialized, such instance variables will be nil. If you want to re-initialize and set values to those instance variables, you can use #fuelAfterMaterialization for that."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Ignoring Instance Variables #  It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:
-User class >> fuelIgnoredInstanceVariableNames ^#('acumulatedLogins' 'applications') When materialized, such instance variables will be nil. If you want to re-initialize and set values to those instance variables, you can use #fuelAfterMaterialization for that."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/customizing-the-graph/"><meta property="article:section" content><title>Customizing the Graph | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/ class=active>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Ignoring Instance Variables #  It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:
+User class >> fuelIgnoredInstanceVariableNames ^#('acumulatedLogins' 'applications') When materialized, such instance variables will be nil. If you want to re-initialize and set values to those instance variables, you can use #fuelAfterMaterialization for that.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="Ignoring Instance Variables #  It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:
+User class >> fuelIgnoredInstanceVariableNames ^#('acumulatedLogins' 'applications') When materialized, such instance variables will be nil. If you want to re-initialize and set values to those instance variables, you can use #fuelAfterMaterialization for that.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://theseion.github.io/Fuel/customizing-the-graph/"><meta property="article:section" content>
+<title>Customizing the Graph | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/ class=active>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>Customizing the Graph</strong>
-<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#dynamic-way>Dynamic way</a></li><li><a href=#static-way>Static way</a></li></ul><ul><li><a href=#global-sends>Global Sends</a></li><li><a href=#hooking-instance-creation>Hooking instance creation</a></li><li><a href=#not-serializable-objects>Not Serializable Objects</a></li></ul></nav></aside></header><article class=markdown><h1 id=ignoring-instance-variables>Ignoring Instance Variables
-<a class=anchor href=#ignoring-instance-variables>#</a></h1><p>It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>class</span> <span style=color:#a6e22e>&gt;&gt;</span> fuelIgnoredInstanceVariableNames
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#dynamic-way>Dynamic way</a></li>
+<li><a href=#static-way>Static way</a></li>
+</ul>
+<ul>
+<li><a href=#global-sends>Global Sends</a></li>
+<li><a href=#hooking-instance-creation>Hooking instance creation</a></li>
+<li><a href=#not-serializable-objects>Not Serializable Objects</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=ignoring-instance-variables>
+Ignoring Instance Variables
+<a class=anchor href=#ignoring-instance-variables>#</a>
+</h1>
+<p>It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let&rsquo;s say we have the class User and we do not want to serialize the instance variables &lsquo;acumulatedLogins&rsquo; and &lsquo;applications&rsquo;. So we implement:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>class</span> <span style=color:#a6e22e>&gt;&gt;</span> fuelIgnoredInstanceVariableNames
     <span style=color:#960050;background-color:#1e0010>^#</span>(<span style=color:#e6db74>&#39;acumulatedLogins&#39;</span> <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>applications</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)
 </code></pre></div><p>When materialized, such instance variables will be nil. If you want to re-initialize and set values to those instance variables, you can use #fuelAfterMaterialization for that.Be aware that in case of renaming those instance variables, you should rename that method as well. Notice also that the method #fuelIgnoredInstanceVariableNames is implemented at class side. This means that all instances of such class will ignore the defined instances variables. We test this feature in FLIgnoredVariablesTest.In StOMP serializer this same hook is called #stompTransientInstVarNames and in SIXX it is #sixxIgnorableInstVarNames.
 Post-Materialization Action
-The method <code>#fuelAfterMaterialization</code> lets us execute something once an object has been materialized. For example, let&rsquo;s say we would like to set back the instance variable &lsquo;acumulatedLogins&rsquo; during materialization. Hence, we can implement:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> fuelAfterMaterialization
+The method <code>#fuelAfterMaterialization</code> lets us execute something once an object has been materialized. For example, let&rsquo;s say we would like to set back the instance variable &lsquo;acumulatedLogins&rsquo; during materialization. Hence, we can implement:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> fuelAfterMaterialization
  <span style=color:#a6e22e>acumulatedLogins</span> <span style=color:#f92672>:=</span> <span style=color:#ae81ff>0</span>. 
-</code></pre></div><h1 id=substitution-on-serialization>Substitution on Serialization
-<a class=anchor href=#substitution-on-serialization>#</a></h1><p>Sometimes you may want to serialize something different than the original object, without altering them.</p><h2 id=dynamic-way>Dynamic way
-<a class=anchor href=#dynamic-way>#</a></h2><p>You can establish a pluggable substitution to a particular serialization. Let&rsquo;s illustrate with an example, where your graph includes a Stream and you want to serialize nil instead.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>objectToSerialize <span style=color:#f92672>:=</span> <span style=color:#a6e22e>Array</span> <span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;hello&#39;</span> <span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;&#39;</span> <span style=color:#a6e22e>writeStream</span>.
+</code></pre></div><h1 id=substitution-on-serialization>
+Substitution on Serialization
+<a class=anchor href=#substitution-on-serialization>#</a>
+</h1>
+<p>Sometimes you may want to serialize something different than the original object, without altering them.</p>
+<h2 id=dynamic-way>
+Dynamic way
+<a class=anchor href=#dynamic-way>#</a>
+</h2>
+<p>You can establish a pluggable substitution to a particular serialization. Let&rsquo;s illustrate with an example, where your graph includes a Stream and you want to serialize nil instead.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>objectToSerialize <span style=color:#f92672>:=</span> <span style=color:#a6e22e>Array</span> <span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;hello&#39;</span> <span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;&#39;</span> <span style=color:#a6e22e>writeStream</span>.
 
 <span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [ <span style=color:#f92672>:</span>aStream <span style=color:#f92672>|</span>
     aSerializer <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>newDefault</span>.
@@ -22,26 +148,42 @@ The method <code>#fuelAfterMaterialization</code> lets us execute something once
     aSerializer         
         <span style=color:#a6e22e>serialize:</span> objectToSerialize
         <span style=color:#a6e22e>on:</span> aStream <span style=color:#a6e22e>binary</span> ].
-</code></pre></div><p>So, when loading you will get <code>#('hello' nil)</code>, without any instance of a stream.You can find this code in <code>FLUserGuidesTest>>testPluggableSubstitution</code>.</p><h2 id=static-way>Static way
-<a class=anchor href=#static-way>#</a></h2><p>You have to override <code>#fuelAccept:</code> in the class of the object to be substituted. Fuel visits each object in the graph by sending this message, to determine how to trace and serialize it. Note that this will affect every serialization, in contrast with the &lsquo;dynamic way&rsquo; we explained above; but it could be much faster.As an example, imagine we want to replace an object directly with nil. In other words, we want to make a whole object transient, say CachedResult. For that, we should implement:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>CachedResult</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>So, when loading you will get <code>#('hello' nil)</code>, without any instance of a stream.You can find this code in <code>FLUserGuidesTest>>testPluggableSubstitution</code>.</p>
+<h2 id=static-way>
+Static way
+<a class=anchor href=#static-way>#</a>
+</h2>
+<p>You have to override <code>#fuelAccept:</code> in the class of the object to be substituted. Fuel visits each object in the graph by sending this message, to determine how to trace and serialize it. Note that this will affect every serialization, in contrast with the &lsquo;dynamic way&rsquo; we explained above; but it could be much faster.As an example, imagine we want to replace an object directly with nil. In other words, we want to make a whole object transient, say CachedResult. For that, we should implement:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>CachedResult</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     <span style=color:#f92672>^</span> aGeneralMapper <span style=color:#a6e22e>visitSubstitution:</span> self <span style=color:#a6e22e>by:</span> nil
-</code></pre></div><p>As another example, we have a Proxy class and when serializing we want to serialize its target instead of the proxy. So we implement:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>Proxy</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>As another example, we have a Proxy class and when serializing we want to serialize its target instead of the proxy. So we implement:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>Proxy</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     <span style=color:#f92672>^</span> aGeneralMapper <span style=color:#a6e22e>visitSubstitution:</span> self <span style=color:#a6e22e>by:</span> target
-</code></pre></div><p>Notice that <code>#fuelAccept:</code> is the same as the previous example. The last example is when an object needs to change the value of its instance variables. Say we have again the class User and we want to nil the instance variable &lsquo;history&rsquo; when its size is greater than 100.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>Notice that <code>#fuelAccept:</code> is the same as the previous example. The last example is when an object needs to change the value of its instance variables. Say we have again the class User and we want to nil the instance variable &lsquo;history&rsquo; when its size is greater than 100.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     <span style=color:#f92672>^</span>self <span style=color:#a6e22e>history</span> <span style=color:#a6e22e>size</span> <span style=color:#a6e22e>&gt;</span> <span style=color:#ae81ff>100</span> 
         ifTrue: [ 
             aGeneralMapper 
                 <span style=color:#a6e22e>visitSubstitution:</span> self 
                 <span style=color:#a6e22e>by:</span> (self <span style=color:#a6e22e>copy</span> <span style=color:#a6e22e>history:</span> <span style=color:#a6e22e>Array</span> new) ].
         <span style=color:#960050;background-color:#1e0010>ifFalse:</span> [ super <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper ]
-</code></pre></div><p>Note we are substituting the original user by another instance of User, which Fuel will visit with the same #fuelAccept: method. We could easily fall in an infinite sequence of substitutions if we don&rsquo;t take care. To avoid this problem, it is useful #visitSubstitution:by:onRecursionDo:, where you define an alternative mapping for the case of mapping an object which is already a substitute of another one:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>Note we are substituting the original user by another instance of User, which Fuel will visit with the same #fuelAccept: method. We could easily fall in an infinite sequence of substitutions if we don&rsquo;t take care. To avoid this problem, it is useful #visitSubstitution:by:onRecursionDo:, where you define an alternative mapping for the case of mapping an object which is already a substitute of another one:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     aGeneralMapper 
         <span style=color:#a6e22e>visitSubstitution:</span> self 
         <span style=color:#a6e22e>by:</span> (self <span style=color:#a6e22e>copy</span> <span style=color:#a6e22e>history:</span> <span style=color:#e6db74>#()</span>)
         <span style=color:#a6e22e>onRecursionDo:</span> [ super <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper ]
-</code></pre></div><p>In the case, the substitute user (i.e. the one with the empty history) is will be visited via its super implementation.You can see tests for this functionality at FLHookedSubstitutionTest.</p><h1 id=substitution-on-materialization>Substitution on Materialization
-<a class=anchor href=#substitution-on-materialization>#</a></h1><h2 id=global-sends>Global Sends
-<a class=anchor href=#global-sends>#</a></h2><p>Suppose we have a special instance of User that represents the admin user, and it is an unique instance in the image. In case the admin user is referenced in our graph, we want to treat that object as a global. We can do that in this way:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>In the case, the substitute user (i.e. the one with the empty history) is will be visited via its super implementation.You can see tests for this functionality at FLHookedSubstitutionTest.</p>
+<h1 id=substitution-on-materialization>
+Substitution on Materialization
+<a class=anchor href=#substitution-on-materialization>#</a>
+</h1>
+<h2 id=global-sends>
+Global Sends
+<a class=anchor href=#global-sends>#</a>
+</h2>
+<p>Suppose we have a special instance of User that represents the admin user, and it is an unique instance in the image. In case the admin user is referenced in our graph, we want to treat that object as a global. We can do that in this way:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>User</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     <span style=color:#f92672>^</span>self <span style=color:#a6e22e>==</span> <span style=color:#a6e22e>User</span> <span style=color:#a6e22e>admin</span>
         ifTrue: [ 
             aGeneralMapper 
@@ -49,13 +191,56 @@ The method <code>#fuelAfterMaterialization</code> lets us execute something once
                 <span style=color:#a6e22e>name:</span> <span style=color:#e6db74>#User</span> 
                 <span style=color:#a6e22e>selector:</span> <span style=color:#e6db74>#admin</span> ]
         ifFalse: [ super <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper ]
-</code></pre></div><p>So what will happen is that during serialization, the admin user won&rsquo;t be completly serialized (with all its intance variables) but instead its global name and selector are stored. Then, at materialization time, Fuel will send #admin to the class User, and use what that answers as the admin user of the materialized graph. We test this feature in FLGlobalSendSerializationTest.</p><h2 id=hooking-instance-creation>Hooking instance creation
-<a class=anchor href=#hooking-instance-creation>#</a></h2><p>Fuel provides two hook methods to customise how instances are created: <code>#fuelNew</code> and <code>#fuelNew:</code>. For (regular) fixed objects, the method <code>#fuelNew</code> is defined in Behavior as:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>fuelNew</span>
+</code></pre></div><p>So what will happen is that during serialization, the admin user won&rsquo;t be completly serialized (with all its intance variables) but instead its global name and selector are stored. Then, at materialization time, Fuel will send #admin to the class User, and use what that answers as the admin user of the materialized graph. We test this feature in FLGlobalSendSerializationTest.</p>
+<h2 id=hooking-instance-creation>
+Hooking instance creation
+<a class=anchor href=#hooking-instance-creation>#</a>
+</h2>
+<p>Fuel provides two hook methods to customise how instances are created: <code>#fuelNew</code> and <code>#fuelNew:</code>. For (regular) fixed objects, the method <code>#fuelNew</code> is defined in Behavior as:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>fuelNew</span>
 	<span style=color:#f92672>^</span> self <span style=color:#a6e22e>basicNew</span>
-</code></pre></div><p>But we can override it to our needs, for example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>fuelNew</span>
+</code></pre></div><p>But we can override it to our needs, for example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>fuelNew</span>
 	<span style=color:#f92672>^</span> self <span style=color:#a6e22e>uniqueInstance</span>
-</code></pre></div><p>This similarly applies to variable objects through the method <code>#fuelNew:</code>, which by default answers <code>#basicNew:</code>. We test this feature in FLSingletonTest.</p><h2 id=not-serializable-objects>Not Serializable Objects
-<a class=anchor href=#not-serializable-objects>#</a></h2><p>You may want to be sure that some objects are not serialized. For this case we provide <code>#visitNotSerializable:</code>, which in next example forbids serialization of any instance of MyNotSerializableObject.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>MyNotSerializableObject</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
+</code></pre></div><p>This similarly applies to variable objects through the method <code>#fuelNew:</code>, which by default answers <code>#basicNew:</code>. We test this feature in FLSingletonTest.</p>
+<h2 id=not-serializable-objects>
+Not Serializable Objects
+<a class=anchor href=#not-serializable-objects>#</a>
+</h2>
+<p>You may want to be sure that some objects are not serialized. For this case we provide <code>#visitNotSerializable:</code>, which in next example forbids serialization of any instance of MyNotSerializableObject.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>MyNotSerializableObject</span> <span style=color:#a6e22e>&gt;&gt;</span> <span style=color:#a6e22e>fuelAccept:</span> aGeneralMapper
     aGeneralMapper <span style=color:#a6e22e>visitNotSerializable:</span> self
-</code></pre></div><p>We test this feature in <code>FLBasicSerializationTest>>testNotSerializableObject</code>.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#dynamic-way>Dynamic way</a></li><li><a href=#static-way>Static way</a></li></ul><ul><li><a href=#global-sends>Global Sends</a></li><li><a href=#hooking-instance-creation>Hooking instance creation</a></li><li><a href=#not-serializable-objects>Not Serializable Objects</a></li></ul></nav></div></aside></main></body></html>
+</code></pre></div><p>We test this feature in <code>FLBasicSerializationTest>>testNotSerializableObject</code>.</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#dynamic-way>Dynamic way</a></li>
+<li><a href=#static-way>Static way</a></li>
+</ul>
+<ul>
+<li><a href=#global-sends>Global Sends</a></li>
+<li><a href=#hooking-instance-creation>Hooking instance creation</a></li>
+<li><a href=#not-serializable-objects>Not Serializable Objects</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

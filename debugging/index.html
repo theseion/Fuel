@@ -1,17 +1,169 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
 Serialization #  The most important thing to remark is that serialization is split in two main steps: analysis and encoding.
-Analysis #  It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
+Analysis #  It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
 Serialization #  The most important thing to remark is that serialization is split in two main steps: analysis and encoding.
-Analysis #  It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/debugging/"><meta property="article:section" content><title>Debugging | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script><script defer src=/Fuel/en.search.min.a05254d35db10f479c6a2cd25c3c289b79e0f47f07577bedea5fb6ceacb44f29.js integrity="sha256-oFJU012xD0ecaizSXDwom3ng9H8HV3vt6l+2zqy0Tyk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/ class=active>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
+Analysis #  It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://theseion.github.io/Fuel/debugging/"><meta property="article:section" content>
+<title>Debugging | Fuel</title>
+<link rel=manifest href=/Fuel/manifest.json>
+<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
+<script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.576e377e4b6e628159c3355f531ef7688dce9d06d0f5c96e983b1ebcd2614be0.js integrity="sha256-V243fktuYoFZwzVfUx73aI3OnQbQ9clumDsevNJhS+A=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/debugging/ class=active>Debugging</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
+</li>
+<li>
+<span>Releases</span>
+<ul>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
+</li>
+<li>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>Debugging</strong>
-<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#analysis>Analysis</a></li><li><a href=#encoding>Encoding</a></li></ul><ul><li><a href=#decoding>Decoding</a></li></ul><ul><li><a href=#fldebugserialization>FLDebugSerialization</a></li><li><a href=#fldebugmaterialization>FLDebugMaterialization</a></li></ul></nav></aside></header><article class=markdown><p>There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.</p><h1 id=serialization>Serialization
-<a class=anchor href=#serialization>#</a></h1><p>The most important thing to remark is that serialization is split in two main steps: analysis and encoding.</p><h2 id=analysis>Analysis
-<a class=anchor href=#analysis>#</a></h2><p>It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster.</p><h2 id=encoding>Encoding
-<a class=anchor href=#encoding>#</a></h2><p>After analysis, we linearly write on the stream, in these steps:</p><ol><li>header</li><li>for each cluster, instances part</li><li>for each cluster, references part</li><li>trailer</li></ol><h1 id=materialization>Materialization
-<a class=anchor href=#materialization>#</a></h1><p>It consists on progressively recreating the graph.</p><h2 id=decoding>Decoding
-<a class=anchor href=#decoding>#</a></h2><p>This is done by linearly reading from the stream. So, steps are obviously analogous to the ones above:</p><ol><li>header</li><li>for each cluster, instances part</li><li>for each cluster, references part</li><li>trailer</li></ol><h1 id=debug-tools>Debug Tools
-<a class=anchor href=#debug-tools>#</a></h1><p>Ensure you have them with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>(<span style=color:#a6e22e>ConfigurationOfFuel</span> <span style=color:#a6e22e>project</span> <span style=color:#a6e22e>version:</span> <span style=color:#e6db74>&#39;1.8.1&#39;</span>) 
+<label for=toc-control>
+<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#analysis>Analysis</a></li>
+<li><a href=#encoding>Encoding</a></li>
+</ul>
+<ul>
+<li><a href=#decoding>Decoding</a></li>
+</ul>
+<ul>
+<li><a href=#fldebugserialization>FLDebugSerialization</a></li>
+<li><a href=#fldebugmaterialization>FLDebugMaterialization</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><p>There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.</p>
+<h1 id=serialization>
+Serialization
+<a class=anchor href=#serialization>#</a>
+</h1>
+<p>The most important thing to remark is that serialization is split in two main steps: analysis and encoding.</p>
+<h2 id=analysis>
+Analysis
+<a class=anchor href=#analysis>#</a>
+</h2>
+<p>It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster.</p>
+<h2 id=encoding>
+Encoding
+<a class=anchor href=#encoding>#</a>
+</h2>
+<p>After analysis, we linearly write on the stream, in these steps:</p>
+<ol>
+<li>header</li>
+<li>for each cluster, instances part</li>
+<li>for each cluster, references part</li>
+<li>trailer</li>
+</ol>
+<h1 id=materialization>
+Materialization
+<a class=anchor href=#materialization>#</a>
+</h1>
+<p>It consists on progressively recreating the graph.</p>
+<h2 id=decoding>
+Decoding
+<a class=anchor href=#decoding>#</a>
+</h2>
+<p>This is done by linearly reading from the stream. So, steps are obviously analogous to the ones above:</p>
+<ol>
+<li>header</li>
+<li>for each cluster, instances part</li>
+<li>for each cluster, references part</li>
+<li>trailer</li>
+</ol>
+<h1 id=debug-tools>
+Debug Tools
+<a class=anchor href=#debug-tools>#</a>
+</h1>
+<p>Ensure you have them with:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>(<span style=color:#a6e22e>ConfigurationOfFuel</span> <span style=color:#a6e22e>project</span> <span style=color:#a6e22e>version:</span> <span style=color:#e6db74>&#39;1.8.1&#39;</span>) 
     <span style=color:#a6e22e>load:</span> <span style=color:#e6db74>#(FuelDebug</span> <span style=color:#e6db74>FuelPreview)</span>.
 <span style=color:#a6e22e>Next</span><span style=color:#a6e22e>,</span> a <span style=color:#a6e22e>transcript</span> <span style=color:#a6e22e>of</span> <span style=color:#a6e22e>some</span> <span style=color:#a6e22e>useful</span> <span style=color:#a6e22e>class</span> <span style=color:#a6e22e>comments</span>.
 <span style=color:#a6e22e>FLGraphViewBuilder</span>
@@ -28,17 +180,66 @@ Analysis #  It consists in a graph iteration, mapping each traversed object to i
     <span style=color:#a6e22e>setDebug</span>;
     <span style=color:#a6e22e>analysisFor:</span> <span style=color:#e6db74>#((</span><span style=color:#ae81ff>1</span><span style=color:#e6db74>)</span> <span style=color:#e6db74>(</span><span style=color:#ae81ff>2</span><span style=color:#e6db74>)</span> <span style=color:#e6db74>(</span><span style=color:#ae81ff>3</span><span style=color:#e6db74>)</span> <span style=color:#e6db74>(</span><span style=color:#ae81ff>4</span><span style=color:#e6db74>))</span>)
     <span style=color:#a6e22e>openPathsToEvery:</span> [<span style=color:#f92672>:</span>o <span style=color:#f92672>|</span> o <span style=color:#a6e22e>isNumber</span> <span style=color:#a6e22e>and:</span> [o <span style=color:#a6e22e>&gt;</span> <span style=color:#ae81ff>2</span>] ].
-</code></pre></div><p>They look like:<figure><img src=/static/fuel-preview.png><figcaption><h4>Fuel Preview</h4></figcaption></figure></p><h2 id=fldebugserialization>FLDebugSerialization
-<a class=anchor href=#fldebugserialization>#</a></h2><p>I am a serialization which facilitates debugging, by logging the stream position before and after main steps of <code>FLSerialization</code>, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send #setDebug to your serializer and run as usually. For example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;debug.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFile <span style=color:#f92672>|</span>
+</code></pre></div><p>They look like: <figure><img src=/static/fuel-preview.png><figcaption>
+<h4>Fuel Preview</h4>
+</figcaption>
+</figure>
+</p>
+<h2 id=fldebugserialization>
+FLDebugSerialization
+<a class=anchor href=#fldebugserialization>#</a>
+</h2>
+<p>I am a serialization which facilitates debugging, by logging the stream position before and after main steps of <code>FLSerialization</code>, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send #setDebug to your serializer and run as usually. For example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>forceNewFileNamed:</span> <span style=color:#e6db74>&#39;debug.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFile <span style=color:#f92672>|</span>
     <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>newDefault</span>
         <span style=color:#a6e22e>setDebug</span>;
         <span style=color:#a6e22e>serialize:</span> <span style=color:#e6db74>&#39;&#39;</span><span style=color:#a6e22e>hello</span><span style=color:#960050;background-color:#1e0010>&#39;&#39;</span> <span style=color:#a6e22e>on:</span> aFile <span style=color:#a6e22e>binary</span> ]
-</code></pre></div><p>Then, inspect the output log:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLDebugSerialization</span> <span style=color:#a6e22e>last</span> <span style=color:#a6e22e>log</span>
-</code></pre></div><h2 id=fldebugmaterialization>FLDebugMaterialization
-<a class=anchor href=#fldebugmaterialization>#</a></h2><p>I am a materialization which facilitates debugging, by logging the stream position before and after main steps of <code>FLMaterialization</code>, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send <code>#setDebug</code> to your serializer and run as usually. For example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>oldFileNamed:</span> <span style=color:#e6db74>&#39;debug.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFile <span style=color:#f92672>|</span>
+</code></pre></div><p>Then, inspect the output log:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLDebugSerialization</span> <span style=color:#a6e22e>last</span> <span style=color:#a6e22e>log</span>
+</code></pre></div><h2 id=fldebugmaterialization>
+FLDebugMaterialization
+<a class=anchor href=#fldebugmaterialization>#</a>
+</h2>
+<p>I am a materialization which facilitates debugging, by logging the stream position before and after main steps of <code>FLMaterialization</code>, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send <code>#setDebug</code> to your serializer and run as usually. For example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FileStream</span> <span style=color:#a6e22e>oldFileNamed:</span> <span style=color:#e6db74>&#39;debug.fuel&#39;</span> <span style=color:#a6e22e>do:</span> [<span style=color:#f92672>:</span>aFile <span style=color:#f92672>|</span>
     <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>newDefault</span>
         <span style=color:#a6e22e>setDebug</span>;
         <span style=color:#a6e22e>materializeFrom:</span> aFile <span style=color:#a6e22e>binary</span> ]
-</code></pre></div><p>Then, inspect the output log:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLDebugMaterialization</span> <span style=color:#a6e22e>last</span> <span style=color:#a6e22e>log</span>
-</code></pre></div><p>There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#analysis>Analysis</a></li><li><a href=#encoding>Encoding</a></li></ul><ul><li><a href=#decoding>Decoding</a></li></ul><ul><li><a href=#fldebugserialization>FLDebugSerialization</a></li><li><a href=#fldebugmaterialization>FLDebugMaterialization</a></li></ul></nav></div></aside></main></body></html>
+</code></pre></div><p>Then, inspect the output log:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=color:#a6e22e>FLDebugMaterialization</span> <span style=color:#a6e22e>last</span> <span style=color:#a6e22e>log</span>
+</code></pre></div><p>There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Jun 11, 2021</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#analysis>Analysis</a></li>
+<li><a href=#encoding>Encoding</a></li>
+</ul>
+<ul>
+<li><a href=#decoding>Decoding</a></li>
+</ul>
+<ul>
+<li><a href=#fldebugserialization>FLDebugSerialization</a></li>
+<li><a href=#fldebugmaterialization>FLDebugMaterialization</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
