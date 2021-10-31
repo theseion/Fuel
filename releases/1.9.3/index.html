@@ -2,19 +2,15 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Version 1.6 #  19 August 2011
-Hello!
-I want to announce in this post the new release version 1.6. This version does not add any new concrete functionality but has two main achievements: a performance improvement and a design clean up.
-Many changes included in this release are part of a design clean up. They are a necessary step forward to new functionalities that are coming soon. They make code more understandable.">
+<meta name=description content="Version 1.9 #  17 February 2014
+Changes: #   (feature) the #fuelReplacement selector offers the ability to statically replace an object (e.g. with nil) during analysis. This can lead to significantly smaller graphs and improved speed when serializing large graphs (feature) serialize the same graph that was analyzed instead of retrazing the graph during serialization. This prevents changes in the graph from happening between analysis and serialization (change) store source when serializing CompiledMethod objects.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Version 1.6 #  19 August 2011
-Hello!
-I want to announce in this post the new release version 1.6. This version does not add any new concrete functionality but has two main achievements: a performance improvement and a design clean up.
-Many changes included in this release are part of a design clean up. They are a necessary step forward to new functionalities that are coming soon. They make code more understandable.">
+<meta property="og:description" content="Version 1.9 #  17 February 2014
+Changes: #   (feature) the #fuelReplacement selector offers the ability to statically replace an object (e.g. with nil) during analysis. This can lead to significantly smaller graphs and improved speed when serializing large graphs (feature) serialize the same graph that was analyzed instead of retrazing the graph during serialization. This prevents changes in the graph from happening between analysis and serialization (change) store source when serializing CompiledMethod objects.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.6/"><meta property="article:section" content="releases">
-<meta property="article:modified_time" content="2021-06-11T12:45:53+02:00">
-<title>1.6 | Fuel</title>
+<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.9.3/"><meta property="article:section" content="releases">
+<meta property="article:modified_time" content="2021-10-31T16:35:32+01:00">
+<title>1.9.3 | Fuel</title>
 <link rel=manifest href=/Fuel/manifest.json>
 <link rel=icon href=/Fuel/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
@@ -72,7 +68,7 @@ Many changes included in this release are part of a design clean up. They are a 
 <a href=https://theseion.github.io/Fuel/releases/3.0.0/>3.0.0</a>
 </li>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/1.9.3/>1.9.3</a>
+<a href=https://theseion.github.io/Fuel/releases/1.9.3/ class=active>1.9.3</a>
 </li>
 <li>
 <a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
@@ -87,7 +83,7 @@ Many changes included in this release are part of a design clean up. They are a 
 <a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
 </li>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/1.6/ class=active>1.6</a>
+<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
 </li>
 <li>
 <a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
@@ -108,36 +104,43 @@ Many changes included in this release are part of a design clean up. They are a 
 <label for=menu-control>
 <img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>1.6</strong>
+<strong>1.9.3</strong>
 <label for=toc-control>
 <img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#changes>Changes:</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><h1 id=version-16>
-Version 1.6
-<a class=anchor href=#version-16>#</a>
+<article class=markdown><h1 id=version-19>
+Version 1.9
+<a class=anchor href=#version-19>#</a>
 </h1>
-<p>19 August 2011</p>
-<p>Hello!</p>
-<p>I want to announce in this post the new release version 1.6. This version does not add any new concrete functionality but has two main achievements: a performance improvement and a design clean up.</p>
-<p>Many changes included in this release are part of a design clean up. They are a necessary step forward to new functionalities that are coming soon. They make code more understandable. They enable simpler extension. Happily they also helped to improve serialization performance by reducing unnecessary interactions. And it is specially important a bottleneck in graph analysis stage we have successfully attacked, obtaining great results.</p>
-<p>Details:</p>
+<p>17 February 2014</p>
+<h2 id=changes>
+Changes:
+<a class=anchor href=#changes>#</a>
+</h2>
 <ul>
-<li>Removed explicit references to cluster classes scattered around the system. For example, in previous versions Float&#187;fuelCluster has an explicit reference to FLFloatCluster. This version replaces this by a double dispatch interaction.</li>
-<li>Clusters: Better reification. Removed annoying IDs. Removed Singleton instance creation mechanism, now mappers manage uniqueness in a better way.</li>
-<li>Mappers: They were simplified. New mapping machanism inspired on Chain of Responsibility pattern. The global objects detection has been optimized considerably.</li>
-<li>Analyzer: Part of its behavior and state has been moved to a new abstraction called &lsquo;clusterization&rsquo;.</li>
+<li>(feature) the #fuelReplacement selector offers the ability to statically replace an object (e.g. with nil) during analysis. This can lead to significantly smaller graphs and improved speed when serializing large graphs</li>
+<li>(feature) serialize the same graph that was analyzed instead of retrazing the graph during serialization. This prevents changes in the graph from happening between analysis and serialization</li>
+<li>(change) store source when serializing CompiledMethod objects. Needed because Opal does not allow decompilation</li>
+<li>(fix) migrate variables across hierarchy</li>
+<li>(feature) Object&#187;serializeToFileNamed: shortcut for serializing arbitrary objects</li>
+<li>(fix) better compression for LargeNegativeIntegers (
+<a href=https://pharo.fogbugz.com/f/cases/12052/Fuel-could-store-LargeNegativeInteger-up-to-32bits-magnitude>https://pharo.fogbugz.com/f/cases/12052/Fuel-could-store-LargeNegativeInteger-up-to-32bits-magnitude</a>)</li>
 </ul>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/279bc13a4d153e154604bc177982db0e2893886f title="Last modified by Max Leske | Oct 31, 2021" target=_blank rel=noopener>
 <img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span>
+<span>Oct 31, 2021</span>
 </a>
 </div>
 </div>
@@ -149,7 +152,11 @@ Version 1.6
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#changes>Changes:</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
