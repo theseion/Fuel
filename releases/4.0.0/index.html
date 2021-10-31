@@ -13,7 +13,7 @@ This version brings with it some changes that we have had in mind for years, as 
 There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on FLSerializer, FLMaterializer, and FLConfiguration include comments and FLUserGuidesTest and FLConfigurationTest show off some of the most interesting scenarios (you can load tests by loading the Tests Metacello group from the baseline).">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://theseion.github.io/Fuel/releases/4.0.0/"><meta property="article:section" content="releases">
-<meta property="article:modified_time" content="2021-10-31T10:47:09+01:00">
+<meta property="article:modified_time" content="2021-10-31T11:17:32+01:00">
 <title>4.0.0 | Fuel</title>
 <link rel=manifest href=/Fuel/manifest.json>
 <link rel=icon href=/Fuel/favicon.png type=image/x-icon>
@@ -143,7 +143,7 @@ Announcement
 Pharo, and the OpenSmalltalk VM.</p>
 <p>There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on <code>FLSerializer</code>, <code>FLMaterializer</code>, and <code>FLConfiguration</code> include comments and <code>FLUserGuidesTest</code> and <code>FLConfigurationTest</code> show off some of the most interesting scenarios (you can load tests by loading the <code>Tests</code> Metacello group from the baseline). If you still have questions, please get in touch.</p>
 <p>Unfortunately, none of us core developers use Fuel in their day jobs anymore. So it is possible that you will encounter issues, even though our test suite looks healthy. If you do, please open an issue on
-<a href=https://github.com/theseion/Fuel/issues>GitHub</a>. We try to respond quickly.</p>
+<a href=https://github.com/theseion/Fuel/issues/new/choose>GitHub</a>. We try to respond quickly.</p>
 <p>&ndash; @theseion, on behalf of the Fuel team</p>
 <h2 id=new-features>
 New Features
@@ -179,7 +179,7 @@ Total Objects Limit
 <a class=anchor href=#total-objects-limit>#</a>
 </h4>
 <p>With <code>FLSerializer>>limitObjectsTo:</code> you set the maximum number of objects that Fuel will serialize. Think about the layout of your object graph before setting this option. Deep chains of references may cause parts of your graph to be lost that you want to keep. It is usually best to use this option in conjuntion with a
-<a href=/Fuel/#depth-limit>depth limit</a>. The primary reason for applying the total objects limit is to minimize the size of the resulting file and the amount of resources that go into serialization.</p>
+<a href=#depth-limit>depth limit</a>. The primary reason for applying the total objects limit is to minimize the size of the resulting file and the amount of resources that go into serialization.</p>
 <h4 id=depth-limit>
 Depth Limit
 <a class=anchor href=#depth-limit>#</a>
@@ -190,7 +190,7 @@ Full Serialization Support By Default
 <a class=anchor href=#full-serialization-support-by-default>#</a>
 </h3>
 <p>The Metalevel package is no more. Serialization of classes and methods is now part of the core package. There are a couple of advantages to this, one of the most interesting ones is that this makes it possible for us to support
-<a href=/Fuel/#support-for-talents-and-anonymous-classes>talents</a>.</p>
+<a href=#support-for-talents-and-anonymous-classes>talents</a>.</p>
 <h3 id=class-and-method-serialization-for-squeak>
 Class And Method Serialization For Squeak
 <a class=anchor href=#class-and-method-serialization-for-squeak>#</a>
@@ -233,7 +233,7 @@ Issue Cleanup
 <a class=anchor href=#issue-cleanup>#</a>
 </h2>
 <p>We&rsquo;ve closed many old issues on the
-<a href=https://github.com/theseion/Fuel/issues>GitHub issue tracker</a>. Many of them have become obsolete or have already been addressed. Some are out of scope and, while interesting, don&rsquo;t make much sense to keep around as open issues as long a no real interest in them exists. If there&rsquo;s an issue that we closed that you think should be reopened, feel free to reopen it and leave a comment.</p>
+<a href="https://github.com/theseion/Fuel/issues?q=is%3Aissue+is%3Aclosed+">GitHub issue tracker</a>. Many of them have become obsolete or have already been addressed. Some are out of scope and, while interesting, don&rsquo;t make much sense to keep around as open issues as long a no real interest in them exists. If there&rsquo;s an issue that we closed that you think should be reopened, feel free to reopen it and leave a comment.</p>
 <h2 id=new-documentation-home>
 New Documentation Home
 <a class=anchor href=#new-documentation-home>#</a>
@@ -242,7 +242,7 @@ New Documentation Home
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/ce9a402e3c5fe9810e2fe156853a97010fa005eb title="Last modified by Max Leske | Oct 31, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/a1489dc70c3f9f9c1e64f9792fecc75c2bf456d8 title="Last modified by Max Leske | Oct 31, 2021" target=_blank rel=noopener>
 <img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
 <span>Oct 31, 2021</span>
 </a>
