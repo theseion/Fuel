@@ -25,14 +25,14 @@ I am an error produced during serialization, signaled when trying to serialize a
 ## FLMaterializationError
 I represent an error happened during materialization.
 ## FLBadSignature
-I represent an error produced during materialization when the serialized signature doesn't match the materializer's signature (accessible via FLMaterializer>>signature). A signature is a byte prefix that should prefix a well-serialized stream.
+I represent an error produced during materialization when the serialized signature doesn't match the materializer's signature (accessible via `FLMaterializer>>signature`). A signature is a byte prefix that should prefix a well-serialized stream.
 ## FLBadVersion
-I represent an error produced during materialization when the serialized version doesn't match the materializer's version (accessible via FLMaterializer>>version). A version is encoded in 16 bits and is encoded heading the serialized stream, after the signature.
+I represent an error produced during materialization when the serialized version doesn't match the materializer's version (accessible via `FLMaterializer>>version`). A version is encoded in 16 bits and is encoded heading the serialized stream, after the signature.
 ## FLClassNotFound
 I represent an error produced during materialization when a serialized class or trait name doesn't exist.
 ## FLGlobalNotFound
-I represent an error produced during materialization when a serialized global name doesn't exist (at Smalltalk globals).
+I represent an error produced during materialization when a serialized global name doesn't exist (see `FLConfiguration>>environment`).
 ## FLMethodChanged
-I represent an error produced during materialization when is detected a change in the bytecodes of a method serialized as global. This error was born when testing the materialization of a BlockClosure defined in a method that changed. The test produced a VM crash.
+I represent an error produced during materialization when is detected a change in the bytecodes of a method serialized. This error was born when testing the materialization of a `BlockClosure` defined in a method that changed, and produced a VM crash. See `FLConfiguration>>isMethodChangedWarningDisabled`).
 ## FLMethodNotFound
-I represent an error produced during materialization when a serialized method in a class or trait name doesn't exist (at Smalltalk globals).
+I represent an error produced during materialization when a serialized method in a class or trait name doesn't exist (see `FLConfiguration>>environment`).
