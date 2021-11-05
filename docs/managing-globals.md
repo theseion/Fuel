@@ -1,7 +1,8 @@
 +++
 type = "docs"
 +++
-Let us assume a CompiledMethod is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.
+Let us assume a `CompiledMethod` is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.
+
 ## Default globals
 By default, Fuel considers following objects as globals, i.e. will store just its name:
 - `nil`, `true`, `false`, and `Smalltalk globals`.
@@ -23,8 +24,9 @@ In this following code snippet we show that by default the global value is not s
  [ (FLMaterializer materializeFromFileNamed: 'g.fuel') ~~ SomeGlobal ] assert.
 ```
 But...
-How to avoid duplication
-Instead, in the code below `#considerGlobal:` is used to specify that it should be stored as global.
+
+## How to avoid duplication
+Instead, in the code below, `#considerGlobal:` is used to specify that it should be stored as global.
 ```smalltalk
  | aSerializer |
  
@@ -74,6 +76,6 @@ It is possible to specify where the global will be looked-up during materializat
  	[ (aMaterializer materializeFrom: aStream) root = {42} ] assert ]
 ```
 This feature is tested in the class `FLGlobalEnvironmentTest`. The global environment can be setted also for serialization (not only materialization), but we don't include an example for that case.
-Let us assume a CompiledMethod is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.
+Let us assume a `CompiledMethod` is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.
 
 This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.
