@@ -1,4 +1,4 @@
-[![Fuel](resources/logo-fuel-header.png)](http://rmod.inria.fr/web/software/Fuel)
+![Fuel](resources/logo-fuel-header.png)
 
 - [Description](#description)
 - [Properties](#properties)
