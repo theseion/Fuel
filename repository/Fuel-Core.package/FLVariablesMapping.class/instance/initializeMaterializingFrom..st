@@ -5,4 +5,3 @@ initializeMaterializingFrom: aDecoder
 
 	mapping := notIgnoredVariables  
 		collect: [ :name | theClass instVarIndexFor: name ifAbsent: [ nil ] ].
-

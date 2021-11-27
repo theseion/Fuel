@@ -17,4 +17,3 @@ testDateOffsets
 	self assert: object start offset equals: 0 hours.
 	materialized := self resultOfSerializeAndMaterialize: object.
 	self assert: materialized start offset equals: 0 hours
-	

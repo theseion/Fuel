@@ -13,6 +13,3 @@ testWeakAndNoStrongReferenceFromGraph
 	
 	self deny: (self serializationOf: graph includes: 11).
 	self deny: (self serializationOf: graph includes: 'something').
-	
-	 
-		

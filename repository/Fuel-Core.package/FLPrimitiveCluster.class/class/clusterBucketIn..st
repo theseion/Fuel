@@ -1,4 +1,4 @@
 analyzing
 clusterBucketIn: aClusterization
 
-	^aClusterization primitivesBucket 
+	^aClusterization primitivesBucket

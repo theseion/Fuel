@@ -1,4 +1,4 @@
 accessing
 globalEnvironment: aDictionary 
 
-	globalEnvironment := aDictionary 
+	globalEnvironment := aDictionary

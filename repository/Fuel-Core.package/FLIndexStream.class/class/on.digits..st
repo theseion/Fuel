@@ -5,5 +5,3 @@ on: aStream digits: aNumberOfDigits
 		initializeOn: aStream 
 		digits: aNumberOfDigits;
 		yourself.
-
-	

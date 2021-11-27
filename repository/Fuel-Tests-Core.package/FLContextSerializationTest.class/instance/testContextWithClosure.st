@@ -5,4 +5,3 @@ testContextWithClosure
 	context1 := self class blockClosureContextTesting.
 	materializedContext1 := self resultOfSerializeAndMaterialize: context1.
 	context1 assertWellMaterializedInto: materializedContext1 in: self.
-	

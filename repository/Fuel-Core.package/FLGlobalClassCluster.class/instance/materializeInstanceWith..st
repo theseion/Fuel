@@ -1,4 +1,4 @@
 serialize/materialize
 materializeInstanceWith: aDecoder
 
-	^self materializeGlobalClassFrom: aDecoder 
+	^self materializeGlobalClassFrom: aDecoder

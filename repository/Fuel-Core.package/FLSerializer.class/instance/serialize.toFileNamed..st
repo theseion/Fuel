@@ -5,4 +5,3 @@ serialize: anObject toFileNamed: aFilename
 		fileNamed: aFilename 
 		writeStreamDo: [ :aFileStream |
 			self serialize: anObject on: aFileStream ]
-	

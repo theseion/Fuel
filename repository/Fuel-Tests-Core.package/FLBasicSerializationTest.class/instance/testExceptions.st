@@ -9,4 +9,3 @@ testExceptions
 	
 	ex := (Notification new messageText: 'sample notification').
 	self assert: (self resultOfSerializeAndMaterialize: ex) messageText equals: ex messageText.
-	

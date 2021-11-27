@@ -13,5 +13,4 @@ testClassSideMethodNotFoundAfterRemoval
 		should: [self materialized] 
 		raise: FLMethodNotFound
 		whoseDescriptionIncludes: classOrTrait classSide printString 
-		description: 'Should raise an error when method is not present.' 
-	
+		description: 'Should raise an error when method is not present.'

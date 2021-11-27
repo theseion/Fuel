@@ -1,4 +1,4 @@
 serialize/materialize
 materializeInstanceWith: aDecoder
 	
-	^ aDecoder nextEncodedUint16 
+	^ aDecoder nextEncodedUint16

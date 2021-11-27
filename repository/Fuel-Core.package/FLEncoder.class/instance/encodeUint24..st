@@ -5,4 +5,3 @@ encodeUint24: aSmallInteger
 		nextPut: ((aSmallInteger bitShift: -16) bitAnd: 255);
 		nextPut: ((aSmallInteger bitShift: -8) bitAnd: 255);
 		nextPut: (aSmallInteger bitAnd: 255)
-

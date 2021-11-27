@@ -11,4 +11,3 @@ setUp
 		on: stream
 		migrations: #()
 		globalEnvironment: self class environment
-	

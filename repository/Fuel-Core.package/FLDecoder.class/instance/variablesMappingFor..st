@@ -9,4 +9,3 @@ variablesMappingFor: aClass
 		thenDo: [ :m | m applyTo: variables ].
 		
 	^ variables
-	

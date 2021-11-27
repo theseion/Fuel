@@ -11,4 +11,3 @@ serializeReferencesOf: anObject with: anEncoder
 		from: 2
 		to: refs size
 		do: [ :ref | anEncoder encodeReferenceTo: ref ]
-	

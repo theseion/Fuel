@@ -1,4 +1,3 @@
 tests-collections
 testMethodDictionary
 	self resultOfSerializeAndMaterializeMethodDictionary: FLPair methodDict.
-	

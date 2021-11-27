@@ -1,3 +1,3 @@
 *Fuel-Core
 shouldBeSubstitutedByCleanCopy
-	^ self isClean 
+	^ self isClean

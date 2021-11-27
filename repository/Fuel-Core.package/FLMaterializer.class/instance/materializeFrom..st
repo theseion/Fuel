@@ -17,5 +17,4 @@ materializeFrom: aStream
 	"This is useful because the postMaterializationActions may need to have access to the state of the materialization, for example, to the root"
 	header materialization: materialization.
 	header executePostMaterializationActions.
-	^ materialization 
-	
+	^ materialization

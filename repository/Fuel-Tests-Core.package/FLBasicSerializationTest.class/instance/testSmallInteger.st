@@ -6,4 +6,3 @@ testSmallInteger
 	self assertSerializationIdentityOf: 0.
 	self assertSerializationIdentityOf: 1111.
 	self assertSerializationIdentityOf: SmallInteger one.
-
