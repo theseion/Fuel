@@ -1,3 +1,3 @@
-initialization
+class initialization
 reset
 	Instance := nil
