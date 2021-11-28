@@ -15,4 +15,4 @@ jobs:
     uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
       build_targets: '["Pharo32-8.0", "Pharo64-8.0"]'
-      configs: '[".default.ston", ".tests.ston", ".debug.ston", ".developmentgroup.ston"]'
+      configs: '[".default.ston", ".tests.ston", ".corewithextras.ston", ".developmentgroup.ston"]'

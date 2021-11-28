@@ -67,7 +67,7 @@ master | 4.0.0 | 3.0.4 | 3.0.3 | 3.0.2 | 3.0.1 | 3.0.0 | 2.2.0
 ## Pharo >= 7.0
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:4.0.0/repository';
+    repository: 'github://theseion/Fuel:3.0.4/repository';
     baseline: 'Fuel';
     load.
 ```
@@ -107,7 +107,7 @@ Gofer new
 ## Squeak >= 5.2
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:4.0.0/repository';
+    repository: 'github://theseion/Fuel:3.0.4/repository';
     baseline: 'Fuel';
     load.
 ```
