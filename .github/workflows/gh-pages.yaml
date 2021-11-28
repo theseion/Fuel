@@ -1,0 +1,34 @@
+name: github pages for docs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    if: ${{contains(github.event.commits[0].message, '[docs]')}}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify --cleanDestinationDir --gc -s hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'Published docs [skip ci]'
+          publish_dir: hugo/public
+          publish_branch: docs
