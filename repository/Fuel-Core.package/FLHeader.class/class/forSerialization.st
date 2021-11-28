@@ -4,4 +4,3 @@ forSerialization
 		initializeForSerialization;
 		initialize;
 		yourself
-		

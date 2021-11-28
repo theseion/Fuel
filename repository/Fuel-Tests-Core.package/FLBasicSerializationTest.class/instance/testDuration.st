@@ -7,4 +7,3 @@ testDuration
 		Duration 
 			seconds: 3 
 			nanoSeconds: 35).
-	

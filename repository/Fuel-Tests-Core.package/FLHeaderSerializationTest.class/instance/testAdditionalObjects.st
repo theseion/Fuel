@@ -9,4 +9,3 @@ testAdditionalObjects
 
 	self assert: (self materializedObjects additionalObjectAt: #test) equals: 'test'.
 	self assert: (self materializedObjects additionalObjectAt: 42) equals: 68.
-	

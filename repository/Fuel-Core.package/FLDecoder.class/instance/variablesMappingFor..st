@@ -13,4 +13,3 @@ variablesMappingFor: aClass
 					migration applyTo: variables ] ] ].
 		
 	^ variables
-	

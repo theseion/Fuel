@@ -1,3 +1,3 @@
 encoding
 encodeBytes: aBytesObject
-	stream nextBytesPutAll: aBytesObject 
+	stream nextBytesPutAll: aBytesObject

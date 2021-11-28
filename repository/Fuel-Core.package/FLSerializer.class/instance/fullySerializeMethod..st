@@ -4,4 +4,3 @@ fullySerializeMethod: aCompiledMethod
 		FLConfigurationError signal: 'Argument must be a CompiledMethod' ].
 	
 	self methodsToSerialize add: aCompiledMethod
-		

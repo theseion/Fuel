@@ -1,3 +1,3 @@
 serialize/materialize
 serializeGlobalClass: aClass on: anEncoder
-	anEncoder encodeString: aClass name 
+	anEncoder encodeString: aClass name

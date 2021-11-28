@@ -6,4 +6,3 @@ visitCompiledBlock: aCompiledBlock
 				mapAndTraceByClusterName: aCompiledBlock
 				to: FLCompiledBlockCluster ]
 		ifFalse: [ next mapAndTrace: aCompiledBlock ]
-	

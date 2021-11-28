@@ -6,4 +6,3 @@ visitCompiledMethod: aCompiledMethod
 				mapAndTraceByClusterName: aCompiledMethod
 				to: FLCompiledMethodCluster ]
 		ifFalse: [ next mapAndTrace: aCompiledMethod ]
-	

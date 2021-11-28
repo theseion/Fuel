@@ -4,4 +4,3 @@ classNamed: className
 		at: className
 		ifPresent: [ :migration | migration targetClass ]
 		ifAbsent: [ self globalClassNamed: className ]
-		

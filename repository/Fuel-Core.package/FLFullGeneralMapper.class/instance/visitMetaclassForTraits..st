@@ -6,4 +6,3 @@ visitMetaclassForTraits: aMetaclass
 				mapAndTraceByClusterName: aMetaclass
 				to: FLMetaclassForTraitsCluster ]
 		ifFalse: [ next mapAndTrace: aMetaclass ]
-	

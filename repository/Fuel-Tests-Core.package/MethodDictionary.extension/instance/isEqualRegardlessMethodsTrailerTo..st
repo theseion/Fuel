@@ -13,4 +13,3 @@ isEqualRegardlessMethodsTrailerTo: aMethodDictionary
 		((aMethodDictionary at: assoc key ifAbsent: [^false]) isEqualRegardlessTrailerTo:  assoc value)
 			ifFalse: [^false]].
 	^true
-

@@ -1,4 +1,4 @@
 accessing
 classVariableForTesting: anObject
 	
-	ClassVariableForTesting := anObject 
+	ClassVariableForTesting := anObject

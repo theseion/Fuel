@@ -9,5 +9,4 @@ materializeInstanceWith: aDecoder
 
 	(aDecoder isBigEndian = FLPlatform current isBigEndian asBit)
 		ifTrue: [^ inst ]
-		ifFalse: [ ^ self swapBytesOf: inst ] 
-	
+		ifFalse: [ ^ self swapBytesOf: inst ]

@@ -9,4 +9,3 @@ testJustMaterializeHeader
 	
 	self assert: (self materializationHeader additionalObjectAt: #test) equals: 'test'.
 	self assert: (self materializationHeader additionalObjectAt: 42) equals: 68.
-	

@@ -1,3 +1,3 @@
 cleanup
 cleanUp
-	self initialize 
+	self initialize

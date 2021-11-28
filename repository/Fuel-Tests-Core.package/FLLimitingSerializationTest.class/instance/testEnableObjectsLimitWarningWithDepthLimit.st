@@ -27,4 +27,3 @@ testEnableObjectsLimitWarningWithDepthLimit
 	self 
 		shouldnt: [ self serializer serialize ]
 		raise: FLObjectLimitExceededWarning
-		

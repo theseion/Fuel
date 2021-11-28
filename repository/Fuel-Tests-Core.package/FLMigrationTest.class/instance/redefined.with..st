@@ -7,4 +7,3 @@ redefined: aClass with: instanceVariableNames
 	^ self classFactory
 		silentlyRename: (self classFactory newClassWithInstanceVariableNames: instanceVariableNames)
 		to: name
-	

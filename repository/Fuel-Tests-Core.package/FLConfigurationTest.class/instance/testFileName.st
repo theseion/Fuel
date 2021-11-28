@@ -15,4 +15,3 @@ testFileName
 		fileName: fileName;
 		materializeRoot.
 	self assert: materialized equals: 'abc'
-	

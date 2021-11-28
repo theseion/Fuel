@@ -8,4 +8,3 @@ testTime
 	self assertSerializationEqualityOf: (Time seconds: 0 nanoSeconds: 5).
 	self assertSerializationEqualityOf: (Time allInstances sort:  [:a :b | a asSeconds > b asSeconds]) first.
 	self assertSerializationEqualityOf: (Time allInstances sort:  [:a :b | a nanoSecond > b nanoSecond]) first
-		

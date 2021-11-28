@@ -5,4 +5,3 @@ initializeWith: aPc stackPtr: aStackPtr method: aMethod receiver: aReceiver send
 	method := aMethod.
 	receiver := aReceiver.
 	sender := aSender.
-	

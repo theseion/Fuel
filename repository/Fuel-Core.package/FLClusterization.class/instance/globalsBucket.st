@@ -1,4 +1,4 @@
 cluster buckets
 globalsBucket
 	
-	^ globalsBucket 
+	^ globalsBucket

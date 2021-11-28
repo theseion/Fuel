@@ -6,4 +6,3 @@ testDecorateStreamFactoryWhenStreamFactoryNotSet
 	self
 		should: [ FLMaterializer new decorateStreamFactory: [ :stream ] ]
 		raise: FLConfigurationError
-		

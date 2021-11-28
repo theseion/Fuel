@@ -16,4 +16,3 @@ testCreateSharedPoolClass
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: sharedPool.
 
 	self assert: (materializedClass perform: #classVar1) equals: #foo
-	

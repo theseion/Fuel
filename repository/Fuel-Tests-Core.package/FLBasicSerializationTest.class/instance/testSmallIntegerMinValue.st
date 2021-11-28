@@ -1,4 +1,4 @@
 tests-numbers
 testSmallIntegerMinValue
 
-	self assertSerializationIdentityOf: SmallInteger minVal 
+	self assertSerializationIdentityOf: SmallInteger minVal

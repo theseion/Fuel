@@ -2,4 +2,4 @@ encoding
 encodeWeakReferenceTo: anObject
 
 	indexStream 
-		nextIndexPut: (objectsIndexes at: anObject ifAbsent: [objectsIndexes at: nil]) 
+		nextIndexPut: (objectsIndexes at: anObject ifAbsent: [objectsIndexes at: nil])

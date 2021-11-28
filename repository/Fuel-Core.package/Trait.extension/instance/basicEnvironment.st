@@ -1,4 +1,4 @@
 *Fuel-Core
 basicEnvironment
 
-	^self environment 
+	^self environment

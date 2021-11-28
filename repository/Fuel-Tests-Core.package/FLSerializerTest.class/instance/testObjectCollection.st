@@ -7,4 +7,3 @@ testObjectCollection
 	self serializer objectCollection: array.
 	self assert: self serializer object identicalTo: array.
 	self assert: self serializer hasMultipleObjects
-	

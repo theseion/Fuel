@@ -10,4 +10,3 @@ testSmallIntegerSerializationForAllBits
 			integer := 0 - integer.
 			integer isLarge ifFalse: [
 				self assertSerializationIdentityOf: integer ] ]
-

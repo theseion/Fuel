@@ -1,3 +1,3 @@
 decoding
 nextEncodedWordsInto: aWordsObject 
-	stream fuelNextWordsInto: aWordsObject 
+	stream fuelNextWordsInto: aWordsObject

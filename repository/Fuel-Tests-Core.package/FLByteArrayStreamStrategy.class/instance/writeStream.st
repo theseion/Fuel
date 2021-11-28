@@ -1,3 +1,3 @@
 writing
 writeStream
-	^ inMemoryStream := ByteArray new writeStream 
+	^ inMemoryStream := ByteArray new writeStream

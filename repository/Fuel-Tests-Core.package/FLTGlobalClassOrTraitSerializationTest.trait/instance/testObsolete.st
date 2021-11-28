@@ -10,4 +10,4 @@ testObsolete
 		should: [self serialize: classOrTrait ] 
 		raise: FLObsolete
 		whoseDescriptionIncludes: classOrTrait name
-		description: 'Should raise an error when serializing as global an obsolete class or trait.' 
+		description: 'Should raise an error when serializing as global an obsolete class or trait.'

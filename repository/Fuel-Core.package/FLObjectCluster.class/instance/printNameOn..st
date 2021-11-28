@@ -7,4 +7,3 @@ printNameOn: aStream
 	aStream nextPut: $[.
 	theClass printOn: aStream.
 	aStream nextPut: $].
-	

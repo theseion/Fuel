@@ -15,5 +15,4 @@ testMethodNotFoundAfterRemoval
 		should: [self materialized] 
 		raise: FLMethodNotFound
 		whoseDescriptionIncludes: classOrTrait name, '>>#you' 
-		description: 'Should raise an error when method is not present.' 
-	
+		description: 'Should raise an error when method is not present.'

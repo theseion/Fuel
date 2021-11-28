@@ -15,4 +15,3 @@ testCreateWithSmalltalkGlobalsEnvironment
 	"Classes are not direclty inserted in the system organization so we can only test #basicCategory and not #category."
 	self assert: category = materializedClassOrTrait basicCategory.
 	self assert: name = materializedClassOrTrait name.
-

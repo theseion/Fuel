@@ -9,4 +9,3 @@ serializeReferencesOf: anObject with: anEncoder
 		ifPresent: [ :refs |
 			refs do: [ :ref |
 				anEncoder encodeReferenceTo: ref ] ]
-	

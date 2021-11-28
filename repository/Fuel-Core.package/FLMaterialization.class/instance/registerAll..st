@@ -1,4 +1,4 @@
 private
 registerAll: materializedObjects
 	
-	decoder registerAll: materializedObjects 
+	decoder registerAll: materializedObjects

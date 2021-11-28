@@ -5,4 +5,3 @@ applyTo: aVariablesMapping
 		aVariablesMapping 
 			map: link key 
 			to: link value ]
-	

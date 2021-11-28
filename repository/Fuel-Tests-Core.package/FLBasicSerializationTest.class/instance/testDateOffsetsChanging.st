@@ -15,4 +15,3 @@ testDateOffsetsChanging
 	object := Date fromDays: 37023.
 	self assert: object start offset equals: 0 hours.
 	self assert: self materialized start offset equals: 0 hours
-	

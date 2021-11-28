@@ -4,4 +4,3 @@ fullySerializeBehavior: aBehavior
 		FLConfigurationError signal: 'Argument must be a Behavior' ].
 	
 	self behaviorsToSerialize add: aBehavior
-		

@@ -20,4 +20,3 @@ testSortedCollectionWithClassVariableChanges
 	ClassVariableForTesting := true.
 	"the class variable ClassVariableForTesting should be true"
 	self assert: (literalHolder literalAt: index) value
-	
