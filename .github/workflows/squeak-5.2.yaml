@@ -1,0 +1,18 @@
+name: Build Squeak 5.2
+on:
+  push:
+  pull_request:
+  schedule:
+    # Minute [0,59]
+    # Hour [0,23]
+    # Day of the month [1,31]
+    # Month of the year [1,12]
+    # Day of the week ([0,6] with 0=Sunday)
+    - cron:  '17 4 * * 6'
+jobs:
+  build:
+    name: Build Squeak 5.2
+    uses: theseion/fuel/.github/workflows/base.yaml@master
+    with:
+      build_targets: '["Squeak32-5.2", "Squeak64-5.2"]'
+      configs: '[".default.ston", ".tests.ston"]'
