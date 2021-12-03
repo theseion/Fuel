@@ -2,19 +2,17 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Version 1.4 #  1 June 2011
-Opening our News section, this post announces a new release version in ConfigurationOfFuel. It is the 1.4 and includes this list of changes:
- Serialization in memory. Important refactorings done in various hierarchies and protocols. Hack to avoid several OrderedCollection &#187; makeRoomAtLast during deserialization. Small code cleanups.  To expand on the topic of serialization in memory, I give an example:
-aByteArray := FLSerializer serializeInMemory: sourceObject.">
+<meta name=description content="Version 4.1.0 #  03 December 2021
+Announcement #  This release contains only one small improvement.
+Changes #   FLConfiguration>>fileName: has been renamed to filePath: to better reflect its use. The comment in this method has also been updated (parts of it were outdated).  ">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Version 1.4 #  1 June 2011
-Opening our News section, this post announces a new release version in ConfigurationOfFuel. It is the 1.4 and includes this list of changes:
- Serialization in memory. Important refactorings done in various hierarchies and protocols. Hack to avoid several OrderedCollection &#187; makeRoomAtLast during deserialization. Small code cleanups.  To expand on the topic of serialization in memory, I give an example:
-aByteArray := FLSerializer serializeInMemory: sourceObject.">
+<meta property="og:description" content="Version 4.1.0 #  03 December 2021
+Announcement #  This release contains only one small improvement.
+Changes #   FLConfiguration>>fileName: has been renamed to filePath: to better reflect its use. The comment in this method has also been updated (parts of it were outdated).  ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.4/"><meta property="article:section" content="releases">
-<meta property="article:modified_time" content="2021-06-11T12:45:53+02:00">
-<title>1.4 | Fuel</title>
+<meta property="og:url" content="https://theseion.github.io/Fuel/releases/4.1.0/"><meta property="article:section" content="releases">
+<meta property="article:modified_time" content="2021-12-03T09:53:53+01:00">
+<title>4.1.0 | Fuel</title>
 <link rel=manifest href=/Fuel/manifest.json>
 <link rel=icon href=/Fuel/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
@@ -66,7 +64,7 @@ aByteArray := FLSerializer serializeInMemory: sourceObject.">
 <span>Releases</span>
 <ul>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/4.1.0/>4.1.0</a>
+<a href=https://theseion.github.io/Fuel/releases/4.1.0/ class=active>4.1.0</a>
 </li>
 <li>
 <a href=https://theseion.github.io/Fuel/releases/4.0.0/>4.0.0</a>
@@ -96,7 +94,7 @@ aByteArray := FLSerializer serializeInMemory: sourceObject.">
 <a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
 </li>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/1.4/ class=active>1.4</a>
+<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
 </li>
 </ul>
 </li>
@@ -111,38 +109,44 @@ aByteArray := FLSerializer serializeInMemory: sourceObject.">
 <label for=menu-control>
 <img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>1.4</strong>
+<strong>4.1.0</strong>
 <label for=toc-control>
 <img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><h1 id=version-14>
-Version 1.4
-<a class=anchor href=#version-14>#</a>
+<article class=markdown><h1 id=version-410>
+Version 4.1.0
+<a class=anchor href=#version-410>#</a>
 </h1>
-<p>1 June 2011</p>
-<p>Opening our News section, this post announces a new release version in ConfigurationOfFuel. It is the 1.4 and includes this list of changes:</p>
+<p>03 December 2021</p>
+<h2 id=announcement>
+Announcement
+<a class=anchor href=#announcement>#</a>
+</h2>
+<p>This release contains only one small improvement.</p>
+<h2 id=changes>
+Changes
+<a class=anchor href=#changes>#</a>
+</h2>
 <ul>
-<li>Serialization in memory.</li>
-<li>Important refactorings done in various hierarchies and protocols.</li>
-<li>Hack to avoid several OrderedCollection &#187; makeRoomAtLast during deserialization.</li>
-<li>Small code cleanups.</li>
+<li><code>FLConfiguration>>fileName:</code> has been renamed to <code>filePath:</code> to better reflect its use.
+The comment in this method has also been updated (parts of it were outdated).</li>
 </ul>
-<p>To expand on the topic of serialization in memory, I give an example:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk> aByteArray <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLSerializer</span> <span style=color:#a6e22e>serializeInMemory:</span> sourceObject.
-</code></pre></div><p>And then:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>loadedObject <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> <span style=color:#a6e22e>materializeFromByteArray:</span> aByteArray.
-</code></pre></div><p>The idea is to provide protocol for NoSQL databases, where the graph is stored as a blob and not on a stream.</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/9dea82008df4ab604013f64f6855850c4d708873 title="Last modified by Max Leske | Dec 3, 2021" target=_blank rel=noopener>
 <img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span>
+<span>Dec 3, 2021</span>
 </a>
 </div>
 </div>
@@ -154,7 +158,12 @@ Version 1.4
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
