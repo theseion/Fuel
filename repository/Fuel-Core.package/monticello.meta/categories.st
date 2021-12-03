@@ -8,4 +8,5 @@ SystemOrganization addCategory: #'Fuel-Core-Configuration'!
 SystemOrganization addCategory: #'Fuel-Core-Errors'!
 SystemOrganization addCategory: #'Fuel-Core-Manifest'!
 SystemOrganization addCategory: #'Fuel-Core-Mappers'!
+SystemOrganization addCategory: #'Fuel-Core-Public'!
 SystemOrganization addCategory: #'Fuel-Core-Streams'!

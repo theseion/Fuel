@@ -1,3 +1,3 @@
 private
-streamFactoryForFilename: aString
+streamFactoryForFilePath: aString
 	^ self subclassResponsibility

@@ -1,8 +1,8 @@
 tests-configuring-convenience
-testFileNameWhenStreamFactoryAlreadySet
+testFilePathWhenStreamFactoryAlreadySet
 	serializer := FLSerializer new
-		fileName: 'filename';
+		filePath: 'filename';
 		yourself.
 	 self
-		should: [ serializer fileName: 'filename' ]
+		should: [ serializer filePath: 'filename' ]
 		raise: FLConfigurationError

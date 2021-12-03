@@ -10,7 +10,7 @@ testConsiderGlobal
 
 	"Serialize considering *only first* as a global object."
 	FLSerializer new
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		environment: self environmentOfTest;
 		lookUpInGlobals: #GlobalSet1;
 		object: anArray;
@@ -18,7 +18,7 @@ testConsiderGlobal
 
 	"Materialize"
 	materialized := FLMaterializer new
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		environment: self environmentOfTest;
 		materializeRoot.
 				

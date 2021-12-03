@@ -2,10 +2,10 @@ tests-Getting Started
 testFileShortcuts
 	| materializedString |
 	FLSerializer new
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		object: 'stringToSerialize';
 		serialize.
 	materializedString := FLMaterializer new
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		materializeRoot.
 	self assert: materializedString equals: 'stringToSerialize'

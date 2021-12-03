@@ -5,10 +5,10 @@ testPluggableSubstitution
 	FLSerializer new
 		when: [ :o | o isStream ] substituteBy: [ :o | nil ];
 		object: objectToSerialize;
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		serialize.
 	materializedObject := FLMaterializer new
-		fileName: 'demo.fuel';
+		filePath: 'demo.fuel';
 		materializeRoot.
 		
 	self

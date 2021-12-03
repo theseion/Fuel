@@ -9,12 +9,12 @@ testDemo
 			'a string' ].
 	"Store to the file"
 	FLSerializer new
-		fileName: 'example.FL';
+		filePath: 'example.FL';
 		object: sourceArray;
 		serialize.
 	"Load from the file"
 	loadedArray := FLMaterializer new
-		fileName: 'example.FL';
+		filePath: 'example.FL';
 		materializeRoot.
 	"The arrays are not the same"
 	self assert: sourceArray ~~ loadedArray.
