@@ -3,11 +3,11 @@ testProxyByTarget
 	| aProxyClass result original |
 	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'Target'.
 	self classFactory
-		silentlyCompile: 'target: x  target := x' in: aProxyClass;
+		silentlyCompile: 'target: x  Target := x' in: aProxyClass;
 		silentlyCompile: 'fuelAccept: aVisitor
 			^ aVisitor
 				visitSubstitution: self
-				by: target' in: aProxyClass.
+				by: Target' in: aProxyClass.
 
 	original := aProxyClass new
 		target: 5;

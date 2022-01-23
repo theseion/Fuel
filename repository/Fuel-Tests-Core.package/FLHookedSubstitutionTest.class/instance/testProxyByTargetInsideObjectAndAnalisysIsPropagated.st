@@ -3,11 +3,11 @@ testProxyByTargetInsideObjectAndAnalisysIsPropagated
 	| aProxyClass result original pair pairRoot |
 	aProxyClass := self classFactory silentlyNewClassWithClassVariableNames: 'Target'.
 	self classFactory
-		silentlyCompile:  'target: x  target := x' in: aProxyClass;
+		silentlyCompile:  'target: x  Target := x' in: aProxyClass;
 		silentlyCompile: 'fuelAccept: aVisitor
 			^ aVisitor
 				visitSubstitution: self
-				by: target' in: aProxyClass.
+				by: Target' in: aProxyClass.
 
 	pair := FLPair new
 		left: 6;
