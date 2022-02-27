@@ -1,10 +1,10 @@
 serialize/materialize
 materializePostInstance: aMetaclass with: aDecoder
 
-	| superclass instanceVariableNames layout |
+	| superclass instanceVariableNames format layout |
 	superclass := aDecoder nextEncodedReference.
 	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
-	aDecoder nextEncodedUint24. "format"
+	format := aDecoder nextEncodedUint24.
 	layout := self materializeLayoutWith: aDecoder.
 
 	aMetaclass
@@ -13,5 +13,6 @@ materializePostInstance: aMetaclass with: aDecoder
 	
 	self
 		installLayout: layout
-		withVariableNames: instanceVariableNames
+		withFormat: format
+		variableNames: instanceVariableNames
 		into: aMetaclass

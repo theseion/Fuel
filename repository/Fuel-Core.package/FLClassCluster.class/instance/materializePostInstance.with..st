@@ -1,11 +1,11 @@
 serialize/materialize
 materializePostInstance: aClass with: aDecoder
 
-	| superclass category name instanceVariableNames layout |
+	| superclass category name format instanceVariableNames layout |
 	superclass := aDecoder nextEncodedReference.
 	category := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
-	aDecoder nextEncodedReference. "format"
+	format := aDecoder nextEncodedReference.
 	layout := self materializeLayoutWith: aDecoder.
 	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
 
@@ -16,5 +16,6 @@ materializePostInstance: aClass with: aDecoder
 		methodDictionary: MethodDictionary new.
 	self
 		installLayout: layout
-		withVariableNames: instanceVariableNames
+		withFormat: format
+		variableNames: instanceVariableNames
 		into: aClass

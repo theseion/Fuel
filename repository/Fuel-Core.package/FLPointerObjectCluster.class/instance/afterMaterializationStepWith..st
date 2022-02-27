@@ -1,4 +1,5 @@
 serialize/materialize
 afterMaterializationStepWith: aDecoder  
-
-	objects do: [ :anObject | anObject fuelAfterMaterialization ]
+	objects do: [ :anObject |
+		variablesMapping materializeTraitVariablesWith: anObject.
+		anObject fuelAfterMaterialization ]

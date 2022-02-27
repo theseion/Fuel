@@ -9,7 +9,8 @@
 		"mapping",
 		"theClass",
 		"notIgnoredVariables",
-		"references"
+		"references",
+		"possibleTraitVariables"
 	],
 	"name" : "FLVariablesMapping",
 	"type" : "normal"
