@@ -1,5 +1,3 @@
 testing
-fileExists: aFileName
-	^ FLPlatform current filePathExists: (FLPlatform current
-		joinPath: directoryPath
-		with: aFileName)
+fileExists: aString
+	^ FLPlatform current filePathExists: (self filePathString: aString)

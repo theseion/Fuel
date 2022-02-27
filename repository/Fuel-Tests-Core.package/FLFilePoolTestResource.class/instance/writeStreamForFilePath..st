@@ -1,5 +1,3 @@
 accessing-files
 writeStreamForFilePath: aString
-	^ FLPlatform current writeStreamForFilePath: (FLPlatform current
-		joinPath: directoryPath
-		with: aString)
+	^ FLPlatform current writeStreamForFilePath: (self filePathString: aString)
