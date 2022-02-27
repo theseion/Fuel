@@ -7,6 +7,7 @@ materializeTraitVariablesWith: anObject
 	
 	See FLBehaviorCluster>>installLayout:withFormat:variableNames:into:
 	and Behavior>>fuelRecomputeSlotScopeWithTraits."
+	FLPlatform current hasStatefulTraits ifFalse: [ ^ self ].
 	possibleTraitVariables ifNil: [ ^ self ].
 	
 	anObject class traitComposition slots do: [ :slot |

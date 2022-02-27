@@ -9,8 +9,7 @@ initializeMaterializingFrom: aDecoder
 			ifAbsent: [ nil ] ].
 	
 	"Don't allocate unnecessary space for the dictionary if we don't need it."
+	FLPlatform current hasStatefulTraits ifFalse: [ ^ self ].
 	(mapping includes: nil) ifFalse: [ ^ self ].
-	"Squeak and stateless traits"
-	(theClass traitComposition respondsTo: #slots) ifFalse: [ ^ self ].
 	
 	possibleTraitVariables := Dictionary new

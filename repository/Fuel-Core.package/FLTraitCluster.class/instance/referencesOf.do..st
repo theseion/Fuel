@@ -8,8 +8,6 @@ referencesOf: aTrait do: aBlock
 		value: aTrait category;
 		value: aTrait name;
 		value: aTrait format;
-		value: ((aTrait respondsTo: #classLayout)
+		value: (FLPlatform current hasStatefulTraits
 			ifTrue: [ aTrait classLayout class ]
-			ifFalse: [
-				"Squeak and stateless traits"
-				nil ])
+			ifFalse: [ nil ])

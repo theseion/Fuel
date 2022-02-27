@@ -6,12 +6,10 @@ serializePostInstance: aTrait with: anEncoder
 		encodeReferenceTo: aTrait name;
 		encodeReferenceTo: aTrait basicEnvironment;
 		encodeReferenceTo: aTrait format.
-	(aTrait respondsTo: #classLayout)
+	FLPlatform current hasStatefulTraits
 		ifTrue: [
 			self
 				serializeLayout: aTrait classLayout
 				with: anEncoder ]
-		ifFalse: [
-			"Squeak and stateless traits"
-			anEncoder encodeReferenceTo: nil ].
+		ifFalse: [ anEncoder encodeReferenceTo: nil ].
 	anEncoder encodeString: aTrait instanceVariablesString
