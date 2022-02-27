@@ -2,21 +2,19 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Version 1.8 #  26 May 2012
-We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.
-Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.
-Below there are some remarkable changes.
- Much more complete user guides.">
+<meta name=description content="Version 5.0.0 #  27 February 2022
+Announcement #  Although release 5.0.0 includes only one change, but introduces a change in the serialization format.
+Changes #   Added full support for stateful traits (aka &ldquo;TraitsV2&rdquo; in Pharo).  Notes #  Stateful traits have instance variables that are applied to the target class. To support this, Fuel needs to serialize additional information about traits.
+Stateful traits are available in Pharo only, starting at version 8.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Version 1.8 #  26 May 2012
-We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.
-Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.
-Below there are some remarkable changes.
- Much more complete user guides.">
+<meta property="og:description" content="Version 5.0.0 #  27 February 2022
+Announcement #  Although release 5.0.0 includes only one change, but introduces a change in the serialization format.
+Changes #   Added full support for stateful traits (aka &ldquo;TraitsV2&rdquo; in Pharo).  Notes #  Stateful traits have instance variables that are applied to the target class. To support this, Fuel needs to serialize additional information about traits.
+Stateful traits are available in Pharo only, starting at version 8.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://theseion.github.io/Fuel/releases/1.8/"><meta property="article:section" content="releases">
-<meta property="article:modified_time" content="2021-06-11T12:45:53+02:00">
-<title>1.8 | Fuel</title>
+<meta property="og:url" content="https://theseion.github.io/Fuel/releases/5.0.0/"><meta property="article:section" content="releases">
+<meta property="article:modified_time" content="2022-02-27T18:14:00+01:00">
+<title>5.0.0 | Fuel</title>
 <link rel=manifest href=/Fuel/manifest.json>
 <link rel=icon href=/Fuel/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
@@ -68,7 +66,7 @@ Below there are some remarkable changes.
 <span>Releases</span>
 <ul>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/5.0.0/>5.0.0</a>
+<a href=https://theseion.github.io/Fuel/releases/5.0.0/ class=active>5.0.0</a>
 </li>
 <li>
 <a href=https://theseion.github.io/Fuel/releases/4.1.1/>4.1.1</a>
@@ -89,7 +87,7 @@ Below there are some remarkable changes.
 <a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
 </li>
 <li>
-<a href=https://theseion.github.io/Fuel/releases/1.8/ class=active>1.8</a>
+<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
 </li>
 <li>
 <a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
@@ -119,50 +117,54 @@ Below there are some remarkable changes.
 <label for=menu-control>
 <img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>1.8</strong>
+<strong>5.0.0</strong>
 <label for=toc-control>
 <img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes</a></li>
+<li><a href=#notes>Notes</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><h1 id=version-18>
-Version 1.8
-<a class=anchor href=#version-18>#</a>
+<article class=markdown><h1 id=version-500>
+Version 5.0.0
+<a class=anchor href=#version-500>#</a>
 </h1>
-<p>26 May 2012</p>
-<p>We are proud to announce Fuel 1.8 with a lot of new features and documentation. Of course, we don&rsquo;t stop working but it was time to freeze a stable version.</p>
-<p>Fuel works out of the box in Pharo from 1.1 up to 2.0 (checked at #20094). Please check our Documentation for complete installation and use guides.</p>
-<p>Below there are some remarkable changes.</p>
+<p>27 February 2022</p>
+<h2 id=announcement>
+Announcement
+<a class=anchor href=#announcement>#</a>
+</h2>
+<p>Although release 5.0.0 includes only one change, but introduces a
+change in the serialization format.</p>
+<h2 id=changes>
+Changes
+<a class=anchor href=#changes>#</a>
+</h2>
 <ul>
-<li>Much more complete user guides.</li>
-<li>Improved API for customizing how graph is traced.</li>
-<li>FuelMetalevel: serialization of stuff like classes and compiled methods moved to an optional package.</li>
-<li>Customize objects to be treated as globals.</li>
-<li>Migrations: declare at materialization time class and variables renames.</li>
-<li>Weak references properly managed. Thanks to Juan Vuletich and Levente.</li>
-<li>Thanks Pavel for helping us improving FuelPackageLoader with wonderful ideas and bug reports.</li>
-<li>Serialization speed up on large graphs by using specialized collections. Thanks Levente.</li>
-<li>Encoder and Decoder: new reifications that clarify the design. Thanks Colin Putney.</li>
-<li>Optimized serialization of &ldquo;clean&rdquo; BlockClosures, which don&rsquo;t need the whole stack of contexts. Thanks Juan Vuletich and Eliot Miranda.</li>
-<li>Added a clear error hierarchy.</li>
-<li>Debug facilities, including graph visualization using Roassal. Thanks Alexandre and Doru.</li>
-<li>Many more new tests. Including those from extension packages, we have almost 600 tests.</li>
-<li>Repository moved from &lsquo;
-<a href=http://www.squeaksource.com/Fuel%27>http://www.squeaksource.com/Fuel'</a> to &lsquo;
-<a href=http://ss3.gemstone.com/ss/Fuel%27>http://ss3.gemstone.com/ss/Fuel'</a>.</li>
+<li>Added full support for stateful traits (aka &ldquo;TraitsV2&rdquo; in Pharo).</li>
 </ul>
-<p>If you are a Fuel user we are not aware of, please let us know!</p>
-<p>Best regards,</p>
-<p>Martin and Mariano</p>
+<h2 id=notes>
+Notes
+<a class=anchor href=#notes>#</a>
+</h2>
+<p>Stateful traits have instance variables that are applied to the target class. To support this, Fuel needs to serialize additional information about traits.</p>
+<p>Stateful traits are available in Pharo only, starting at version 8.</p>
+<p>Only users that previously have experimented with
+<a href=https://github.com/tesonep/pharo-talents>Talents</a> or serialization of anonymous classes will see a difference. However, if you&rsquo;ve used Fuel to serialize traits, you will need migrate your snapshots (additional information is stored for all traits, not
+just for stateful ones).</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/30f646158dec95bc10995c12d702a06ef16da709 title="Last modified by Max Leske | Jun 11, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/a7d1aa30837a425349a7610c896bb154f70f9f3c title="Last modified by Max Leske | Feb 27, 2022" target=_blank rel=noopener>
 <img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Jun 11, 2021</span>
+<span>Feb 27, 2022</span>
 </a>
 </div>
 </div>
@@ -174,7 +176,13 @@ Version 1.8
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#announcement>Announcement</a></li>
+<li><a href=#changes>Changes</a></li>
+<li><a href=#notes>Notes</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
