@@ -6,7 +6,7 @@ serializePostInstance: aTrait with: anEncoder
 		encodeReferenceTo: aTrait name;
 		encodeReferenceTo: aTrait basicEnvironment;
 		encodeReferenceTo: aTrait format.
-	(aTrait canUnderstand: #classLayout)
+	(aTrait respondsTo: #classLayout)
 		ifTrue: [
 			self
 				serializeLayout: aTrait classLayout

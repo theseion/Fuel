@@ -8,7 +8,7 @@ referencesOf: aTrait do: aBlock
 		value: aTrait category;
 		value: aTrait name;
 		value: aTrait format;
-		value: ((aTrait canUnderstand: #classLayout)
+		value: ((aTrait respondsTo: #classLayout)
 			ifTrue: [ aTrait classLayout class ]
 			ifFalse: [
 				"Squeak and stateless traits"
