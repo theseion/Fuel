@@ -1,6 +1,6 @@
 creating-traits-silently
-silentlyNewTrait
+silentlyNewTraitWithInstanceVariableNames: aString
 	^ self
 		silentlyNewTraitNamed: self defaultNewTraitName
 		uses: Array new
-		instanceVariableNames: ''
+		instanceVariableNames: aString
