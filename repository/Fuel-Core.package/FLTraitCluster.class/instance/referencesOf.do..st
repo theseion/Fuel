@@ -8,4 +8,8 @@ referencesOf: aTrait do: aBlock
 		value: aTrait category;
 		value: aTrait name;
 		value: aTrait format;
-		value: aTrait classLayout class
+		value: ((aTrait canUnderstand: #classLayout)
+			ifTrue: [ aTrait classLayout class ]
+			ifFalse: [
+				"Squeak and stateless traits"
+				nil ])

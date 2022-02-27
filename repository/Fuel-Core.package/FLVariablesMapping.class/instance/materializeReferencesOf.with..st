@@ -9,10 +9,12 @@ materializeReferencesOf: anObject with: aDecoder
 						instVarAt: varIndex
 						put: reference ]
 				ifNil: [
-					"Since the variables from traits will only become known
-					after the references have been fully materialized we
-					don't yet know whether this variable is to be ignored
-					or might be needed later"
-					possibleTraitVariables
-						at: (notIgnoredVariables at: index)
-						put: reference ] ]
+					"Stateful traits only"
+					possibleTraitVariables ifNotNil: [
+						"Since the variables from traits will only become known
+						after the references have been fully materialized we
+						don't yet know whether this variable is to be ignored
+						or might be needed later"
+						possibleTraitVariables
+							at: (notIgnoredVariables at: index)
+							put: reference ] ] ]

@@ -17,8 +17,10 @@ fuelRecomputeSlotScopeWithTraits
 	See FLBehaviorCluster>>installLayout:withFormat:variableNames:into:
 	and FLVariablesMapping>>materializeTraitVariablesWith:."
 	| classSlots traitSlots newSlotScope |
-	(self traitComposition slots allSatisfy: [ :slot |
-		self hasSlotNamed: slot name ]) ifTrue: [ ^ self ].
+	"Stateful traits only"
+	(((self traitComposition respondsTo: #slots) not) or: [
+		self traitComposition slots allSatisfy: [ :slot |
+			self hasSlotNamed: slot name ] ]) ifTrue: [ ^ self ].
 	
 	classSlots := self classLayout slots.
 	traitSlots := self traitComposition slots select: [ :traitSlot |
@@ -27,4 +29,4 @@ fuelRecomputeSlotScopeWithTraits
 	
 	newSlotScope := self classLayout slotScope parentScope extend: classSlots, traitSlots.
 	self classLayout slotScope: newSlotScope.
-	self setFormat: layout format
+	self setFormat: self classLayout format
