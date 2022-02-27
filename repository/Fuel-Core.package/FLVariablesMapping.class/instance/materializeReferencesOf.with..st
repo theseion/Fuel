@@ -1,12 +1,12 @@
 serialize/materialize
 materializeReferencesOf: anObject with: aDecoder 
-	mapping withIndexDo: [ :index :varIndex | 
+	mapping withIndexDo: [ :varIndex :index | 
 			| reference |
 			reference := aDecoder nextEncodedReference.
-			index
+			varIndex
 				ifNotNil: [
 					anObject 
-						instVarAt: index
+						instVarAt: varIndex
 						put: reference ]
 				ifNil: [
 					"Since the variables from traits will only become known
@@ -14,5 +14,5 @@ materializeReferencesOf: anObject with: aDecoder
 					don't yet know whether this variable is to be ignored
 					or might be needed later"
 					possibleTraitVariables
-						at: (notIgnoredVariables at: varIndex)
+						at: (notIgnoredVariables at: index)
 						put: reference ] ]
