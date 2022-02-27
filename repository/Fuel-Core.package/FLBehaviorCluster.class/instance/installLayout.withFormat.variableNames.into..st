@@ -1,16 +1,16 @@
 serialize/materialize layouts
-installLayout: aLayout withFormat: anInteger variableNames: variableNames into: aClass
+installLayout: aLayout withFormat: anInteger variableNames: variableNames into: aClassOrTrait
 	| scope superSlotSize slots |	
 	aLayout hasSlotScope ifTrue: [
-		superSlotSize := aClass superclass allInstVarNames size.
+		superSlotSize := self superclassSlotSizeOf: aClassOrTrait.
 		slots := variableNames withIndexCollect: [ :var :index |
 			(InstanceVariableSlot named: var asSymbol)
 				index: index + superSlotSize;
 				yourself ].
-		scope := aClass superclass classLayout slotScope extend: slots.
+		scope := (self superclassLayoutOf: aClassOrTrait) slotScope extend: slots.
 		aLayout slotScope: scope ].
 	
-	aLayout host: aClass.
+	aLayout host: aClassOrTrait.
 	"NOTE: the class format may change later when we materialize trait variables.
 		However, it is important to set the format correctly (or possibly too large) here,
 		even though it may indicate more instance variables than the layout defines.
@@ -19,6 +19,6 @@ installLayout: aLayout withFormat: anInteger variableNames: variableNames into: 
 		enough fields.
 		See Behavior>>fuelRecomputeSlotScopeWithTraits
 		and FLVariablesMapping>>materializeTraitVariables."
-	aClass
+	aClassOrTrait
 		classLayout: aLayout;
 		setFormat: anInteger

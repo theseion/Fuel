@@ -4,4 +4,9 @@ serializePostInstance: aTrait with: anEncoder
 	anEncoder
 		encodeReferenceTo: aTrait category;
 		encodeReferenceTo: aTrait name;
-		encodeReferenceTo: aTrait basicEnvironment
+		encodeReferenceTo: aTrait basicEnvironment;
+		encodeReferenceTo: aTrait format.
+	self
+		serializeLayout: aTrait classLayout
+		with: anEncoder.
+	anEncoder encodeString: aTrait instanceVariablesString

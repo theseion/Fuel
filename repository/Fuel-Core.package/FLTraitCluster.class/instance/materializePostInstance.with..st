@@ -1,9 +1,12 @@
 serialize/materialize
 materializePostInstance: aTrait with: aDecoder
-	| category name environment |
+	| category name environment format layout instanceVariableNames |
 	category := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
 	environment := aDecoder nextEncodedReference.
+	format := aDecoder nextEncodedReference.
+	layout := self materializeLayoutWith: aDecoder.
+	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
 	
 	aTrait 
 		initialize;
@@ -12,4 +15,9 @@ materializePostInstance: aTrait with: aDecoder
 		superclass: nil;
 		setName: name;
 		basicCategory: (category ifNil: [ RPackage defaultPackageName ]) asSymbol;
-		environment: environment
+		environment: environment.
+	self
+		installLayout: layout
+		withFormat: format
+		variableNames: instanceVariableNames
+		into: aTrait
