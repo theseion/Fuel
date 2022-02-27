@@ -21,4 +21,6 @@ installLayout: aLayout withFormat: anInteger variableNames: variableNames into: 
 		and FLVariablesMapping>>materializeTraitVariables."
 	aClassOrTrait
 		classLayout: aLayout;
-		setFormat: anInteger
+		"We have to make sure that instances are allocated with enough space
+		when instance variables have been added in the target environment."
+		setFormat: (anInteger max: aLayout format)
