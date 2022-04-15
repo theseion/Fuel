@@ -1,301 +1,52 @@
-<!doctype html><html lang=en dir=ltr>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Version 4.0.0 #  31 October 2021
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Version 4.0.0 #  31 October 2021
 Announcement #  We are excited to announce Fuel 4.0.0!
 This version brings with it some changes that we have had in mind for years, as well as support for some of the newer features of Squeak, Pharo, and the OpenSmalltalk VM.
-There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on FLSerializer, FLMaterializer, and FLConfiguration include comments and FLUserGuidesTest and FLConfigurationTest show off some of the most interesting scenarios (you can load tests by loading the Tests Metacello group from the baseline).">
-<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Version 4.0.0 #  31 October 2021
+There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on FLSerializer, FLMaterializer, and FLConfiguration include comments and FLUserGuidesTest and FLConfigurationTest show off some of the most interesting scenarios (you can load tests by loading the Tests Metacello group from the baseline)."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Version 4.0.0 #  31 October 2021
 Announcement #  We are excited to announce Fuel 4.0.0!
 This version brings with it some changes that we have had in mind for years, as well as support for some of the newer features of Squeak, Pharo, and the OpenSmalltalk VM.
-There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on FLSerializer, FLMaterializer, and FLConfiguration include comments and FLUserGuidesTest and FLConfigurationTest show off some of the most interesting scenarios (you can load tests by loading the Tests Metacello group from the baseline).">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://theseion.github.io/Fuel/releases/4.0.0/"><meta property="article:section" content="releases">
-<meta property="article:modified_time" content="2021-10-31T15:32:45+01:00">
-<title>4.0.0 | Fuel</title>
-<link rel=manifest href=/Fuel/manifest.json>
-<link rel=icon href=/Fuel/favicon.png type=image/x-icon>
-<link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous>
-<script defer src=/Fuel/flexsearch.min.js></script>
-<script defer src=/Fuel/en.search.min.5e65d5576593ccc692d46eddfc3b08705bd1186956943e131a608756990fcf36.js integrity="sha256-XmXVV2WTzMaS1G7d/DsIcFvRGGlWlD4TGmCHVpkPzzY=" crossorigin=anonymous></script>
-</head>
-<body dir=ltr>
-<input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control>
-<main class="container flex">
-<aside class=book-menu>
-<div class=book-menu-content>
-<nav>
-<h2 class=book-brand>
-<a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span>
-</a>
-</h2>
-<div class=book-search>
-<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
-<div class="book-search-spinner hidden"></div>
-<ul id=book-search-results></ul>
-</div>
-<ul>
-<li>
-<a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/debugging/>Debugging</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/errors/>Errors</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/migration/>Migration</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a>
-</li>
-<li>
-<span>Releases</span>
-<ul>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/5.0.0/>5.0.0</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/4.1.1/>4.1.1</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/4.1.0/>4.1.0</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/4.0.0/ class=active>4.0.0</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/3.0.0/>3.0.0</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.9.3/>1.9.3</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a>
-</li>
-<li>
-<a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-</div>
-</aside>
-<div class=book-page>
-<header class=book-header>
-<div class="flex align-center justify-between">
-<label for=menu-control>
-<img src=/Fuel/svg/menu.svg class=book-icon alt=Menu>
-</label>
+There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on FLSerializer, FLMaterializer, and FLConfiguration include comments and FLUserGuidesTest and FLConfigurationTest show off some of the most interesting scenarios (you can load tests by loading the Tests Metacello group from the baseline)."><meta property="og:type" content="article"><meta property="og:url" content="https://theseion.github.io/Fuel/releases/4.0.0/"><meta property="article:section" content="releases"><meta property="article:modified_time" content="2021-10-31T15:32:45+01:00"><title>4.0.0 | Fuel</title><link rel=manifest href=/Fuel/manifest.json><link rel=icon href=/Fuel/favicon.png type=image/x-icon><link rel=stylesheet href=/Fuel/book.min.4161ce72491bec8afb94acd3b81e1480e4774aca5e9e3e25c4eeeb0a4dff856a.css integrity="sha256-QWHOckkb7Ir7lKzTuB4UgOR3Sspenj4lxO7rCk3/hWo=" crossorigin=anonymous><script defer src=/Fuel/flexsearch.min.js></script>
+<script defer src=/Fuel/en.search.min.6e45e605ad77d2ac23b90429ac0ec30bdd0462d70435f844487850fd95eaf8f5.js integrity="sha256-bkXmBa130qwjuQQprA7DC90EYtcENfhESHhQ/ZXq+PU=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/Fuel/><img src=/Fuel/logo-fuel-header.png alt=Logo><span>Fuel</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://theseion.github.io/Fuel/builtin-header-support/>Builtin Header Support</a></li><li><a href=https://theseion.github.io/Fuel/customizing-the-graph/>Customizing the Graph</a></li><li><a href=https://theseion.github.io/Fuel/debugging/>Debugging</a></li><li><a href=https://theseion.github.io/Fuel/errors/>Errors</a></li><li><a href=https://theseion.github.io/Fuel/format-migration/>Format Migration</a></li><li><a href=https://theseion.github.io/Fuel/managing-globals/>Managing Globals</a></li><li><a href=https://theseion.github.io/Fuel/migration/>Migration</a></li><li><a href=https://theseion.github.io/Fuel/package-overview/>Package Overview</a></li><li><span>Releases</span><ul><li><a href=https://theseion.github.io/Fuel/releases/5.0.2/>5.0.2</a></li><li><a href=https://theseion.github.io/Fuel/releases/5.0.1/>5.0.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/5.0.0/>5.0.0</a></li><li><a href=https://theseion.github.io/Fuel/releases/4.1.1/>4.1.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/4.1.0/>4.1.0</a></li><li><a href=https://theseion.github.io/Fuel/releases/4.0.0/ class=active>4.0.0</a></li><li><a href=https://theseion.github.io/Fuel/releases/3.0.0/>3.0.0</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.9.3/>1.9.3</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.9/>1.9</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8/>1.8</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.8.1/>1.8.1</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.7/>1.7</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.6/>1.6</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.5/>1.5</a></li><li><a href=https://theseion.github.io/Fuel/releases/1.4/>1.4</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/Fuel/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>4.0.0</strong>
-<label for=toc-control>
-<img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents">
-</label>
-</div>
-<aside class="hidden clearfix">
-<nav id=TableOfContents>
-<ul>
-<li><a href=#announcement>Announcement</a></li>
-<li><a href=#new-features>New Features</a>
-<ul>
-<li><a href=#builder-api>Builder API</a></li>
-<li><a href=#object-limits>Object Limits</a></li>
-<li><a href=#full-serialization-support-by-default>Full Serialization Support By Default</a></li>
-<li><a href=#class-and-method-serialization-for-squeak>Class And Method Serialization For Squeak</a></li>
-<li><a href=#support-for-talents-and-anonymous-classes>Support For Talents And Anonymous Classes</a></li>
-<li><a href=#support-for-fullblockclosure>Support For <code>FullBlockClosure</code></a></li>
-<li><a href=#semantic-versioning>Semantic Versioning</a></li>
-</ul>
-</li>
-<li><a href=#removals>Removals</a></li>
-<li><a href=#issue-cleanup>Issue Cleanup</a></li>
-<li><a href=#new-documentation-home>New Documentation Home</a></li>
-</ul>
-</nav>
-</aside>
-</header>
-<article class=markdown><h1 id=version-400>
-Version 4.0.0
-<a class=anchor href=#version-400>#</a>
-</h1>
-<p>31 October 2021</p>
-<h2 id=announcement>
-Announcement
-<a class=anchor href=#announcement>#</a>
-</h2>
-<p>We are excited to announce Fuel 4.0.0!</p>
-<p>This version brings with it some changes that we have had in mind for years, as well as support for some of the newer features of Squeak,
-Pharo, and the OpenSmalltalk VM.</p>
-<p>There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on <code>FLSerializer</code>, <code>FLMaterializer</code>, and <code>FLConfiguration</code> include comments and <code>FLUserGuidesTest</code> and <code>FLConfigurationTest</code> show off some of the most interesting scenarios (you can load tests by loading the <code>Tests</code> Metacello group from the baseline). If you still have questions, please get in touch.</p>
-<p>Unfortunately, none of us core developers use Fuel in their day jobs anymore. So it is possible that you will encounter issues, even though our test suite looks healthy. If you do, please open an issue on
-<a href=https://github.com/theseion/Fuel/issues/new/choose>GitHub</a>. We try to respond quickly.</p>
-<p>I want to especially thank
+<label for=toc-control><img src=/Fuel/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#announcement>Announcement</a></li><li><a href=#new-features>New Features</a><ul><li><a href=#builder-api>Builder API</a></li><li><a href=#object-limits>Object Limits</a></li><li><a href=#full-serialization-support-by-default>Full Serialization Support By Default</a></li><li><a href=#class-and-method-serialization-for-squeak>Class And Method Serialization For Squeak</a></li><li><a href=#support-for-talents-and-anonymous-classes>Support For Talents And Anonymous Classes</a></li><li><a href=#support-for-fullblockclosure>Support For <code>FullBlockClosure</code></a></li><li><a href=#semantic-versioning>Semantic Versioning</a></li></ul></li><li><a href=#removals>Removals</a></li><li><a href=#issue-cleanup>Issue Cleanup</a></li><li><a href=#new-documentation-home>New Documentation Home</a></li></ul></nav></aside></header><article class=markdown><h1 id=version-400>Version 4.0.0
+<a class=anchor href=#version-400>#</a></h1><p>31 October 2021</p><h2 id=announcement>Announcement
+<a class=anchor href=#announcement>#</a></h2><p>We are excited to announce Fuel 4.0.0!</p><p>This version brings with it some changes that we have had in mind for years, as well as support for some of the newer features of Squeak,
+Pharo, and the OpenSmalltalk VM.</p><p>There&rsquo;s still a lot to document so you will have to look at the code to get started. The public API methods on <code>FLSerializer</code>, <code>FLMaterializer</code>, and <code>FLConfiguration</code> include comments and <code>FLUserGuidesTest</code> and <code>FLConfigurationTest</code> show off some of the most interesting scenarios (you can load tests by loading the <code>Tests</code> Metacello group from the baseline). If you still have questions, please get in touch.</p><p>Unfortunately, none of us core developers use Fuel in their day jobs anymore. So it is possible that you will encounter issues, even though our test suite looks healthy. If you do, please open an issue on
+<a href=https://github.com/theseion/Fuel/issues/new/choose>GitHub</a>. We try to respond quickly.</p><p>I want to especially thank
 <a href=https://github.com/noha>@noha</a> and
-<a href=https://github.com/seandenigris>@seandenigris</a> for pointing out that Fuel remains an important project and for pushing me to implement support for talents.</p>
-<p>&ndash;
-<a href=https://github.com/theseion>@theseion</a>, on behalf of the Fuel team</p>
-<h2 id=new-features>
-New Features
-<a class=anchor href=#new-features>#</a>
-</h2>
-<h3 id=builder-api>
-Builder API
-<a class=anchor href=#builder-api>#</a>
-</h3>
-<p>For this version of Fuel we have rewritten much of the setup code to provide users with a builder API. Instead of having to instantiate
-different classes in a specific order, there are now only two classes that users really need to know about: <code>FLSerializer</code> and <code>FLMaterializer</code>. You can configure almost anything you need on these two classes and then send <code>#serialize</code> or <code>#materializeRoot</code> as the final message to kickstart Fuel. Here are two examples from the test suite:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk>objectToSerialize <span style=color:#f92672>:=</span> <span style=color:#a6e22e>Array</span>
-	<span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;hello&#39;</span>
-	<span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;&#39;</span> <span style=color:#a6e22e>writeStream</span>.
-
-<span style=color:#a6e22e>FLSerializer</span> new
-	<span style=color:#a6e22e>when:</span> [ <span style=color:#f92672>:</span>object <span style=color:#f92672>|</span> object <span style=color:#a6e22e>isStream</span> ] <span style=color:#a6e22e>substituteBy:</span> [ <span style=color:#f92672>:</span>o <span style=color:#f92672>|</span> nil ];
-	<span style=color:#a6e22e>object:</span> objectToSerialize;
-	<span style=color:#a6e22e>fileName:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>;
-	<span style=color:#a6e22e>serialize</span>.
-
-materializedObject <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> new
-	<span style=color:#a6e22e>fileName:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>;
-	<span style=color:#a6e22e>materializeRoot</span>.
-</code></pre></div><h3 id=object-limits>
-Object Limits
-<a class=anchor href=#object-limits>#</a>
-</h3>
-<p>For a long time we wanted Fuel to provide the option to limit the amount of objects that would be serialized. This does nothing for you if your goal is to serialize a complete object graph. But consider an application that serializes stack traces with Fuel. Depending on the application, the object graph could be very large, or there could easily be references that lead to serialization of the entire globals dictionary. In such a case you want to serialize as much of the relevant information as possible without assigning all of the processing resources to serialization. Keeping the application running is more important than serializing a stack trace.</p>
-<p>We provide two different ways of limiting the object graph.</p>
-<h4 id=total-objects-limit>
-Total Objects Limit
-<a class=anchor href=#total-objects-limit>#</a>
-</h4>
-<p>With <code>FLSerializer>>limitObjectsTo:</code> you set the maximum number of objects that Fuel will serialize. Think about the layout of your object graph before setting this option. Deep chains of references may cause parts of your graph to be lost that you want to keep. It is usually best to use this option in conjuntion with a
-<a href=#depth-limit>depth limit</a>. The primary reason for applying the total objects limit is to minimize the size of the resulting file and the amount of resources that go into serialization.</p>
-<h4 id=depth-limit>
-Depth Limit
-<a class=anchor href=#depth-limit>#</a>
-</h4>
-<p>With <code>FLSerializer>>limitDepthTo:</code> you set the maximum distance from the root object that Fuel will serialize. This option is useful for trimming unnecessary information from your object graph, e.g. when serializing a stack trace.</p>
-<h3 id=full-serialization-support-by-default>
-Full Serialization Support By Default
-<a class=anchor href=#full-serialization-support-by-default>#</a>
-</h3>
-<p>The Metalevel package is no more. Serialization of classes and methods is now part of the core package. There are a couple of advantages to this, one of the most interesting ones is that this makes it possible for us to support
-<a href=#support-for-talents-and-anonymous-classes>talents</a>.</p>
-<h3 id=class-and-method-serialization-for-squeak>
-Class And Method Serialization For Squeak
-<a class=anchor href=#class-and-method-serialization-for-squeak>#</a>
-</h3>
-<p>The Metalevel package has never, or at least not for a long time, worked in Squeak, which meant that Squeak users were limited to object instance graphs and global lookups. That&rsquo;s fine for many cases but there are so many great things we can do with class and method serialization that it seems unfair to exclude Squeak users from the fun ;). Thanks to a more flexible approach to on-demand class compilation for tests that we implemented, it wasn&rsquo;t too hard to get the tests running for Squeak and after a bit of work most of the things that work for Pharo also work for Squeak. There are some differences of course because of the differences in machinery but those will only matter in edge cases, in my opinion. At some point we will hopefully get around to documenting the differences, until then, don&rsquo;t hesitate to get in touch.</p>
-<h3 id=support-for-talents-and-anonymous-classes>
-Support For Talents And Anonymous Classes
-<a class=anchor href=#support-for-talents-and-anonymous-classes>#</a>
-</h3>
-<p>While working on support for talents we realized that we didn&rsquo;t fully support anonymous classes (as the implementation of talents is based on anonymous classes). We now fully support anonymous classes and, therefore, talents.</p>
-<p>Note that there are no anonymous classes, at least not officially. For our test suite we came up with a way to create anonymous classes so that our tests also succeed in Squeak. That means you can do some crazy things with Fuel and Squeak :).</p>
-<h3 id=support-for-fullblockclosure>
-Support For <code>FullBlockClosure</code>
-<a class=anchor href=#support-for-fullblockclosure>#</a>
-</h3>
-<p>We now support <code>FullBlockClosure</code> for VM&rsquo;s that use the Sista bytecodes. This is an exciting development because instances of <code>FullBlockClosure</code> can exist in isolation, decoupling them from their associated <code>CompiledMethod</code>.</p>
-<h3 id=semantic-versioning>
-Semantic Versioning
-<a class=anchor href=#semantic-versioning>#</a>
-</h3>
-<p>The versioning in Fuel has always been an issue, especially the version check upon materialization. While the intentions were good, in practice we didn&rsquo;t pay enough attention to what a version change meant semantically. For this release we&rsquo;ve decided to finally fix that and adhere to
+<a href=https://github.com/seandenigris>@seandenigris</a> for pointing out that Fuel remains an important project and for pushing me to implement support for talents.</p><p>&ndash;
+<a href=https://github.com/theseion>@theseion</a>, on behalf of the Fuel team</p><h2 id=new-features>New Features
+<a class=anchor href=#new-features>#</a></h2><h3 id=builder-api>Builder API
+<a class=anchor href=#builder-api>#</a></h3><p>For this version of Fuel we have rewritten much of the setup code to provide users with a builder API. Instead of having to instantiate
+different classes in a specific order, there are now only two classes that users really need to know about: <code>FLSerializer</code> and <code>FLMaterializer</code>. You can configure almost anything you need on these two classes and then send <code>#serialize</code> or <code>#materializeRoot</code> as the final message to kickstart Fuel. Here are two examples from the test suite:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-smalltalk data-lang=smalltalk><span style=display:flex><span>objectToSerialize <span style=color:#f92672>:=</span> <span style=color:#a6e22e>Array</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;hello&#39;</span>
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>with:</span> <span style=color:#e6db74>&#39;&#39;</span> <span style=color:#a6e22e>writeStream</span>.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>FLSerializer</span> new
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>when:</span> [ <span style=color:#f92672>:</span>object <span style=color:#f92672>|</span> object <span style=color:#a6e22e>isStream</span> ] <span style=color:#a6e22e>substituteBy:</span> [ <span style=color:#f92672>:</span>o <span style=color:#f92672>|</span> nil ];
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>object:</span> objectToSerialize;
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>fileName:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>;
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>serialize</span>.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>materializedObject <span style=color:#f92672>:=</span> <span style=color:#a6e22e>FLMaterializer</span> new
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>fileName:</span> <span style=color:#e6db74>&#39;demo.fuel&#39;</span>;
+</span></span><span style=display:flex><span>	<span style=color:#a6e22e>materializeRoot</span>.
+</span></span></code></pre></div><h3 id=object-limits>Object Limits
+<a class=anchor href=#object-limits>#</a></h3><p>For a long time we wanted Fuel to provide the option to limit the amount of objects that would be serialized. This does nothing for you if your goal is to serialize a complete object graph. But consider an application that serializes stack traces with Fuel. Depending on the application, the object graph could be very large, or there could easily be references that lead to serialization of the entire globals dictionary. In such a case you want to serialize as much of the relevant information as possible without assigning all of the processing resources to serialization. Keeping the application running is more important than serializing a stack trace.</p><p>We provide two different ways of limiting the object graph.</p><h4 id=total-objects-limit>Total Objects Limit
+<a class=anchor href=#total-objects-limit>#</a></h4><p>With <code>FLSerializer>>limitObjectsTo:</code> you set the maximum number of objects that Fuel will serialize. Think about the layout of your object graph before setting this option. Deep chains of references may cause parts of your graph to be lost that you want to keep. It is usually best to use this option in conjuntion with a
+<a href=#depth-limit>depth limit</a>. The primary reason for applying the total objects limit is to minimize the size of the resulting file and the amount of resources that go into serialization.</p><h4 id=depth-limit>Depth Limit
+<a class=anchor href=#depth-limit>#</a></h4><p>With <code>FLSerializer>>limitDepthTo:</code> you set the maximum distance from the root object that Fuel will serialize. This option is useful for trimming unnecessary information from your object graph, e.g. when serializing a stack trace.</p><h3 id=full-serialization-support-by-default>Full Serialization Support By Default
+<a class=anchor href=#full-serialization-support-by-default>#</a></h3><p>The Metalevel package is no more. Serialization of classes and methods is now part of the core package. There are a couple of advantages to this, one of the most interesting ones is that this makes it possible for us to support
+<a href=#support-for-talents-and-anonymous-classes>talents</a>.</p><h3 id=class-and-method-serialization-for-squeak>Class And Method Serialization For Squeak
+<a class=anchor href=#class-and-method-serialization-for-squeak>#</a></h3><p>The Metalevel package has never, or at least not for a long time, worked in Squeak, which meant that Squeak users were limited to object instance graphs and global lookups. That&rsquo;s fine for many cases but there are so many great things we can do with class and method serialization that it seems unfair to exclude Squeak users from the fun ;). Thanks to a more flexible approach to on-demand class compilation for tests that we implemented, it wasn&rsquo;t too hard to get the tests running for Squeak and after a bit of work most of the things that work for Pharo also work for Squeak. There are some differences of course because of the differences in machinery but those will only matter in edge cases, in my opinion. At some point we will hopefully get around to documenting the differences, until then, don&rsquo;t hesitate to get in touch.</p><h3 id=support-for-talents-and-anonymous-classes>Support For Talents And Anonymous Classes
+<a class=anchor href=#support-for-talents-and-anonymous-classes>#</a></h3><p>While working on support for talents we realized that we didn&rsquo;t fully support anonymous classes (as the implementation of talents is based on anonymous classes). We now fully support anonymous classes and, therefore, talents.</p><p>Note that there are no anonymous classes, at least not officially. For our test suite we came up with a way to create anonymous classes so that our tests also succeed in Squeak. That means you can do some crazy things with Fuel and Squeak :).</p><h3 id=support-for-fullblockclosure>Support For <code>FullBlockClosure</code>
+<a class=anchor href=#support-for-fullblockclosure>#</a></h3><p>We now support <code>FullBlockClosure</code> for VM&rsquo;s that use the Sista bytecodes. This is an exciting development because instances of <code>FullBlockClosure</code> can exist in isolation, decoupling them from their associated <code>CompiledMethod</code>.</p><h3 id=semantic-versioning>Semantic Versioning
+<a class=anchor href=#semantic-versioning>#</a></h3><p>The versioning in Fuel has always been an issue, especially the version check upon materialization. While the intentions were good, in practice we didn&rsquo;t pay enough attention to what a version change meant semantically. For this release we&rsquo;ve decided to finally fix that and adhere to
 <a href=https://semver.org>semantic versioning</a>. From this release on we will mark changes to serialization / materialization by incrementing the major version number.
 Small changes, e.g. API additions, or transparent optimizations, will be marked by incrementing the minor version number.
-Finally, small bug fixes and similar changes without direct impact will be marked by incrementing the patch version number.</p>
-<p>In line with this change, the version check upon materialization will only raise a warning when the major version number differs. In addition, most exceptions raised by Fuel have been resumable since version 3.0.3, so you can still ignore it if you need to.</p>
-<h2 id=removals>
-Removals
-<a class=anchor href=#removals>#</a>
-</h2>
-<p>We don&rsquo;t have a lot of resources, so maintining parts of Fuel that go largely unused isn&rsquo;t a good investment of our time. Often we&rsquo;d also just ignore those parts when updating Fuel for new Pharo and Squeak versions, so many things outside of the core package have become outdated.</p>
-<p>We have decided to remove the following packages:</p>
-<ul>
-<li>FuelDebug</li>
-<li>FuelPreview</li>
-<li>FuelProgressUpdate</li>
-</ul>
-<p>If you rely on any of these, please let us know.</p>
-<h2 id=issue-cleanup>
-Issue Cleanup
-<a class=anchor href=#issue-cleanup>#</a>
-</h2>
-<p>We&rsquo;ve closed many old issues on the
-<a href="https://github.com/theseion/Fuel/issues?q=is%3Aissue+is%3Aclosed+">GitHub issue tracker</a>. Many of them have become obsolete or have already been addressed. Some are out of scope and, while interesting, don&rsquo;t make much sense to keep around as open issues as long a no real interest in them exists. If there&rsquo;s an issue that we closed that you think should be reopened, feel free to reopen it and leave a comment.</p>
-<h2 id=new-documentation-home>
-New Documentation Home
-<a class=anchor href=#new-documentation-home>#</a>
-</h2>
-<p>You are probably reading this announcement on GitHub, the new home for the project documentation. We are still in the process of moving and updating old documentation so you will probably not find all the answers you&rsquo;re looking for here. If you have a suggestion on how to improve the documentation, we welcome pull requests. Or open an issue and let us know.</p>
-</article>
-<footer class=book-footer>
-<div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/d9171b60730cc38896b089a5638efe177c5bcc9a title="Last modified by Max Leske | Oct 31, 2021" target=_blank rel=noopener>
-<img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
-<span>Oct 31, 2021</span>
-</a>
-</div>
-</div>
-<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
-</footer>
-<div class=book-comments>
-</div>
-<label for=menu-control class="hidden book-menu-overlay"></label>
-</div>
-<aside class=book-toc>
-<div class=book-toc-content>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#announcement>Announcement</a></li>
-<li><a href=#new-features>New Features</a>
-<ul>
-<li><a href=#builder-api>Builder API</a></li>
-<li><a href=#object-limits>Object Limits</a></li>
-<li><a href=#full-serialization-support-by-default>Full Serialization Support By Default</a></li>
-<li><a href=#class-and-method-serialization-for-squeak>Class And Method Serialization For Squeak</a></li>
-<li><a href=#support-for-talents-and-anonymous-classes>Support For Talents And Anonymous Classes</a></li>
-<li><a href=#support-for-fullblockclosure>Support For <code>FullBlockClosure</code></a></li>
-<li><a href=#semantic-versioning>Semantic Versioning</a></li>
-</ul>
-</li>
-<li><a href=#removals>Removals</a></li>
-<li><a href=#issue-cleanup>Issue Cleanup</a></li>
-<li><a href=#new-documentation-home>New Documentation Home</a></li>
-</ul>
-</nav>
-</div>
-</aside>
-</main>
-</body>
-</html>
+Finally, small bug fixes and similar changes without direct impact will be marked by incrementing the patch version number.</p><p>In line with this change, the version check upon materialization will only raise a warning when the major version number differs. In addition, most exceptions raised by Fuel have been resumable since version 3.0.3, so you can still ignore it if you need to.</p><h2 id=removals>Removals
+<a class=anchor href=#removals>#</a></h2><p>We don&rsquo;t have a lot of resources, so maintining parts of Fuel that go largely unused isn&rsquo;t a good investment of our time. Often we&rsquo;d also just ignore those parts when updating Fuel for new Pharo and Squeak versions, so many things outside of the core package have become outdated.</p><p>We have decided to remove the following packages:</p><ul><li>FuelDebug</li><li>FuelPreview</li><li>FuelProgressUpdate</li></ul><p>If you rely on any of these, please let us know.</p><h2 id=issue-cleanup>Issue Cleanup
+<a class=anchor href=#issue-cleanup>#</a></h2><p>We&rsquo;ve closed many old issues on the
+<a href="https://github.com/theseion/Fuel/issues?q=is%3Aissue+is%3Aclosed+">GitHub issue tracker</a>. Many of them have become obsolete or have already been addressed. Some are out of scope and, while interesting, don&rsquo;t make much sense to keep around as open issues as long a no real interest in them exists. If there&rsquo;s an issue that we closed that you think should be reopened, feel free to reopen it and leave a comment.</p><h2 id=new-documentation-home>New Documentation Home
+<a class=anchor href=#new-documentation-home>#</a></h2><p>You are probably reading this announcement on GitHub, the new home for the project documentation. We are still in the process of moving and updating old documentation so you will probably not find all the answers you&rsquo;re looking for here. If you have a suggestion on how to improve the documentation, we welcome pull requests. Or open an issue and let us know.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/theseion/Fuel/commit/d9171b60730cc38896b089a5638efe177c5bcc9a title="Last modified by Max Leske | Oct 31, 2021" target=_blank rel=noopener><img src=/Fuel/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Oct 31, 2021</span></a></div></div><script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#announcement>Announcement</a></li><li><a href=#new-features>New Features</a><ul><li><a href=#builder-api>Builder API</a></li><li><a href=#object-limits>Object Limits</a></li><li><a href=#full-serialization-support-by-default>Full Serialization Support By Default</a></li><li><a href=#class-and-method-serialization-for-squeak>Class And Method Serialization For Squeak</a></li><li><a href=#support-for-talents-and-anonymous-classes>Support For Talents And Anonymous Classes</a></li><li><a href=#support-for-fullblockclosure>Support For <code>FullBlockClosure</code></a></li><li><a href=#semantic-versioning>Semantic Versioning</a></li></ul></li><li><a href=#removals>Removals</a></li><li><a href=#issue-cleanup>Issue Cleanup</a></li><li><a href=#new-documentation-home>New Documentation Home</a></li></ul></nav></div></aside></main></body></html>
