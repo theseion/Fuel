@@ -1,9 +1,10 @@
 tests
 assertMaterializedHasCorrectFormat: aClass
-	| materializedClass |	
+	| materializedClass |
 	self serializer fullySerializeBehavior: aClass.
+	
 	materializedClass := self resultOfSerializeAndMaterialize: aClass.
 	
-	self deny: aClass == materializedClass.
-	self assert: aClass typeOfClass = materializedClass typeOfClass.
-	self assert: aClass format = materializedClass format.
+	self deny: aClass identicalTo: materializedClass.
+	self assert: aClass mcType equals: materializedClass mcType.
+	self assert: aClass format equals: materializedClass format

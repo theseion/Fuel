@@ -2,7 +2,7 @@ configuring-materialization
 addPostMaterializationAction: aCleanBlockClosure
 	"Takes a clean (no dependency on outer variables) block closure which will be
 	activated after materialization automatically.
-	This closure takes two optional arguments:
+	This closure takes three optional arguments:
 		1. the header (FLHeader)
 		2. the materialization (FLMateralization)
 		3. the global environment
