@@ -6,5 +6,4 @@ assertMaterializedHasCorrectFormat: aClass
 	materializedClass := self resultOfSerializeAndMaterialize: aClass.
 	
 	self deny: aClass identicalTo: materializedClass.
-	self assert: aClass mcType equals: materializedClass mcType.
 	self assert: aClass format equals: materializedClass format
