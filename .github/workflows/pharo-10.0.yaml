@@ -1,4 +1,4 @@
-name: Build Pharo 9.0
+name: Build Pharo 10.0
 on:
   push:
   pull_request:
