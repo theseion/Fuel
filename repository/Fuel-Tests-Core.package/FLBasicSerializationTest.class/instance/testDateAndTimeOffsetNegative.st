@@ -1,10 +1,10 @@
 tests
 testDateAndTimeOffsetNegative
-	| edt now |
-	edt := TimeZone timeZones detect: [ :timeZone |
+	| est now |
+	est := TimeZone timeZones detect: [ :timeZone |
 		timeZone abbreviation = 'EST' ].
 	
-	DateAndTime localTimeZone: edt.
+	DateAndTime localTimeZone: est.
 	now := DateAndTime now.
 	self assert: now offset equals: -5 hours.
 	self serialize: now.
