@@ -4,4 +4,4 @@ current
 		Current := self
 			newWithMajor: 5
 			minor: 0
-			patch: 2 ]
+			patch: 3 ]
