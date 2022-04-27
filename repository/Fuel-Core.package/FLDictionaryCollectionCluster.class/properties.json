@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"associationNames"
-	],
+	"instvars" : [ ],
 	"name" : "FLDictionaryCollectionCluster",
 	"type" : "normal"
 }

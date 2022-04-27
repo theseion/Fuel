@@ -8,9 +8,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"map",
-		"serializer",
-		"materializer"
+		"map"
 	],
 	"name" : "FLConfiguration",
 	"type" : "normal"

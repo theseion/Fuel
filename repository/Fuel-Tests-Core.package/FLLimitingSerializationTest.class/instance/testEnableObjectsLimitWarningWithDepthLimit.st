@@ -1,6 +1,6 @@
 tests
 testEnableObjectsLimitWarningWithDepthLimit
-	| root materialized |
+	| root |
 	root := FLPair new
 		left: (FLPair new
 			left: 2;

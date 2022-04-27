@@ -3,8 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"encoder",
-		"clusters",
-		"analyzer"
+		"clusters"
 	],
 	"name" : "FLSerialization",
 	"commentStamp" : "",
