@@ -4,4 +4,4 @@ materializeHeader
 		at: #shouldMaterializeHeaderOnly
 		put: true.
 		
-	^ self materialize
+	^ self materialize header
