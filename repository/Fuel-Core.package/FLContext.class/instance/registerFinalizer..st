@@ -1,4 +1,4 @@
-accessing
+finalization
 registerFinalizer: aBlock
 	(map
 		at: #finalizers

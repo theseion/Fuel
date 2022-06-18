@@ -3,6 +3,7 @@ useDuring: aBlock
 	^ FLCurrentConfiguration
 		value: self
 		during: [
-			FLCurrentContext
-				value: FLContext new
-				during: aBlock ]
+			| context |
+			context := FLContext new.
+			[ context useDuring: aBlock ] ensure: [
+				context finalizeStream ] ]

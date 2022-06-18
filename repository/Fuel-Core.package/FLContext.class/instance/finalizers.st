@@ -1,4 +1,4 @@
-accessing
+finalization
 finalizers
 	^ map
 		at: #finalizers
