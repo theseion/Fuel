@@ -5,7 +5,7 @@
 		"map"
 	],
 	"name" : "FLContext",
-	"commentStamp" : "MaxLeske 6/30/2021 19:53",
+	"commentStamp" : "",
 	"super" : "Object",
 	"traitcomposition" : "TFLConfigurable",
 	"type" : "normal",
