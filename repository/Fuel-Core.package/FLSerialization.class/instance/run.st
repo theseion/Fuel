@@ -10,5 +10,4 @@ run
 				FLContext new
 					stream: self context stream;
 					object: object;
-					shouldFinalizeStream: index = numberOfObjects;
 					useDuring: [ self runSteps ] ] ]
