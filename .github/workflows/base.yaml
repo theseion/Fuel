@@ -19,7 +19,7 @@ jobs:
         smalltalk: ${{ fromJSON(inputs.build_targets) }}
         config: ${{ fromJSON(inputs.configs) }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
