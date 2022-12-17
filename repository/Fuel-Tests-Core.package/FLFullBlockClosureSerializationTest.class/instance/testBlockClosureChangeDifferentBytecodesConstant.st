@@ -10,7 +10,7 @@ testBlockClosureChangeDifferentBytecodesConstant
 	aClosure := aClass new perform: #methodWithClosure.
 	self assert: aClosure isClean.
 	self assert: aClosure outerContext isNil.
-	self assert: aClosure class equals: ConstantBlockClosure.
+	self assert: aClosure class equals: (Smalltalk at: #ConstantBlockClosure).
 	
 	self serializer fullySerializeMethod: aClosure compiledBlock method.
 	self serialize: aClosure.
