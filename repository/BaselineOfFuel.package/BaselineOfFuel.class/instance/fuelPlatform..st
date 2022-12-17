@@ -9,5 +9,5 @@ fuelPlatform: spec
 				ifPresent: [ 'master' ]
 				ifAbsent: [ 'v5' ].
 			spec
-				repository: 'github://theseion/FuelPlatform:' + branch + '/repository';
+				repository: 'github://theseion/FuelPlatform:', branch, '/repository';
   				loads: 'default' ]
