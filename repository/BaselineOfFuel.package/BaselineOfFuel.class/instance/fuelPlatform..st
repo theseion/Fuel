@@ -4,7 +4,7 @@ fuelPlatform: spec
 		baseline: 'FuelPlatform' 
 		with: [
 			| branch |
-			branch := Smalltalk
+			branch := Smalltalk globals
 				at: #SmalltalkCI
 				ifPresent: [ :class |
 					(class getEnv: #FL_USE_PLATFORM_MASTER)
