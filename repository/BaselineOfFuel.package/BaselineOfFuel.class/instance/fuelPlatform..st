@@ -4,9 +4,12 @@ fuelPlatform: spec
 		baseline: 'FuelPlatform' 
 		with: [
 			| branch |
-			branch := Smalltalk os environment
-				at: #FL_USE_PLATFORM_MASTER
-				ifPresent: [ 'master' ]
+			branch := Smalltalk
+				at: #SmalltalkCI
+				ifPresent: [ :class |
+					(class getEnv: #FL_USE_PLATFORM_MASTER)
+						ifNotNil: [ 'master' ]
+						ifNil: [ 'v5' ] ]
 				ifAbsent: [ 'v5' ].
 			spec
 				repository: 'github://theseion/FuelPlatform:', branch, '/repository';
