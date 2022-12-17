@@ -9,13 +9,9 @@ afterMaterializationStepWith: aDecoder
 		cluster."
 	aDecoder configuration isMethodChangedWarningDisabled ifTrue: [
 		^ self ].
-	
+
 	objects
-		select: [ :block |
-			| method |
-			method := block method.
-			(method methodClass includesSelector: method selector) not or: [
-				(method methodClass compiledMethodAt: method selector) bytecodesHash ~= method bytecodesHash ] ]
+		select: [ :block | self shouldWarnThatMethodChangedFor: block ]
 		thenDo: [ :block |
 			FLMethodChanged
 				signalWith: block methodClass name

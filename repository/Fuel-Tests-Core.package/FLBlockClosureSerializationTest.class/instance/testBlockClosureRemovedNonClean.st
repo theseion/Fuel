@@ -1,15 +1,14 @@
 tests-change
-testBlockClosureRemoved
-	"Raise an error when materializing a clean closure whose method was removed.
-	Send #yourself to prevent ConstantBlockClosure optmization."
+testBlockClosureRemovedNonClean
+	"Raise an error when materializing a non-clean closure whose method was removed."
 
 	| aClass aClosure |
 	aClass := self classFactory silentlyNewClass.
 	self classFactory
-		silentlyCompile: 'methodWithClosure  ^ [ 42 yourself ]'
+		silentlyCompile: 'methodWithClosure  ^ [ self + 1 ]'
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
-	self assert: aClosure isClean.
+	self deny: aClosure isClean.
 	self assert: aClosure outerContext notNil.
 	
 	self serialize: aClosure.

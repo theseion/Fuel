@@ -1,7 +1,7 @@
 serialize/materialize
 serializeInstance: aCompiledBlock with: anEncoder
 	| header bytecode |
-	bytecode := aCompiledBlock bytecode.
+	bytecode := aCompiledBlock bytecodes.
 	header := aCompiledBlock header.
 
 	self
