@@ -9,6 +9,7 @@ on:
     # Month of the year [1,12]
     # Day of the week ([0,6] with 0=Sunday)
     - cron:  '17 4 * * 6'
+  workflow_dispatch:
 jobs:
   build:
     name: Build Pharo 7.0
