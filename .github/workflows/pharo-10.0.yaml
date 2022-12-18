@@ -1,4 +1,4 @@
-name: Build Pharo alpha
+name: Build Pharo 10.0
 on:
   push:
   pull_request:
@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    name: Build Pharo alpha
+    name: Build Pharo 10.0
     uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
-      build_targets: '["Pharo64-alpha"]'
+      build_targets: '["Pharo64-10"]'
       configs: '[".default.ston", ".tests.ston", ".corewithextras.ston", ".developmentgroup.ston"]'
