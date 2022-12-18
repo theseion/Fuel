@@ -1,0 +1,44 @@
+name: Build Pharo 10.0
+on:
+  push:
+  pull_request:
+  schedule:
+    # Minute [0,59]
+    # Hour [0,23]
+    # Day of the month [1,31]
+    # Month of the year [1,12]
+    # Day of the week ([0,6] with 0=Sunday)
+    - cron:  '17 4 * * 6'
+  workflow_dispatch:
+    inputs:
+      branches:
+        description: "Branches"
+        required: true
+        type: choice
+        options:
+        - master
+        - 2.2.0
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 4.0.0
+        - 4.1.0
+        - 4.1.1
+        - 5.0.0
+        - 5.0.1
+        - 5.0.2
+        - 5.0.3
+        - 5.0.4
+        - 5.0.5
+        - 5.0.6
+        - 5.1.0
+        - 5.2.0
+jobs:
+  build:
+    name: Build Pharo 10.0
+    uses: theseion/fuel/.github/workflows/base.yaml@master
+    with:
+      build_targets: '["Pharo64-10"]'
+      configs: '[".default.ston", ".tests.ston", ".debug.ston", ".developmentgroup.ston"]'
