@@ -1,4 +1,4 @@
-tests
+tests-serialization
 testDifferentMajor
 	self serializer
 		at: #version

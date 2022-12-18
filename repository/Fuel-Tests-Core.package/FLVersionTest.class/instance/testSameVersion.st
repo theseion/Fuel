@@ -1,4 +1,4 @@
-tests
+tests-serialization
 testSameVersion
 	self serializer
 		at: #version
