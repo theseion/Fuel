@@ -5,5 +5,5 @@ shouldWarnThatMethodChangedFor: aBlock
 	(method methodClass includesSelector: method selector) ifFalse: [ ^ true ].
 	
 	currentMethod := method methodClass compiledMethodAt: method selector.
-	^ currentMethod recursiveBytecodesHash ~= method recursiveBytecodesHash or: [
+	^ currentMethod bytecodesHash ~= method bytecodesHash or: [
 		currentMethod literals ~= method literals ]
