@@ -1,4 +1,4 @@
-tests
+tests-serialization
 testDifferentPatch
 	self serializer
 		at: #version
