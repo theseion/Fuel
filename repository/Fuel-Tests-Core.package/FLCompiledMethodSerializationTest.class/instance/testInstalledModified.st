@@ -7,17 +7,14 @@ testInstalledModified
 
 	self assert: theCompiledMethod isInstalled.
 	self deny: theCompiledMethod isDoIt.
-	self deny: theCompiledMethod trailer hasSource.
-	self deny: theCompiledMethod trailer isEmpty.
-	self assert: theCompiledMethod trailer hasSourcePointer.
+	self assert: theCompiledMethod hasSourcePointer.
 
 	copy := theCompiledMethod copy.
 	"different instance can not be installed at the same time."
 	self deny: copy isInstalled.
 	self deny: copy isDoIt.
-	self deny: copy trailer hasSource.
-	self deny: copy trailer isEmpty.
-	self assert: copy trailer hasSourcePointer.
+	self deny: theCompiledMethod sourceCode isNil.
+	self assert: copy hasSourcePointer.
 
 	"if installed but not different, the installed instance will be answered"
 	materialized := self resultOfSerializeAndMaterialize: copy.
@@ -26,6 +23,4 @@ testInstalledModified
 	self deny: materialized isInstalled.
 	self deny: materialized isDoIt.
 	"we serialized the source"
-	self assert: materialized trailer hasSource.
-	self deny: materialized trailer isEmpty.
-	self deny: materialized trailer hasSourcePointer
+	self assert: materialized sourceCode notNil.

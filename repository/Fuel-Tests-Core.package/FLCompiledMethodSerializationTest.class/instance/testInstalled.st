@@ -1,15 +1,12 @@
 tests
 testInstalled
 	| materialized |
-	"Since Pharo 3.0 decompilation of compiled methods is no longer possible.
-	That means we have to store the source too."
 	self useInstalled.
 
 	self assert: theCompiledMethod isInstalled.
 	self deny: theCompiledMethod isDoIt.
-	self deny: theCompiledMethod trailer hasSource.
-	self deny: theCompiledMethod trailer isEmpty.
-	self assert: theCompiledMethod trailer hasSourcePointer.
+	self deny: theCompiledMethod sourceCode isNil.
+	self assert: theCompiledMethod hasSourcePointer.
 
 	"if installed but not different, the installed instance will be answered"
 	materialized := self resultOfSerializeAndMaterialize: theCompiledMethod.
