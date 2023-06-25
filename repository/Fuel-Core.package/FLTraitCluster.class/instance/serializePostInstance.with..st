@@ -12,4 +12,7 @@ serializePostInstance: aTrait with: anEncoder
 				serializeLayout: aTrait classLayout
 				with: anEncoder ]
 		ifFalse: [ anEncoder encodeReferenceTo: nil ].
-	anEncoder encodeString: aTrait instanceVariablesString
+	anEncoder
+		encodeString: aTrait instanceVariablesString;
+		encodeString: aTrait comment;
+		encodeString: aTrait commentStamp

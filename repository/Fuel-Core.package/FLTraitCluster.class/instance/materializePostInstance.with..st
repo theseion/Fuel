@@ -1,12 +1,14 @@
 serialize/materialize
 materializePostInstance: aTrait with: aDecoder
-	| category name environment format layout instanceVariableNames |
+	| category name environment format layout instanceVariableNames comment stamp |
 	category := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
 	environment := aDecoder nextEncodedReference.
 	format := aDecoder nextEncodedReference.
 	layout := self materializeLayoutWith: aDecoder.
 	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
+	comment := aDecoder nextEncodedString.
+	stamp := aDecoder nextEncodedString.
 	
 	aTrait 
 		initialize;
@@ -20,4 +22,8 @@ materializePostInstance: aTrait with: aDecoder
 		installLayout: layout
 		withFormat: format
 		variableNames: instanceVariableNames
-		into: aTrait
+		into: aTrait.
+		
+	aTrait
+		comment: comment
+		stamp: stamp
