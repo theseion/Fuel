@@ -1,6 +1,9 @@
 tests
 testAssociationWithWeak
-	"This tests an association with weak values. InstVar1 is a fixed instance variable, hence they are strong and hence should not be replaed by nil. Instead, 'weak' is stored in the variable part of FLWeakClassMock, so it is weak and so it should have been replaced by nil."
+	"This tests an association with weak values.
+	InstVar1 is a fixed instance variable, hence they are strong and hence should not be replaced by nil.
+	Instead, 'weak' is stored in the variable part of FLWeakClassMock, so it is weak and is
+	replaced by nil."
 
 	| weak association materializedAssociation |
 	weak := FLWeakClassMock new: 1.
