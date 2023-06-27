@@ -5,8 +5,8 @@ baseline: spec
 	spec for: #common do: [
 		spec
 			package: 'Fuel-Core';
-			package: 'Fuel-Tests-Core' with: [ spec requires: 'Core' ].
+			package: 'Fuel-Core-Tests' with: [ spec requires: 'Core' ].
 
 		spec
 			group: 'Core' with: #( 'Fuel-Core' );
-			group: 'Tests' with: #( 'Core' 'Fuel-Tests-Core' ) ]
+			group: 'Tests' with: #( 'Core' 'Fuel-Core-Tests' ) ]

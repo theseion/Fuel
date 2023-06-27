@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializationTest",
+	"category" : "Fuel-Core-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentTimeZone"
+	],
+	"name" : "FLBasicSerializationTest",
+	"type" : "normal"
+}

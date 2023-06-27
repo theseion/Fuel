@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializationTest",
+	"category" : "Fuel-Core-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"thisContextSample"
+	],
+	"name" : "FLContextSerializationTest",
+	"type" : "normal"
+}

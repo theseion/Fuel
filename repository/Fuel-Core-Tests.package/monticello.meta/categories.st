@@ -1,0 +1,12 @@
+SystemOrganization addCategory: #'Fuel-Core-Tests'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Base'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Collections'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Configuration'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-ConvenienceExtensions'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-FullSerialization'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Streams'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Support-ClassFactory'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Support-Environment'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Support-Mocks'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Support-Resources'!
+SystemOrganization addCategory: #'Fuel-Core-Tests-Support-StreamStrategies'!

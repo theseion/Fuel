@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "AbstractEnvironmentTestCase",
+	"category" : "Fuel-Core-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"streamStrategy",
+		"classFactory",
+		"materializer",
+		"serializer"
+	],
+	"name" : "FLSerializationTest",
+	"type" : "normal"
+}

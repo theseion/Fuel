@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestResource",
+	"category" : "Fuel-Core-Tests-Support-Resources",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"directoryPath"
+	],
+	"name" : "FLFilePoolTestResource",
+	"type" : "normal"
+}

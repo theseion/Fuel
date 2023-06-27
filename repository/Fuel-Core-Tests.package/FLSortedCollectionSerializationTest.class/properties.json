@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FLSerializationTest",
+	"category" : "Fuel-Core-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ClassVariableForTesting"
+	],
+	"instvars" : [
+		"instanceVariableForTesting"
+	],
+	"name" : "FLSortedCollectionSerializationTest",
+	"type" : "normal"
+}

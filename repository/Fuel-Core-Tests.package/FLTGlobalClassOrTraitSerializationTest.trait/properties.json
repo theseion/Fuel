@@ -1,0 +1,7 @@
+{
+	"commentStamp" : "",
+	"classinstvars" : [ ],
+	"category" : "Fuel-Core-Tests-Base",
+	"instvars" : [ ],
+	"name" : "FLTGlobalClassOrTraitSerializationTest"
+}

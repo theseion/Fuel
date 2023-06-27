@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FLPair",
+	"category" : "Fuel-Core-Tests-Support-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instVar1"
+	],
+	"name" : "FLWeakClassMock",
+	"type" : "weak"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FLBasicSerializationTest",
+	"category" : "Fuel-Core-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLGZippedBasicSerializationTest",
+	"type" : "normal"
+}
