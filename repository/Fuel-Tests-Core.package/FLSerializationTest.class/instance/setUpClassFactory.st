@@ -1,4 +1,3 @@
 running
 setUpClassFactory
-	classFactory := FLPlatform current classFactoryForTestCaseClass
-		forEnvironment: self environmentOfTest
+	classFactory := FLClassFactoryForTestCase forEnvironment: self environmentOfTest

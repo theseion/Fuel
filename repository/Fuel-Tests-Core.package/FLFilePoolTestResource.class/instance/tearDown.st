@@ -1,5 +1,5 @@
 running
 tearDown
-	FLPlatform current deleteAllInDirectoryPath: directoryPath.
-	
+	directoryPath asFileReference deleteAll.
+
 	super tearDown

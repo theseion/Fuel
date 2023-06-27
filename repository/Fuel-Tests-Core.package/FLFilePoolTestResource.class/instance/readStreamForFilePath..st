@@ -1,3 +1,5 @@
 accessing-files
 readStreamForFilePath: aString
-	^ FLPlatform current readStreamForFilePath: (self filePathString: aString)
+	^ (File named: (self filePathString: aString)) readStream
+		  binary;
+		  yourself

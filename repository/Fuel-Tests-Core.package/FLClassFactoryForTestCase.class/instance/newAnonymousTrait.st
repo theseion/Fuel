@@ -1,3 +1,7 @@
 creating-traits-anonymous
 newAnonymousTrait
-	^ FLPlatform current newAnonymousTraitNamed: self defaultNewTraitName
+	^ Smalltalk anonymousClassInstaller make: [ :builder |
+		builder
+			"The name is necessary to not break Pharo"
+			name: self defaultNewTraitName;
+			beTrait ]

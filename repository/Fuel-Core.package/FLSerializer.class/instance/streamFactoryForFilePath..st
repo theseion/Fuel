@@ -1,3 +1,6 @@
 private
 streamFactoryForFilePath: aString
-	^ [ FLPlatform current writeStreamForFilePath: aString ]
+	^ [
+	  (File named: aString) writeStream
+		  binary;
+		  yourself ]

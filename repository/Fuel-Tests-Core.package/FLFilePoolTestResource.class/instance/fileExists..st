@@ -1,3 +1,3 @@
 testing
 fileExists: aString
-	^ FLPlatform current filePathExists: (self filePathString: aString)
+	^ (self filePathString: aString) asFileReference exists

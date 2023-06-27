@@ -1,3 +1,5 @@
 accessing-files
 writeStreamForFilePath: aString
-	^ FLPlatform current writeStreamForFilePath: (self filePathString: aString)
+	^ (File named: (self filePathString: aString)) writeStream
+		  binary;
+		  yourself

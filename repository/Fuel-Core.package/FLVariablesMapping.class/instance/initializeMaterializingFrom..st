@@ -7,9 +7,8 @@ initializeMaterializingFrom: aDecoder
 		theClass
 			instVarIndexFor: name
 			ifAbsent: [ nil ] ].
-	
+
 	"Don't allocate unnecessary space for the dictionary if we don't need it."
-	FLPlatform current hasStatefulTraits ifFalse: [ ^ self ].
 	(mapping includes: nil) ifFalse: [ ^ self ].
-	
+
 	possibleTraitVariables := Dictionary new

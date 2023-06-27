@@ -1,3 +1,3 @@
 private-cleaning
 deletePackage
-	self packageOrganizer removeCategoriesMatching: self defaultPackageName , '-*'
+	Smalltalk organization removeCategoriesMatching: self defaultPackageName , '-*'

@@ -5,7 +5,7 @@ cleanUpSystemOrganization
 	categories."
 
 	| categories |
-	categories := self packageOrganizer categoriesMatching: self defaultPackageName , '-*'.
+	categories := Smalltalk organization categoriesMatching: self defaultPackageName , '-*'.
 	categories do: [ :category |
-		(self packageOrganizer listAtCategoryNamed: category) do: [ :behaviorName |
-			self packageOrganizer removeBehavior: behaviorName ] ]
+		(Smalltalk organization listAtCategoryNamed: category) do: [ :behaviorName |
+			Smalltalk organization removeBehavior: behaviorName ] ]
