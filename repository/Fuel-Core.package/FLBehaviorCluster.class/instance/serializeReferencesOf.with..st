@@ -3,4 +3,4 @@ serializeReferencesOf: aClassOrTrait with: anEncoder
 
 	anEncoder
 		encodeReferenceTo: aClassOrTrait methodDictionary;
-		encodeReferenceTo: aClassOrTrait organization
+		encodeReferenceTo: aClassOrTrait protocols

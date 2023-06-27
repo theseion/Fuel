@@ -14,5 +14,5 @@ testCreateWithMethod
 
 	self assert: (materializedClassOrTrait includesSelector: #fortyTwo).
 	self assertCollection: #(fortyTwo) hasSameElements: materializedClassOrTrait localSelectors.
-	self assert: category equals: (materializedClassOrTrait whichCategoryIncludesSelector: #fortyTwo).
+	self assert: category equals: (materializedClassOrTrait protocolNameOfSelector: #fortyTwo).
 	self assert: 42 equals: ((self newInstanceFrom: materializedClassOrTrait) perform: #fortyTwo).

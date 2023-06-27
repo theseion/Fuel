@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FLCreateClassSerializationTest",
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"super" : "FLClassSerializationTest",
 	"traitcomposition" : "FLTCreateClassOrTraitSerializationTest",
 	"type" : "normal",

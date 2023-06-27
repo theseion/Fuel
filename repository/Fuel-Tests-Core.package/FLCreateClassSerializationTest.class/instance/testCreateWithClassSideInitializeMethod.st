@@ -21,4 +21,4 @@ testCreateWithClassSideInitializeMethod
 
 	self assert: (materializedClassOrTrait classSide includesSelector: #initialize).
 	self assertCollection: #(initialize) hasSameElements: materializedClassOrTrait classSide localSelectors.
-	self assert: category equals: (materializedClassOrTrait classSide whichCategoryIncludesSelector: #initialize)
+	self assert: category equals: (materializedClassOrTrait classSide protocolNameOfSelector: #initialize)
