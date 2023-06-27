@@ -3,6 +3,8 @@ testSortedCollectionWithClassVariableChanges
 	"Tests serialization of a SortedCollection whose sortBlock has a reference to a class variable and its value is changed. See also FLBlockClosureSerializationTest >> testBlockClosureWithClassVariableChanges  and FLCompiledMethodSerializationTest >> testMethodChangingClassVariable"
 
 	| aSortedCollection materialized compiledBlock index literalHolder |
+	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+
 	ClassVariableForTesting := false.
 	
 	aSortedCollection := self class sortedCollectionForTestingWithClassVariable.

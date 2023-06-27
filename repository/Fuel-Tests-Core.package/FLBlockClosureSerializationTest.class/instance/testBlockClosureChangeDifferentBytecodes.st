@@ -4,6 +4,8 @@ testBlockClosureChangeDifferentBytecodes
 	Send #yourself to prevent ConstantBlockClosure optmization."
 
 	| aClass aClosure |
+	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+
 	aClass := self classFactory silentlyNewClass.
 	self classFactory
 		silentlyCompile: 'methodWithClosure  ^ [ 42 yourself ]'

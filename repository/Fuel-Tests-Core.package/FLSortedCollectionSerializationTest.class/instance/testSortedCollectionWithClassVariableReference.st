@@ -8,6 +8,8 @@ testSortedCollectionWithClassVariableReference
 	self assert: x ~= y"
 
 	| aSortedCollection materialized |
+	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+
 	ClassVariableForTesting := false.
 
 	aSortedCollection := self class sortedCollectionForTestingWithClassVariable.

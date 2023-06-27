@@ -1,6 +1,8 @@
 tests-clean
 testBlockClosureWithThreeArguments
 	| closure materializedClosure |
+	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+
 	closure := [ :a :b :c | a + b + c ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
 	closure assertWellMaterializedInto: materializedClosure in: self.

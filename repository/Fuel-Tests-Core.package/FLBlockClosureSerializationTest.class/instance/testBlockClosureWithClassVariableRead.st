@@ -1,6 +1,8 @@
 tests-clean
 testBlockClosureWithClassVariableRead
 	| closure materializedClosure |
+	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+
 	ClassVariableForTesting := nil.
 	closure := [ ClassVariableForTesting ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
