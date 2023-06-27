@@ -6,4 +6,4 @@ shouldWarnThatMethodChangedFor: aBlock
 	
 	currentMethod := method methodClass compiledMethodAt: method selector.
 	^ currentMethod bytecodesHash ~= method bytecodesHash or: [
-		currentMethod literalsHash ~= method literalsHash ]
+		currentMethod literals ~= method literals ]

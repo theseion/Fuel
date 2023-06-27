@@ -1,3 +1,0 @@
-running
-setUpStreamStrategy
-	streamStrategy := FLFileReferenceStreamStrategy new

@@ -1,6 +1,7 @@
 tests-configuring-stream
 testStreamFinalizerDefault
 	| logClass log |
+	<ignoreNotImplementedSelectors: #(_log)>
 	logClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'log'.
 	self classFactory
 		silentlyCompile: 'initialize log := OrderedCollection new' in: logClass;
