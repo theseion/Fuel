@@ -9,11 +9,10 @@ SmalltalkCISpec {
       #directory: 'repository',
       #load : [ 'Tests' ],
       #platforms : [
-        #squeak,
         #pharo ]
     }
   ],
   #testing : {
-    #categories : [ 'Fuel-Tests*' ]
+    #categories : [ 'Fuel-Core-Tests' ]
   }
 }

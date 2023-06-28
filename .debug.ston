@@ -9,7 +9,6 @@ SmalltalkCISpec {
       #directory: 'repository',
       #load : [ 'Debug' ],
       #platforms : [
-        #squeak,
         #pharo ]
     }
   ],
