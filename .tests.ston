@@ -13,6 +13,6 @@ SmalltalkCISpec {
     }
   ],
   #testing : {
-    #categories : [ 'Fuel-Core-Tests' ]
+    #categories : [ 'Fuel-Core-Tests*' ]
   }
 }

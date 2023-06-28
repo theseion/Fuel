@@ -15,8 +15,8 @@ SmalltalkCISpec {
   ],
   #testing : {
     #categories : [
-      'Fuel-Core-Tests',
-      'Fuel-Debug-Tests',
-      'Fuel-Benchmark-Tests' ]
+      'Fuel-Core-Tests*',
+      'Fuel-Debug-Tests*',
+      'Fuel-Benchmark-Tests*' ]
   }
 }
