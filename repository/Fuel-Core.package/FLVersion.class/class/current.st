@@ -3,4 +3,4 @@ current
 	^ self
 		newWithMajor: 5
 		minor: 2
-		patch: 0
+		patch: 1
