@@ -69,10 +69,21 @@ master | 5.2.2 | 5.1.0 | 5.0.6 | 4.1.1 | 3.0.4 | 3.0.3 | 3.0.2 | 3.0.1 | 3.0.0 |
 
 # Installation
 
+## Pharo >= 12
+As of Pharo 12, Fuel will no longer be backwards compatible and each version
+will live on a separate branch.
+
+```
+Metacello new
+    repository: 'github://theseion/Fuel:Pharo12/repository';
+    baseline: 'Fuel';
+    load.
+```
+
 ## Pharo >= 7.0
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:5.1.0/repository';
+    repository: 'github://theseion/Fuel:5.2.2/repository';
     baseline: 'Fuel';
     load.
 ```
@@ -112,7 +123,7 @@ Gofer new
 ## Squeak >= 5.2
 ```smalltalk
 Metacello new
-    repository: 'github://theseion/Fuel:5.1.0/repository';
+    repository: 'github://theseion/Fuel:5.2.2/repository';
     baseline: 'Fuel';
     load.
 ```
