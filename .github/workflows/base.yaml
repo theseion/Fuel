@@ -8,6 +8,10 @@ on:
       configs:
         required: true
         type: string
+      branch:
+        required: false
+        default: master
+        type: string
 jobs:
   build:
     name: "Build ${{ matrix.smalltalk }} ${{ matrix.config }}"
@@ -20,6 +24,8 @@ jobs:
         config: ${{ fromJSON(inputs.configs) }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.branch }}
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
