@@ -21,3 +21,4 @@ jobs:
     with:
       build_targets: '["Pharo64-alpha"]'
       configs: '[".default.ston", ".tests.ston"]'
+      branch: Pharo12
