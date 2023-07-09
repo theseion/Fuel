@@ -6,12 +6,9 @@ serializePostInstance: aTrait with: anEncoder
 		encodeReferenceTo: aTrait name;
 		encodeReferenceTo: aTrait basicEnvironment;
 		encodeReferenceTo: aTrait format.
-	FLPlatform current hasStatefulTraits
-		ifTrue: [
-			self
-				serializeLayout: aTrait classLayout
-				with: anEncoder ]
-		ifFalse: [ anEncoder encodeReferenceTo: nil ].
+	self
+		serializeLayout: aTrait classLayout
+		with: anEncoder.
 	anEncoder
 		encodeString: aTrait instanceVariablesString;
 		encodeString: aTrait comment;

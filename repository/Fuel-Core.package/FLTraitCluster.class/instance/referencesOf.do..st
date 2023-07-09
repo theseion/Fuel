@@ -8,6 +8,4 @@ referencesOf: aTrait do: aBlock
 		value: aTrait category;
 		value: aTrait name;
 		value: aTrait format;
-		value: (FLPlatform current hasStatefulTraits
-			ifTrue: [ aTrait classLayout class ]
-			ifFalse: [ nil ])
+		value: aTrait classLayout class
