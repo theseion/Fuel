@@ -1,3 +1,3 @@
 instance creation
 newClassOrTrait
-	^ self classFactory newTrait
+	^ self classFactory silentlyNewTrait

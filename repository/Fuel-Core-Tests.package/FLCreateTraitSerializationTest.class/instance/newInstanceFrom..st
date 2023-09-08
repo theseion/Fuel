@@ -1,8 +1,6 @@
 class-factory
 newInstanceFrom: aClassOrTrait
+
 	^ (aClassOrTrait isTrait
-		ifTrue: [
-			self classFactory
-				silentlyNewSubclassOf: Object
-				uses: aClassOrTrait ]
-		ifFalse: [ aClassOrTrait ]) new
+		   ifTrue: [ self classFactory silentlyMake: [ :aBuilder | aBuilder traitComposition: aClassOrTrait ] ]
+		   ifFalse: [ aClassOrTrait ]) new

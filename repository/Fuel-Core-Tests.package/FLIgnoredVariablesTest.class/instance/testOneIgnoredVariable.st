@@ -1,15 +1,14 @@
 tests
 testOneIgnoredVariable
+
 	| anObject result aClass |
-	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'a b c'.
-	self classFactory
-		silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(b)'
-		in: aClass class.
+	aClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'a b c' ].
+	self classFactory silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(b)' in: aClass class.
 	anObject := aClass new
-		instVarAt: 1 put: $A;
-		instVarAt: 2 put: $B;
-		instVarAt: 3 put: $C;
-		yourself.
+		            instVarAt: 1 put: $A;
+		            instVarAt: 2 put: $B;
+		            instVarAt: 3 put: $C;
+		            yourself.
 
 	result := self resultOfSerializeAndMaterialize: anObject.
 

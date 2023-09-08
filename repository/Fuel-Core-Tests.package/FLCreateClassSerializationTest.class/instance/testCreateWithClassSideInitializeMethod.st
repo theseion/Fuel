@@ -9,7 +9,7 @@ testCreateWithClassSideInitializeMethod
 		silentlyCompile: 'initialize
 			self error: ''Fuel should not automatically call #initialize'''
 		in: aClassOrTrait classSide
-		category: category.
+		protocol: category.
 
 	self
 		shouldnt: [ materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait ]

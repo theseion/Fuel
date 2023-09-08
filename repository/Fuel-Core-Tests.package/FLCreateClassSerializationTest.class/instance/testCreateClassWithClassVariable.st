@@ -1,9 +1,9 @@
 tests
 testCreateClassWithClassVariable
 	"Tests materialization a class not defined in the image, with a class variable."
-	
-	| aClass materializedClass |	
-	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'ClassVariable'.
+
+	| aClass materializedClass |
+	aClass := self classFactory make: [ :aBuilder | aBuilder sharedVariablesFromString: 'ClassVariable' ].
 	aClass classPool at: 'ClassVariable' put: #test.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.

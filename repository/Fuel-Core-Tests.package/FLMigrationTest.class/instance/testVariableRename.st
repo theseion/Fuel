@@ -1,7 +1,8 @@
 tests-manual
 testVariableRename
+
 	| pointClass aPoint resultPoint pointClassName |
-	pointClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'x y'.
+	pointClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'x y' ].
 	pointClassName := pointClass name.
 	aPoint := pointClass new.
 	aPoint instVarNamed: 'x' put: 7.
@@ -10,12 +11,10 @@ testVariableRename
 	self serialize: aPoint.
 	self redefined: pointClass with: 'posY posX'.
 
-	self materializer
-		migrateClassNamed: pointClassName
-		variables: (Dictionary new
-			at: 'x' put: 'posX';
-			at: 'y' put: 'posY';
-			yourself).
+	self materializer migrateClassNamed: pointClassName variables: (Dictionary new
+			 at: 'x' put: 'posX';
+			 at: 'y' put: 'posY';
+			 yourself).
 
 	resultPoint := self materialized.
 

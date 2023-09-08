@@ -6,6 +6,6 @@ testNotFoundAfterRemoval
 	classOrTrait := self newClassOrTrait.
 	
 	self serialize: classOrTrait.
-	self classFactory 	deleteBehavior: classOrTrait.
+	self classFactory 	delete: classOrTrait.
 	
 	self should: [self materialized] raise: FLClassNotFound.

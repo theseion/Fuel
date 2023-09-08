@@ -2,13 +2,11 @@ tests
 testIgnoredValueIsNotMaterialized
 
 	| anObject materialized aClass |
-	aClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'a'.
-	self classFactory
-		silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(a)'
-		in: aClass class.
+	aClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'a' ].
+	self classFactory silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(a)' in: aClass class.
 	anObject := aClass new
-		instVarAt: 1 put: #A;
-		yourself.
+		            instVarAt: 1 put: #A;
+		            yourself.
 
 	self serialize: anObject.
 	materialized := self materialized.

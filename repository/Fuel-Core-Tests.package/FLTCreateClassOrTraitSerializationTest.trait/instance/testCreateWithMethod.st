@@ -8,7 +8,7 @@ testCreateWithMethod
 	self classFactory
 		silentlyCompile: 'fortyTwo ^42'
 		in: aClassOrTrait
-		category: category.
+		protocol: category.
 
 	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
 

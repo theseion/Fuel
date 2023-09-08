@@ -3,7 +3,7 @@ testVariableOrderChange
 	"Tests that serializer tolarates when the order in the instance variables changed between serialization and materialization"
 
 	| pairClass aPair resultPair |
-	pairClass := self classFactory silentlyNewClassWithInstanceVariableNames: 'left right'.
+	pairClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'left right' ].
 	aPair := pairClass new.
 	aPair instVarAt: 1 put: $A.
 	aPair instVarAt: 2 put: $B.

@@ -1,9 +1,10 @@
 tests
 testPostMaterializationActions
+
 	| aClass |
 	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
-	aClass := self classFactory silentlyNewClassWithClassVariableNames: 'TestClassVariable TestClassVariable2'.
+	aClass := self classFactory make: [ :aBuilder | aBuilder sharedVariablesFromString: 'TestClassVariable TestClassVariable2' ].
 	self classFactory
 		silentlyCompile: 'postLoadMethod TestClassVariable := 1' in: aClass class;
 		silentlyCompile: 'postLoadMethod2 TestClassVariable := 2' in: aClass class;
