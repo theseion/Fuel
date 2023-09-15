@@ -10,4 +10,5 @@ testConsiderCustomGlobal
 	self environmentOfTest
 		at: globalKey
 		put: aPerson.
+	addedGlobals add: globalKey.
 	self assertSerializationIdentityOf: aPerson

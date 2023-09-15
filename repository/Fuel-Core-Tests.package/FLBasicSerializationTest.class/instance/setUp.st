@@ -1,4 +1,4 @@
 running
 setUp
 	super setUp.
-	currentTimeZone := DateAndTime localTimeZone.
+	currentTimeZone := DateAndTime localTimeZone

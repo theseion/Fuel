@@ -5,6 +5,7 @@ testLookUpInGlobalsSymbolKey
 	self environmentOfTest
 		at: #aGlobal
 		put: object.
+	addedGlobals add: #aGlobal.
 	self serializer lookUpInGlobals: #aGlobal.
 	
 	self assert: (self serializer globals includesKey: #aGlobal).

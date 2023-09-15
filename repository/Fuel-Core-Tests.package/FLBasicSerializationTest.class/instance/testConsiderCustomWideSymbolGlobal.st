@@ -12,6 +12,7 @@ testConsiderCustomWideSymbolGlobal
 	self environmentOfTest
 		at: aWideSymbol
 		put: aPerson.
+	addedGlobals add: aWideSymbol.
 	
 	self
 		shouldnt: [ self resultOfSerializeAndMaterialize: aPerson ]

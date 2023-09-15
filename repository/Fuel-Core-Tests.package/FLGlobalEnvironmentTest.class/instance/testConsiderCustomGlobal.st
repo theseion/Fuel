@@ -7,6 +7,7 @@ testConsiderCustomGlobal
 		environment: (Dictionary new
 			at: #FLGlobalVariableForTesting put: 42;
 			yourself).
+	addedGlobals add: #FLGlobalVariableForTesting. 
 
 	self materializer environment: (Dictionary new
 		at: #FLGlobalVariableForTesting put: 7;

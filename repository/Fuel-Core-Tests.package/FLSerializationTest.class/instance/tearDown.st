@@ -1,5 +1,7 @@
 running
 tearDown
-	self tearDownClassFactory.
+	self
+		tearDownClassFactory;
+		tearDownEnvironment.
 	
 	super tearDown

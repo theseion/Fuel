@@ -8,6 +8,7 @@ testWideStringGlobal
 	self environmentOfTest
 		at: global
 		put: globalValue.
+	addedGlobals add: global.
 	self serializer lookUpInGlobals: global.
 
 	self shouldnt: [ self serialize: 'bar' -> globalValue ] raise: Error.

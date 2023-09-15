@@ -9,7 +9,8 @@
 		"streamStrategy",
 		"classFactory",
 		"materializer",
-		"serializer"
+		"serializer",
+		"addedGlobals"
 	],
 	"name" : "FLSerializationTest",
 	"type" : "normal"

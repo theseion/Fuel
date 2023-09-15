@@ -6,6 +6,7 @@ testLookUpInGlobalsObjectKey
 	self environmentOfTest
 		at: object
 		put: marge.
+	addedGlobals add: object.
 	self serializer lookUpInGlobals: object.
 
 	self assert: (self serializer globals includesKey: object).

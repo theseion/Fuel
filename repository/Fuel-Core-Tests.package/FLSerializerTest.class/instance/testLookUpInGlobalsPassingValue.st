@@ -6,6 +6,7 @@ testLookUpInGlobalsPassingValue
 	self environmentOfTest
 		at: object1
 		put: object2.
+	addedGlobals add: object1.
 	self serializer lookUpInGlobals: object2.
 	
 	self assert: (self serializer globals includesKey: object1).

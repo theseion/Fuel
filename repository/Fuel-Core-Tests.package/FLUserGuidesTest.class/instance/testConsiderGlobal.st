@@ -7,6 +7,9 @@ testConsiderGlobal
 	self environmentOfTest
 		at: #GlobalSet1 put: anArray first;
 		at: #GlobalSet2 put: anArray second.
+	addedGlobals
+		add: #GlobalSet1;
+		add: #GlobalSet2.
 
 	"Serialize considering *only first* as a global object."
 	FLSerializer new

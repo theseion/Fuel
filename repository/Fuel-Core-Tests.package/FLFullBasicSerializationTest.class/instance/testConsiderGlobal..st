@@ -8,6 +8,7 @@ testConsiderGlobal: anObject
 	self environmentOfTest
 		at: #FLGlobalVariableForTesting
 		put: anObject.
+	addedGlobals add: #FLGlobalVariableForTesting.
 	globalAssociation := self environmentOfTest associationAt: #FLGlobalVariableForTesting.
 	
 	self assertSerializationIdentityOf: globalAssociation.
