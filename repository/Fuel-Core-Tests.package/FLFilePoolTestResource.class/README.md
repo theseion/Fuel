@@ -1,0 +1,1 @@
+I abstract file creation so that I can track all the files that are created by tests and can delete them after the tests have ended.
