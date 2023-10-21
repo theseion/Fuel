@@ -1,3 +1,12 @@
++++
++++
+<div style="margin: 1rem 0; padding: 0.5rem 1rem 0.5rem 0.75rem; border-inline-start: 0.25rem solid yellow; border-radius:0.25">
+    <span style="color=yellow">IMPORTANT</span>
+    <p>
+        The debugging packages are no longer being maintained. The documentation below was written for version 1.8.1 but is left here for posterity.
+    </p>
+</div    
+
 There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
 # Serialization
 The most important thing to remark is that serialization is split in two main steps: analysis and encoding.
