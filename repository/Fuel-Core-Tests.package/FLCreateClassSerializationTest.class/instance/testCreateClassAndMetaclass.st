@@ -2,23 +2,25 @@ tests
 testCreateClassAndMetaclass
 	"Tests materialization of a class or trait not defined in the image and that the metaclass is also created."
 
-	| class materializedClassOrTrait environment category name metaclassName metaclass |
+	| class materializedClass environment name metaclassName metaclass package packageTag |
 	class := self classFactory silentlyNewClass.
 	environment := class environment.
-	category := class category.
+	package := class package.
+	packageTag := class packageTag.
 	name := class name.
 	metaclassName := class class name.
 	metaclass := class class.
 
-	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: class.
+	materializedClass := self resultOfSerializeRemoveAndMaterialize: class.
 
-	self assert: environment identicalTo: materializedClassOrTrait environment.
+	self assert: environment identicalTo: materializedClass environment.
 
-	self assert: category equals: materializedClassOrTrait category.
-	self assert: name equals: materializedClassOrTrait name.
+	self assert: package identicalTo: materializedClass package.
+	self assert: packageTag name equals: materializedClass packageTag name.
+	self assert: name equals: materializedClass name.
 	"Notice that the metaclass is serialized by Fuel and a new one will be created."
-	self assert: metaclassName equals: materializedClassOrTrait class name.
-	self deny: metaclass identicalTo: materializedClassOrTrait class.
+	self assert: metaclassName equals: materializedClass class name.
+	self deny: metaclass identicalTo: materializedClass class.
 
 	"It is important to notice that (at this moment) Fuel does not add the materialized class or trait into Smalltalk globals"
 	self deny: (self environmentOfTest includesKey: name)

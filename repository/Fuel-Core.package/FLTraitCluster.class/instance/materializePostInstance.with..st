@@ -1,7 +1,9 @@
 serialize/materialize
 materializePostInstance: aTrait with: aDecoder
-	| category name environment format layout instanceVariableNames comment stamp |
-	category := aDecoder nextEncodedReference.
+
+	| name environment format layout instanceVariableNames comment stamp packageName packageTagName |
+	packageName := aDecoder nextEncodedReference.
+	packageTagName := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
 	environment := aDecoder nextEncodedReference.
 	format := aDecoder nextEncodedReference.
@@ -9,21 +11,21 @@ materializePostInstance: aTrait with: aDecoder
 	instanceVariableNames := aDecoder nextEncodedString substrings: ' '.
 	comment := aDecoder nextEncodedString.
 	stamp := aDecoder nextEncodedString.
-	
-	aTrait 
+
+	aTrait
 		initialize;
 		"#initialize sets Object as the superclass
 		but the superclass of traits is nil"
 		superclass: nil;
 		setName: name;
-		basicCategory: (category ifNil: [ UndefinedPackage undefinedPackageName ]) asSymbol;
 		environment: environment.
+
+	self setTag: packageTagName ofPackage: packageName to: aTrait.
+
 	self
 		installLayout: layout
 		withFormat: format
 		variableNames: instanceVariableNames
 		into: aTrait.
-		
-	aTrait
-		comment: comment
-		stamp: stamp
+
+	aTrait comment: comment stamp: stamp

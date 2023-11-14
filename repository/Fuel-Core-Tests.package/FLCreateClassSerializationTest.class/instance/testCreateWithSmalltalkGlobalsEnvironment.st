@@ -2,15 +2,17 @@ tests
 testCreateWithSmalltalkGlobalsEnvironment
 	"Tests materialization of a class or trait not defined in the image, and with Smalltalk globals  in the instance variable 'environment'. In that case, the whole Smalltalk globals should NOT be fully serialized but only a reference to the globals should be stored. "
 
-	| aClassOrTrait materializedClassOrTrait category name |
-	aClassOrTrait := self classFactory silentlyNewClass.
-	aClassOrTrait environment: Smalltalk globals.
-	category := aClassOrTrait category.
-	name := aClassOrTrait name.
+	| class materializedClass name package packageTag |
+	class := self classFactory silentlyNewClass.
+	class environment: Smalltalk globals.
+	package := class package.
+	packageTag := class packageTag.
+	name := class name.
 
-	materializedClassOrTrait := self resultOfSerializeRemoveAndMaterialize: aClassOrTrait.
+	materializedClass := self resultOfSerializeRemoveAndMaterialize: class.
 
-	self assert: materializedClassOrTrait basicEnvironment identicalTo: Smalltalk globals.
+	self assert: materializedClass basicEnvironment identicalTo: Smalltalk globals.
 
-	self assert: category equals: materializedClassOrTrait category.
-	self assert: name equals: materializedClassOrTrait name
+	self assert: package identicalTo: materializedClass package.
+	self assert: packageTag name equals: materializedClass packageTag name.
+	self assert: name equals: materializedClass name

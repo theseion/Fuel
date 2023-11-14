@@ -1,9 +1,10 @@
 serialize/materialize
 materializePostInstance: aClass with: aDecoder
 
-	| superclass category name format instanceVariableNames layout comment stamp |
+	| superclass name format instanceVariableNames layout comment stamp packageName packageTagName |
 	superclass := aDecoder nextEncodedReference.
-	category := aDecoder nextEncodedReference.
+	packageName := aDecoder nextEncodedReference.
+	packageTagName := aDecoder nextEncodedReference.
 	name := aDecoder nextEncodedReference.
 	format := aDecoder nextEncodedReference.
 	layout := self materializeLayoutWith: aDecoder.
@@ -11,17 +12,17 @@ materializePostInstance: aClass with: aDecoder
 	comment := aDecoder nextEncodedString.
 	stamp := aDecoder nextEncodedString.
 
-	aClass 
+	aClass
 		basicSuperclass: superclass;
 		setName: name;
-		basicCategory: category; 
 		methodDictionary: MethodDictionary new.
+
+	self setTag: packageTagName ofPackage: packageName to: aClass.
+
 	self
 		installLayout: layout
 		withFormat: format
 		variableNames: instanceVariableNames
 		into: aClass.
-	
-	aClass 
-		comment: comment
-		stamp: stamp
+
+	aClass comment: comment stamp: stamp

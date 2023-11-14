@@ -2,9 +2,10 @@ serialize/materialize
 serializePostInstance: aClass with: anEncoder
 
 	anEncoder encodeReferenceTo: aClass superclass.
-	"Do not use #basicCategory because since it may be lazily computed it may happen that it is still in nil. "
+
 	anEncoder
-		encodeReferenceTo: aClass category;
+		encodeReferenceTo: aClass package name;
+		encodeReferenceTo: aClass packageTag name;
 		encodeReferenceTo: aClass getName;
 		encodeReferenceTo: aClass format.	
 	self

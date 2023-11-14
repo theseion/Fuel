@@ -7,7 +7,8 @@ referencesOf: aClass do: aBlock
 	aBlock value: aClass superclass.
 	aBlock value: aClass basicClassPool.
 	aBlock value: aClass basicSharedPools. 
-	aBlock value: aClass category.
+	aBlock value: aClass package name.
+	aBlock value: aClass packageTag name.
 	aBlock value: aClass name.
 	aBlock value: aClass format.	
 	aBlock value: aClass basicEnvironment.
