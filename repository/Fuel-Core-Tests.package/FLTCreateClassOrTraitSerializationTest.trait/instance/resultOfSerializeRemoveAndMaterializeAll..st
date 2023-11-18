@@ -1,4 +1,4 @@
-tests
+helpers
 resultOfSerializeRemoveAndMaterializeAll: objects
 
 	| classesOrTraits materialized silent |
