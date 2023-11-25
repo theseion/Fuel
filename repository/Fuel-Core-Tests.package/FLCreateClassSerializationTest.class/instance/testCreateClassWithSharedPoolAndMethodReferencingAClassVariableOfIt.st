@@ -22,7 +22,7 @@ testCreateClassWithSharedPoolAndMethodReferencingAClassVariableOfIt
 
 	self assert: materializedClass sharedPools size equals: 1.
 	self assert: sharedPool identicalTo: materializedClass sharedPools first.
-	self assert: (materializedClass >> #xxx literalAt: 1) value identicalTo: (sharedPool classPool at: #ClassVar1).
-	self assert: (materializedClass class >> #yyy literalAt: 1) value identicalTo: (sharedPool classPool at: #ClassVar1).
+	self assert: (materializedClass >> #xxx literalAt: 1) value identicalTo: (sharedPool readClassVariableNamed: #ClassVar1).
+	self assert: (materializedClass class >> #yyy literalAt: 1) value identicalTo: (sharedPool readClassVariableNamed: #ClassVar1).
 	self assert: (materializedClass new perform: #xxx) identicalTo: anObject.
 	self assert: (materializedClass perform: #yyy) identicalTo: anObject
