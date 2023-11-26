@@ -1,1 +1,1 @@
-I am a cluster for objects with weak indexable variables.
+I am a cluster for objects with weak indexable variables. I only serialize a weak reference if there is also a strong reference from within the graph, as otherwise the garbage collector would immediately collect the object during materialization.

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "MaxLeske 6/2/2021 13:40",
+	"commentStamp" : "",
 	"super" : "FLAbstractCollectionCluster",
 	"category" : "Fuel-Core-Clusters-Optimized",
 	"classinstvars" : [ ],

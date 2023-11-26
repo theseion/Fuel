@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "MaxLeske 11/26/2023 09:57",
-	"super" : "FLVariableObjectCluster",
+	"commentStamp" : "MaxLeske 11/26/2023 09:58",
+	"super" : "FLFixedObjectCluster",
 	"category" : "Fuel-Core-Clusters",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FLWeakVariableObjectCluster",
+	"name" : "FLEphemeronCluster",
 	"type" : "normal"
 }
