@@ -1,8 +1,8 @@
 analyzing
 referencesOf: anObject do: aBlock
-	"Do not store strong reference to the key, which is essentially a weak reference.
-	Do not trace the key either. We only want to serialize the key if there's an
-	explicit reference to it in the graph."
+	"Do not trace the key. We only want to serialize the key if there's an
+	explicit reference to it in the graph.
+	See #serializeReferencesOf:with:"
 	| key |
 	key := anObject key.
 	variablesMapping

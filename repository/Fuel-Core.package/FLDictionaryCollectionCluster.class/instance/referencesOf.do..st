@@ -6,4 +6,7 @@ referencesOf: aDictionary do: aBlock
 				aBlock
 					value: key;
 					value: value ] ]
-		ifFalse: [ aDictionary associationsDo: aBlock ]
+		ifFalse: [
+			self
+				specialAssociationsOf: aDictionary
+				do: aBlock ]
