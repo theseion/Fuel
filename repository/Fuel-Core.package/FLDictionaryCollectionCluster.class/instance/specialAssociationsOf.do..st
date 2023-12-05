@@ -1,7 +1,7 @@
 analyzing
 specialAssociationsOf: aDictionary do: aBlock
 	aDictionary associationsDo: [ :association |
-		association fuelIsEphemeron
+		association class isEphemeronClass
 			ifFalse: [ aBlock value: association ]
 			ifTrue: [
 				self
