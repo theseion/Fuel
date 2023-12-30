@@ -2,7 +2,7 @@ tests-manual
 testClassRename
 
 	| pointClass aPoint resultPoint pointClassName |
-	pointClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'x y' ].
+	pointClass := self classFactory make: [ :aBuilder | aBuilder slots: #(x y) ].
 	pointClassName := pointClass name.
 	aPoint := pointClass new.
 	aPoint instVarNamed: 'x' put: 7.

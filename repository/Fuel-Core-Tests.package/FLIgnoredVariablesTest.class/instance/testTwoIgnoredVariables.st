@@ -2,7 +2,7 @@ tests
 testTwoIgnoredVariables
 
 	| anObject result aClass |
-	aClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'a b c' ].
+	aClass := self classFactory make: [ :aBuilder | aBuilder slots: #(a b c) ].
 	self classFactory silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(a c)' in: aClass class.
 	anObject := aClass new
 		            instVarAt: 1 put: $A;

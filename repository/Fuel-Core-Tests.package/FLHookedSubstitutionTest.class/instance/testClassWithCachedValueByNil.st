@@ -2,7 +2,7 @@ tests
 testClassWithCachedValueByNil
 
 	| aClassWithCachedValue result original |
-	aClassWithCachedValue := self classFactory silentlyMake: [ :aBuilder | aBuilder slotsFromString: 'cache' ].
+	aClassWithCachedValue := self classFactory silentlyMake: [ :aBuilder | aBuilder slots: #(cache) ].
 	self classFactory
 		silentlyCompile: 'cache ^cache' in: aClassWithCachedValue;
 		silentlyCompile: 'cache: x cache := x' in: aClassWithCachedValue;

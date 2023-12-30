@@ -2,7 +2,7 @@ tests
 testIgnoredValueIsNotMaterialized
 
 	| anObject materialized aClass |
-	aClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'a' ].
+	aClass := self classFactory make: [ :aBuilder | aBuilder slots: #(a) ].
 	self classFactory silentlyCompile: 'fuelIgnoredInstanceVariableNames ^#(a)' in: aClass class.
 	anObject := aClass new
 		            instVarAt: 1 put: #A;

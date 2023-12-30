@@ -3,7 +3,7 @@ testMaterializationDoesNotModifySerializedClass
 	"Tests that materialization does not change the source class."
 
 	| aClass materializedClass |
-	aClass := self classFactory make: [ :aBuilder | aBuilder slotsFromString: 'var' ].
+	aClass := self classFactory make: [ :aBuilder | aBuilder slots: #(var) ].
 
 	self serializer fullySerializeBehavior: aClass.
 	self serialize: aClass.

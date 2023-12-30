@@ -2,7 +2,7 @@ tests
 testProxyInsideObjectByTarget
 
 	| aProxyClass result original pair |
-	aProxyClass := self classFactory silentlyMake: [ :aBuilder | aBuilder sharedVariablesFromString: 'Target' ].
+	aProxyClass := self classFactory silentlyMake: [ :aBuilder | aBuilder sharedVariables: #(Target) ].
 	self classFactory
 		silentlyCompile: 'target: x  Target := x' in: aProxyClass;
 		silentlyCompile: 'fuelAccept: aVisitor

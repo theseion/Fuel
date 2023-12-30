@@ -3,7 +3,7 @@ testCreateClassWithClassVariable
 	"Tests materialization a class not defined in the image, with a class variable."
 
 	| aClass materializedClass |
-	aClass := self classFactory make: [ :aBuilder | aBuilder sharedVariablesFromString: #ClassVariable ].
+	aClass := self classFactory make: [ :aBuilder | aBuilder sharedVariables: #(ClassVariable) ].
 	(aClass classVariableNamed: #ClassVariable) write: #test.
 
 	materializedClass := self resultOfSerializeRemoveAndMaterialize: aClass.
