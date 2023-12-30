@@ -1,0 +1,3 @@
+*Fuel-Core
+fuelGetTraitComposition
+	^ composition

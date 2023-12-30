@@ -8,4 +8,4 @@ serializeReferencesOf: aMetaclass with: anEncoder
 		encodeReferenceTo: aMetaclass baseLocalMethods;
 		encodeReferenceTo: aMetaclass localMethodDict;
 		encodeReferenceTo: aMetaclass baseComposition;
-		encodeReferenceTo: aMetaclass traitComposition
+		encodeReferenceTo: aMetaclass fuelGetTraitComposition

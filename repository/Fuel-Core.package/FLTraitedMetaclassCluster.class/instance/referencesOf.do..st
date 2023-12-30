@@ -8,4 +8,4 @@ referencesOf: aMetaclass do: aBlock
 		value: aMetaclass baseLocalMethods;
 		value: aMetaclass localMethodDict;
 		value: aMetaclass baseComposition;
-		value: aMetaclass traitComposition
+		value: aMetaclass fuelGetTraitComposition
