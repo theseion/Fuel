@@ -5,30 +5,31 @@
     <p>
         The debugging packages are no longer being maintained. The documentation below was written for version 1.8.1 but is left here for posterity.
     </p>
-</div    
+</div>
 
+# Debugging
 There are a couple of packages that help us debugging Fuel. To understand the output of the tools in this guide, you should know some basics of how Fuel internally works.
-# Serialization
+## Serialization
 The most important thing to remark is that serialization is split in two main steps: analysis and encoding.
-## Analysis
+### Analysis
 It consists in a graph iteration, mapping each traversed object to its correspondent grouping, called cluster.
-## Encoding
+### Encoding
 After analysis, we linearly write on the stream, in these steps:
 1. header
 1. for each cluster, instances part
 1. for each cluster, references part
 1. trailer
 
-# Materialization
+## Materialization
 It consists on progressively recreating the graph.
-## Decoding
+### Decoding
 This is done by linearly reading from the stream. So, steps are obviously analogous to the ones above:
 1. header
 1. for each cluster, instances part
 1. for each cluster, references part
 1. trailer
 
-# Debug Tools
+## Debugging Tools
 Ensure you have them with:
 ```smalltalk
 (ConfigurationOfFuel project version: '1.8.1') 
@@ -51,7 +52,7 @@ I add draw capabilities to analysis in FuelDebug package.Right-click a node for 
 ```
 They look like: {{< figure src="/static/fuel-preview.png" title="Fuel Preview" >}}
 
-## FLDebugSerialization
+### FLDebugSerialization
 I am a serialization which facilitates debugging, by logging the stream position before and after main steps of `FLSerialization`, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send #setDebug to your serializer and run as usually. For example:
 ```smalltalk
 FileStream forceNewFileNamed: 'debug.fuel' do: [:aFile |
@@ -64,7 +65,7 @@ Then, inspect the output log:
 FLDebugSerialization last log
 ```
 
-## FLDebugMaterialization
+### FLDebugMaterialization
 I am a materialization which facilitates debugging, by logging the stream position before and after main steps of `FLMaterialization`, including cluster information. Obviously, you should be familiar with such class and the algorithm to understand the output log.To use, send `#setDebug` to your serializer and run as usually. For example:
 ```smalltalk
 FileStream oldFileNamed: 'debug.fuel' do: [:aFile |

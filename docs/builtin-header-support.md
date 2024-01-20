@@ -1,3 +1,13 @@
++++
++++
+<div style="margin: 1rem 0; padding: 0.5rem 1rem 0.5rem 0.75rem; border-inline-start: 0.25rem solid yellow; border-radius:0.25">
+    <span style="color=yellow">IMPORTANT</span>
+    <p>
+        The information on this page refers to versions < 5.
+    </p>
+</div>
+
+# Built-in Header Support
 Since the graph of objects serialized in a file can be large, and it can be useful to query some small extra info, Fuel supports the possibility to easily add such information in a header. The following examples show this set of features:
 ```smalltalk
 | serializer |

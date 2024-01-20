@@ -1,3 +1,4 @@
+# Errors
 We provide a hierarchy of errors which allow to clearly identify the problem if something went wrong:
 - FLError
   - FLSerializationError

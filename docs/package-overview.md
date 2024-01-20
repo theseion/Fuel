@@ -1,3 +1,13 @@
++++
++++
+<div style="margin: 1rem 0; padding: 0.5rem 1rem 0.5rem 0.75rem; border-inline-start: 0.25rem solid yellow; border-radius:0.25">
+    <span style="color=yellow">IMPORTANT</span>
+    <p>
+        The information on this page refers to versions < 5.
+    </p>
+</div>
+
+# Package Overview
 Fuel is a general purpose serializer and it is highly customizable to cope with different objects and scenarios. Below we describe the main packages that are available in our repository. For simplicitly we omit testing packages.
 
 ## Fuel
