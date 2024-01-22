@@ -1,5 +1,5 @@
 "Images with integrated Fuel will not be able to load a new package structure"
-RPackageOrganizer default packages
+PackageOrganizer default packages
   select: [ :package | package name beginsWith: 'Fuel' ]
   thenDo: [ :package |
     (package class canUnderstand: #removeFromSystem)
