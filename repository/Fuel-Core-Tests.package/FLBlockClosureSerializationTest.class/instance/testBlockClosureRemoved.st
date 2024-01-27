@@ -12,7 +12,7 @@ testBlockClosureRemoved
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
 	self assert: aClosure isClean.
-	self assert: aClosure outerContext notNil.
+	self assert: aClosure outerContext isNotNil.
 	
 	self serialize: aClosure.
 	aClass removeSelectorSilently: #methodWithClosure.

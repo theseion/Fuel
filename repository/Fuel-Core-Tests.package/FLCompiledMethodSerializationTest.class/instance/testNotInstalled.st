@@ -13,7 +13,7 @@ testNotInstalled
 	self deny: materialized isInstalled.
 	self deny: materialized isDoIt.
 	"we serialized the source, trailer is empty"
-	self assert: materialized sourceCode notNil.
+	self assert: materialized sourceCode isNotNil.
 	self deny: materialized hasSourcePointer.
 	
 	self assert: (materialized isEqualRegardlessTrailerTo: theCompiledMethod)

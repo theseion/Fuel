@@ -23,7 +23,7 @@ testEnableObjectsLimitWarning
 		do: [ :ex | ex resume ].
 		
 	materialized := self materialized.
-	self assert: materialized left notNil.
+	self assert: materialized left isNotNil.
 	self assert: materialized right equals: 1.
 	self assert: materialized left left isNil.
 	self assert: materialized left right isNil
