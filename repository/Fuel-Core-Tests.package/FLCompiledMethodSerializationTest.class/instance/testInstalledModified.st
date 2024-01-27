@@ -23,4 +23,4 @@ testInstalledModified
 	self deny: materialized isInstalled.
 	self deny: materialized isDoIt.
 	"we serialized the source"
-	self assert: materialized sourceCode notNil.
+	self assert: materialized sourceCode isNotNil.

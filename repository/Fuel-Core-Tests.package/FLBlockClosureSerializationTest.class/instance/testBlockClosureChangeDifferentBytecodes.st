@@ -12,7 +12,7 @@ testBlockClosureChangeDifferentBytecodes
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
 	self assert: aClosure isClean.
-	self assert: aClosure notNil.
+	self assert: aClosure isNotNil.
 	
 	self serialize: aClosure.
 	self classFactory

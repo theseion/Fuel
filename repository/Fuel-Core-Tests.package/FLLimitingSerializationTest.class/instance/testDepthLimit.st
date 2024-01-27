@@ -17,9 +17,9 @@ testDepthLimit
 		serialize.
 		
 	materialized := self materialized.
-	self assert: materialized left notNil.
+	self assert: materialized left isNotNil.
 	self assert: materialized right equals: 1.
-	self assert: materialized left left notNil.
+	self assert: materialized left left isNotNil.
 	self assert: materialized left right equals: 2.
 	self assert: materialized left left left isNil.
 	self assert: materialized left left right isNil
