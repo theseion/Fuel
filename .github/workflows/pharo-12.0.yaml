@@ -19,6 +19,6 @@ jobs:
     name: Build Pharo 12.0
     uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
-      build_targets: '["Pharo64-alpha"]'
+      build_targets: '["Pharo64-12"]'
       configs: '[".default.ston", ".tests.ston"]'
       branch: Pharo12
