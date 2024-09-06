@@ -1,3 +1,4 @@
 accessing
 variableReferences
-	^ variableReferences ifNil: [ variableReferences := FLLargeIdentityDictionary new ]
+"FLLargeIdentityDictionary -> IdentityDictionary"
+	^ variableReferences ifNil: [ variableReferences := IdentityDictionary new ]

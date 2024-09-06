@@ -1,3 +1,4 @@
 accessing
 references
-	^ references ifNil: [  references := FLLargeIdentityDictionary new ]
+"FLLargeIdentityDictionary -> IdentityDictionary"
+	^ references ifNil: [  references := IdentityDictionary new ]
