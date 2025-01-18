@@ -1,7 +1,7 @@
 tests-clean
 testBlockClosureWithGlobalVariable
 	| closure materializedClosure |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	closure := [ Smalltalk ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.

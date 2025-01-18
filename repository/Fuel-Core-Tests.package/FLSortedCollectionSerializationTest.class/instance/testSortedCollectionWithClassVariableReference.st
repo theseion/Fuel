@@ -8,7 +8,7 @@ testSortedCollectionWithClassVariableReference
 	self assert: x ~= y"
 
 	| aSortedCollection materialized |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	ClassVariableForTesting := false.
 

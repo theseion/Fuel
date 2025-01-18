@@ -1,7 +1,7 @@
 tests-Getting Started
 testDemo
 	| sourceArray loadedArray |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	sourceArray := Array
 		with: 'a string'

@@ -2,7 +2,7 @@ tests
 testPreMaterializationActions
 
 	| aClass |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	aClass := self classFactory make: [ :aBuilder | aBuilder sharedVariables: #(TestClassVariable TestClassVariable2) ].
 	self classFactory

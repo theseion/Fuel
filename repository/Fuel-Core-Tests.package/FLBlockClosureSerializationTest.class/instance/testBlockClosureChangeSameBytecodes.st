@@ -4,7 +4,7 @@ testBlockClosureChangeSameBytecodes
 	Send #yourself to prevent ConstantBlockClosure optmization."
 
 	| aClass aClosure materializedClosure |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	aClass := self classFactory silentlyNewClass.
 	self classFactory

@@ -5,7 +5,7 @@ testCompiledMethodChanged
 	Else, raise a proper error."
 	
 	| classA classB |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	classA := self classFactory silentlyNewClass.
 	self classFactory

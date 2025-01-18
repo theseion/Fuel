@@ -8,7 +8,7 @@ testSortedCollection
 	self assert: x ~= y"
 
 	| aSortBlock aSortedCollection materialized |
-	CompilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
+	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
 
 	aSortBlock := [ :a :b | a >= b ].
 	aSortedCollection := SortedCollection sortBlock: aSortBlock.
