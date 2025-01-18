@@ -1,3 +1,3 @@
 accessing
 references
-	^ references ifNil: [  references := FLLargeIdentityDictionary new ]
+	^ references ifNil: [  references := IdentityDictionary new ]

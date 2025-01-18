@@ -1,6 +1,6 @@
 accessing
 objectCount: aNumber
 	objectCount := aNumber.
-	objectsIndexes := FLLargeIdentityDictionary new.
-	substitutionIndexes := FLLargeIdentityDictionary new.
+	objectsIndexes := IdentityDictionary new.
+	substitutionIndexes := IdentityDictionary new.
 	indexStream := FLIndexStream on: stream digits: aNumber bytesCount
