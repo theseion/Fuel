@@ -1,19 +1,17 @@
 tests-change
-testBlockClosureChangeDifferentBytecodes
+testBlockClosureChangeDifferentBytecodesClean
 	"Raise an error when materializing a clean closure whose method has changed bytecodes.
 	Send #yourself to prevent ConstantBlockClosure optmization."
 
 	| aClass aClosure |
-	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
-
 	aClass := self classFactory silentlyNewClass.
 	self classFactory
 		silentlyCompile: 'methodWithClosure  ^ [ 42 yourself ]'
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
 	self assert: aClosure isClean.
-	self assert: aClosure isNotNil.
-	
+	self assertCleanBlockOuterContextBasedOnCompilationOption: aClosure.
+	 
 	self serialize: aClosure.
 	self classFactory
 		silentlyCompile: 'methodWithClosure  ^ 42'

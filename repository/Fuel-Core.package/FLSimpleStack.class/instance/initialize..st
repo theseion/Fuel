@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initialize: hintSize
 
 	array := Array new: hintSize.

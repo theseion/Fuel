@@ -1,5 +1,5 @@
-tests-change
-testBlockClosureRemovedNonClean
+tests
+testBlockClosureRemovedFull
 	"Raise an error when materializing a non-clean closure whose method was removed."
 
 	| aClass aClosure |
@@ -11,6 +11,10 @@ testBlockClosureRemovedNonClean
 	self deny: aClosure isClean.
 	self assert: aClosure outerContext isNotNil.
 	
+	self serializer fullySerializeMethod: aClosure compiledBlock method.
 	self serialize: aClosure.
 	aClass removeSelectorSilently: #methodWithClosure.
-	self should: [ self materialized ] raise: FLMethodNotFound
+	self should: [ self materialized ] raise: FLMethodChanged.
+	
+	self materializer disableMethodChangedWarning.
+	self materialized

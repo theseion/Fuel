@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeWith: aStreamStrategy
 
 	self initialize.

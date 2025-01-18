@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeWithClass: aClass references: aCollection
 	self initialize.
 	theClass := aClass.

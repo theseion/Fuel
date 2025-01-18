@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeAnalyzing: aClass
 
 	self initializeAnalyzing.

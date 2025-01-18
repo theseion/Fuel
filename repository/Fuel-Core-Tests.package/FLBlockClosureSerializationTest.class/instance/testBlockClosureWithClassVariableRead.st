@@ -1,8 +1,6 @@
 tests-clean
 testBlockClosureWithClassVariableRead
 	| closure materializedClosure |
-	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
-
 	ClassVariableForTesting := nil.
 	closure := [ ClassVariableForTesting ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.

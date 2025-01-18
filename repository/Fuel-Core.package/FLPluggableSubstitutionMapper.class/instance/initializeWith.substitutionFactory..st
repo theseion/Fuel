@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeWith: aCondition substitutionFactory: aBlock
 
 	self initialize.

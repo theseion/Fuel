@@ -18,4 +18,5 @@ testBlockClosureChangeDifferentBytecodesConstant
 		in: aClass.
 	self deny: aClosure method isInstalled.
 	materializedClosure := self materialized.
+
 	self assert: materializedClosure value equals: 41

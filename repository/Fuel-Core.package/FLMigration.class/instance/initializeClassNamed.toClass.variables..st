@@ -1,4 +1,4 @@
-initializing
+initialization
 initializeClassNamed: aSymbol toClass: aClass variables: anArray 
 	
 	self initialize.

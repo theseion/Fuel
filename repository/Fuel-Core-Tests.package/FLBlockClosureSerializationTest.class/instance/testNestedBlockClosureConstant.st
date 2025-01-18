@@ -1,8 +1,6 @@
 tests-clean
-testNestedBlockClosure
+testNestedBlockClosureConstant
 	| closure materializedClosure |
-	Smalltalk compiler compilationContext optionCleanBlockClosure ifTrue: [ ^ self skip ].
-
 	closure := [ [ 42 ] ].
 	materializedClosure := self resultOfSerializeAndMaterialize: closure.
 	closure assertWellMaterializedInto: materializedClosure in: self.

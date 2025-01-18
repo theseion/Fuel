@@ -11,8 +11,9 @@ testBlockClosureChangeSameBytecodesConstant
 		in: aClass.
 	aClosure := aClass new perform: #methodWithClosure.
 	self assert: aClosure isClean.
-	self assert: aClosure outerContext isNil.
-	self assert: aClosure class equals: (Smalltalk at: #ConstantBlockClosure).
+	self assertConstantBlockOuterContextBasedOnCompilationOption: aClosure.
+	Smalltalk compiler compilationContext optionConstantBlockClosure ifTrue: [ 
+		self assert: aClosure class equals: (Smalltalk at: #ConstantBlockClosure) ].
 	
 	self serializer fullySerializeMethod: aClosure compiledBlock method.
 	self serialize: aClosure.

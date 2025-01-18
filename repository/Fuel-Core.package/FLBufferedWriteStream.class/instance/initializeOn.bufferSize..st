@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeOn: writeStream bufferSize: aSize
 
 	self initialize.

@@ -1,4 +1,4 @@
-initializing
+initialization
 initializeMigrations
 	migrationsBySource := IdentityDictionary new.
 	migrationsByTarget := IdentityDictionary new.

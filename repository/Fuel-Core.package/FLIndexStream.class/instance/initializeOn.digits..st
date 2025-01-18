@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initializeOn: aStream digits: aNumberOfDigits
 
 	self initialize.

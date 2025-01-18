@@ -14,4 +14,4 @@ testBlockClosureRemovedConstant
 	
 	self serialize: aClosure.
 	aClass removeSelectorSilently: #methodWithClosure.
-	self shouldnt: [ self materialized ] raise: FLMethodNotFound
+	self should: [ self materialized ] raise: FLMethodNotFound
