@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: ${{contains(join(github.event.commits.*.message), '[docs]')}}
     steps:
       - uses: actions/checkout@v2
