@@ -1,11 +1,11 @@
-name: Build Pharo 13.0
+name: Build Pharo 14.0
 on:
   push:
     branches:
-      - Pharo13
+      - Pharo14
   pull_request_target:
     branches:
-      - Pharo13
+      - Pharo14
   schedule:
     # Minute [0,59]
     # Hour [0,23]
@@ -16,9 +16,9 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    name: Build Pharo 13.0
+    name: Build Pharo 14.0
     uses: theseion/fuel/.github/workflows/base.yaml@master
     with:
       build_targets: '["Pharo64-alpha"]'
       configs: '[".default.ston", ".tests.ston"]'
-      branch: Pharo13
+      branch: Pharo14

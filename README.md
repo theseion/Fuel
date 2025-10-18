@@ -28,7 +28,8 @@ We would love to see your project here too ;)!
 # Status of automated builds
 ### Pharo
 
-[![Build status: Pharo 13 (alpha)](https://img.shields.io/github/actions/workflow/status/theseion/fuel/pharo-13.0.yaml?branch=Pharo13&label=Pharo%2013%20(alpha)&logo=github)](https://github.com/theseion/Fuel/actions/workflows/pharo-13.0.yaml)
+[![Build status: Pharo 14 (alpha)](https://img.shields.io/github/actions/workflow/status/theseion/fuel/pharo-14.0.yaml?branch=Pharo14&label=Pharo%2014%20(alpha)&logo=github)](https://github.com/theseion/Fuel/actions/workflows/pharo-14.0.yaml)
+[![Build status: Pharo 13](https://img.shields.io/github/actions/workflow/status/theseion/fuel/pharo-13.0.yaml?branch=Pharo13&label=Pharo%201&logo=github)](https://github.com/theseion/Fuel/actions/workflows/pharo-13.0.yaml)
 [![Build status: Pharo 12](https://img.shields.io/github/actions/workflow/status/theseion/fuel/pharo-12.0.yaml?branch=Pharo12&label=Pharo%2012&logo=github)](https://github.com/theseion/Fuel/actions/workflows/pharo-12.0.yaml)
 
 master | 5.2.2 | 5.1.0 | 5.0.6 | 4.1.1 | 3.0.4 | 3.0.3 |
