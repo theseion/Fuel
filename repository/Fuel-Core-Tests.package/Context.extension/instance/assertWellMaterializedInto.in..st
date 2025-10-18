@@ -3,7 +3,7 @@ assertWellMaterializedInto: aMethodContext in: aTestCase
 
 	aTestCase assert: self ~~ aMethodContext.
 	aTestCase assert: self class == aMethodContext class.
-	aTestCase assert: self tempNames = aMethodContext tempNames.
+	aTestCase assert: self temporaryVariableNames = aMethodContext temporaryVariableNames.
 	aTestCase assert: pc = aMethodContext pc.
 	aTestCase assert: stackp = aMethodContext stackPtr.
 	closureOrNil
