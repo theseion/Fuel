@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Fuel-Benchmarks-Tests'!
+self packageOrganizer ensurePackage: #'Fuel-Benchmarks-Tests' withTags: #()!

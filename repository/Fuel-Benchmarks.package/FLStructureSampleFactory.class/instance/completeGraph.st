@@ -1,6 +1,6 @@
 samples
 completeGraph
-	"Answe ra complete graph of aproximately problemSize edges. A complete graph of n vertices has n*(n-1)/2 edges."
+	"Answer a complete graph of aproximately problemSize edges. A complete graph of n vertices has n*(n-1)/2 edges."
 
 	| n vertices |
 	n := (self problemSize * 2) sqrt rounded.

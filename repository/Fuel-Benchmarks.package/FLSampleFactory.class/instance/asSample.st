@@ -1,6 +1,8 @@
 building
 asSample
 
-	^ FLBenchmarkSample 
-		title: selector asString
-		content: (self perform: selector) 
+	^ FLBenchmarkSample new
+		title: selector asString;
+		problemSize: problemSize;
+		content: (self perform: selector);
+		yourself
