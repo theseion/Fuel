@@ -1,3 +1,3 @@
 accessing
-problemSize: anObject
-	problemSize := anObject
+problemSize: anInteger
+	problemSize := anInteger

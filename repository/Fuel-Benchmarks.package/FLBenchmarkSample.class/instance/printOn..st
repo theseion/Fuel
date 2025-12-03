@@ -5,4 +5,7 @@ printOn: aStream
 	super printOn: aStream.
 	aStream
 		nextPutAll: ' title: ';
-		print: title
+		print: title.
+	aStream
+		nextPutAll: ' problemSize: ';
+		print: problemSize

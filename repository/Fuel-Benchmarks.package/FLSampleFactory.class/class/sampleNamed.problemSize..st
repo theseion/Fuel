@@ -1,6 +1,7 @@
 sample creation
-sampleNamed: aSelector
+sampleNamed: aSelector problemSize: n
 
 	^ (self new
 			selector: aSelector;
+			problemSize: n;
 			yourself) asSample
