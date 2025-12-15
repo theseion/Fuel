@@ -1,4 +1,15 @@
-# Ignoring Instance Variables
++++
++++
+<div style="margin: 1rem 0; padding: 0.5rem 1rem 0.5rem 0.75rem; border-inline-start: 0.25rem solid yellow; border-radius:0.25">
+    <span style="color=yellow">IMPORTANT</span>
+    <p>
+        The information on this page refers to versions < 5. While the core concepts have not changed, some information may be outdated.
+    </p>
+</div>
+
+# Customizing The Graph
+
+## Ignoring Instance Variables
 It can happen that instance variables should never be serialized. A practical way to do this is overriding the hook method #fuelIgnoredInstanceVariableNames. Let's say we have the class User and we do not want to serialize the instance variables 'acumulatedLogins' and 'applications'. So we implement:
 ```smalltalk
 User class >> fuelIgnoredInstanceVariableNames
@@ -11,9 +22,9 @@ The method `#fuelAfterMaterialization` lets us execute something once an object 
 User >> fuelAfterMaterialization
  acumulatedLogins := 0. 
 ```
-# Substitution on Serialization
+## Substitution on Serialization
 Sometimes you may want to serialize something different than the original object, without altering them.
-## Dynamic way
+### Dynamic way
 You can establish a pluggable substitution to a particular serialization. Let's illustrate with an example, where your graph includes a Stream and you want to serialize nil instead.
 ```smalltalk
 objectToSerialize := Array with: 'hello' with: '' writeStream.
@@ -28,7 +39,8 @@ FileStream forceNewFileNamed: 'demo.fuel' do: [ :aStream |
         on: aStream binary ].
 ```
 So, when loading you will get `#('hello' nil)`, without any instance of a stream.You can find this code in `FLUserGuidesTest>>testPluggableSubstitution`.
-## Static way
+
+### Static way
 You have to override `#fuelAccept:` in the class of the object to be substituted. Fuel visits each object in the graph by sending this message, to determine how to trace and serialize it. Note that this will affect every serialization, in contrast with the 'dynamic way' we explained above; but it could be much faster.As an example, imagine we want to replace an object directly with nil. In other words, we want to make a whole object transient, say CachedResult. For that, we should implement:
 ```smalltalk
 CachedResult >> fuelAccept: aGeneralMapper
@@ -58,8 +70,9 @@ User >> fuelAccept: aGeneralMapper
         onRecursionDo: [ super fuelAccept: aGeneralMapper ]
 ```
 In the case, the substitute user (i.e. the one with the empty history) is will be visited via its super implementation.You can see tests for this functionality at FLHookedSubstitutionTest.
-# Substitution on Materialization
-## Global Sends
+
+## Substitution on Materialization
+### Global Sends
 Suppose we have a special instance of User that represents the admin user, and it is an unique instance in the image. In case the admin user is referenced in our graph, we want to treat that object as a global. We can do that in this way:
 ```smalltalk
 User >> fuelAccept: aGeneralMapper
@@ -72,7 +85,8 @@ User >> fuelAccept: aGeneralMapper
         ifFalse: [ super fuelAccept: aGeneralMapper ]
 ```
 So what will happen is that during serialization, the admin user won't be completly serialized (with all its intance variables) but instead its global name and selector are stored. Then, at materialization time, Fuel will send #admin to the class User, and use what that answers as the admin user of the materialized graph. We test this feature in FLGlobalSendSerializationTest.
-## Hooking instance creation
+
+### Hooking instance creation
 Fuel provides two hook methods to customise how instances are created: `#fuelNew` and `#fuelNew:`. For (regular) fixed objects, the method `#fuelNew` is defined in Behavior as:
 ```smalltalk
 fuelNew
@@ -84,7 +98,8 @@ fuelNew
 	^ self uniqueInstance
 ```
 This similarly applies to variable objects through the method `#fuelNew:`, which by default answers `#basicNew:`. We test this feature in FLSingletonTest.
-## Not Serializable Objects
+
+### Not Serializable Objects
 You may want to be sure that some objects are not serialized. For this case we provide `#visitNotSerializable:`, which in next example forbids serialization of any instance of MyNotSerializableObject.
 ```smalltalk
 MyNotSerializableObject >> fuelAccept: aGeneralMapper

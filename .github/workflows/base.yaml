@@ -16,7 +16,7 @@ jobs:
   build:
     name: "Build ${{ matrix.smalltalk }} ${{ matrix.config }}"
     if: ${{!contains(github.event.commits[0].message, '[docs]')}}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:

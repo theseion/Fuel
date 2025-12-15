@@ -1,8 +1,15 @@
 +++
-type = "docs"
 +++
+<div style="margin: 1rem 0; padding: 0.5rem 1rem 0.5rem 0.75rem; border-inline-start: 0.25rem solid yellow; border-radius:0.25">
+    <span style="color=yellow">IMPORTANT</span>
+    <p>
+        The information on this page refers to versions < 5.
+    </p>
+</div>
+
+# Managing Globals
 Let us assume a CompiledMethod is referenced from the graph to serialize. Sometimes we may be interested in storing just the selector and name of the class, because we know it will be present when materializing the graph. However, sometimes we want to really store the method with full detail.This means that given an object graph, there is not an unique way of serializing it. Fuel offers dynamic and static mechanisms to customize this.
-## Default globals
+## Default Globals
 By default, Fuel considers following objects as globals, i.e. will store just its name:
 - `nil`, `true`, `false`, and `Smalltalk globals`.
 - Any `Class`, `Trait`, `Metaclass` or `ClassTrait`.
