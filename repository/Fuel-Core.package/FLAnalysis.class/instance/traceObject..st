@@ -1,5 +1,5 @@
 tracing
-trace: anObject
+traceObject: anObject
 	"It's possible to get here from #privateMapAndTrace: but then #mapAndTrace: will
 	not be sent again (see #run)"
 	objectStack

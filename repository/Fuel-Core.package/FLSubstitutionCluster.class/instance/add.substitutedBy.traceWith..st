@@ -6,4 +6,4 @@ add: anObject substitutedBy: anotherObject traceWith: aAnalysis
 		ifAbsent: [ 
 			substitutions at: anObject put: anotherObject.
 			substitutes add: anotherObject.
-			aAnalysis trace: anotherObject ].
+			aAnalysis traceObject: anotherObject ].

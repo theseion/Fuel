@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ClapPharoApplication",
+	"category" : "Fuel-Core-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FLFuelCliCommand",
+	"type" : "normal"
+}

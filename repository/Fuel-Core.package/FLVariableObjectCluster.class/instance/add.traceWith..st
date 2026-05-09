@@ -7,10 +7,10 @@ add: anObject traceWith: aAnalysis
 		referencesOf: anObject 
 		do: [ :aChild |
 			self addReferenceFrom: anObject to: aChild.
-			aAnalysis trace: aChild ].
+			aAnalysis traceObject: aChild ].
 		
 	self
 		variablePartReferencesOf: anObject
 		do: [ :aChild |
 			self addVariableReferenceFrom: anObject to: aChild.
-			aAnalysis trace: aChild ]
+			aAnalysis traceObject: aChild ]
