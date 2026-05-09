@@ -7,4 +7,16 @@ PackageOrganizer default packages
        ifFalse: [
          package definedClasses do:[ :classToRemove |
            classToRemove removeFromSystem ].
-         package organizer unregisterPackage: package ] ]
+         package organizer unregisterPackage: package ] ].
+
+"FLFuelCliHandler is sometimes not cleaned up and the pragma cache
+still references the #commandSpecification method"
+((Pragma allNamed: #commandline)
+  detect: [ :pragma | 
+    pragma methodClass isObsolete ]
+  ifNone: []) methodClass removeSelector: #commandSpecification.
+Smalltalk garbageCollect.
+self assert: ((Pragma allNamed: #commandline) noneSatisfy: [ :pragma |
+  pragma methodClass isObsolete ])
+
+
