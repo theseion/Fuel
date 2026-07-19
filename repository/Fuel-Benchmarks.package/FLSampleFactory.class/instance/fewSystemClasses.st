@@ -1,6 +1,8 @@
 private
 fewSystemClasses
-	^ Array streamContents: [ :stream |
-		#('System' 'Collections' 'SUnit') do: [ :packageName |
-		(SystemOrganization categoriesMatching: packageName, '*') do: [ :category |
-			stream nextPutAll: (SystemOrganization classesInCategory: category) ] ] ]
+
+	^ (PackageOrganizer default packages
+		select: [ :each |
+			#( 'System' 'Collections' 'SUnit' )
+				anySatisfy: [ :prefix | each name beginsWith: prefix ] ])
+		flatCollect: [ :each | each classes ] as: Array
